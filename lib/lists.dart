@@ -33,14 +33,24 @@ class _GroceryListsState extends State<GroceryLists> {
         content: TextField(autofocus: true, controller: controller),
         actions: [
           TextButton(
-            onPressed: onPromptClosed,
+            onPressed: () {
+              controller.clear();
+              onPromptClosed();
+            },
+            child: const Text("Anuluj"),
+          ),
+          TextButton(
+            onPressed: () {
+              onPromptClosed();
+              controller.clear();
+            },
             child: const Text("Potwierdź"),
           )
         ],
       ),
     );
 
-    if (listTitle == null) return;
+    if (listTitle == null || listTitle == "") return;
     provider.newList(listTitle, {});
   }
 
