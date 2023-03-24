@@ -37,7 +37,15 @@ class _AppState extends State<App> {
         brightness: SchedulerBinding.instance.window.platformBrightness,
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text(titles[tabIndex])),
+        appBar: AppBar(
+          title: Text(titles[tabIndex]),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.settings),
+              onPressed: () {},
+            )
+          ],
+        ),
         body: screens[tabIndex],
         bottomNavigationBar:
             BottomNav(tabIndex: tabIndex, changeTab: changeTab),
