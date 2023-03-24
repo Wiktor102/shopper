@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 import "package:flutter/scheduler.dart";
+import 'package:provider/provider.dart';
 
 import "./bottom_nav.dart";
+import "./lists.dart";
+
+import "./lists_model.dart";
 
 void main() {
-  runApp(const App());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (context) => GroceryListModel()),
+    ],
+    child: const App(),
+  ));
 }
 
 class App extends StatefulWidget {
@@ -15,13 +24,9 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  int tabIndex = 0;
+  int tabIndex = 1;
   List titles = ["Przepisy", "Listy zakupowe", "Najbliższe sklepy"];
-  List screens = const [
-    Text("zakładka 1"),
-    Text("zakładka 2"),
-    Text("zakładka 3")
-  ];
+  List screens = const [Text("zakładka 1"), GroceryLists(), Text("zakładka 3")];
 
   changeTab(int i) {
     setState(() => tabIndex = i);
