@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "package:flutter/scheduler.dart";
 
 import "./bottom_nav.dart";
+import "./map.dart";
 
 void main() {
   runApp(const App());
@@ -17,11 +18,7 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   int tabIndex = 0;
   List titles = ["Przepisy", "Listy zakupowe", "Najbliższe sklepy"];
-  List screens = const [
-    Text("zakładka 1"),
-    Text("zakładka 2"),
-    Text("zakładka 3")
-  ];
+  List screens = const [Text("zakładka 1"), Text("zakładka 2"), Map()];
 
   changeTab(int i) {
     setState(() => tabIndex = i);
