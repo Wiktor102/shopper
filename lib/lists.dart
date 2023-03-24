@@ -30,7 +30,15 @@ class _GroceryListsState extends State<GroceryLists> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text("Wprowadź nazwę nowej listy"),
-        content: TextField(autofocus: true, controller: controller),
+        content: TextField(
+          autofocus: true,
+          controller: controller,
+          // Żeby działało zatwierdzanie przyciskiem na klawiaturze
+          onSubmitted: (value) {
+            onPromptClosed();
+            controller.clear();
+          },
+        ),
         actions: [
           TextButton(
             onPressed: () {
