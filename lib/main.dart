@@ -3,7 +3,7 @@ import "package:flutter/scheduler.dart";
 import 'package:provider/provider.dart';
 
 import "./bottom_nav.dart";
-import "./map.dart";
+import "./nearby_stores.dart";
 import "./position_model.dart";
 
 void main() {
