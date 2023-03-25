@@ -5,11 +5,18 @@ import 'package:provider/provider.dart';
 import "./bottom_nav.dart";
 import "./nearby_stores.dart";
 import "./position_model.dart";
+import "./stores_model.dart";
 
 void main() {
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (context) => PositionModel()),
+      ChangeNotifierProvider(create: (_) => PositionModel()),
+      ChangeNotifierProxyProvider<PositionModel, StoresModel>(
+        create: (BuildContext context) =>
+            StoresModel(Provider.of<PositionModel>(context, listen: false)),
+        update: (_, PositionModel pos, StoresModel? storesModel) =>
+            StoresModel(pos),
+      ),
     ],
     child: const App(),
   ));

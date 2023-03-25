@@ -4,6 +4,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 
 import "./position_model.dart";
+import "./stores_model.dart";
 
 class NearbyStoresMap extends StatelessWidget {
   const NearbyStoresMap({
@@ -15,9 +16,10 @@ class NearbyStoresMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<PositionModel>(context);
+    final posProvider = Provider.of<PositionModel>(context);
+    final storesProvider = Provider.of<StoresModel>(context);
 
-    if (provider.currentPosition == null) {
+    if (posProvider.currentPosition == null || storesProvider.loading) {
       return const Center(child: CircularProgressIndicator());
     }
 
@@ -25,7 +27,7 @@ class NearbyStoresMap extends StatelessWidget {
       body: FlutterMap(
         mapController: _mapController,
         options: MapOptions(
-          center: LatLng(provider.lat, provider.lng),
+          center: LatLng(posProvider.lat, posProvider.lng),
           minZoom: 2,
           zoom: 13,
           maxZoom: 15,
@@ -40,7 +42,7 @@ class NearbyStoresMap extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _mapController.moveAndRotate(
-            LatLng(provider.lat, provider.lng),
+            LatLng(posProvider.lat, posProvider.lng),
             13,
             0,
           );
