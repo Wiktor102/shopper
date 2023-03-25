@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import "./position_model.dart";
+import "./stores_model.dart";
 
 class NearbyStoresList extends StatelessWidget {
   const NearbyStoresList({
@@ -10,12 +10,17 @@ class NearbyStoresList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<PositionModel>(context);
+    final provider = Provider.of<StoresModel>(context);
 
-    if (provider.currentPosition == null) {
+    if (provider.loading) {
       return const Center(child: CircularProgressIndicator());
     }
 
-    return const Icon(Icons.directions_transit);
+    return ListView.builder(
+      itemCount: provider.nearbyStores.length,
+      itemBuilder: (BuildContext context, int index) => ListTile(
+        title: Text(provider.nearbyStores[index].name),
+      ),
+    );
   }
 }
