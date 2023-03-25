@@ -3,16 +3,19 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 
+import 'package:flutter_map_marker_popup/flutter_map_marker_popup.dart';
+
 import "./position_model.dart";
 import "./stores_model.dart";
 
 class NearbyStoresMap extends StatelessWidget {
-  const NearbyStoresMap({
+  NearbyStoresMap({
     super.key,
     required MapController mapController,
   }) : _mapController = mapController;
 
   final MapController _mapController;
+  final PopupController _popupLayerController = PopupController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +27,12 @@ class NearbyStoresMap extends StatelessWidget {
     }
 
     final List<Marker> markerList = storesProvider.nearbyStores
-        .map((Store store) => Marker(
-              point: LatLng(store.location.latitude, store.location.longitude),
-              builder: (context) =>
-                  const Image(image: AssetImage('assets/pinGreen.png')),
-            ))
+        .map((Store store) => MarkerWithMetadata(
+            point: LatLng(store.location.latitude, store.location.longitude),
+            builder: (context) =>
+                const Image(image: AssetImage('assets/pinGreen.png')),
+            anchorPos: AnchorPos.align(AnchorAlign.top),
+            metadata: {"id": store.id}))
         .toList();
 
     return Scaffold(
@@ -45,7 +49,15 @@ class NearbyStoresMap extends StatelessWidget {
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName: 'com.example.app',
           ),
-          MarkerLayer(markers: markerList),
+          PopupMarkerLayerWidget(
+            options: PopupMarkerLayerOptions(
+              popupController: _popupLayerController,
+              markers: markerList,
+              markerRotateAlignment:
+                  PopupMarkerLayerOptions.rotationAlignmentFor(AnchorAlign.top),
+              popupBuilder: (_, dynamic marker) => MarkerPopup(marker),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -57,6 +69,83 @@ class NearbyStoresMap extends StatelessWidget {
           );
         },
         child: const Icon(Icons.near_me),
+      ),
+    );
+  }
+}
+
+class MarkerWithMetadata extends Marker {
+  final Map<String, dynamic> metadata;
+
+  MarkerWithMetadata({
+    required super.point,
+    required super.builder,
+    super.key,
+    super.width = 30.0,
+    super.height = 30.0,
+    super.rotate,
+    super.rotateOrigin,
+    super.rotateAlignment,
+    super.anchorPos,
+    this.metadata = const {},
+  });
+}
+
+class MarkerPopup extends StatelessWidget {
+  final MarkerWithMetadata marker;
+
+  const MarkerPopup(this.marker, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final storesProvider = Provider.of<StoresModel>(context);
+    final Store storeData = storesProvider.getStoreById(marker.metadata["id"]);
+
+    return Card(
+      child: InkWell(
+        onTap: () => {},
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(Icons.favorite),
+            ),
+            _cardDescription(storeData),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _cardDescription(Store storeData) {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Container(
+        constraints: const BoxConstraints(minWidth: 100, maxWidth: 200),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            _getCardTitle(storeData.name),
+            const Padding(padding: EdgeInsets.symmetric(vertical: 4.0)),
+            Text(
+              'Adres: ${storeData.address}',
+              style: const TextStyle(fontSize: 12.0),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _getCardTitle(String title) {
+    return Text(
+      title,
+      style: const TextStyle(
+        fontWeight: FontWeight.w500,
+        fontSize: 14.0,
       ),
     );
   }

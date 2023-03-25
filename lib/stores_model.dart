@@ -16,6 +16,10 @@ class StoresModel extends ChangeNotifier {
     _getNearbyStores(_positionProvider);
   }
 
+  Store getStoreById(String id) {
+    return nearbyStores.firstWhere((Store store) => store.id == id);
+  }
+
   Future<dynamic> _getNearbyStores(PositionModel _positionProvider) async {
     double lat = _positionProvider.lat;
     double lng = _positionProvider.lng;
