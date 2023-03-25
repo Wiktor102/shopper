@@ -1,71 +1,131 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:http/http.dart';
+import 'dart:convert';
+import 'package:provider/provider.dart';
 
-class Map extends StatefulWidget {
-  const Map({super.key});
+import "./position_model.dart";
+
+class NearbyStores extends StatefulWidget {
+  const NearbyStores({super.key});
 
   @override
-  State<Map> createState() => _MapState();
+  State<NearbyStores> createState() => _NearbyStoresState();
 }
 
-class _MapState extends State<Map> {
+class _NearbyStoresState extends State<NearbyStores> {
   Position? _currentPosition;
   final MapController _mapController = MapController();
 
-  Future<bool> _handleLocationPermission() async {
-    bool serviceEnabled;
-    LocationPermission permission;
+  Future<dynamic> _getNearbyShops() async {
+    double lat = _currentPosition!.latitude;
+    double lng = _currentPosition!.longitude;
 
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text(
-              'Location services are disabled. Please enable the services')));
-      return false;
-    }
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Location permissions are denied')));
-        return false;
-      }
-    }
-    if (permission == LocationPermission.deniedForever) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text(
-              'Location permissions are permanently denied, we cannot request permissions.')));
-      return false;
-    }
-    return true;
-  }
+    Uri uri = Uri(
+      scheme: 'https',
+      host: 'trueway-places.p.rapidapi.com',
+      path: 'FindPlacesNearby',
+      queryParameters: {
+        'location': '$lat,$lng',
+        "type": "food",
+        "radius": "3000"
+      },
+    );
 
-  Future<void> _getCurrentPosition() async {
-    final hasPermission = await _handleLocationPermission();
+    Map<String, String> headers = {
+      'X-RapidAPI-Key': 'b76e842c5dmshaef6496a223d71fp15abb2jsn62961ea937f2',
+      'X-RapidAPI-Host': 'trueway-places.p.rapidapi.com'
+    };
 
-    if (!hasPermission) return;
-    await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
-        .then((Position position) {
-      setState(() => _currentPosition = position);
-    }).catchError((e) {
-      debugPrint(e);
-    });
+    Response response = await get(uri, headers: headers);
+
+    if (response.statusCode == 200) {
+      dynamic body = jsonDecode(response.body);
+      print(body);
+    } else {
+      print(response.reasonPhrase);
+    }
   }
 
   @override
   void initState() {
     super.initState();
-    _getCurrentPosition();
-    // _mapController = MapController();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_currentPosition == null) {
+    final provider = Provider.of<PositionModel>(context);
+
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: TabBar(
+          tabs: [
+            Tab(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon(Icons.map),
+                  Padding(
+                      padding: EdgeInsets.only(left: 10), child: Text("Mapa"))
+                ],
+              ),
+            ),
+            Tab(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon(Icons.list),
+                  Padding(
+                      padding: EdgeInsets.only(left: 10), child: Text("Lista"))
+                ],
+              ),
+            ),
+          ],
+        ),
+        body: TabBarView(
+          children: [
+            NearbyStoresMap(mapController: _mapController),
+            const NearbyStoresList(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class NearbyStoresList extends StatelessWidget {
+  const NearbyStoresList({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final provider = Provider.of<PositionModel>(context);
+
+    if (provider.currentPosition == null) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
+    return const Icon(Icons.directions_transit);
+  }
+}
+
+class NearbyStoresMap extends StatelessWidget {
+  const NearbyStoresMap({
+    super.key,
+    required MapController mapController,
+  }) : _mapController = mapController;
+
+  final MapController _mapController;
+
+  @override
+  Widget build(BuildContext context) {
+    final provider = Provider.of<PositionModel>(context);
+
+    if (provider.currentPosition == null) {
       return const Center(child: CircularProgressIndicator());
     }
 
@@ -73,8 +133,7 @@ class _MapState extends State<Map> {
       body: FlutterMap(
         mapController: _mapController,
         options: MapOptions(
-          center:
-              LatLng(_currentPosition!.latitude, _currentPosition!.longitude),
+          center: LatLng(provider.lat, provider.lng),
           minZoom: 2,
           zoom: 13,
           maxZoom: 15,
@@ -89,7 +148,7 @@ class _MapState extends State<Map> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _mapController.moveAndRotate(
-            LatLng(_currentPosition!.latitude, _currentPosition!.longitude),
+            LatLng(provider.lat, provider.lng),
             13,
             0,
           );

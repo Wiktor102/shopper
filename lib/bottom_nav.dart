@@ -27,8 +27,8 @@ class BottomNav extends StatelessWidget {
           label: "Listy",
         ),
         NavigationDestination(
-          icon: Icon(Icons.map),
-          label: "Mapa",
+          icon: Icon(Icons.store),
+          label: "Sklepy",
         ),
       ],
     );
