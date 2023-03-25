@@ -2,22 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:latlong2/latlong.dart';
+import 'package:collection/collection.dart';
 
 import "./position_model.dart";
+import "./favorite_stores_model.dart";
 
 class StoresModel extends ChangeNotifier {
   List<Store> nearbyStores = [];
   bool loading = true;
 
   final PositionModel _positionProvider;
+  final FavoriteStoresModel _favoritesProvider;
 
-  StoresModel(this._positionProvider) {
+  StoresModel(this._positionProvider, this._favoritesProvider) {
     if (_positionProvider.currentPosition == null) return;
-    _getNearbyStores(_positionProvider);
+    _getNearbyStores(_positionProvider).then((_) => _checkFavorites());
   }
 
   Store getStoreById(String id) {
     return nearbyStores.firstWhere((Store store) => store.id == id);
+  }
+
+  // Below code updates out-of-date favorites
+  void _checkFavorites() {
+    for (Store store in nearbyStores) {
+      Store? fromFav = _favoritesProvider.getFavoriteStoreById(store.id);
+
+      if (fromFav == null) continue;
+      if (!(const DeepCollectionEquality().equals(store, fromFav))) {
+        _favoritesProvider.updateFavorite(store);
+      }
+    }
   }
 
   Future<dynamic> _getNearbyStores(PositionModel _positionProvider) async {

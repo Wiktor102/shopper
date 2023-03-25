@@ -6,6 +6,7 @@ import "./bottom_nav.dart";
 import "./nearby_stores.dart";
 import "./position_model.dart";
 import "./stores_model.dart";
+import './favorite_stores_model.dart';
 
 final _scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 
@@ -13,11 +14,15 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => PositionModel(_scaffoldKey)),
+      ChangeNotifierProvider(create: (_) => FavoriteStoresModel()),
       ChangeNotifierProxyProvider<PositionModel, StoresModel>(
-        create: (BuildContext context) =>
-            StoresModel(Provider.of<PositionModel>(context, listen: false)),
-        update: (_, PositionModel pos, StoresModel? storesModel) =>
-            StoresModel(pos),
+        create: (BuildContext context) => StoresModel(
+            Provider.of<PositionModel>(context, listen: false),
+            Provider.of<FavoriteStoresModel>(context, listen: false)),
+        update: (BuildContext context, PositionModel pos,
+                StoresModel? storesModel) =>
+            StoresModel(
+                pos, Provider.of<FavoriteStoresModel>(context, listen: false)),
       ),
     ],
     child: const App(),

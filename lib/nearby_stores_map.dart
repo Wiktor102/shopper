@@ -7,6 +7,7 @@ import 'package:flutter_map_marker_popup/flutter_map_marker_popup.dart';
 
 import "./position_model.dart";
 import "./stores_model.dart";
+import './favorite_stores_model.dart';
 
 class NearbyStoresMap extends StatelessWidget {
   NearbyStoresMap({
@@ -99,21 +100,30 @@ class MarkerPopup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final storesProvider = Provider.of<StoresModel>(context);
+    final favoritesProvider = Provider.of<FavoriteStoresModel>(context);
     final Store storeData = storesProvider.getStoreById(marker.metadata["id"]);
 
     return Card(
-      child: InkWell(
-        onTap: () => {},
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            const Padding(
-              padding: EdgeInsets.only(left: 20, right: 10),
-              child: Icon(Icons.favorite),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: IconButton(
+              iconSize: 35,
+              onPressed: () {
+                favoritesProvider.toggleFavorite(storeData);
+              },
+              icon: Icon(
+                Icons.favorite,
+                color: favoritesProvider.isFavorite(storeData.id)
+                    ? Colors.red
+                    : null,
+              ),
             ),
-            _cardDescription(storeData),
-          ],
-        ),
+          ),
+          _cardDescription(storeData),
+        ],
       ),
     );
   }
@@ -131,7 +141,7 @@ class MarkerPopup extends StatelessWidget {
             _getCardTitle(storeData.name),
             const Padding(padding: EdgeInsets.symmetric(vertical: 4.0)),
             Text(
-              'Adres: ${storeData.address}',
+              "Adres: ${storeData.address}",
               style: const TextStyle(fontSize: 12.0),
             ),
           ],
