@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
 class PositionModel extends ChangeNotifier {
+  late ScaffoldMessengerState _scaffoldState;
+
   Position? _currentPosition;
   bool hasPermission = false;
 
-  PositionModel() {
-    _handleLocationPermission().then((bool gotPermission) {
+  PositionModel(scaffoldKey) {
+    _scaffoldState = scaffoldKey.currentState;
+
+    _handleLocationPermission(_onPermissionDenied).then((bool gotPermission) {
       hasPermission = gotPermission;
       notifyListeners();
 
@@ -18,15 +22,13 @@ class PositionModel extends ChangeNotifier {
   double get lng => _currentPosition!.longitude;
   Position? get currentPosition => _currentPosition;
 
-  Future<bool> _handleLocationPermission() async {
+  Future<bool> _handleLocationPermission(Function(String) onFailure) async {
     bool serviceEnabled;
     LocationPermission permission;
 
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      //   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      //       content: Text(
-      //           'Location services are disabled. Please enable the services')));
+      onFailure('Lokalizacja urządzenia jest wyłączona. Włącz ją.');
       return false;
     }
 
@@ -34,17 +36,16 @@ class PositionModel extends ChangeNotifier {
 
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
+
       if (permission == LocationPermission.denied) {
-        // ScaffoldMessenger.of(context).showSnackBar(
-        //     const SnackBar(content: Text('Location permissions are denied')));
+        onFailure("Dostęp do lokalizacji został odmówiony");
         return false;
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      //   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      //       content: Text(
-      //           'Location permissions are permanently denied, we cannot request permissions.')));
+      onFailure(
+          "Dostęp do lokalizacji został odmówiony, przywróć go ręcznie w ustawieniach urządzenia.");
       return false;
     }
 
@@ -58,5 +59,9 @@ class PositionModel extends ChangeNotifier {
         desiredAccuracy: LocationAccuracy.high);
 
     notifyListeners();
+  }
+
+  void _onPermissionDenied(String text) {
+    _scaffoldState.showSnackBar(SnackBar(content: Text(text)));
   }
 }

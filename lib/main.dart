@@ -7,10 +7,12 @@ import "./nearby_stores.dart";
 import "./position_model.dart";
 import "./stores_model.dart";
 
+final _scaffoldKey = GlobalKey<ScaffoldMessengerState>();
+
 void main() {
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (_) => PositionModel()),
+      ChangeNotifierProvider(create: (_) => PositionModel(_scaffoldKey)),
       ChangeNotifierProxyProvider<PositionModel, StoresModel>(
         create: (BuildContext context) =>
             StoresModel(Provider.of<PositionModel>(context, listen: false)),
@@ -42,6 +44,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Shopper',
+      scaffoldMessengerKey: _scaffoldKey,
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: Colors.green,
