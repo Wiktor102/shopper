@@ -24,10 +24,12 @@ class StoresModel extends ChangeNotifier {
       scheme: 'https',
       host: 'trueway-places.p.rapidapi.com',
       path: 'FindPlacesNearby',
-      queryParameters: {"location": "$lat,$lng", "type": "grocery_store"},
+      queryParameters: {
+        "location": "$lat,$lng",
+        "type": "grocery_store",
+        "radius": "3000"
+      },
     );
-
-    print(uri.toString());
 
     Map<String, String> headers = {
       'X-RapidAPI-Key': 'b76e842c5dmshaef6496a223d71fp15abb2jsn62961ea937f2',

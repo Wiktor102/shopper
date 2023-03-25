@@ -23,6 +23,14 @@ class NearbyStoresMap extends StatelessWidget {
       return const Center(child: CircularProgressIndicator());
     }
 
+    final List<Marker> markerList = storesProvider.nearbyStores
+        .map((Store store) => Marker(
+              point: LatLng(store.location.latitude, store.location.longitude),
+              builder: (context) =>
+                  const Image(image: AssetImage('assets/pinGreen.png')),
+            ))
+        .toList();
+
     return Scaffold(
       body: FlutterMap(
         mapController: _mapController,
@@ -37,6 +45,7 @@ class NearbyStoresMap extends StatelessWidget {
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName: 'com.example.app',
           ),
+          MarkerLayer(markers: markerList),
         ],
       ),
       floatingActionButton: FloatingActionButton(
