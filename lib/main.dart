@@ -10,6 +10,10 @@ import './favorite_stores_model.dart';
 
 final _scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 
+GlobalKey<ScaffoldMessengerState> getScaffoldKey() {
+  return _scaffoldKey;
+}
+
 void main() {
   runApp(MultiProvider(
     providers: [

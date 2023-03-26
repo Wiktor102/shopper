@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import "./stores_model.dart";
 import "./favorite_stores_model.dart";
+import "./store_details.dart";
 
 class NearbyStoresList extends StatelessWidget {
   final bool favorites;
@@ -32,6 +33,11 @@ class NearbyStoresList extends StatelessWidget {
     return ListView.builder(
       itemCount: storeList.length,
       itemBuilder: (BuildContext context, int index) => ListTile(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => StoreDetails(storeList[index].id),
+          ));
+        },
         title: Text(storeList[index].name),
         trailing: IconButton(
           onPressed: () {

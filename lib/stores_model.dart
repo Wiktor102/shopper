@@ -3,6 +3,7 @@ import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:latlong2/latlong.dart';
 import 'package:collection/collection.dart';
+import 'package:phone_number/phone_number.dart';
 
 import "./position_model.dart";
 import "./favorite_stores_model.dart";
@@ -100,5 +101,42 @@ class Store {
       location: LatLng(json["location"]["lat"], json["location"]["lng"]),
       types: json["types"] as List<dynamic>,
     );
+  }
+
+  Future<List<Map<String, dynamic>>> getDetails() async {
+    List<Map<String, dynamic>> detailsList = [];
+
+    detailsList.add({"title": "Nazwa", "icon": Icons.abc, "value": name});
+
+    if (website != null) {
+      detailsList.add({
+        "title": "Strona internetowa",
+        "icon": Icons.language,
+        "value": website
+      });
+    }
+
+    if (phoneNumber != null) {
+      try {
+        PhoneNumber parsedNumber =
+            await PhoneNumberUtil().parse(phoneNumber as String);
+
+        String formattedNumber = await PhoneNumberUtil()
+            .format(phoneNumber as String, parsedNumber.regionCode);
+
+        detailsList.add(
+            {"title": "Telefon", "icon": Icons.call, "value": formattedNumber});
+      } catch (e) {
+        detailsList.add(
+            {"title": "Telefon", "icon": Icons.call, "value": phoneNumber});
+      }
+    }
+
+    if (address != null) {
+      detailsList
+          .add({"title": "Adres", "icon": Icons.signpost, "value": address});
+    }
+
+    return detailsList;
   }
 }

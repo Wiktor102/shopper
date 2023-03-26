@@ -51,5 +51,14 @@
     <string>Aplikacja potrzebuje dostępu do lokalizacji gdy jest otwarta.</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>Aplikacja potrzebuje dostępu do lokalizacji w tle.</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>https</string>
+    </array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
