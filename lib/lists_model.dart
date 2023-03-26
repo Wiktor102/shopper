@@ -1,29 +1,36 @@
 import 'package:flutter/material.dart';
 
 class GroceryListModel extends ChangeNotifier {
-  final List<GroceryList> _lists = [
-    GroceryList("Lista 1", {}),
-    GroceryList("Lista 2", {}),
-    GroceryList("Lista 3", {})
-  ];
+  final Set<GroceryList> _set = {};
 
-  List<GroceryList> get lists => _lists;
-
-  void newList(String name, Set<String> items) {
+  Set<GroceryList> get set => _set;
+  void newList(String name, Set<ListItemObject> items) {
     GroceryList newList = GroceryList(name, items);
-    _lists.add(newList);
+    _set.add(newList);
     notifyListeners();
   }
 
   void deleteList(int index) {
-    _lists.removeAt(index);
+    _set.remove(index);
     notifyListeners();
   }
 }
 
+//objekt który pozwala stwierdzić czy rzecz była juz wykonana
+class ListItemObject {
+  String item;
+  bool done;
+  //przełącza między trybami zaznaczenia obiektu na liście
+  void toggle() {
+    done = !done ? done : !done;
+  }
+
+  ListItemObject(this.item, this.done);
+}
+
 class GroceryList {
   String name;
-  Set<String> items;
+  Set<ListItemObject> items;
 
   GroceryList(this.name, this.items);
 }

@@ -12,7 +12,9 @@ class GroceryLists extends StatefulWidget {
 
 class _GroceryListsState extends State<GroceryLists> {
   late TextEditingController controller;
-
+  final ChangeNotifier<GroceryList> currentGroceryList =
+      ChangeNotifier<GroceryList>(GroceryList("Value",
+          {ListItemObject("cuz", false), ListItemObject("yesnt", true)}));
   @override
   void initState() {
     super.initState();
@@ -23,6 +25,40 @@ class _GroceryListsState extends State<GroceryLists> {
   void dispose() {
     controller.dispose();
     super.dispose();
+  }
+
+  void promptForListTask(GroceryListModel provider) async {
+    String? taskTitle = await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              title: const Text("Wprowadź obiekt do listy"),
+              content: TextField(
+                autofocus: true,
+                controller: controller,
+                onSubmitted: (value) {
+                  onPromptClosed();
+                  controller.clear();
+                },
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    controller.clear();
+                    onPromptClosed();
+                  },
+                  child: const Text("Anuluj"),
+                ),
+                TextButton(
+                  onPressed: () {
+                    onPromptClosed();
+                    controller.clear();
+                  },
+                  child: const Text("Potwierdź"),
+                )
+              ],
+            ));
+    if (taskTitle == null || taskTitle == "") return;
+    currentGroceryList.items.add(ListItemObject(taskTitle, false));
   }
 
   void promptForListName(GroceryListModel provider) async {
@@ -69,25 +105,38 @@ class _GroceryListsState extends State<GroceryLists> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<GroceryListModel>(context);
-    final groceryLists = provider.lists;
+    final grocerySet = provider.set;
 
     return Scaffold(
-      body: ListView.builder(
-        itemCount: groceryLists.length,
-        itemBuilder: (BuildContext context, index) {
-          return ListTile(
-            title: Text(groceryLists[index].name),
-            trailing: IconButton(
-              onPressed: () {
-                provider.deleteList(index);
-              },
-              icon: const Icon(Icons.delete),
-            ),
-          );
-        },
+      body: Stack(
+        children: [
+          ListView.builder(
+            itemCount: currentGroceryList.items.length,
+            itemBuilder: (BuildContext context, index) {
+              bool checked = currentGroceryList.items.elementAt(index).done;
+              return ListTile(
+                title: Text(currentGroceryList.items.elementAt(index).item,
+                    style: TextStyle(
+                        decoration: checked
+                            ? TextDecoration.lineThrough
+                            : TextDecoration.none)),
+                trailing: IconButton(
+                  onPressed: () {
+                    provider.deleteList(index);
+                  },
+                  icon: const Icon(Icons.delete),
+                ),
+              );
+            },
+          ),
+        ],
       ),
+      //ten guzik słuzy do przypisywania itemów do listy
       floatingActionButton: FloatingActionButton(
-        onPressed: () => promptForListName(provider),
+        onPressed: () => {
+          promptForListTask(provider),
+          ChangeNotifier(),
+        },
         child: const Icon(Icons.add),
       ),
     );
