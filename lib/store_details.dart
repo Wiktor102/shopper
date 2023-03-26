@@ -65,7 +65,7 @@ class StoreDetails extends StatelessWidget {
                 itemBuilder: (_, i) => detailsBuilder(snapshot.data![i]),
               );
             } else {
-              return const CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
             }
           }),
     );
@@ -74,6 +74,7 @@ class StoreDetails extends StatelessWidget {
   Widget detailsBuilder(Map<String, dynamic> detail) {
     if (detail["title"] == "Strona internetowa") {
       Uri uri = Uri.parse(detail["value"]);
+
       return ListTile(
         leading: Icon(detail["icon"]),
         title: Text(detail["title"]),
