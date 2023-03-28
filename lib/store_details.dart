@@ -11,8 +11,10 @@ import "./main.dart";
 class StoreDetails extends StatelessWidget {
   final String storeId;
   final bool favorites;
+  final Function showStoreOnMap;
 
-  const StoreDetails(this.storeId, {super.key, this.favorites = false});
+  const StoreDetails(this.storeId, this.showStoreOnMap,
+      {super.key, this.favorites = false});
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +70,13 @@ class StoreDetails extends StatelessWidget {
               return const Center(child: CircularProgressIndicator());
             }
           }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+          showStoreOnMap(storeId);
+        },
+        child: const Icon(Icons.location_on),
+      ),
     );
   }
 

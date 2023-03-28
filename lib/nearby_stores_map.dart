@@ -9,13 +9,19 @@ import "./position_model.dart";
 import "./stores_model.dart";
 import './favorite_stores_model.dart';
 
+import "./nearby_stores.dart";
+
 class NearbyStoresMap extends StatelessWidget {
+  final MapController mapController;
+  final MarkersController markersController;
+  final GlobalKey markerLayerKey = GlobalKey();
+
   NearbyStoresMap({
     super.key,
-    required MapController mapController,
-  }) : _mapController = mapController;
+    required this.mapController,
+    required this.markersController,
+  });
 
-  final MapController _mapController;
   final PopupController _popupLayerController = PopupController();
 
   @override
@@ -27,7 +33,7 @@ class NearbyStoresMap extends StatelessWidget {
       return const Center(child: CircularProgressIndicator());
     }
 
-    final List<Marker> markerList = storesProvider.nearbyStores
+    final List<MarkerWithMetadata> markerList = storesProvider.nearbyStores
         .map((Store store) => MarkerWithMetadata(
             point: LatLng(store.location.latitude, store.location.longitude),
             builder: (context) =>
@@ -36,9 +42,22 @@ class NearbyStoresMap extends StatelessWidget {
             metadata: {"id": store.id}))
         .toList();
 
+    markersController.markerList = markerList;
+
+    PopupMarkerLayerWidget popupMarkerLayer = PopupMarkerLayerWidget(
+      key: markerLayerKey,
+      options: PopupMarkerLayerOptions(
+        popupController: _popupLayerController,
+        markers: markerList,
+        markerRotateAlignment:
+            PopupMarkerLayerOptions.rotationAlignmentFor(AnchorAlign.top),
+        popupBuilder: (_, dynamic marker) => MarkerPopup(marker),
+      ),
+    );
+
     return Scaffold(
       body: FlutterMap(
-        mapController: _mapController,
+        mapController: mapController,
         options: MapOptions(
           center: LatLng(posProvider.lat, posProvider.lng),
           minZoom: 2,
@@ -50,20 +69,12 @@ class NearbyStoresMap extends StatelessWidget {
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName: 'com.example.app',
           ),
-          PopupMarkerLayerWidget(
-            options: PopupMarkerLayerOptions(
-              popupController: _popupLayerController,
-              markers: markerList,
-              markerRotateAlignment:
-                  PopupMarkerLayerOptions.rotationAlignmentFor(AnchorAlign.top),
-              popupBuilder: (_, dynamic marker) => MarkerPopup(marker),
-            ),
-          ),
+          popupMarkerLayer,
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          _mapController.moveAndRotate(
+          mapController.moveAndRotate(
             LatLng(posProvider.lat, posProvider.lng),
             13,
             0,

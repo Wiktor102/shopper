@@ -7,8 +7,10 @@ import "./store_details.dart";
 
 class NearbyStoresList extends StatelessWidget {
   final bool favorites;
+  final Function showStoreOnMap;
 
-  const NearbyStoresList({
+  const NearbyStoresList(
+    this.showStoreOnMap, {
     super.key,
     this.favorites = false,
   });
@@ -35,18 +37,30 @@ class NearbyStoresList extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) => ListTile(
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => StoreDetails(storeList[index].id),
+            builder: (context) =>
+                StoreDetails(storeList[index].id, showStoreOnMap),
           ));
         },
         title: Text(storeList[index].name),
-        trailing: IconButton(
-          onPressed: () {
-            favoritesProvider.toggleFavorite(storeList[index]);
-          },
-          icon: const Icon(Icons.favorite),
-          color: favoritesProvider.isFavorite(storeList[index].id)
-              ? Colors.red
-              : null,
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            IconButton(
+              onPressed: () {
+                favoritesProvider.toggleFavorite(storeList[index]);
+              },
+              icon: const Icon(Icons.favorite),
+              color: favoritesProvider.isFavorite(storeList[index].id)
+                  ? Colors.red
+                  : null,
+            ),
+            IconButton(
+              onPressed: () {
+                showStoreOnMap(storeList[index].id);
+              },
+              icon: const Icon(Icons.location_on),
+            ),
+          ],
         ),
       ),
     );

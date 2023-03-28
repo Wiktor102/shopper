@@ -81,6 +81,9 @@ class Store {
   final LatLng location;
   final List<dynamic> types;
 
+  double get lat => location.latitude;
+  double get lng => location.longitude;
+
   Store({
     required this.id,
     required this.name,
