@@ -12,9 +12,7 @@ class GroceryLists extends StatefulWidget {
 
 class _GroceryListsState extends State<GroceryLists> {
   late TextEditingController controller;
-  final ChangeNotifier<GroceryList> currentGroceryList =
-      ChangeNotifier<GroceryList>(GroceryList("Value",
-          {ListItemObject("cuz", false), ListItemObject("yesnt", true)}));
+
   @override
   void initState() {
     super.initState();
@@ -27,7 +25,7 @@ class _GroceryListsState extends State<GroceryLists> {
     super.dispose();
   }
 
-  void promptForListTask(GroceryListModel provider) async {
+  void promptForListTask(GroceryListModel provider, int index) async {
     String? taskTitle = await showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -58,7 +56,9 @@ class _GroceryListsState extends State<GroceryLists> {
               ],
             ));
     if (taskTitle == null || taskTitle == "") return;
-    currentGroceryList.items.add(ListItemObject(taskTitle, false));
+    // currentGroceryList.items.add(ListItemObject(taskTitle, false)); //! to nie miało prawa działać -> bezpośrednio modyfikujesz listę
+    // * tutaj poprawnie -. stworzyłem nową metodę w modelu
+    provider.addItemToList(index, ListItemObject(taskTitle, true));
   }
 
   void promptForListName(GroceryListModel provider) async {
@@ -105,24 +105,29 @@ class _GroceryListsState extends State<GroceryLists> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<GroceryListModel>(context);
-    final grocerySet = provider.set;
+
+    //* zauważ, że to jest zbiór list a nie poszczególna lista!
+    final grocerySet = provider.grocerySet;
 
     return Scaffold(
       body: Stack(
         children: [
+          //* Zdecduj się czy ten Widgrt wyświetla listy czy poszczególne rzeczy z listy!???
           ListView.builder(
-            itemCount: currentGroceryList.items.length,
+            itemCount: grocerySet.elementAt(0).items.length,
             itemBuilder: (BuildContext context, index) {
-              bool checked = currentGroceryList.items.elementAt(index).done;
+              bool checked =
+                  grocerySet.elementAt(0).items.elementAt(index).done;
               return ListTile(
-                title: Text(currentGroceryList.items.elementAt(index).item,
+                title: Text(grocerySet.elementAt(0).items.elementAt(index).item,
                     style: TextStyle(
                         decoration: checked
                             ? TextDecoration.lineThrough
                             : TextDecoration.none)),
                 trailing: IconButton(
                   onPressed: () {
-                    provider.deleteList(index);
+                    provider.deleteList(
+                        index); //! opisałem ci przy definicji tej metody dlaczego to nie działa
                   },
                   icon: const Icon(Icons.delete),
                 ),
@@ -131,11 +136,11 @@ class _GroceryListsState extends State<GroceryLists> {
           ),
         ],
       ),
-      //ten guzik słuzy do przypisywania itemów do listy
+      // ten guzik słuzy do przypisywania itemów do listy
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {
-          promptForListTask(provider),
-          ChangeNotifier(),
+        onPressed: () {
+          //* Tu nie powinno być przypadkiem dodawanie nowej listy a nie dodawanie rzeczy do istniejącej (promptForListName) ???
+          promptForListTask(provider, 0); //* index na razie tymczasowo
         },
         child: const Icon(Icons.add),
       ),
