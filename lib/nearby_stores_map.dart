@@ -50,7 +50,15 @@ class NearbyStoresMap extends StatelessWidget {
                     (element) => element.metadata["id"] == store.id,
                   );
 
-                  markersController.popupController.hideAllPopups();
+                  final List<MarkerWithMetadata> markersToHide =
+                      markersController.markerList
+                          .where(
+                            (element) => element.metadata["id"] != store.id,
+                          )
+                          .toList();
+
+                  markersController.popupController
+                      .hidePopupsOnlyFor(markersToHide);
                   markersController.popupController.togglePopup(marker);
                 },
               ),
