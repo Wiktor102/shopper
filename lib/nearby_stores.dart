@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_map_marker_popup/flutter_map_marker_popup.dart';
 import "package:latlong2/latlong.dart";
 import 'package:provider/provider.dart';
 import 'dart:async';
@@ -11,6 +12,7 @@ import "./stores_model.dart";
 
 class MarkersController {
   late List<MarkerWithMetadata> markerList;
+  final PopupController popupController = PopupController();
 }
 
 class NearbyStores extends StatefulWidget {
@@ -57,16 +59,18 @@ class _NearbyStoresState extends State<NearbyStores>
       }
 
       Store storeData = provider.getStoreById(storeId);
-      _tabController!.animateTo(0, duration: const Duration(seconds: 1));
-
-      Timer timer = Timer(const Duration(seconds: 1), () {
+      _tabController!.animation!.addStatusListener((_) {
         _mapController.move(LatLng(storeData.lat, storeData.lng), 15);
 
         final MarkerWithMetadata markerToOpen = _markersController.markerList
             .firstWhere((element) => element.metadata["id"] == storeId);
-
-        // TODO: somehow show the popup
+        _markersController.popupController.showPopupsOnlyFor([markerToOpen]);
       });
+
+      _tabController!.animateTo(0, duration: const Duration(seconds: 1));
+
+      //   Timer timer = Timer(const Duration(seconds: 1), () {
+      //   });
     }
 
     return Scaffold(

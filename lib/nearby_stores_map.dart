@@ -22,8 +22,6 @@ class NearbyStoresMap extends StatelessWidget {
     required this.markersController,
   });
 
-  final PopupController _popupLayerController = PopupController();
-
   @override
   Widget build(BuildContext context) {
     final posProvider = Provider.of<PositionModel>(context);
@@ -47,7 +45,7 @@ class NearbyStoresMap extends StatelessWidget {
     PopupMarkerLayerWidget popupMarkerLayer = PopupMarkerLayerWidget(
       key: markerLayerKey,
       options: PopupMarkerLayerOptions(
-        popupController: _popupLayerController,
+        popupController: markersController.popupController,
         markers: markerList,
         markerRotateAlignment:
             PopupMarkerLayerOptions.rotationAlignmentFor(AnchorAlign.top),
