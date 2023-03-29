@@ -35,11 +35,28 @@ class NearbyStoresMap extends StatelessWidget {
 
     final List<MarkerWithMetadata> markerList = storesProvider.nearbyStores
         .map((Store store) => MarkerWithMetadata(
-            point: LatLng(store.location.latitude, store.location.longitude),
-            builder: (context) =>
-                const Image(image: AssetImage('assets/pinGreen.png')),
-            anchorPos: AnchorPos.align(AnchorAlign.top),
-            metadata: {"id": store.id}))
+              point: LatLng(store.location.latitude, store.location.longitude),
+              builder: (context) => GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                child: const Image(image: AssetImage('assets/pinGreen.png')),
+                onTap: () {
+                  mapController.move(
+                    LatLng(store.lat, store.lng),
+                    mapController.zoom,
+                  );
+
+                  final MarkerWithMetadata marker =
+                      markersController.markerList.firstWhere(
+                    (element) => element.metadata["id"] == store.id,
+                  );
+
+                  markersController.popupController.hideAllPopups();
+                  markersController.popupController.togglePopup(marker);
+                },
+              ),
+              anchorPos: AnchorPos.align(AnchorAlign.top),
+              metadata: {"id": store.id},
+            ))
         .toList();
 
     markersController.markerList = markerList;
