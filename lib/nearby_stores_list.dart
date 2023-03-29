@@ -8,9 +8,11 @@ import "./store_details.dart";
 class NearbyStoresList extends StatelessWidget {
   final bool favorites;
   final Function showStoreOnMap;
+  final Function showStoreDetails;
 
   const NearbyStoresList(
-    this.showStoreOnMap, {
+    this.showStoreOnMap,
+    this.showStoreDetails, {
     super.key,
     this.favorites = false,
   });
@@ -35,12 +37,7 @@ class NearbyStoresList extends StatelessWidget {
     return ListView.builder(
       itemCount: storeList.length,
       itemBuilder: (BuildContext context, int index) => ListTile(
-        onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) =>
-                StoreDetails(storeList[index].id, showStoreOnMap),
-          ));
-        },
+        onTap: () => showStoreDetails(storeList[index].id),
         title: Text(storeList[index].name),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,

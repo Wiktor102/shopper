@@ -7,6 +7,7 @@ import 'dart:async';
 
 import "./nearby_stores_map.dart";
 import "./nearby_stores_list.dart";
+import "./store_details.dart";
 
 import "./stores_model.dart";
 
@@ -67,10 +68,15 @@ class _NearbyStoresState extends State<NearbyStores>
         _markersController.popupController.showPopupsOnlyFor([markerToOpen]);
       });
 
-      _tabController!.animateTo(0, duration: const Duration(seconds: 1));
+      _tabController!.animateTo(0);
+    }
 
-      //   Timer timer = Timer(const Duration(seconds: 1), () {
-      //   });
+    void showStoreDetails(String storeId) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => StoreDetails(storeId, showStoreOnMap),
+        ),
+      );
     }
 
     return Scaffold(
@@ -112,11 +118,12 @@ class _NearbyStoresState extends State<NearbyStores>
         controller: _tabController,
         children: [
           NearbyStoresMap(
+            showStoreDetails,
             mapController: _mapController,
             markersController: _markersController,
           ),
-          NearbyStoresList(showStoreOnMap),
-          NearbyStoresList(showStoreOnMap, favorites: true),
+          NearbyStoresList(showStoreOnMap, showStoreDetails),
+          NearbyStoresList(showStoreOnMap, showStoreDetails, favorites: true),
         ],
       ),
     );

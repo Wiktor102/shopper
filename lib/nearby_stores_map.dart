@@ -15,8 +15,10 @@ class NearbyStoresMap extends StatelessWidget {
   final MapController mapController;
   final MarkersController markersController;
   final GlobalKey markerLayerKey = GlobalKey();
+  final Function(String) showStoreDetails;
 
-  NearbyStoresMap({
+  NearbyStoresMap(
+    this.showStoreDetails, {
     super.key,
     required this.mapController,
     required this.markersController,
@@ -49,7 +51,8 @@ class NearbyStoresMap extends StatelessWidget {
         markers: markerList,
         markerRotateAlignment:
             PopupMarkerLayerOptions.rotationAlignmentFor(AnchorAlign.top),
-        popupBuilder: (_, dynamic marker) => MarkerPopup(marker),
+        popupBuilder: (_, dynamic marker) =>
+            MarkerPopup(marker, showStoreDetails),
       ),
     );
 
@@ -103,8 +106,9 @@ class MarkerWithMetadata extends Marker {
 
 class MarkerPopup extends StatelessWidget {
   final MarkerWithMetadata marker;
+  final Function(String) showStoreDetails;
 
-  const MarkerPopup(this.marker, {super.key});
+  const MarkerPopup(this.marker, this.showStoreDetails, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -138,22 +142,25 @@ class MarkerPopup extends StatelessWidget {
   }
 
   Widget _cardDescription(Store storeData) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: Container(
-        constraints: const BoxConstraints(minWidth: 100, maxWidth: 200),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            _getCardTitle(storeData.name),
-            const Padding(padding: EdgeInsets.symmetric(vertical: 4.0)),
-            Text(
-              "Adres: ${storeData.address}",
-              style: const TextStyle(fontSize: 12.0),
-            ),
-          ],
+    return InkWell(
+      onTap: () => showStoreDetails(storeData.id),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Container(
+          constraints: const BoxConstraints(minWidth: 100, maxWidth: 200),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              _getCardTitle(storeData.name),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 4.0)),
+              Text(
+                "Adres: ${storeData.address}",
+                style: const TextStyle(fontSize: 12.0),
+              ),
+            ],
+          ),
         ),
       ),
     );
