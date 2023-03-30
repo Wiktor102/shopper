@@ -98,7 +98,7 @@ class _GroceryListsState extends State<GroceryLists> {
                         );
                       }).toList(),
                       onChanged: (GroceryList? value) {
-                        SchedulerBinding.instance.addPostFrameCallback((_) {
+                        WidgetsBinding.instance.addPostFrameCallback((_) {
                           setState(() {
                             if (value == null) return;
                             provider.changeListTo(value);
@@ -151,10 +151,9 @@ class _GroceryListsState extends State<GroceryLists> {
             ),
           ),
           Container(
-              margin: const EdgeInsets.only(top: 50),
-              alignment: Alignment.center,
               child: provider.getCurrentList().items.isNotEmpty
                   ? ListView.builder(
+                      shrinkWrap: true,
                       itemCount: provider.getCurrentList().items.length,
                       itemBuilder: (BuildContext context, index) {
                         bool checked = provider
