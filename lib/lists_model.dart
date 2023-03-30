@@ -1,56 +1,106 @@
 import 'package:flutter/material.dart';
 
-class GroceryListModel extends ChangeNotifier {
-  final Set<GroceryList> _set = {};
+//komenda pozwalająca usuwać obiekt z listy
+Set<dynamic> deleteFromSetIndex(Set<dynamic> set, int index) {
+  Set<dynamic> result = {};
+  for (int i = 0; i < set.length; i++) {
+    if (i == index) continue;
+    result.add(set.elementAt(i));
+  }
+  return result;
+}
 
-//* Możesz to usunąć jak skończysz testowanie -> tak się deklaruje konstruktor we flutterze
+class GroceryListModel extends ChangeNotifier {
+  Set<GroceryList> _set = {};
+  int currentListIndex = 0;
+
   GroceryListModel() {
-    final newList = GroceryList("Value", {
-      ListItemObject("cuz", false),
-      ListItemObject("yesnt", true),
+    final newList = GroceryList("y2g8hiueiugauoghiuoasei8ghiisaeheg", {
+      //tej listy nie usune poniewarz pozwala na wydłużenie drropdown menu
+      TaskObject("cuz", false),
+      TaskObject("yesnt", true),
+    });
+    final newList2 = GroceryList("Value -2", {
+      TaskObject("obvously", true),
+      TaskObject("can'tn't", false),
     });
 
-    _set.add(newList);
+    //  deleteList(0);
     notifyListeners();
   }
 
   Set<GroceryList> get grocerySet =>
       _set; //* nazwy kolidowały -> "set" jest zastrzerzonym słowem (chyba)
 
-  void newList(String name, Set<ListItemObject> items) {
+  void newList(String name, Set<TaskObject> items) {
     GroceryList newList = GroceryList(name, items);
     _set.add(newList);
     notifyListeners();
   }
 
-  void deleteList(int index) {
-    _set.remove(
-        index); //! to nie zadziała -> metoda remove nie bierze indexu jako argument tylko wartość a jako że wartością jest obiekt to chyba w ogóle nie zadziała?
+  void renameList(String name, int index) {
+    _set.elementAt(index).name = name;
     notifyListeners();
   }
 
-  void addItemToList(int index, ListItemObject listItem) {
-    final currentGroceryList = _set.elementAt(index);
-    currentGroceryList.items.add(listItem);
+  void deleteList(int index) {
+    Set<dynamic> updatedSet = deleteFromSetIndex(_set, index);
+    _set = updatedSet.cast<GroceryList>();
+    notifyListeners();
+  }
+
+  void deleteTask(int index, int listIndex) {
+    Set<dynamic> updatedSet =
+        deleteFromSetIndex(_set.elementAt(listIndex).items, index);
+    _set.elementAt(listIndex).items = updatedSet.cast<TaskObject>();
+    notifyListeners();
+  }
+
+  bool getTaskStatus(int taskIndex) {
+    return _set.elementAt(currentListIndex).items.elementAt(taskIndex).done;
+  }
+
+  GroceryList getCurrentList() {
+    return grocerySet.elementAt(currentListIndex);
+  }
+
+  void changeListTo(GroceryList element) {
+    currentListIndex = _set.toList().indexOf(element);
+    notifyListeners();
+  }
+
+  void setTaskStatus(int taskIndex, bool value) {
+    _set.elementAt(currentListIndex).items.elementAt(taskIndex).done = value;
+    notifyListeners();
+  }
+
+  void renameTask(int index, String name) {
+    _set.elementAt(currentListIndex).items.elementAt(index).item = name;
+    notifyListeners();
+  }
+
+  void addTaskToCurrentList(TaskObject listItem) {
+    _set.elementAt(currentListIndex).items.add(listItem);
     notifyListeners();
   }
 }
 
 //objekt który pozwala stwierdzić czy rzecz była juz wykonana
-class ListItemObject {
+class TaskObject {
   String item;
   bool done;
-  //przełącza między trybami zaznaczenia obiektu na liście
-  void toggle() {
-    done = !done ? done : !done;
+
+  void replace(TaskObject taskObject) {
+    item = taskObject.item;
+    done = taskObject.done;
   }
 
-  ListItemObject(this.item, this.done);
+  TaskObject(this.item, this.done);
 }
 
 class GroceryList {
   String name;
-  Set<ListItemObject> items;
+  Set<TaskObject> items;
 
   GroceryList(this.name, this.items);
 }

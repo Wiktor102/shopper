@@ -1,7 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import "./lists_model.dart";
+
+enum TaskOptions { edit, delete }
 
 class GroceryLists extends StatefulWidget {
   const GroceryLists({super.key});
@@ -25,11 +29,12 @@ class _GroceryListsState extends State<GroceryLists> {
     super.dispose();
   }
 
-  void promptForListTask(GroceryListModel provider, int index) async {
-    String? taskTitle = await showDialog(
+  Future<String?> promptForString(
+      GroceryListModel provider, String dialog) async {
+    String? result = await showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: const Text("Wprowadź obiekt do listy"),
+              title: Text(dialog),
               content: TextField(
                 autofocus: true,
                 controller: controller,
@@ -55,47 +60,7 @@ class _GroceryListsState extends State<GroceryLists> {
                 )
               ],
             ));
-    if (taskTitle == null || taskTitle == "") return;
-    // currentGroceryList.items.add(ListItemObject(taskTitle, false)); //! to nie miało prawa działać -> bezpośrednio modyfikujesz listę
-    // * tutaj poprawnie -. stworzyłem nową metodę w modelu
-    provider.addItemToList(index, ListItemObject(taskTitle, true));
-  }
-
-  void promptForListName(GroceryListModel provider) async {
-    String? listTitle = await showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text("Wprowadź nazwę nowej listy"),
-        content: TextField(
-          autofocus: true,
-          controller: controller,
-          // Żeby działało zatwierdzanie przyciskiem na klawiaturze
-          onSubmitted: (value) {
-            onPromptClosed();
-            controller.clear();
-          },
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              controller.clear();
-              onPromptClosed();
-            },
-            child: const Text("Anuluj"),
-          ),
-          TextButton(
-            onPressed: () {
-              onPromptClosed();
-              controller.clear();
-            },
-            child: const Text("Potwierdź"),
-          )
-        ],
-      ),
-    );
-
-    if (listTitle == null || listTitle == "") return;
-    provider.newList(listTitle, {});
+    return result;
   }
 
   void onPromptClosed() {
@@ -105,42 +70,161 @@ class _GroceryListsState extends State<GroceryLists> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<GroceryListModel>(context);
-
-    //* zauważ, że to jest zbiór list a nie poszczególna lista!
-    final grocerySet = provider.grocerySet;
-
+    if (provider.grocerySet.isEmpty) {
+      provider.newList("Nowa Lista", {TaskObject("necesary", false)});
+      provider.deleteTask(0, 0);
+    }
     return Scaffold(
       body: Stack(
         children: [
-          //* Zdecduj się czy ten Widgrt wyświetla listy czy poszczególne rzeczy z listy!???
-          ListView.builder(
-            itemCount: grocerySet.elementAt(0).items.length,
-            itemBuilder: (BuildContext context, index) {
-              bool checked =
-                  grocerySet.elementAt(0).items.elementAt(index).done;
-              return ListTile(
-                title: Text(grocerySet.elementAt(0).items.elementAt(index).item,
-                    style: TextStyle(
-                        decoration: checked
-                            ? TextDecoration.lineThrough
-                            : TextDecoration.none)),
-                trailing: IconButton(
-                  onPressed: () {
-                    provider.deleteList(
-                        index); //! opisałem ci przy definicji tej metody dlaczego to nie działa
-                  },
-                  icon: const Icon(Icons.delete),
-                ),
-              );
-            },
+          //wyświetla poszczególne rzeczy z listy
+          Container(
+              alignment: Alignment.topCenter,
+              padding: const EdgeInsets.only(left: 50.0, right: 50.0),
+              // ignore: sort_child_properties_last
+              child: DropdownButton<GroceryList>(
+                value: provider.getCurrentList(),
+                items: provider.grocerySet
+                    .map<DropdownMenuItem<GroceryList>>((GroceryList value) {
+                  return DropdownMenuItem(
+                    value: value,
+                    child: Text(value.name),
+                  );
+                }).toList(),
+                onChanged: (GroceryList? value) {
+                  setState(() {
+                    if (value == null) return;
+                    provider.changeListTo(value);
+                  });
+                },
+                alignment: Alignment.topCenter,
+              ),
+              height: 50),
+          Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              alignment: Alignment.topRight,
+              height: 50,
+              width: 150,
+              child: Row(
+                children: [
+                  IconButton(
+                      onPressed: () => {
+                            promptForString(provider, "Podaj nazwę listy")
+                                .then((String? value) => {
+                                      if (value != null || value != "")
+                                        {
+                                          provider.newList(value!,
+                                              {TaskObject("necesary", true)}),
+                                          provider.deleteTask(
+                                              0, provider.grocerySet.length - 1)
+                                        }
+                                    })
+                          },
+                      icon: const Icon(Icons.format_list_bulleted_add)),
+                  IconButton(
+                      onPressed: () => {
+                            promptForString(provider, "Zmień nazwę listy")
+                                .then((String? value) => {
+                                      if (value != null || value != "")
+                                        {
+                                          provider.renameList(
+                                              value!, provider.currentListIndex)
+                                        }
+                                    })
+                          },
+                      icon: const Icon(Icons.edit_note_sharp)),
+                  IconButton(
+                      onPressed: () => {}, icon: const Icon(Icons.more_horiz))
+                ],
+              ),
+            ),
           ),
+          Container(
+              margin: const EdgeInsets.only(top: 50),
+              alignment: Alignment.center,
+              child: provider.getCurrentList().items.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: provider.getCurrentList().items.length,
+                      itemBuilder: (BuildContext context, index) {
+                        bool checked = provider
+                            .getCurrentList()
+                            .items
+                            .elementAt(index)
+                            .done;
+                        return ListTile(
+                          title: Text(
+                              provider
+                                  .getCurrentList()
+                                  .items
+                                  .elementAt(index)
+                                  .item,
+                              style: TextStyle(
+                                  decoration: checked
+                                      ? TextDecoration.lineThrough
+                                      : TextDecoration.none)),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Checkbox(
+                                value: provider.getTaskStatus(index),
+                                onChanged: (bool? value) => {
+                                  if (value != null)
+                                    provider.setTaskStatus(index, (value))
+                                },
+                              ),
+                              PopupMenuButton<TaskOptions>(
+                                  initialValue: null,
+                                  onSelected: (TaskOptions value) {
+                                    switch (value) {
+                                      case TaskOptions.edit:
+                                        promptForString(provider,
+                                                "Zmień nazwę produktu")
+                                            .then((String? value) => {
+                                                  if (value != null ||
+                                                      value != "")
+                                                    provider.renameTask(
+                                                        index, value!)
+                                                });
+                                        break;
+                                      case TaskOptions.delete:
+                                        provider.deleteTask(
+                                            index, provider.currentListIndex);
+                                        break;
+                                      default:
+                                    }
+                                  },
+                                  icon: const Icon(Icons.more_vert),
+                                  itemBuilder: (BuildContext context) =>
+                                      <PopupMenuEntry<TaskOptions>>[
+                                        const PopupMenuItem(
+                                          value: TaskOptions.edit,
+                                          child: Text("Edytuj nazwe"),
+                                        ),
+                                        const PopupMenuItem(
+                                          value: TaskOptions.delete,
+                                          child: Text(
+                                            "Usuń",
+                                            style: TextStyle(color: Colors.red),
+                                          ),
+                                        ),
+                                      ])
+                            ],
+                          ),
+                        );
+                      },
+                    )
+                  : const Text("Brak Obiektów na liście"))
         ],
       ),
       // ten guzik słuzy do przypisywania itemów do listy
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          //* Tu nie powinno być przypadkiem dodawanie nowej listy a nie dodawanie rzeczy do istniejącej (promptForListName) ???
-          promptForListTask(provider, 0); //* index na razie tymczasowo
+          promptForString(provider, "Zmień nazwę produktu")
+              .then((String? value) => {
+                    if (value != null || value != "")
+                      provider.addTaskToCurrentList(TaskObject(value!, false))
+                  });
         },
         child: const Icon(Icons.add),
       ),
