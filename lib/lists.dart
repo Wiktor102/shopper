@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 
 import "./lists_model.dart";
@@ -97,9 +98,11 @@ class _GroceryListsState extends State<GroceryLists> {
                         );
                       }).toList(),
                       onChanged: (GroceryList? value) {
-                        setState(() {
-                          if (value == null) return;
-                          provider.changeListTo(value);
+                        SchedulerBinding.instance.addPostFrameCallback((_) {
+                          setState(() {
+                            if (value == null) return;
+                            provider.changeListTo(value);
+                          });
                         });
                       },
                     ),
