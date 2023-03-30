@@ -32,7 +32,7 @@ class _NearbyStoresState extends State<NearbyStores>
   @override
   void initState() {
     _tabController = TabController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 3,
       vsync: this,
     );
