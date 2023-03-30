@@ -34,6 +34,16 @@ class NearbyStoresList extends StatelessWidget {
       storeList = provider.nearbyStores;
     }
 
+    if (storeList.isEmpty) {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Image(image: AssetImage('assets/empty.png')),
+          Text("Brak danych do wyświetlenia"),
+        ],
+      );
+    }
+
     return ListView.builder(
       itemCount: storeList.length,
       itemBuilder: (BuildContext context, int index) => ListTile(
