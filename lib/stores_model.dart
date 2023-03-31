@@ -7,6 +7,7 @@ import 'package:phone_number/phone_number.dart';
 
 import "./position_model.dart";
 import "./favorite_stores_model.dart";
+import "./settings_model.dart";
 
 class StoresModel extends ChangeNotifier {
   List<Store> nearbyStores = [];
@@ -14,8 +15,13 @@ class StoresModel extends ChangeNotifier {
 
   final PositionModel _positionProvider;
   final FavoriteStoresModel _favoritesProvider;
+  final SettingsModel settingsProvider;
 
-  StoresModel(this._positionProvider, this._favoritesProvider) {
+  StoresModel(
+    this._positionProvider,
+    this._favoritesProvider,
+    this.settingsProvider,
+  ) {
     if (_positionProvider.currentPosition == null) return;
     _getNearbyStores(_positionProvider).then((_) => _checkFavorites());
   }
@@ -47,7 +53,7 @@ class StoresModel extends ChangeNotifier {
       queryParameters: {
         "location": "$lat,$lng",
         "type": "grocery_store",
-        "radius": "3000"
+        "radius": settingsProvider.storeDistance.toString()
       },
     );
 
