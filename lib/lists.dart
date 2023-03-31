@@ -1,12 +1,13 @@
-import 'dart:math';
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 
 import "./lists_model.dart";
 
 enum TaskOptions { edit, delete }
+
+enum MoreListOption { delete_list, delete_checked_tasks }
 
 class GroceryLists extends StatefulWidget {
   const GroceryLists({super.key});
@@ -30,9 +31,37 @@ class _GroceryListsState extends State<GroceryLists> {
     super.dispose();
   }
 
-  Future<String?> promptForString(
-      GroceryListModel provider, String dialog) async {
-    String? result = await showDialog(
+  Future<bool> promptForBoolean(String dialog) async {
+    bool result = false;
+    await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              title: Text(dialog),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    controller.clear();
+                    onPromptClosed();
+                  },
+                  child: const Text("Anuluj"),
+                ),
+                TextButton(
+                  onPressed: () {
+                    onPromptClosed();
+                    result = true;
+                    controller.clear();
+                  },
+                  child: const Text("Potwierdź"),
+                )
+              ],
+            ));
+    return result;
+  }
+
+  Future<String?> promptForString(String dialog, String? value) async {
+    TextEditingController controller = TextEditingController();
+    if (value != null) controller.text += value;
+    await showDialog(
         context: context,
         builder: (context) => AlertDialog(
               title: Text(dialog),
@@ -41,7 +70,6 @@ class _GroceryListsState extends State<GroceryLists> {
                 controller: controller,
                 onSubmitted: (value) {
                   onPromptClosed();
-                  controller.clear();
                 },
               ),
               actions: [
@@ -55,13 +83,15 @@ class _GroceryListsState extends State<GroceryLists> {
                 TextButton(
                   onPressed: () {
                     onPromptClosed();
-                    controller.clear();
                   },
                   child: const Text("Potwierdź"),
                 )
               ],
             ));
-    return result;
+    if (controller.text.isNotEmpty && controller.text != "")
+      return controller.text;
+    controller.clear();
+    return null; // return an empty string if result is null
   }
 
   void onPromptClosed() {
@@ -75,6 +105,7 @@ class _GroceryListsState extends State<GroceryLists> {
       provider.newList("Nowa Lista", {TaskObject("necesary", false)});
       provider.deleteTask(0, 0);
     }
+
     return Scaffold(
       body: Column(
         children: [
@@ -112,28 +143,28 @@ class _GroceryListsState extends State<GroceryLists> {
                   children: [
                     IconButton(
                         onPressed: () async {
-                          String? value = await promptForString(
-                              provider, "Podaj nazwę listy");
+                          String? value =
+                              await promptForString("Podaj nazwę listy", null);
 
                           if (value != null || value != "") {
                             provider.newList(
                               value!,
                               {TaskObject("necesary", true)},
                             );
-
+                            int newListIndex = provider.grocerySet.length - 1;
                             provider.deleteTask(
                               0,
-                              provider.grocerySet.length - 1,
+                              newListIndex,
                             );
+                            provider.currentListIndex = newListIndex;
                           }
                         },
                         icon: const Icon(Icons.format_list_bulleted_add)),
                     IconButton(
                         onPressed: () async {
                           String? value = await promptForString(
-                            provider,
-                            "Zmień nazwę listy",
-                          );
+                              "Zmień nazwę listy",
+                              provider.getCurrentList().name);
 
                           if (value != null || value != "") {
                             provider.renameList(
@@ -143,8 +174,48 @@ class _GroceryListsState extends State<GroceryLists> {
                           }
                         },
                         icon: const Icon(Icons.edit_note_sharp)),
-                    IconButton(
-                        onPressed: () => {}, icon: const Icon(Icons.more_horiz))
+                    PopupMenuButton<MoreListOption>(
+                      icon: const Icon(
+                        Icons.delete,
+                        color: Colors.red,
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuItem<MoreListOption>>[
+                        const PopupMenuItem(
+                          value: MoreListOption.delete_list,
+                          child: Text(
+                            "Usuń listę",
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ),
+                        const PopupMenuItem(
+                            value: MoreListOption.delete_checked_tasks,
+                            child: Text(
+                              "Usuń zaznaczone",
+                              style: TextStyle(color: Colors.red),
+                            )),
+                      ],
+                      onSelected: (MoreListOption value) {
+                        switch (value) {
+                          case MoreListOption.delete_checked_tasks:
+                            promptForBoolean(
+                                    "Czy chcesz usunąć zaznaczone obiekty")
+                                .then((value) => {
+                                      if (value == true)
+                                        provider.deleteChecked(
+                                            provider.currentListIndex)
+                                    });
+                            break;
+                          case MoreListOption.delete_list:
+                            print(provider.currentListIndex);
+                            promptForBoolean("Czy chcesz usunąć listę").then(
+                                (value) =>
+                                    value ? provider.deleteCurrentList() : 0);
+                            break;
+                          default:
+                        }
+                      },
+                    )
                   ],
                 ),
               ],
@@ -160,7 +231,7 @@ class _GroceryListsState extends State<GroceryLists> {
                             .getCurrentList()
                             .items
                             .elementAt(index)
-                            .done;
+                            .checked;
                         return ListTile(
                           title: Text(
                               provider
@@ -187,8 +258,13 @@ class _GroceryListsState extends State<GroceryLists> {
                                   onSelected: (TaskOptions value) {
                                     switch (value) {
                                       case TaskOptions.edit:
-                                        promptForString(provider,
-                                                "Zmień nazwę produktu")
+                                        promptForString(
+                                                "Zmień nazwę produktu",
+                                                provider
+                                                    .getCurrentList()
+                                                    .items
+                                                    .elementAt(index)
+                                                    .item)
                                             .then((String? value) => {
                                                   if (value != null ||
                                                       value != "")
@@ -208,7 +284,7 @@ class _GroceryListsState extends State<GroceryLists> {
                                       <PopupMenuEntry<TaskOptions>>[
                                         const PopupMenuItem(
                                           value: TaskOptions.edit,
-                                          child: Text("Edytuj nazwe"),
+                                          child: Text("Edytuj nazwę"),
                                         ),
                                         const PopupMenuItem(
                                           value: TaskOptions.delete,
@@ -223,13 +299,13 @@ class _GroceryListsState extends State<GroceryLists> {
                         );
                       },
                     )
-                  : const Text("Brak Obiektów na liście"))
+                  : const Text("Brak produktów na liście"))
         ],
       ),
       // ten guzik słuzy do przypisywania itemów do listy
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          promptForString(provider, "Zmień nazwę produktu")
+          promptForString("Napisz nazwę produktu", null)
               .then((String? value) => {
                     if (value != null || value != "")
                       provider.addTaskToCurrentList(TaskObject(value!, false))

@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 //komenda pozwalająca usuwać obiekt z listy
 Set<dynamic> deleteFromSetIndex(Set<dynamic> set, int index) {
   Set<dynamic> result = {};
-  for (int i = 0; i < set.length; i++) {
-    if (i == index) continue;
-    result.add(set.elementAt(i));
-  }
+  List<dynamic> list = set.toList();
+  list.removeAt(index);
+  result = list.toSet();
   return result;
 }
 
@@ -14,23 +13,7 @@ class GroceryListModel extends ChangeNotifier {
   Set<GroceryList> _set = {};
   int currentListIndex = 0;
 
-  GroceryListModel() {
-    final newList = GroceryList("y2g8hiueiugauoghiuoasei8ghiisaeheg", {
-      //tej listy nie usune poniewarz pozwala na wydłużenie drropdown menu
-      TaskObject("cuz", false),
-      TaskObject("yesnt", true),
-    });
-    final newList2 = GroceryList("Value -2", {
-      TaskObject("obvously", true),
-      TaskObject("can'tn't", false),
-    });
-
-    //  deleteList(0);
-    notifyListeners();
-  }
-
-  Set<GroceryList> get grocerySet =>
-      _set; //* nazwy kolidowały -> "set" jest zastrzerzonym słowem (chyba)
+  Set<GroceryList> get grocerySet => _set;
 
   void newList(String name, Set<TaskObject> items) {
     GroceryList newList = GroceryList(name, items);
@@ -49,6 +32,21 @@ class GroceryListModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void deleteCurrentList() {
+    deleteList(currentListIndex);
+    currentListIndex = 0;
+    notifyListeners();
+  }
+
+  void deleteChecked(int listIndex) {
+    final list = _set.elementAt(listIndex).items;
+    for (int i = 0; i < list.length; i++) {
+      if (!list.elementAt(i).checked) continue;
+      deleteTask(i, listIndex);
+      deleteChecked(listIndex);
+    }
+  }
+
   void deleteTask(int index, int listIndex) {
     Set<dynamic> updatedSet =
         deleteFromSetIndex(_set.elementAt(listIndex).items, index);
@@ -57,7 +55,7 @@ class GroceryListModel extends ChangeNotifier {
   }
 
   bool getTaskStatus(int taskIndex) {
-    return _set.elementAt(currentListIndex).items.elementAt(taskIndex).done;
+    return _set.elementAt(currentListIndex).items.elementAt(taskIndex).checked;
   }
 
   GroceryList getCurrentList() {
@@ -70,7 +68,7 @@ class GroceryListModel extends ChangeNotifier {
   }
 
   void setTaskStatus(int taskIndex, bool value) {
-    _set.elementAt(currentListIndex).items.elementAt(taskIndex).done = value;
+    _set.elementAt(currentListIndex).items.elementAt(taskIndex).checked = value;
     notifyListeners();
   }
 
@@ -88,14 +86,14 @@ class GroceryListModel extends ChangeNotifier {
 //objekt który pozwala stwierdzić czy rzecz była juz wykonana
 class TaskObject {
   String item;
-  bool done;
+  bool checked;
 
   void replace(TaskObject taskObject) {
     item = taskObject.item;
-    done = taskObject.done;
+    checked = taskObject.checked;
   }
 
-  TaskObject(this.item, this.done);
+  TaskObject(this.item, this.checked);
 }
 
 class GroceryList {
