@@ -109,25 +109,31 @@ class ThemeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: const Text("Motyw"),
-      trailing: DropdownButton(
-        value: settingsProvider.theme,
-        onChanged: (String? newTheme) {
-          settingsProvider.theme = newTheme as String;
-        },
-        items: const [
-          DropdownMenuItem(
-            value: "auto",
-            child: Text("Automatyczny"),
-          ),
-          DropdownMenuItem(
-            value: "light",
-            child: Text("Jasny"),
-          ),
-          DropdownMenuItem(
-            value: "dark",
-            child: Text("Ciemny"),
-          ),
-        ],
+      trailing: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width * 0.4,
+        ),
+        child: DropdownButton(
+          isExpanded: true,
+          value: settingsProvider.theme,
+          onChanged: (String? newTheme) {
+            settingsProvider.theme = newTheme as String;
+          },
+          items: const [
+            DropdownMenuItem(
+              value: "auto",
+              child: Text("Automatyczny"),
+            ),
+            DropdownMenuItem(
+              value: "light",
+              child: Text("Jasny"),
+            ),
+            DropdownMenuItem(
+              value: "dark",
+              child: Text("Ciemny"),
+            ),
+          ],
+        ),
       ),
     );
   }
