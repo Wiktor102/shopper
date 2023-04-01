@@ -14,21 +14,6 @@ class GroceryListModel extends ChangeNotifier {
   Set<GroceryList> _set = {};
   int currentListIndex = 0;
 
-  GroceryListModel() {
-    final newList = GroceryList("y2g8hiueiugauoghiuoasei8ghiisaeheg", {
-      //tej listy nie usune poniewarz pozwala na wydłużenie drropdown menu
-      TaskObject("cuz", false),
-      TaskObject("yesnt", true),
-    });
-    final newList2 = GroceryList("Value -2", {
-      TaskObject("obvously", true),
-      TaskObject("can'tn't", false),
-    });
-
-    //  deleteList(0);
-    notifyListeners();
-  }
-
   Set<GroceryList> get grocerySet =>
       _set; //* nazwy kolidowały -> "set" jest zastrzerzonym słowem (chyba)
 

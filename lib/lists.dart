@@ -152,7 +152,8 @@ class _GroceryListsState extends State<GroceryLists> {
           ),
           Container(
               child: provider.getCurrentList().items.isNotEmpty
-                  ? ListView.builder(
+                  ? ReorderableListView.builder(
+                      buildDefaultDragHandles: true,
                       shrinkWrap: true,
                       itemCount: provider.getCurrentList().items.length,
                       itemBuilder: (BuildContext context, index) {
@@ -162,6 +163,7 @@ class _GroceryListsState extends State<GroceryLists> {
                             .elementAt(index)
                             .done;
                         return ListTile(
+                          key: ValueKey(index),
                           title: Text(
                               provider
                                   .getCurrentList()
@@ -182,45 +184,60 @@ class _GroceryListsState extends State<GroceryLists> {
                                     provider.setTaskStatus(index, (value))
                                 },
                               ),
-                              PopupMenuButton<TaskOptions>(
-                                  initialValue: null,
-                                  onSelected: (TaskOptions value) {
-                                    switch (value) {
-                                      case TaskOptions.edit:
-                                        promptForString(provider,
-                                                "Zmień nazwę produktu")
-                                            .then((String? value) => {
-                                                  if (value != null ||
-                                                      value != "")
-                                                    provider.renameTask(
-                                                        index, value!)
-                                                });
-                                        break;
-                                      case TaskOptions.delete:
-                                        provider.deleteTask(
-                                            index, provider.currentListIndex);
-                                        break;
-                                      default:
-                                    }
-                                  },
-                                  icon: const Icon(Icons.more_vert),
-                                  itemBuilder: (BuildContext context) =>
-                                      <PopupMenuEntry<TaskOptions>>[
-                                        const PopupMenuItem(
-                                          value: TaskOptions.edit,
-                                          child: Text("Edytuj nazwe"),
-                                        ),
-                                        const PopupMenuItem(
-                                          value: TaskOptions.delete,
-                                          child: Text(
-                                            "Usuń",
-                                            style: TextStyle(color: Colors.red),
+                              Container(
+                                margin: const EdgeInsets.only(right: 30),
+                                child: PopupMenuButton<TaskOptions>(
+                                    initialValue: null,
+                                    onSelected: (TaskOptions value) {
+                                      switch (value) {
+                                        case TaskOptions.edit:
+                                          promptForString(provider,
+                                                  "Zmień nazwę produktu")
+                                              .then((String? value) => {
+                                                    if (value != null ||
+                                                        value != "")
+                                                      provider.renameTask(
+                                                          index, value!)
+                                                  });
+                                          break;
+                                        case TaskOptions.delete:
+                                          provider.deleteTask(
+                                              index, provider.currentListIndex);
+                                          break;
+                                        default:
+                                      }
+                                    },
+                                    icon: const Icon(Icons.more_vert),
+                                    itemBuilder: (BuildContext context) =>
+                                        <PopupMenuEntry<TaskOptions>>[
+                                          const PopupMenuItem(
+                                            value: TaskOptions.edit,
+                                            child: Text("Edytuj nazwe"),
                                           ),
-                                        ),
-                                      ])
+                                          const PopupMenuItem(
+                                            value: TaskOptions.delete,
+                                            child: Text(
+                                              "Usuń",
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            ),
+                                          ),
+                                        ]),
+                              )
                             ],
                           ),
                         );
+                      },
+                      onReorder: (int oldIndex, int newIndex) {
+                        final list = provider.getCurrentList().items.toList();
+                        if (oldIndex < newIndex) {
+                          newIndex -= 1;
+                        }
+                        final item = list.removeAt(oldIndex);
+                        list.insert(newIndex, item);
+                        provider.grocerySet
+                            .elementAt(provider.currentListIndex)
+                            .items = list.toSet();
                       },
                     )
                   : const Text("Brak Obiektów na liście"))
