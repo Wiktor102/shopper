@@ -153,7 +153,6 @@ class _GroceryListsState extends State<GroceryLists> {
           Container(
               child: provider.getCurrentList().items.isNotEmpty
                   ? ReorderableListView.builder(
-                      buildDefaultDragHandles: true,
                       shrinkWrap: true,
                       itemCount: provider.getCurrentList().items.length,
                       itemBuilder: (BuildContext context, index) {
