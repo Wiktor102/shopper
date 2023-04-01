@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import "./lists_model.dart";
+import 'empty.dart';
 
 enum TaskOptions { edit, delete }
 
@@ -221,96 +222,90 @@ class _GroceryListsState extends State<GroceryLists> {
               ],
             ),
           ),
-          Container(
-              child: provider.getCurrentList().items.isNotEmpty
-                  ? ReorderableListView.builder(
-                      shrinkWrap: true,
-                      itemCount: provider.getCurrentList().items.length,
-                      itemBuilder: (BuildContext context, index) {
-                        bool checked = provider
-                            .getCurrentList()
-                            .items
-                            .elementAt(index)
-                            .checked;
-                        return ListTile(
-                          key: ValueKey(index),
-                          title: Text(
-                              provider
-                                  .getCurrentList()
-                                  .items
-                                  .elementAt(index)
-                                  .item,
-                              style: TextStyle(
-                                  decoration: checked
-                                      ? TextDecoration.lineThrough
-                                      : TextDecoration.none)),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Checkbox(
-                                value: provider.getTaskStatus(index),
-                                onChanged: (bool? value) => {
-                                  if (value != null)
-                                    provider.setTaskStatus(index, (value))
-                                },
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 30),
-                                child: PopupMenuButton<TaskOptions>(
-                                    initialValue: null,
-                                    onSelected: (TaskOptions value) {
-                                      switch (value) {
-                                        case TaskOptions.edit:
-                                          promptForString(
-                                                  "Zmień nazwę produktu", null)
-                                              .then((String? value) => {
-                                                    if (value != null ||
-                                                        value != "")
-                                                      provider.renameTask(
-                                                          index, value!)
-                                                  });
-                                          break;
-                                        case TaskOptions.delete:
-                                          provider.deleteTask(
-                                              index, provider.currentListIndex);
-                                          break;
-                                        default:
-                                      }
-                                    },
-                                    icon: const Icon(Icons.more_vert),
-                                    itemBuilder: (BuildContext context) =>
-                                        <PopupMenuEntry<TaskOptions>>[
-                                          const PopupMenuItem(
-                                            value: TaskOptions.edit,
-                                            child: Text("Edytuj nazwe"),
-                                          ),
-                                          const PopupMenuItem(
-                                            value: TaskOptions.delete,
-                                            child: Text(
-                                              "Usuń",
-                                              style:
-                                                  TextStyle(color: Colors.red),
-                                            ),
-                                          ),
-                                        ]),
-                              )
-                            ],
+          provider.getCurrentList().items.isNotEmpty
+              ? ReorderableListView.builder(
+                  shrinkWrap: true,
+                  itemCount: provider.getCurrentList().items.length,
+                  itemBuilder: (BuildContext context, index) {
+                    bool checked = provider
+                        .getCurrentList()
+                        .items
+                        .elementAt(index)
+                        .checked;
+                    return ListTile(
+                      key: ValueKey(index),
+                      title: Text(
+                          provider.getCurrentList().items.elementAt(index).item,
+                          style: TextStyle(
+                              decoration: checked
+                                  ? TextDecoration.lineThrough
+                                  : TextDecoration.none)),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Checkbox(
+                            value: provider.getTaskStatus(index),
+                            onChanged: (bool? value) => {
+                              if (value != null)
+                                provider.setTaskStatus(index, (value))
+                            },
                           ),
-                        );
-                      },
-                      onReorder: (int oldIndex, int newIndex) {
-                        final list = provider.getCurrentList().items.toList();
-                        if (oldIndex < newIndex) {
-                          newIndex -= 1;
-                        }
-                        final item = list.removeAt(oldIndex);
-                        list.insert(newIndex, item);
-                        provider.grocerySet
-                            .elementAt(provider.currentListIndex)
-                            .items = list.toSet();
-                      },
-                    )
-                  : const Text("Brak produktów na liście"))
+                          Container(
+                            margin: const EdgeInsets.only(right: 30),
+                            child: PopupMenuButton<TaskOptions>(
+                                initialValue: null,
+                                onSelected: (TaskOptions value) {
+                                  switch (value) {
+                                    case TaskOptions.edit:
+                                      promptForString(
+                                              "Zmień nazwę produktu", null)
+                                          .then((String? value) => {
+                                                if (value != null ||
+                                                    value != "")
+                                                  provider.renameTask(
+                                                      index, value!)
+                                              });
+                                      break;
+                                    case TaskOptions.delete:
+                                      provider.deleteTask(
+                                          index, provider.currentListIndex);
+                                      break;
+                                    default:
+                                  }
+                                },
+                                icon: const Icon(Icons.more_vert),
+                                itemBuilder: (BuildContext context) =>
+                                    <PopupMenuEntry<TaskOptions>>[
+                                      const PopupMenuItem(
+                                        value: TaskOptions.edit,
+                                        child: Text("Edytuj nazwe"),
+                                      ),
+                                      const PopupMenuItem(
+                                        value: TaskOptions.delete,
+                                        child: Text(
+                                          "Usuń",
+                                          style: TextStyle(color: Colors.red),
+                                        ),
+                                      ),
+                                    ]),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                  onReorder: (int oldIndex, int newIndex) {
+                    final list = provider.getCurrentList().items.toList();
+                    if (oldIndex < newIndex) {
+                      newIndex -= 1;
+                    }
+                    final item = list.removeAt(oldIndex);
+                    list.insert(newIndex, item);
+                    provider.grocerySet
+                        .elementAt(provider.currentListIndex)
+                        .items = list.toSet();
+                  },
+                )
+              : const Expanded(child: Empty("Brak produktów na liście"))
         ],
       ),
       // ten guzik słuzy do przypisywania itemów do listy
