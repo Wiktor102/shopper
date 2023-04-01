@@ -258,7 +258,11 @@ class _GroceryListsState extends State<GroceryLists> {
                                   switch (value) {
                                     case TaskOptions.edit:
                                       promptForString(
-                                              "Zmień nazwę produktu", null)
+                                              "Zmień nazwę produktu",   provider
+                                                  .getCurrentList()
+                                                  .items
+                                                  .elementAt(index)
+                                                  .item)
                                           .then((String? value) => {
                                                 if (value != null ||
                                                     value != "")
