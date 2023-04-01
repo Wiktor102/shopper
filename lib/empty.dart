@@ -6,15 +6,17 @@ class Empty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(50),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Image(image: AssetImage('assets/empty.png')),
-          const Padding(padding: EdgeInsets.only(top: 20)),
-          Text(text, style: const TextStyle(fontSize: 16)),
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(50),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Image(image: AssetImage('assets/empty.png')),
+            const Padding(padding: EdgeInsets.only(top: 20)),
+            Text(text, style: const TextStyle(fontSize: 16)),
+          ],
+        ),
       ),
     );
   }
