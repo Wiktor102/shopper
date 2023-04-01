@@ -4,6 +4,9 @@ import 'package:provider/provider.dart';
 
 import "./settings.dart";
 import "./bottom_nav.dart";
+import "./lists.dart";
+
+import "./lists_model.dart";
 import "./nearby_stores.dart";
 
 import "./stores_model.dart";
@@ -22,6 +25,7 @@ void main() {
     providers: [
       ChangeNotifierProvider(create: (_) => PositionModel(_scaffoldKey)),
       ChangeNotifierProvider(create: (_) => FavoriteStoresModel()),
+      ChangeNotifierProvider(create: (_) => GroceryListModel()),
       ChangeNotifierProvider(create: (_) => SettingsModel()),
       ChangeNotifierProxyProvider2<PositionModel, SettingsModel, StoresModel>(
         create: (BuildContext context) => StoresModel(
@@ -54,9 +58,9 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  int tabIndex = 0;
+  int tabIndex = 1;
   List titles = ["Przepisy", "Listy zakupowe", "Najbliższe sklepy"];
-  List screens = const [Text("zakładka 1"), Text("zakładka 2"), NearbyStores()];
+  List screens = const [Text("zakładka 1"), GroceryLists(), NearbyStores()];
 
   changeTab(int i) {
     setState(() => tabIndex = i);
