@@ -71,10 +71,14 @@ class _GroceryListsState extends State<GroceryLists> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<GroceryListModel>(context);
+
     if (provider.grocerySet.isEmpty) {
+      //   SchedulerBinding.instance.addPostFrameCallback((_) {
       provider.newList("Nowa Lista", {TaskObject("necesary", false)});
       provider.deleteTask(0, 0);
+      //   });
     }
+
     return Scaffold(
       body: Column(
         children: [
@@ -89,22 +93,18 @@ class _GroceryListsState extends State<GroceryLists> {
                     child: DropdownButton<GroceryList>(
                       isExpanded: true,
                       value: provider.getCurrentList(),
-                      items: provider.grocerySet
-                          .map<DropdownMenuItem<GroceryList>>(
-                              (GroceryList value) {
-                        return DropdownMenuItem(
-                          value: value,
-                          child: Text(value.name),
-                        );
-                      }).toList(),
-                      onChanged: (GroceryList? value) {
-                        WidgetsBinding.instance.addPostFrameCallback((_) {
-                          setState(() {
-                            if (value == null) return;
-                            provider.changeListTo(value);
-                          });
-                        });
-                      },
+                      items: provider.getDropdownItems(),
+                      onChanged: provider.grocerySet.isEmpty
+                          ? null
+                          : (GroceryList? value) {
+                              SchedulerBinding.instance
+                                  .addPostFrameCallback((_) {
+                                setState(() {
+                                  if (value == null) return;
+                                  provider.changeListTo(value);
+                                });
+                              });
+                            },
                     ),
                   ),
                 ),

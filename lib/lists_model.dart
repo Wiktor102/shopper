@@ -83,6 +83,18 @@ class GroceryListModel extends ChangeNotifier {
     _set.elementAt(currentListIndex).items.add(listItem);
     notifyListeners();
   }
+
+  List<DropdownMenuItem<GroceryList>> getDropdownItems() {
+    Iterable<DropdownMenuItem<GroceryList>> menuItems =
+        grocerySet.map((GroceryList value) {
+      return DropdownMenuItem(
+        value: value,
+        child: Text(value.name),
+      );
+    });
+
+    return menuItems.toList();
+  }
 }
 
 //objekt który pozwala stwierdzić czy rzecz była juz wykonana
