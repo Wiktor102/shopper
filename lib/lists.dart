@@ -101,12 +101,9 @@ class _GroceryListsState extends State<GroceryLists> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<GroceryListModel>(context);
-
     if (provider.grocerySet.isEmpty) {
-      //   SchedulerBinding.instance.addPostFrameCallback((_) {
       provider.newList("Nowa Lista", {TaskObject("necesary", false)});
       provider.deleteTask(0, 0);
-      //   });
     }
 
     return Scaffold(
@@ -123,18 +120,22 @@ class _GroceryListsState extends State<GroceryLists> {
                     child: DropdownButton<GroceryList>(
                       isExpanded: true,
                       value: provider.getCurrentList(),
-                      items: provider.getDropdownItems(),
-                      onChanged: provider.grocerySet.isEmpty
-                          ? null
-                          : (GroceryList? value) {
-                              SchedulerBinding.instance
-                                  .addPostFrameCallback((_) {
-                                setState(() {
-                                  if (value == null) return;
-                                  provider.changeListTo(value);
-                                });
-                              });
-                            },
+                      items: provider.grocerySet
+                          .map<DropdownMenuItem<GroceryList>>(
+                              (GroceryList value) {
+                        return DropdownMenuItem(
+                          value: value,
+                          child: Text(value.name),
+                        );
+                      }).toList(),
+                      onChanged: (GroceryList? value) {
+                        WidgetsBinding.instance.addPostFrameCallback((_) {
+                          setState(() {
+                            if (value == null) return;
+                            provider.changeListTo(value);
+                          });
+                        });
+                      },
                     ),
                   ),
                 ),
@@ -222,7 +223,7 @@ class _GroceryListsState extends State<GroceryLists> {
           ),
           Container(
               child: provider.getCurrentList().items.isNotEmpty
-                  ? ReorderableListView.builder(
+                  ? ListView.builder(
                       shrinkWrap: true,
                       itemCount: provider.getCurrentList().items.length,
                       itemBuilder: (BuildContext context, index) {
@@ -232,7 +233,6 @@ class _GroceryListsState extends State<GroceryLists> {
                             .elementAt(index)
                             .checked;
                         return ListTile(
-                          key: ValueKey(index),
                           title: Text(
                               provider
                                   .getCurrentList()
@@ -254,60 +254,50 @@ class _GroceryListsState extends State<GroceryLists> {
                                 },
                               ),
                               PopupMenuButton<TaskOptions>(
-                                  initialValue: null,
-                                  onSelected: (TaskOptions value) {
-                                    switch (value) {
-                                      case TaskOptions.edit:
-                                        promptForString(
-                                                "Zmień nazwę produktu",
-                                                provider
-                                                    .getCurrentList()
-                                                    .items
-                                                    .elementAt(index)
-                                                    .item)
-                                            .then((String? value) => {
-                                                  if (value != null ||
-                                                      value != "")
-                                                    provider.renameTask(
-                                                        index, value!)
-                                                });
-                                        break;
-                                      case TaskOptions.delete:
-                                        provider.deleteTask(
-                                            index, provider.currentListIndex);
-                                        break;
-                                      default:
-                                    }
-                                  },
-                                  icon: const Icon(Icons.more_vert),
-                                  itemBuilder: (BuildContext context) =>
-                                      <PopupMenuEntry<TaskOptions>>[
-                                        const PopupMenuItem(
-                                          value: TaskOptions.edit,
-                                          child: Text("Edytuj nazwę"),
-                                        ),
-                                        const PopupMenuItem(
-                                          value: TaskOptions.delete,
-                                          child: Text(
-                                            "Usuń",
-                                            style: TextStyle(color: Colors.red),
-                                          ),
-                                        ]),
+                                initialValue: null,
+                                onSelected: (TaskOptions value) {
+                                  switch (value) {
+                                    case TaskOptions.edit:
+                                      promptForString(
+                                              "Zmień nazwę produktu",
+                                              provider
+                                                  .getCurrentList()
+                                                  .items
+                                                  .elementAt(index)
+                                                  .item)
+                                          .then((String? value) => {
+                                                if (value != null ||
+                                                    value != "")
+                                                  provider.renameTask(
+                                                      index, value!)
+                                              });
+                                      break;
+                                    case TaskOptions.delete:
+                                      provider.deleteTask(
+                                          index, provider.currentListIndex);
+                                      break;
+                                    default:
+                                  }
+                                },
+                                icon: const Icon(Icons.more_vert),
+                                itemBuilder: (BuildContext context) =>
+                                    <PopupMenuEntry<TaskOptions>>[
+                                  const PopupMenuItem(
+                                    value: TaskOptions.edit,
+                                    child: Text("Edytuj nazwę"),
+                                  ),
+                                  const PopupMenuItem(
+                                    value: TaskOptions.delete,
+                                    child: Text(
+                                      "Usuń",
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                  ),
+                                ],
                               )
                             ],
                           ),
                         );
-                      },
-                      onReorder: (int oldIndex, int newIndex) {
-                        final list = provider.getCurrentList().items.toList();
-                        if (oldIndex < newIndex) {
-                          newIndex -= 1;
-                        }
-                        final item = list.removeAt(oldIndex);
-                        list.insert(newIndex, item);
-                        provider.grocerySet
-                            .elementAt(provider.currentListIndex)
-                            .items = list.toSet();
                       },
                     )
                   : const Text("Brak produktów na liście"))
