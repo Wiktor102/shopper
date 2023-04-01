@@ -10,7 +10,7 @@ class Recipes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: TabBar(
           tabs: [
@@ -29,6 +29,16 @@ class Recipes extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: const [
+                  Icon(Icons.local_library),
+                  Padding(
+                      padding: EdgeInsets.only(left: 10), child: Text("Własne"))
+                ],
+              ),
+            ),
+            Tab(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
                   Icon(Icons.favorite),
                   Padding(
                       padding: EdgeInsets.only(left: 10),
@@ -38,8 +48,11 @@ class Recipes extends StatelessWidget {
             ),
           ],
         ),
-        body: const TabBarView(
-            children: [RecipesList(), RecipesList(favorites: true)]),
+        body: const TabBarView(children: [
+          RecipesList(),
+          RecipesList(custom: true),
+          RecipesList(favorites: true)
+        ]),
       ),
     );
   }
@@ -47,8 +60,13 @@ class Recipes extends StatelessWidget {
 
 class RecipesList extends StatelessWidget {
   final bool favorites;
+  final bool custom;
 
-  const RecipesList({super.key, this.favorites = false});
+  const RecipesList({
+    super.key,
+    this.favorites = false,
+    this.custom = false,
+  });
 
   void showDetails(BuildContext context, int index) {
     Navigator.of(context).push(
@@ -58,34 +76,57 @@ class RecipesList extends StatelessWidget {
     );
   }
 
+  void createCustomRecipe(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CreateRecipe(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
+
+    if (custom) {
+      // filtruj listę przepisów by pokazać wyłączne własne
+    } else {
+      // filtruj listę przepisów by nie pokazać własnych przepisów
+    }
 
     if (favorites) {
       // filtruj listę przepisów po atrybucie favorite
       // albo w modelu stworzyć metodę, która zwróci tylko ulubione
     }
 
-    return ListView.builder(
-      itemCount: provider.recipes.length,
-      itemBuilder: (_, index) => ListTile(
-        onTap: () => showDetails(context, index),
-        title: Text(provider.recipes[index].name),
-        trailing: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.playlist_add)),
-            IconButton(
-              onPressed: () => provider.toggleFavorites(index),
-              icon: Icon(
-                Icons.favorite,
-                color: provider.recipes[index].favorite ? Colors.red : null,
+    return Scaffold(
+      body: ListView.builder(
+        itemCount: provider.recipes.length,
+        itemBuilder: (_, index) => ListTile(
+          onTap: () => showDetails(context, index),
+          title: Text(provider.recipes[index].name),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.playlist_add)),
+              IconButton(
+                onPressed: () => provider.toggleFavorites(index),
+                icon: Icon(
+                  Icons.favorite,
+                  color: provider.recipes[index].favorite ? Colors.red : null,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
+      floatingActionButton: custom
+          ? FloatingActionButton(
+              onPressed: () => createCustomRecipe(context),
+              child: const Icon(Icons.add),
+            )
+          : null,
     );
   }
 }
@@ -139,6 +180,26 @@ class RecipeDetails extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CreateRecipe extends StatelessWidget {
+  const CreateRecipe({super.key});
+
+  void save(BuildContext context) {
+    Navigator.of(context).pop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Stwórz przepis")),
+      body: const Text("Tu się będzie tworzyć przepisy"),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => save(context),
+        child: const Icon(Icons.check),
       ),
     );
   }
