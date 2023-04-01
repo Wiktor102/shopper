@@ -6,13 +6,15 @@ import "./settings.dart";
 import "./bottom_nav.dart";
 import "./lists.dart";
 
-import "./lists_model.dart";
 import "./nearby_stores.dart";
+import "./recipes.dart";
 
+import "./lists_model.dart";
 import "./stores_model.dart";
 import "./settings_model.dart";
 import "./position_model.dart";
 import './favorite_stores_model.dart';
+import "./recipes_model.dart";
 
 final _scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 
@@ -27,6 +29,9 @@ void main() {
       ChangeNotifierProvider(create: (_) => FavoriteStoresModel()),
       ChangeNotifierProvider(create: (_) => GroceryListModel()),
       ChangeNotifierProvider(create: (_) => SettingsModel()),
+
+      // jeśli wewnątrz RecipesModel będzie potrzebny GroceryListModel to trzeba będzie użyć ChangeNotifierProxyProvider
+      ChangeNotifierProvider(create: (_) => RecipesModel()),
       ChangeNotifierProxyProvider2<PositionModel, SettingsModel, StoresModel>(
         create: (BuildContext context) => StoresModel(
           Provider.of<PositionModel>(context, listen: false),
@@ -60,7 +65,7 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   int tabIndex = 1;
   List titles = ["Przepisy", "Listy zakupowe", "Najbliższe sklepy"];
-  List screens = const [Text("zakładka 1"), GroceryLists(), NearbyStores()];
+  List screens = const [Recipes(), GroceryLists(), NearbyStores()];
 
   changeTab(int i) {
     setState(() => tabIndex = i);
