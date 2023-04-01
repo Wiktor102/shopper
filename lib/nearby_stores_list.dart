@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import "./stores_model.dart";
 import "./favorite_stores_model.dart";
-import "./store_details.dart";
+import "./empty.dart";
 
 class NearbyStoresList extends StatelessWidget {
   final bool favorites;
@@ -35,13 +35,7 @@ class NearbyStoresList extends StatelessWidget {
     }
 
     if (storeList.isEmpty) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          Image(image: AssetImage('assets/empty.png')),
-          Text("Brak danych do wyświetlenia"),
-        ],
-      );
+      return const Empty("Brak danych do wyświetlenia");
     }
 
     return ListView.builder(
