@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:hive/hive.dart';
 
 class SettingsModel extends ChangeNotifier {
   String _themeMode = "auto";
@@ -8,11 +9,22 @@ class SettingsModel extends ChangeNotifier {
 
   SettingsModel() {
     final window = SchedulerBinding.instance.window;
+
     window.onPlatformBrightnessChanged = () {
       if (_themeMode != "auto") return;
       brightness = window.platformBrightness;
       notifyListeners();
     };
+
+    Hive.openBox("settings").then((Box box) {
+      if (box.get("theme") != null) {
+        theme = box.get("theme");
+      }
+
+      if (box.get("distance") != null) {
+        storeDistance = box.get("distance");
+      }
+    });
   }
 
   String get theme => _themeMode;
@@ -30,6 +42,7 @@ class SettingsModel extends ChangeNotifier {
         brightness = SchedulerBinding.instance.window.platformBrightness;
     }
 
+    Hive.box("settings").put("theme", newTheme);
     notifyListeners();
   }
 
@@ -37,5 +50,7 @@ class SettingsModel extends ChangeNotifier {
   set storeDistance(int newDistance) {
     if (newDistance < 500 || newDistance > 10000) return;
     _storeDistance = newDistance;
+    Hive.box("settings").put("distance", newDistance);
+    notifyListeners();
   }
 }
