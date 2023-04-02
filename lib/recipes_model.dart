@@ -1,24 +1,32 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
   List<Recipe> get recipes => _recipes;
-
-  RecipesModel() {
-    // tutaj można wczytać dane z json-a (albo zawołać funkcję ładującą json-a)
-    // na razie jakieś statyczne dane:
-    List<String> st = [
-      "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "2. Nam at risus venenatis, efficitur orci nec, commodo risus. Nunc eget augue metus. Aliquam sollicitudin, felis porttitor."
-    ];
-
-    _recipes.add(Recipe(
-        name: "Przepis 1", ingredients: ["coś", "I jeszcze coś"], steps: st));
-    _recipes
-        .add(Recipe(name: "Przepis 2", ingredients: ["coś innego"], steps: st));
+  void readJSON() {
+    rootBundle.loadString('assets/recipes.json').then((value) => {
+          for (final recipe in jsonDecode(value))
+            {
+              _recipes.add(Recipe(
+                  name: recipe['title'] as String,
+                  ingredients: ['steps', 'test'],
+                  steps: ['steps', 'imma speed']))
+            }
+        });
     notifyListeners();
   }
 
+  RecipesModel() {
+    readJSON();
+    if (_recipes.isEmpty) {
+      print("empty");
+      return;
+    }
+    notifyListeners();
+  }
   void toggleFavorites(int index) {
     // dodać albo usunąć z ulubionych przepis o podanym index-ie
     notifyListeners();
@@ -26,10 +34,14 @@ class RecipesModel extends ChangeNotifier {
 }
 
 class Recipe {
-  final String name;
-  final List<String> ingredients;
-  final List<String> steps;
+  String name;
+  List<String> ingredients;
+  List<String> steps;
   bool favorite;
+  static Recipe fromJson(Map<String, dynamic> json) {
+    return Recipe(
+        name: json['title'], ingredients: ["a", "b"], steps: ["a", "n"]);
+  }
 
   Recipe({
     required this.name,

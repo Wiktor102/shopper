@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -87,7 +89,6 @@ class RecipesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
-
     if (custom) {
       // filtruj listę przepisów by pokazać wyłączne własne
     } else {
