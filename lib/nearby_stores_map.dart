@@ -96,8 +96,8 @@ class NearbyStoresMap extends StatelessWidget {
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName: 'com.example.app',
           ),
-          popupMarkerLayer,
           CurrentLocationLayer(),
+          popupMarkerLayer,
         ],
       ),
       floatingActionButton: FloatingActionButton(
