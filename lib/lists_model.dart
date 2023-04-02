@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopper/recipes_model.dart';
+import 'recipes_model.dart';
 import 'package:hive/hive.dart';
 
 part 'lists_model.g.dart';

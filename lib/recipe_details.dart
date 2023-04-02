@@ -35,11 +35,9 @@ class RecipeDetails extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          // Jeśli nie uda mi się dodać linków ze zdjęciami do json-a to usuniemy obrazek
-          Image.network("https://picsum.photos/400/250"),
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shopper/empty.dart';
+import 'empty.dart';
 
 import "./recipes_model.dart";
 import 'create_recipe.dart';
