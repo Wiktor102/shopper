@@ -102,115 +102,154 @@ class _CreateRecipeState extends State<CreateRecipe> {
     });
   }
 
+  Future<bool> promptForBoolean(context, String dialog, String text) async {
+    bool result = false;
+    await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(dialog),
+        content: Text(text),
+        actions: [
+          TextButton(
+            onPressed: () {
+              result = false;
+              Navigator.of(context).pop();
+            },
+            child: const Text("Anuluj"),
+          ),
+          TextButton(
+            onPressed: () {
+              result = true;
+              Navigator.of(context).pop();
+            },
+            child: const Text("Potwierdź"),
+          )
+        ],
+      ),
+    );
+
+    return result;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Stwórz przepis")),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: ListView(
-          children: [
-            TextField(
-              controller: titleController,
-              decoration: const InputDecoration(
-                labelText: "Tytuł",
-                border: OutlineInputBorder(),
+    return WillPopScope(
+      child: Scaffold(
+        appBar: AppBar(title: const Text("Stwórz przepis")),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: ListView(
+            children: [
+              TextField(
+                controller: titleController,
+                decoration: const InputDecoration(
+                  labelText: "Tytuł",
+                  border: OutlineInputBorder(),
+                ),
+                onChanged: (value) => setState(() {
+                  title = value;
+                }),
               ),
-              onChanged: (value) => setState(() {
-                title = value;
-              }),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(top: 20),
-              child: Text("Składniki:", style: TextStyle(fontSize: 22)),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Column(
-                children: [
-                  ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: ingredients.length,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: TextField(
-                                controller: ingredientsControllers[index],
-                                decoration: InputDecoration(
-                                  labelText: "Składnik ${index + 1}",
-                                  border: const OutlineInputBorder(),
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Text("Składniki:", style: TextStyle(fontSize: 22)),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Column(
+                  children: [
+                    ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: ingredients.length,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: TextField(
+                                  controller: ingredientsControllers[index],
+                                  decoration: InputDecoration(
+                                    labelText: "Składnik ${index + 1}",
+                                    border: const OutlineInputBorder(),
+                                  ),
+                                  onChanged: (v) => onInputChanged(v, index),
                                 ),
-                                onChanged: (v) => onInputChanged(v, index),
+                              ),
+                              index != 0
+                                  ? IconButton(
+                                      onPressed: () => removeField(index),
+                                      icon: const Icon(
+                                        Icons.delete,
+                                        color: Colors.red,
+                                        size: 25,
+                                      ),
+                                    )
+                                  : const Text("")
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: addNextField,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.only(right: 5),
+                                    child: Icon(Icons.add),
+                                  ),
+                                  Text("Dodaj składnik")
+                                ],
                               ),
                             ),
-                            index != 0
-                                ? IconButton(
-                                    onPressed: () => removeField(index),
-                                    icon: const Icon(
-                                      Icons.delete,
-                                      color: Colors.red,
-                                      size: 25,
-                                    ),
-                                  )
-                                : const Text("")
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: addNextField,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Padding(
-                                  padding: EdgeInsets.only(right: 5),
-                                  child: Icon(Icons.add),
-                                ),
-                                Text("Dodaj składnik")
-                              ],
-                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(top: 20),
-              child: Text("Sposób wykonania:", style: TextStyle(fontSize: 22)),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10, left: 20),
-              child: TextField(
-                controller: stepsController,
-                maxLines: null, //or null
-                decoration: InputDecoration(
-                  hintText: "Jak wykonać $title?",
-                  border: const OutlineInputBorder(),
-                  contentPadding: const EdgeInsets.all(20.0),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
-                onChanged: onStepsChanged,
               ),
-            ),
-          ],
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
+                child:
+                    Text("Sposób wykonania:", style: TextStyle(fontSize: 22)),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, left: 20),
+                child: TextField(
+                  controller: stepsController,
+                  maxLines: null, //or null
+                  decoration: InputDecoration(
+                    hintText: "Jak wykonać $title?",
+                    border: const OutlineInputBorder(),
+                    contentPadding: const EdgeInsets.all(20.0),
+                  ),
+                  onChanged: onStepsChanged,
+                ),
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => save(context),
+          child: const Icon(Icons.check),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => save(context),
-        child: const Icon(Icons.check),
-      ),
+      onWillPop: () async {
+        String title = "Czy chcesz wyjść?";
+        String text = widget.recipe != null
+            ? "Zmiany nie zostaną zapisane!"
+            : "Przepis nie zostanie zapisany!";
+        return await promptForBoolean(context, title, text);
+      },
     );
   }
 }
