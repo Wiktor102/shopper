@@ -224,6 +224,7 @@ class _GroceryListsState extends State<GroceryLists> {
           ),
           provider.getCurrentList().items.isNotEmpty
               ? ReorderableListView.builder(
+                  buildDefaultDragHandles: true,
                   shrinkWrap: true,
                   itemCount: provider.getCurrentList().items.length,
                   itemBuilder: (BuildContext context, index) {
@@ -258,7 +259,8 @@ class _GroceryListsState extends State<GroceryLists> {
                                   switch (value) {
                                     case TaskOptions.edit:
                                       promptForString(
-                                              "Zmień nazwę produktu",   provider
+                                              "Zmień nazwę produktu",
+                                              provider
                                                   .getCurrentList()
                                                   .items
                                                   .elementAt(index)
