@@ -34,19 +34,7 @@
         ]
     },
     {
-        "products": [
-            " 500 gram bakłażana",
-            " cztery cebule",
-            " 500 gram pomidorów",
-            " kilka łyżek <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a> do smażenia",
-            " dwie garście świeżych listków bazylii",
-            " sześć gałązek pietruszki zielonej",
-            " dwie garście świeżej kolendry zielonej",
-            " łyżeczka tymianku ",
-            " sól",
-            " pieprz",
-            " cukier"
-        ],
+        "products": "kilka łyżek oliwy do smażenia",
         "steps": [
             "Bakłażana kroimy w talarki. Cebulę obieramy i przepłukujemy, po czym kroimy w plastry.",
             "Szklimy cebulę na oliwie. Na drugiej patelni podsmażamy bakłażana. ",
@@ -63,16 +51,7 @@
         ]
     },
     {
-        "products": [
-            " 700 gram tłustej wołowiny",
-            " 100 gram cebuli",
-            " pół filiżanki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " 200 gram pomidorów",
-            " 400 gram bakłażanów",
-            " półtora litra wody",
-            " cztery łyżki słodkiej papryki",
-            " sól"
-        ],
+        "products": "pół filiżanki oliwy",
         "steps": [
             "Kroimy mięso w kostkę. Cebulę obieramy i kroimy w plastry. Pomidory obieramy i kroimy na ćwiartki, a bakłażana w kostkę.",
             "Smażymy całość na oliwie, po czym zalewamy wodą. ",
@@ -87,15 +66,7 @@
         ]
     },
     {
-        "products": [
-            "6 ząbków czosnku,",
-            "2 ziemniaki ugotowane w mundurkach,",
-            "1/4 litra <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy z oliwek</a>,",
-            "sok z cytryny",
-            "musztarda,",
-            "sól,",
-            "pieprz."
-        ],
+        "products": "1/4 litra oliwy z oliwek,",
         "steps": "Letnie ziemniaki miksujemy, dodajemy do nich poszatkowany czosnek. Następnie miksując na średnich obrotach składniki w takiej kolejności: oliwa, musztarda, sok, przyprawy.",
         "id": 3340,
         "title": "Aioli",
@@ -105,16 +76,7 @@
         ]
     },
     {
-        "products": [
-            " dwa spore pory",
-            " dwa kwaśne jabłka",
-            " garść posiekanej natki pietruszki",
-            " dwie łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " łyżeczka ostrej musztardy",
-            " łyżeczka soku z cytryny ",
-            " cukier",
-            " sól"
-        ],
+        "products": "dwie łyżki oliwy",
         "steps": [
             "Pory oczyszczamy i kroimy w półplastry. Jabłka obieramy i ścieramy na sporych oczkach.",
             "Oliwę ubijamy z musztardą oraz sokiem z cytryny. ",
@@ -127,14 +89,7 @@
         ]
     },
     {
-        "products": [
-            "50 ml <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy z pierwszego tłoczenia</a>,",
-            "150 ml <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju słonecznikowego</a>,",
-            "2 żółtka,",
-            "4 ząbki czosnku,",
-            "świeżo wyciśnięty sok z 1/2 cytryny,",
-            "sól."
-        ],
+        "products": "150 ml oleju słonecznikowego,",
         "steps": "Czosnek rozgniatamy w moździerzu ze szczyptą soli na gładką pastę. Przekładamy do miski. Dodajemy żółtka, wlewamy oliwę wymieszaną z olejem, cały czas mieszając – początkowo po kropelce, stopniowo później nieco większym strumieniem, by żółtka połączyły się z olejem i oliwą w gładką emulsję. Wlewamy sok z cytryny, solimy do smaku, mieszamy. Szczelnie przykrywamy i do momentu podania trzymamy w lodówce.",
         "id": 3027,
         "title": "Alioli",
@@ -189,13 +144,7 @@
         ]
     },
     {
-        "products": [
-            " dwa kromki chleba",
-            " nieco <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " masło orzechowe",
-            " garść jagód",
-            " łyżeczka cukru "
-        ],
+        "products": "nieco oleju",
         "steps": [
             "Jagody mieszamy z cukrem. Kromki smarujemy olejem i zapiekamy na patelni z obu stron.",
             "Następnie smarujemy je masłem orzechowym i posypujemy jagodami."
@@ -208,14 +157,7 @@
         ]
     },
     {
-        "products": [
-            "ryba amur,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>,",
-            "sól,",
-            "przyprawa do ryb,",
-            "przyprawa grillowa pikantna,",
-            "sok z jednej cytryny."
-        ],
+        "products": "oliwa,",
         "steps": "Rybę oczyszczamy i płuczemy. Polewamy ją sokiem z cytryny i odstawiamy na kwadrans.Następnie solimy, doprawiamy i polewamy oliwą.Zawijamy w folię i grillujemy przez ok. 30 minut, co jakiś czas przewracając.",
         "id": 3570,
         "title": "Amur grillowany",
@@ -224,14 +166,7 @@
         ]
     },
     {
-        "products": [
-            " puszka pokrojonego ananasa",
-            " połowa podwójnej piersi z kurczaka",
-            " 200 gram ugotowanych pieczarek ",
-            " majonez",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa do smażenia</a>",
-            " puszka kukurydzy"
-        ],
+        "products": "oliwa do smażenia",
         "steps": [
             "Mięso kroimy na kawałki, obsmażamy i studzimy.",
             "Ananasa, pieczarki oraz kukurydzę wraz z kurczakiem mieszamy.",
@@ -246,16 +181,7 @@
         ]
     },
     {
-        "products": [
-            " 400 gram białej suchej fasoli ",
-            " 150 gram cienkich parówek ",
-            " trzy średnie cebule ",
-            " łyżka posiekanych kaparów ",
-            " dwa ząbki czosnku ",
-            " trzy łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a> ",
-            " sól ",
-            " pieprz "
-        ],
+        "products": "trzy łyżki oliwy ",
         "steps": [
             "Fasolę namaczamy 12 godzin, po czym gotujemy do miękkości w wodzie z namaczania. Odcedzamy, studzimy.",
             "Parówki obieramy z osłonek i kroimy w plastry. Podsmażamy obraną cebulę na oliwie, po czym dodajemy parówki oraz poszatkowany czosnek.",
@@ -302,20 +228,6 @@
     },
     {
         "products": [
-            "Czas przygotowania:<span class=\"duration\">&nbsp;? min,</span>",
-            "Ilość porcji:<span class=\"yield\"> duża tortownica,</span>",
-            "Orientacyjny koszt:<span class=\"cost\">&nbsp;? zł.</span>"
-        ],
-        "Sk.C5.82adniki": "<b>Ciasto:</b>",
-        "steps": "Ciasto:Żółtka + cukier + margaryna + mąka + kakao + proszek do pieczenia, na końcu piana z białek, upiec 3 placki.",
-        "id": 1571,
-        "title": "Arab",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
             " dwa ogórki sałatkowe",
             " dwa jogurty naturalne",
             " sok z połowy pomarańczy",
@@ -353,7 +265,7 @@
             "pieprz"
         ],
         "steps": [
-            "Z mięsa, 1,5 litra wody i włoszczyzny robimy <a href=\"/przepisy/Ros%C3%B3%C5%82\" title=\"Rosół\">rosół</a>. Ryż gotujemy w osolonej wodzie i odcedzamy.",
+            "Z mięsa, 1,5 litra wody i włoszczyzny robimy rosół. Ryż gotujemy w osolonej wodzie i odcedzamy.",
             "Mięso obieramy z kości i mielimy razem z obraną cebulą. Mieszamy z ryżem, dodajemy rozkłócone jajko, miętę oraz doprawiamy. Jeśli masa będzie za rzadka dodajemy tartą bułkę.",
             "Z masy formujemy pulpety i obtaczamy w posiekanej natce.",
             "Z rosołu wyciągamy włoszczyznę i podgrzewamy w wodzie do wrzenia, po czym wrzucamy pulpety na kwadrans.",
@@ -367,20 +279,7 @@
         ]
     },
     {
-        "products": [
-            "pelati z puszki,",
-            "pół cebuli,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>,",
-            "100 gram posiekanej wieprzowiny,",
-            "250 gram zielonego groszku,",
-            "sól,",
-            "pieprz,",
-            "250 gram ryżu arborio,",
-            "3 łyżki masła,",
-            "50 gram parmezanu,",
-            "2 jajka,",
-            "tarta bułka."
-        ],
+        "products": "oliwa,",
         "steps": "Farsz:Umyte, sparzone i obrane pomidory miksujemy i przecieramy przez sitko. Cebulę kroimy na kawałki i szklimy na oliwie. Gdy cebula zrobi się złocista dodajemy do niej mięso oraz groszek. Gotujemy przez ok. 10 minut cały czas mieszając. Po tym czasie dodajemy zmiksowane pomidory i doprawiamy solą i pieprzem. Dusimy na małym ogniu, dopóki farsz nie stanie się gęsty.Kulki:Ryż gotujemy, po czym mieszamy z masłem i serem. Z powstałej masy lepimy kulki, a w każdą wkładamy nadzienie. Następnie panierujemy w jajku i bułce i smażymy na głębokim oleju na złoty kolor.",
         "id": 3372,
         "title": "Arancine",
@@ -391,16 +290,7 @@
         ]
     },
     {
-        "products": [
-            "1 kg wieprzowiny,",
-            "1 kg pomidorów,",
-            "1 kg cebuli,",
-            "1 kg ziemniaków,",
-            "1/4 szklanki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy</a>,",
-            "2 łyżeczki zmielonego kminku,",
-            "sól,",
-            "pieprz."
-        ],
+        "products": "1/4 szklanki oliwy,",
         "steps": "Pomidory i ziemniaki kroimy w kosteczkę, a cebule na plastry. Mięso również kroimy, ale na nieco grubsze kostki. Warzywa mieszamy, dodajemy do mięsa, a całość zalewamy oliwą. Wkładamy mieszankę do naczynia żaroodpornego, przykrywamy folią i zapiekamy 1 godzinę w temperaturze 180 - 190 stopni. Po upływie czasu mieszamy całość, przykrywamy ponownie i pieczemy przez 75 minut. Po upływie tego czasu zdejmujemy folię i pieczemy tak długo, aż mięso zrobi się rumiane.",
         "id": 3188,
         "title": "Arni kleftiko/wieprzowina po cypryjsku",
@@ -424,17 +314,7 @@
         ]
     },
     {
-        "products": [
-            "sepia ok. 2 łyżki,",
-            "cebula,",
-            "szklanka ryżu,",
-            "4 łyżki oliwy,",
-            "łyżeczka soli,",
-            "łyżeczka pieprzu,",
-            "litr <a href=\"/przepisy/Ros%C3%B3%C5%82\" title=\"Rosół\">rosołu rybnego</a>,",
-            "100 gram kalmarów,",
-            "małe ośmiornice."
-        ],
+        "products": "litr rosołu rybnego,",
         "steps": "Cebulę obieramy i kroimy.Ośmiorniczki i kalmary myjemy i kroimy na kawałki.Na patelnię wlewamy oliwę i podsmażamy na niej cebulę, aż się nie zeszkli.Dodajemy pocięte owoce morza oraz sepię i smażymy.Wlewamy bulion, doprawiamy, po czym dodajemy ryż, mieszamy.Czekamy, aż ryż wchłonie cały bulion.",
         "id": 3588,
         "title": "Arroz negro",
@@ -476,25 +356,7 @@
         ]
     },
     {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> - 1,5 godz.</span>",
-            "Ilość porcji:<span class=\"yield\"> -,12</span>",
-            "Kaloryczność:<span class=\"calories\"> -,65</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł.28.23</span>"
-        ],
-        "Sk.C5.82adniki": "4 białka 20-25dag cukru-pudru łyżeczka octu winnego z białego wina łyżeczka mąki kukurydzianej masło do formy na krem:4żółtka ,2łyżki cukru 150ml kremówki 15ml sherry 25dag serka mascarpone 40dag owoców(truskawek,malin,jeżyn,jagód i porzeczek)",
-        "steps": "Białka ubić na sztywną pianę,dodając pod koniec cukierpuder:ocet winny i mąke kukurydzianą wymieszać z Opis przyrządzania potrawy pianą.Posmarować masłem formę.Na papierze do pieczenia narysować okrąg o średnicy 23cm.połowę piany włożyć na papier do pieczenia i rozprowadzić nożem resztę ułożyć tak aby powstał brzeg z bezowych czapek. Rozgrzać piekarnik do 140 stopni.Piec bezę na środkowej półce przez 50minut.po 5min obniżyć temperature do 130 stopni.potem pozostawić bezę na 5 godz w piekarniku nie  otwierając dżwiczek. Żółtka ubić z połową cukru.śmietanę ubić z resztą cukru, wymieszać z żółtkami Dodać scherry i mascarpone Tuż przed podaniem Wypełnić środek bezy kremem a na kremie położyć owoce W orginalnym przepisi serwuje się bez kiwi ",
-        "id": 2038,
-        "title": "Australijska beza PawĹowa",
-        "categories": [
-            "Ciasta_z_owocami"
-        ]
-    },
-    {
-        "products": [
-            " dwa awokado",
-            " <a href=\"/przepisy/Sos_vinaigrette\" title=\"Sos vinaigrette\">Sos vinaigrette</a>"
-        ],
+        "products": "Sos vinaigrette",
         "steps": [
             "Owoce przecinamy na pół wzdłuż.",
             "Usuwamy pestkę, a środek wypełniamy sosem."
@@ -538,20 +400,7 @@
         "categories": []
     },
     {
-        "products": [
-            " 190 gram mąki pszennej",
-            " 100 gram sera feta",
-            " kilkanaście oliwek",
-            " jajko",
-            " 125 mililitrów mleka",
-            " 65 gram roztopionego masła",
-            " łyżeczka proszku do pieczenia",
-            " łyżeczka soli",
-            " łyżka suszonej bazylii",
-            " łyżeczka czosnku granulowanego",
-            " jajko ",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej do wysmarowania foremek</a>"
-        ],
+        "products": "olej do wysmarowania foremek",
         "steps": [
             "W misce mieszamy proszek, sól, przyprawy oraz mąkę.",
             "W drugiej misce mieszamy mleko, masło, jajko. Mieszamy, po czym łączymy obie miski i również mieszamy.",
@@ -590,19 +439,6 @@
     },
     {
         "products": [
-            "Ilość porcji:<span class=\"yield\"> 6,</span>",
-            "Kaloryczność:<span class=\"calories\"> 415 kcal (jedna porcja)</span>"
-        ],
-        "Sk.C5.82adniki": "Ciasto:",
-        "steps": "Z podanych składników zagnieść ciasto i wstawić je do lodówki. Foremki do babeczek wysmarować tłuszczem i oprószyć bułką tartą. Oziębione ciasto rozwałkować, wylepić nim foremki (najlepiej każdą wyciąć odpowiedni krążek i wcisnąć go do środka), wstawić do piekarnika i piec ok. 15 minut w temperaturze 180°C. Pieczarki i cebulę oczyścić, drobno pokroić, usmażyć na oliwie. Z białka ubić sztywną pianę, połączyć ją z pieczarkami, doprawić solą, pieprzem i posiekaną natką pietruszki. Upieczone, jeszcze ciepłe babeczki delikatnie wyjąć z foremek, napełnić farszem, udekorować kolorową papryką, ułożyć na blasze i ponownie wstawić do piekarnika na 10 minut, aby farsz sie zapiekł.",
-        "id": 2070,
-        "title": "Babeczki z pieczarkami",
-        "categories": [
-            "Przekąski"
-        ]
-    },
-    {
-        "products": [
             "50 gram gorzkiej czekolady,",
             "litr mleka,",
             "dwa jajka,",
@@ -629,19 +465,7 @@
         ]
     },
     {
-        "products": [
-            " pół kilograma mielonej baraniny",
-            " pół kilograma mielonej wołowiny",
-            " czerstwa bułka",
-            " dwie cebule",
-            " cztery ząbki czosnku",
-            " łyżeczka mielonego kolorowego pieprzu",
-            " łyżeczka mielonego kminku",
-            " sól",
-            " szczypta ostrej papryki",
-            " pół pęczka rozmarynu",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>"
-        ],
+        "products": "oliwa",
         "steps": [
             "Bułkę moczymy w wodzie, po czym po 10 minutach odciskamy i przekładamy do sporego naczynia.",
             "Dodajemy mięso, doprawiamy solą, pieprzem, papryką i kminkiem, po czym mieszamy.",
@@ -726,27 +550,6 @@
     },
     {
         "products": [
-            "Czas przygotowania:<span class=\"duration\"> 50 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 5</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>ciasto:</big>",
-        "steps": [
-            "Z ciasta przygotowujemy naleśniki i układamy jeden an drugim.",
-            "Mirabelki zalewamy w emaliowanym garnku wrzątkiem i gotujemy, aż się rozgotują na jednolitą masę. Przecieramy je przez sito i gotujemy mieszając, by przecier zgęstniał.",
-            "Gorący przecier mieszamy z cukrem i cynamonem.",
-            "Okrągłą formę o średnicy nieco większej niż naleśniki, natłuszczamy i posypujemy bułką. Na dnie kładziemy naleśnik, smarujemy go przecierem i kładziemy następny. Powtarzamy do wyczerpania naleśników. Na wierzchu powinien być naleśnik.",
-            "Przykrywamy całość wiórkami masła i wstawiamy do ok. 150 stopni na 30 minut."
-        ],
-        "id": 4749,
-        "title": "Babka naleśnikowa",
-        "categories": [
-            "Desery"
-        ]
-    },
-    {
-        "products": [
             "100 g zmielonych orzechów laskowych",
             "250 g margaryny",
             "175 g cukru",
@@ -773,7 +576,7 @@
             "0.25 l wody",
             "0.25 kg drobnego żwirku"
         ],
-        "steps": "Piasek umieścić w dość dużej misce a nastepnie przesiać go przez sito (w ten sposób oczyszczamy go z różnego rodzaju nieczystości). Następnie powoli wlewamy wodę (porada dla smakoszy: mozna przyprawiać wodę wg własnego uznania np. odrobiną soli, cukru, lub przyprawykorzennej) i mieszamy, aż do uzyskania jednolitej masy. Przekładamy ciasto do formy, a następnie uklepujemy i szybkim ruchem odwracamy formę do gory dnem, wypowiadając magiczną formułkę.W tej sprawie możemy udać się do wróżki lub też przedszkolaka po poradę. Gdy etapczarowania mamy za sobą, mozemy zdjąć formę i ujrzeć efekt swojej pracy. Dekorujemy ciasto żwirkiem. Życzę powodzenia w tej jakże trudnej i skomplikowanej pracy. <i>SMACZNEGO!</i> ",
+        "steps": "Piasek umieścić w dość dużej misce a nastepnie przesiać go przez sito (w ten sposób oczyszczamy go z różnego rodzaju nieczystości). Następnie powoli wlewamy wodę (porada dla smakoszy: mozna przyprawiać wodę wg własnego uznania np. odrobiną soli, cukru, lub przyprawykorzennej) i mieszamy, aż do uzyskania jednolitej masy. Przekładamy ciasto do formy, a następnie uklepujemy i szybkim ruchem odwracamy formę do gory dnem, wypowiadając magiczną formułkę.W tej sprawie możemy udać się do wróżki lub też przedszkolaka po poradę. Gdy etapczarowania mamy za sobą, mozemy zdjąć formę i ujrzeć efekt swojej pracy. Dekorujemy ciasto żwirkiem. Życzę powodzenia w tej jakże trudnej i skomplikowanej pracy. SMACZNEGO! ",
         "id": 2046,
         "title": "Babka piaskowa",
         "categories": [
@@ -781,17 +584,7 @@
         ]
     },
     {
-        "products": [
-            "200 gram tłustej i kwaśnej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>,",
-            "180 gram cukru,",
-            "240 gram mąki,",
-            "cztery jajka,",
-            "15 gram proszku do pieczenia,",
-            "sól,",
-            "łyżeczka skórki startej z pomarańczy,",
-            "dwie łyżki soku z pomarańczy,",
-            "ekstrakt z wanilii."
-        ],
+        "products": "200 gram tłustej i kwaśnej śmietany,",
         "steps": [
             "Jajka, śmietanę, cukier, mąkę oraz proszek mieszamy na gładką masę.",
             "Wrzucamy ekstrakt, skórkę oraz sok z pomarańczy. Mieszamy.",
@@ -838,16 +631,7 @@
         ]
     },
     {
-        "products": [
-            "200 gram bacalhau (bardzo opcjonalnie dorsz),",
-            "cztery spore ziemniaki,",
-            "ząbek czosnku,",
-            "trzy jajka,",
-            "dwie łyżki posiekanej natki pietruszki,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>,",
-            "sól,",
-            "pieprz."
-        ],
+        "products": "oliwa,",
         "steps": [
             "Bacalhau moczymy przez noc w wodzie (zmiana wody co kilka godzin sprawi, że będzie mniej słony).",
             "Czosnek kroimy w plastry, ziemniaki obieramy i kroimy w słupki.",
@@ -908,12 +692,7 @@
         ]
     },
     {
-        "products": [
-            "bakłażan",
-            "<a href=\"/przepisy/Sos_z_jogurtu\" title=\"Sos z jogurtu\">sos jogurtowy</a>",
-            "dwie garście orzeszków piniowych",
-            "listki mięty"
-        ],
+        "products": "sos jogurtowy",
         "steps": [
             "Całego bakłażana pieczemy owiniętego w folię (200 stopni, ok. 45 minut).",
             "Po upieczeni obieramy go ze skóry i kroimy na pół.",
@@ -927,14 +706,7 @@
         ]
     },
     {
-        "products": [
-            " dwa bakłażany",
-            " 500 mililitrów jogurtu naturalnego",
-            " trzy łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " półtora łyżeczki czarnej gorczycy",
-            " cztery świeże liście kaffiru",
-            " sól"
-        ],
+        "products": "trzy łyżki oleju",
         "steps": [
             "Bakłażany kroimy na plastry. Rozgrzewamy na patelni olej, dorzucamy gorczycę, a gdy ta zacznie pękać dodajemy liście kaffirui całość mieszamy.",
             "Dorzucamy plastry bakłażana i mieszamy. Dolewamy szklankę wody, sól, po czym dusimy do miękkości.",
@@ -948,22 +720,7 @@
         ]
     },
     {
-        "products": [
-            "200 gram soczewicy",
-            "dwie spore marchewki",
-            "cebula",
-            "cztery goździki",
-            "100 gram wędzonego boczku",
-            "dwa łodygi selera naciowego",
-            "dwie szalotki",
-            "garść szczypiorku",
-            "garść kolendry",
-            "cztery łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a> z orzechów włoskich",
-            "łyżka musztardy Dijon",
-            "pół łyżeczki czerwonego octu winnego",
-            "sól",
-            "pieprz czarny z młynka"
-        ],
+        "products": "cztery łyżki oleju z orzechów włoskich",
         "steps": [
             "Soczewicę gotujemy 30 minut razem z obraną i pociętą w słupki marchewkę, obraną i pociętą cebulą, goździkami oraz boczkiem pociętym w paski.",
             "Odsączamy, cebulę wyrzucamy, a do soczewicy wrzucamy selera pokrojonego w plastry o grubości ok. 0,5 centymetra, grubo posiekaną kolendrę i szczypiorek.",
@@ -1051,28 +808,7 @@
         "categories": []
     },
     {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> - min,</span>",
-            "Ilość porcji:<span class=\"yield\"> -,</span>",
-            "Kaloryczność:<span class=\"calories\"> -,</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł.</span>"
-        ],
-        "Sk.C5.82adniki": "<span class=\"mw-headline\" id=\"Spos.C3.B3b_przyrz.C4.85dzania\">Sposób przyrządzania</span><span class=\"mw-editsection\"><span class=\"mw-editsection-bracket\">[</span><a href=\"/index.php?title=Bananowiec&amp;action=edit&amp;section=3\" title=\"Edytuj sekcję: Sposób przyrządzania\">edytuj</a><span class=\"mw-editsection-bracket\">]</span></span>",
-        "steps": "<span class=\"mw-headline\" id=\"Podobne_przepisy\">Podobne przepisy</span><span class=\"mw-editsection\"><span class=\"mw-editsection-bracket\">[</span><a href=\"/index.php?title=Bananowiec&amp;action=edit&amp;section=4\" title=\"Edytuj sekcję: Podobne przepisy\">edytuj</a><span class=\"mw-editsection-bracket\">]</span></span>",
-        "id": 2255,
-        "title": "Bananowiec",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "2 banany,",
-            "papier ryżowy,",
-            "sezam prażony,",
-            "czekolada gorzka,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej rzepakowy</a>."
-        ],
+        "products": "olej rzepakowy.",
         "steps": "Banany obieramy ze skórek, po czym kroimy na lekko skośne plastry, a czekoladę trzemy na tarce (na grubych oczkach). W międzyczasie nasączamy papier ryżowy wodą i zawijamy w niego plastry. Mocno rozgrzewamy olej i smażymy na nim \"pakunki\" z obu stron. Gdy będą już gotowe posypujemy je czekolada oraz sezamem.",
         "id": 3131,
         "title": "Banany w papierze ryżowym",
@@ -1081,15 +817,11 @@
         ]
     },
     {
-        "products": [
-            "banany,",
-            "miód,",
-            "<a href=\"/przepisy/Cynamon\" title=\"Cynamon\">cynamon</a>."
-        ],
+        "products": "cynamon.",
         "steps": [
             "Całe banany rozkładamy na grilu i pieczemy około 3-4 minut.",
-            "Przed podaniem nacinamy z jednej strony skórkę i mamy parę możliwości urozmaicenia&nbsp;:",
-            "- wlewamy miód i posypujemy wszystko <a href=\"/przepisy/Cynamon\" title=\"Cynamon\">cynamonem</a>;",
+            "Przed podaniem nacinamy z jednej strony skórkę i mamy parę możliwości urozmaicenia :",
+            "- wlewamy miód i posypujemy wszystko cynamonem;",
             "- posypujemy czekoladą i wlewamy rum;",
             "- polewamy syropem smakowym (do wyboru do koloru);"
         ],
@@ -1186,17 +918,7 @@
         ]
     },
     {
-        "products": [
-            "700 gram buraków,",
-            "100 gram wysuszonych, wydrylowanych śliwek,",
-            "4 szklanki przegotowanej wody,",
-            "2 szklanki <a href=\"/index.php?title=Nap%C3%B3j_z_kwasu_buraczanego_i_jab%C5%82ek&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Napój z kwasu buraczanego i jabłek (strona nie istnieje)\">soku z buraków i jabłek,</a>",
-            "3 łyżki miodu,",
-            "szczypta mielonych goździków,",
-            "skórka otarta z cytryny,",
-            "sól,",
-            "pieprz."
-        ],
+        "products": "2 szklanki soku z buraków i jabłek,",
         "steps": "Umyte buraki pieczemy w piekarniku (150 stopni, ok. 20 minut). Śliwki namaczamy przez ok. 2 godziny w dwóch szklankach przegotowanej wody. Dodajemy goździki i otartą skórkę z cytryny, a następnie zagotowujemy. Upieczone buraki obieramy i ścieramy na tarce o dużych oczkach. Zalewamy gorąca wodą i gotujemy przez 10 minut. Całość przecedzamy, dodajemy pieprz i sól, a następnie mieszamy z miodem i wywarem ze śliwek. Ponownie zagotowujemy, a następnie wyłączamy ogień, dodajemy napój jabłkowo- buraczany.",
         "id": 3043,
         "title": "Barszcz ze śliwkami",
@@ -1206,19 +928,7 @@
         ]
     },
     {
-        "products": [
-            " dwa spore dojrzałe bakłażany",
-            " cztery spore pomidory",
-            " 200 mililitrów białego, wytrawnego wina",
-            " 100 mililitrów bulionu",
-            " 50 gram mąki",
-            " 25 gram masła",
-            " 25 mililitrów <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " 50 gram ostrego, żółtego sera",
-            " łyżeczka suszonej bazylii",
-            " sól",
-            " pieprz"
-        ],
+        "products": "25 mililitrów oleju",
         "steps": [
             "Bakłażany obieramy, odcinamy ogonki i kroimy na spore plastry. Solimy i odkładamy na sitku na ok. pół godziny.",
             "Wycieramy je serwetką i obsypujemy mąką.",
@@ -1262,14 +972,7 @@
         ]
     },
     {
-        "products": [
-            "100 gram <a href=\"/przepisy/Semolina\" title=\"Semolina\">semoliny</a>,",
-            "100 gram mąki pszennej chlebowej typu 650,",
-            "130 gram letniej wody,",
-            "5 gram suchych drożdży,",
-            "spora szczypta soli,",
-            "dwie łyżeczki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>."
-        ],
+        "products": "dwie łyżeczki oliwy.",
         "steps": [
             "Drożdże i ciepłą wodę mieszamy dokładnie.",
             "W misce mieszamy mąkę i sól, po czym dodajemy wodę drożdzową i oliwę.",
@@ -1285,18 +988,7 @@
         ]
     },
     {
-        "products": [
-            " 500 gram makaronu bavette",
-            " 250 gram wędzonego łososia",
-            " pół pęczka natki",
-            " trzy łyżki kaparów",
-            " ząbek czosnku",
-            " papryczka chili bez pestek",
-            " sok z cytryny",
-            " pomidor",
-            " pieprz",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>"
-        ],
+        "products": "oliwa",
         "steps": [
             "Pomidora obieramy ze skóry i usuwamy pestki. Kroimy  w niewielką kostkę. Łososia również tniemy na kawałki",
             "Kapary, natkę, sok z połowy cytryny, czosnek oraz chilli dorzucamy do miksera i miksujemy.",
@@ -1336,18 +1028,7 @@
         ]
     },
     {
-        "products": [
-            " spory bakłażan",
-            " pół kilograma wołowego mielonego mięsa",
-            " szklanka bulionu",
-            " cztery spore pomidory",
-            " jajko",
-            " pół łyżeczki ostrej papryki chili",
-            " sok z połowy cytryny",
-            " sól",
-            " pieprz",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej do smażenia</a>"
-        ],
+        "products": "olej do smażenia",
         "steps": [
             "Obieramy bakłażana ze skóry, po czym kroimy wzdłuż, pozbywając się nasion. Solimy, skrapiamy sokiem z cytryny i odstawiamy na 30 minut.",
             "Rozgrzewamy olej i smażymy na nim plastry na złocisty kolor.",
@@ -1367,18 +1048,7 @@
         ]
     },
     {
-        "products": [
-            "bażant w całości",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">4 łyżki oliwy</a>",
-            "1 marchew",
-            "mała pietruszka",
-            "ćwierć selera",
-            "pół zielonej części pora",
-            "pół szklanki białego wina wytrawnego",
-            "kilka pierniczków",
-            "łyżka miodu",
-            "sól, pieprz, listek laurowy, ziele angielskie, "
-        ],
+        "products": "4 łyżki oliwy",
         "steps": "Marchew, seler, pietruszkę zetrzeć na tarce o grubych oczkach, cebulę pokroić w małą kostkę, dodać rozgniecione ziele angielskie, pieprz, miód i dwie łyżki oliwy, całość dokładnie wymieszać. Powstałą masą dokładnie natrzeć poporcjowanego umytego i osuszonego bażanta, posypać słodką papryką i solą, odłożyć do zamarynowania do lodówki na kilka godzin. Następnie oczyszczamy mięso z marynaty (zostawiamy ją) i smażymy każdą porcję na mocno rozgrzanym tłuszczu, przekładamy do rondla. Dodajemy do obsmażonego mięsa odłożoną marynatę, dodajemy tłuszcz od smażenia, pół szklanki wody i dusimy pod przykryciem na niewielkim ogniu do miękkości. Pod koniec duszenia dodajemy pokruszony lub starty piernik i wino, dusimy jeszcze chwilkę odkryte, aby intensywny zapach alkoholu odparował. ",
         "id": 3643,
         "title": "Bażant słodko- winny",
@@ -1442,17 +1112,7 @@
         ]
     },
     {
-        "products": [
-            " osiem cienkich steków",
-            " trzy łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " dwie cebule",
-            " cztery średnie pomidory",
-            " dwie zielone chili",
-            " dwie czerwone chili",
-            " kilka łyżek bulionu drobiowego",
-            " sól",
-            " pieprz"
-        ],
+        "products": "trzy łyżki oliwy",
         "steps": [
             "Mięso myjemy, cebulę obieramy i kroimy w grube pióra. Pomidory obieramy i kroimy w cząstki. Zielone chili kroimy w plastry, czerwone szatkujemy.",
             "Na oliwie smażymy mięso. Kiedy będzie gotowe (w zależności od upodobań) dodajemy resztę warzyw i podlewamy całość bulionem, doprawiamy solą i pieprzem.",
@@ -1466,18 +1126,8 @@
         ]
     },
     {
-        "products": [
-            "40 dag wołowiny bez kości,",
-            "6-8 dag cebuli,",
-            "4 żółtka,",
-            "5 dag ogórków konserwowych,",
-            "4 dag grzybków marynowanych,",
-            "oliwa,",
-            "musztarda,",
-            "sól, pieprz.",
-            "płynna przyprawa do potraw typu-\"<a href=\"/index.php?title=Maggi&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Maggi (strona nie istnieje)\">Maggi</a>\""
-        ],
-        "steps": "Mięso umyć, zemleć(smakoszom polecał bym raczej przesiekać mięso ze trzy razy), wymieszać z oliwą i przyprawami oraz <a href=\"/index.php?title=Maggi&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Maggi (strona nie istnieje)\">Maggi</a>. Cebulę obrać, opłukać, drobno pokroić razem z ogórkiem i grzybkami. Mięso wyporcjować na talerzyki lub półmisek, w środku zrobić wgłębienie, w które włożyć żółtka a w koło mięsa ułożyć cebulę, ogórki, grzybki i musztardę. Podawać z białym lub ciemnym pieczywem oraz kawałkiem masła  z zestawem przypraw: Maggi,papryka w proszku i sól, mięso można takżeułożyć na liściach sałaty. ",
+        "products": "płynna przyprawa do potraw typu-\"Maggi\"",
+        "steps": "Mięso umyć, zemleć(smakoszom polecał bym raczej przesiekać mięso ze trzy razy), wymieszać z oliwą i przyprawami oraz Maggi. Cebulę obrać, opłukać, drobno pokroić razem z ogórkiem i grzybkami. Mięso wyporcjować na talerzyki lub półmisek, w środku zrobić wgłębienie, w które włożyć żółtka a w koło mięsa ułożyć cebulę, ogórki, grzybki i musztardę. Podawać z białym lub ciemnym pieczywem oraz kawałkiem masła  z zestawem przypraw: Maggi,papryka w proszku i sól, mięso można takżeułożyć na liściach sałaty. ",
         "id": 1685,
         "title": "Befsztyk tatarski",
         "categories": [
@@ -1489,7 +1139,7 @@
             "1 befsztyk wykrojony z pachwiny,",
             "sól, pieprz."
         ],
-        "steps": "<dd>kupić u rzeźnika kotlet z pachwiny, lub 15-20 dag pachwiny na jeden kotlet. Otworzyć mięsień ostrym nożem. Rozgrzać bardzo patelnię i smażyć od 1 min. do 5 min.posolić popieprzyć do smaku. Można to zrobić po podaniu, na talerzu.</dd><dd>Uwaga:świerzą pachwinę zamrozić na kilka dni w niskiej temperaturze.</dd>",
+        "steps": "kupić u rzeźnika kotlet z pachwiny, lub 15-20 dag pachwiny na jeden kotlet. Otworzyć mięsień ostrym nożem. Rozgrzać bardzo patelnię i smażyć od 1 min. do 5 min.posolić popieprzyć do smaku. Można to zrobić po podaniu, na talerzu.Uwaga:świerzą pachwinę zamrozić na kilka dni w niskiej temperaturze.",
         "Linki": "tak wygląda mięsień pachwiny na befszytk, spotykany również jako łata nr 1251 <a rel=\"nofollow\" class=\"external free\" href=\"http://www.interviandes.com/interviandes/decoupe/P1251.html\">http://www.interviandes.com/interviandes/decoupe/P1251.html</a>",
         "id": 2005,
         "title": "Befsztyk z pachwiny",
@@ -1498,14 +1148,7 @@
         ]
     },
     {
-        "products": [
-            "półtora szklanki mąki,",
-            "pięć łyżek <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a> kremówki,",
-            "dwie łyżki wody,",
-            "125 gram masła,",
-            "szczypta soli,",
-            "dwie łyżki cukru pudru."
-        ],
+        "products": "pięć łyżek śmietany kremówki,",
         "steps": [
             "Mąkę, cukier oraz sól ucieramy z masłem.",
             "Gdy masło będzie drobne wlewamy wodę oraz śmietanę i ugniatamy. Gdy ciasto będzie gotowe wkładamy na pół godziny do lodówki.",
@@ -1519,14 +1162,7 @@
         ]
     },
     {
-        "products": [
-            " szklanka mąki",
-            " szklanka mleka",
-            " trzy łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " łyżeczka proszku",
-            " łyżeczka cukru",
-            " szczypta soli"
-        ],
+        "products": "trzy łyżki oleju",
         "steps": [
             "Wszystkie składniki miksujemy. ",
             "Na gorącą patelnię z niewielką ilością tłuszczu wlewamy porcję. Smażymy do momentu, gdy pojawią się bąble i odwracamy. ",
@@ -1539,16 +1175,7 @@
         ]
     },
     {
-        "products": [
-            "sześć białych kiełbasek",
-            "trzy spore cebule",
-            "dwie łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            "dwie łyżki wody",
-            "sól",
-            "pieprz",
-            "majeranek",
-            "oregano"
-        ],
+        "products": "dwie łyżki oliwy",
         "steps": [
             "Cebulę obieramy i tniemy na pióra.",
             "Naczynie żaroodporne smarujemy oliwą i kładziemy w nim umyte kiełbaski. Posypujemy pieprzem i ziołami. Obsypujemy je cebulą, podlewamy wodą i solimy.",
@@ -1562,15 +1189,7 @@
         ]
     },
     {
-        "products": [
-            " pół kilograma cielęciny",
-            " 3/4 szklanki kaszy krakowskiej",
-            " pół pęczka włoszczyzny",
-            " dwa ząbki czosnku",
-            " pół szklanki <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " pieprz",
-            " sól"
-        ],
+        "products": "pół szklanki śmietany",
         "steps": [
             "Mięso zalewamy dwoma litrami wody, dosypujemy półtora łyżeczki soli. Gotujemy 20 minut.",
             "Mięso wyjmujemy i ew. obieramy z kości. Odkładamy.",
@@ -1625,7 +1244,7 @@
             "50 gram gorzkiej czekolady."
         ],
         "steps": [
-            "Czekoladę siekamy i razem z tłuszczem topimy w <a href=\"/przepisy/Roztapianie_czekolady\" title=\"Roztapianie czekolady\">kąpieli wodnej</a>.",
+            "Czekoladę siekamy i razem z tłuszczem topimy w kąpieli wodnej.",
             "Żółtka razem z cukrem ubijamy na pianę (w kąpieli wodnej) i mieszamy z masą czekoladową. ",
             "Formę wykładamy folią spożywczą,a boki smarujemy masą.",
             "Układamy naprzemiennie warstwy: wafle, masa (ostatnią warstwą powinna być masa). Pomiędzy warstwy sypiemy borówki.",
@@ -1667,18 +1286,7 @@
         ]
     },
     {
-        "products": [
-            " litr kwaśnego mleka",
-            " pół litra wody",
-            " pięć ziemniaków",
-            " cebula",
-            " trzy ząbki czosnku",
-            " 300 gram wędzonego parzonego boczku",
-            " szklanka <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " łyżeczka mąki",
-            " łyżeczka soli",
-            " koperek"
-        ],
+        "products": "szklanka śmietany",
         "steps": [
             "Obieramy ziemniaki i gotujemy. W osobnym boczku zagotowujmy wodę, dodajemy pokrojony w paski boczek, obraną i poszatkowaną cebulę oraz zmiażdżony czosnek.",
             "W misce mieszamy mleko z mąką i śmietaną.",
@@ -1841,22 +1449,7 @@
         ]
     },
     {
-        "products": [
-            "400 gram ryżu basmati,",
-            "200 gram fasoli szparagowej,",
-            "duży brokuł,",
-            "dwa duże słodkie ziemniaki,",
-            "trzy łyżeczki czerwonej pasty curry,",
-            "litr bulionu,",
-            "dwie łyżeczki gorczycy,",
-            "szczypta szafranu,",
-            "50 gram orzechów nerkowca,",
-            "sok z cytryny,",
-            "łyżka <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>,",
-            "garść kolendry,",
-            "sól,",
-            "pieprz."
-        ],
+        "products": "łyżka oliwy,",
         "steps": [
             "Fasolę myjemy i odcinamy końcówki, po czym dzielimy na pół.",
             "Ziemniaki obieramy, kroimy w kostkę. Brokuła dzielimy na różyczki. ",
@@ -1917,15 +1510,7 @@
         "categories": []
     },
     {
-        "products": [
-            " dwa jajka",
-            " łyżka mąki",
-            " łyżka cukru",
-            " pół łyżeczki cukru waniliowego",
-            " kilka pokrojony na pół i pozbawionych pestki czereśni",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa z oliwek</a>",
-            " cukier puder "
-        ],
+        "products": "oliwa z oliwek",
         "steps": [
             "Białka oddzielamy od żółtek i ubijamy na sztywno z solą. Ubijając dodajemy powoli cukier.",
             "Pianę łączymy z żółtkami i mieszamy delikatnie z mąką. Dodajemy czereśnie i lekko mieszamy z ciastem.",
@@ -2115,14 +1700,7 @@
         "categories": []
     },
     {
-        "products": [
-            " 500 gram boczku",
-            " ząbek czosnku",
-            " cebula ",
-            " sól",
-            " pieprz",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej do smażenia</a>"
-        ],
+        "products": "olej do smażenia",
         "steps": [
             "Na patelni opiekamy boczek co jakiś czas go obracając. Oprószamy pieprzem i solą, dodajemy obrane i pokrojone czosnek oraz cebulę, podlewamy całość wodą i podgrzewamy pod przykryciem. ",
             "Gdy woda odparuje podlewamy olejem i ponownie opiekamy."
@@ -2134,20 +1712,7 @@
         ]
     },
     {
-        "products": [
-            " 300 gram wędzonego boczku",
-            " natka pietruszki",
-            " papryka mielona",
-            " szklanka bulionu",
-            " dwa jabłka",
-            " dwie cebule",
-            " 200 gram cienkiej kiełbasy",
-            " pięć pomidorów",
-            " sześć kolorowych papryk",
-            " pieprz",
-            " sól",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej</a>"
-        ],
+        "products": "olej",
         "steps": [
             "Paprykę obieramy, usuwamy gniazda i kroimy w słupki. Boczek kroimy w kostkę.",
             "Oba składniki podsmażamy na oleju. Dodajemy obraną i posiekaną cebulę.",
@@ -2163,19 +1728,8 @@
         ]
     },
     {
-        "products": [
-            "4 kotlety schabowe",
-            "100 g wędzonego, chudego boczku",
-            "1 cebula",
-            "4 duże pieczarki",
-            "1 podłużna żółta papryka igołomska",
-            "1 dojrzały pomidor",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\"> olej do smażenia</a>",
-            "100 ml kwaśnej śmietany",
-            "1 łyżeczka mąki",
-            "świeżo mielony czarny pieprz, sól,1 łyżeczka słodkiej papryki w proszku"
-        ],
-        "steps": "Kotlety myjemy, lekko rozbijamy, oprószamy solą i pieprzem z obu stron, po czym na niewielkiej ilości mocno rozgrzanego <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a> obsmażamy tylko do zarumienia się, ściągamy z patelni, na ten sam tłuszcz (musi być go naprawdę mało) kładziemy pokrojony w kostkę boczek i cebulę, kiedy cebula się zeszkli, dodajemy pokrojone pieczarki, smażymy do miękkości, odparowujemy wodę, po czym przyprawiamy papryką w proszku, dolewamy wody i umieszczamy w środku kotlety, dusimy całość pod przykryciem ok. 20 min. Gdy mięso jest już prawie miękkie, dodajemy pokrojone w krążki paprykę i pomidora, znowu dusimy do miękkości mięsa i papryki, po czym dolewamy śmietanę wymieszaną z mąką, po zagotowaniu danie jest gotowe. ",
+        "products": " olej do smażenia",
+        "steps": "Kotlety myjemy, lekko rozbijamy, oprószamy solą i pieprzem z obu stron, po czym na niewielkiej ilości mocno rozgrzanego oleju obsmażamy tylko do zarumienia się, ściągamy z patelni, na ten sam tłuszcz (musi być go naprawdę mało) kładziemy pokrojony w kostkę boczek i cebulę, kiedy cebula się zeszkli, dodajemy pokrojone pieczarki, smażymy do miękkości, odparowujemy wodę, po czym przyprawiamy papryką w proszku, dolewamy wody i umieszczamy w środku kotlety, dusimy całość pod przykryciem ok. 20 min. Gdy mięso jest już prawie miękkie, dodajemy pokrojone w krążki paprykę i pomidora, znowu dusimy do miękkości mięsa i papryki, po czym dolewamy śmietanę wymieszaną z mąką, po zagotowaniu danie jest gotowe. ",
         "id": 3236,
         "title": "Boczkowe kotlety",
         "categories": [
@@ -2248,17 +1802,7 @@
         ]
     },
     {
-        "products": [
-            " 750 gram prawdziwków",
-            " cztery łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " dwie słodkie cebulki lub zwykła cebula",
-            " łyżka grubo tartej bułki",
-            " dwie łyżki soku cytrynowego",
-            " ocet",
-            " natka pietruszki",
-            " sól",
-            " pieprz"
-        ],
+        "products": "cztery łyżki oleju",
         "steps": [
             "Prawdziwki myjemy w wodzie z octem. Odsączamy, kroimy na plastry.",
             "Cebulę obieramy i siekamy, pietruszkę siekamy również.",
@@ -2278,18 +1822,7 @@
         "categories": []
     },
     {
-        "products": [
-            " 200 gram borowików",
-            " 300 gram szpinaku",
-            " 20 gram masła",
-            " ząbek czosnku",
-            " trzy łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " sok z połówki cytryny",
-            " sól",
-            " pieprz",
-            " ćwierć pęczku koperku",
-            " szczypta cukru"
-        ],
+        "products": "trzy łyżki oliwy",
         "steps": [
             "Oczyszczone grzyby tniemy na połówki. Na patelni rozgrzewamy masło i wrzucamy grzyby. Podsmażamy, aż się zarumienią. ",
             "Szpinak przebieramy, myjemy, suszymy i kroimy na kawałki. Dodajemy do grzybów, doprawiamy solą i pieprzem, po czym dusimy do miękkości.",
@@ -2321,16 +1854,7 @@
         ]
     },
     {
-        "products": [
-            " 300 gram filetów z dorsza",
-            " 150 mililitrów <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " sól",
-            " 350 gram ziemniaków",
-            " 100 mililitrów <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " 150 mililitrów mleka",
-            " dwa ząbki czosnku",
-            " pieprz "
-        ],
+        "products": "100 mililitrów śmietany",
         "steps": [
             "Z filetów usuwamy ości.",
             "Do garnka wlewamy oliwę i smażymy na niej rybę ok. 10 minut na wolnym ogniu, aż mięso zacznie się rozpadać. Odstawiamy do ostygnięcia.",
@@ -2345,19 +1869,7 @@
         ]
     },
     {
-        "products": [
-            "85 gram miękkiego masła,",
-            "sześć kromek białego chleba,",
-            "60 gram wybranych bakalii,",
-            "30 gram kandyzowanej skórki pomarańczy,",
-            "trzy spore jajka,",
-            "300 mililitrów mleka,",
-            "150 mililitrów <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietanki</a> 30%,",
-            "nieco ekstraktu waniliowego,",
-            "60 gram drobnego cukru,",
-            "dwie łyżki cukru waniliowego,",
-            "gałka muszkatołowa."
-        ],
+        "products": "150 mililitrów śmietanki 30%,",
         "steps": [
             "Formę 25 na 25 centymetrów smarujemy masłem. Chleb również.",
             "Kromki kroimy na połowę i wykładamy jedną warstwę na dnie formy. Posypujemy ją bakaliami i przykładamy resztą pieczywa. ",
@@ -2372,21 +1884,7 @@
         ]
     },
     {
-        "products": [
-            "8 małych ziemniaków,",
-            "1 średnia cukinia,",
-            "6 suszonych pomidorów,",
-            "1 czerwona cebula,",
-            "2 garście zielonych oliwek,",
-            "różowe pesto,",
-            "rozmaryn,",
-            "słodka papryka,",
-            "sól,",
-            "pieprz,",
-            "łyżka masła,",
-            "łyżka <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy z oliwek</a>",
-            "utarty parmezan do posypania."
-        ],
+        "products": "łyżka oliwy z oliwek",
         "steps": "Ziemniaki obieramy i gotujemy, najlepiej na parze, przez ok. 15 - 20 minut, a gdy będą gotowe tniemy je na talarki. W międzyczasie kroimy cukinię na cienkie plasterki, cebulę na piórka, a pomidory na cienkie paski. Cukinię smażymy na oliwie i maśle i dorzucamy cebulę oraz ziemniaki. Doprawiamy rozmarynem, papryką i czekamy, aż cukinia zmięknie. Gdy stanie się ona miękka dodajemy łyżkę pesto oraz pomidory. Wszystko smażymy tak długo, aż ziemniaki nie staną się rumiane. Doprawiamy całość solą i pieprzem.Wykładamy danie na talerze i dekorujemy oliwkami, papryką i utartym serem.",
         "id": 3365,
         "title": "Briami",
@@ -2600,7 +2098,7 @@
         "steps": [
             "Żółtka ucieramy z łyżką cukru i skórką cytrynową. Dodajemy białka ubite z solą oraz cukrem.",
             "Wsypujemy mąkę i mieszamy. Ciasto rozsmarowujemy na blasze z pergaminem. Pieczemy ok. 10 minut w 220 stopniach.",
-            "Ciasto zdejmujemy z blachy i przykrywamy ścierką. <a href=\"/index.php?title=Roztapianie_czekolady%5CRoztapiamy_czekolad%C4%99&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Roztapianie czekolady\\Roztapiamy czekoladę (strona nie istnieje)\">Roztapianie czekolady\\Roztapiamy czekoladę</a> i schładzamy. ",
+            "Ciasto zdejmujemy z blachy i przykrywamy ścierką. Roztapianie czekolady\\Roztapiamy czekoladę i schładzamy. ",
             "Masło ucieramy z cukrem pudrem, dodajemy czekoladę oraz rum i kakao. Mieszamy i trzy łyżki kremu odkładamy.",
             "Biszkopt smarujemy 3/4 kremu i zwijamy w roladę.",
             "Resztą kremu smarujemy roladę. Dekorujemy widelcem i przyozdabiamy kandyzowanymi owocami i listkami czekolady."
@@ -2749,18 +2247,7 @@
         ]
     },
     {
-        "products": [
-            "cztery buraki,",
-            "mała cebula,",
-            "200 gram  mielonej wieprzowiny,",
-            "dwie łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>,",
-            "cztery łyżki gotowanego ryżu,",
-            "200 mililitrów kwaśnej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>,",
-            "oregano,",
-            "sól,",
-            "pieprz,",
-            "50 gram masła."
-        ],
+        "products": "200 mililitrów kwaśnej śmietany,",
         "steps": [
             "Buraki szorujemy i układamy w brytfannie. Wstawiamy do 150 stopni i pieczemy na półmiękko.",
             "Ostygnięte obieramy, odcinamy czubki, po czym łyżką wydrążamy miąższ.",
@@ -2776,16 +2263,7 @@
         ]
     },
     {
-        "products": [
-            "burak,",
-            "500 mililitrów <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a> 18%,",
-            "sól,",
-            "pieprz,",
-            "tyle jajek ile foremek,",
-            "dwie łyżeczki żelatyny,",
-            "1/3 szklanki wrzątku,",
-            "masło."
-        ],
+        "products": "500 mililitrów śmietany 18%,",
         "steps": "Nieobranego buraka gotujemy przez ok. kwadrans.Jajka gotujemy na twardo.Obieramy buraka i ścieramy na małych oczkach.Żelatynę rozpuszczamy w wrzącej wodzie, wlewamy do garnka i mieszamy ze śmietaną.Stawiamy garnek na mały ogniu i doprowadzimy do momentu \"przed\" wrzeniem.Wrzucamy buraki, doprawiamy solą oraz pieprzem i mieszamy. Po czym odstawiamy, by ostygło.Foremki (mogą być pojemniki po jogurtach lub deserach) smarujemy masłem. Masę nalewamy do ok. 3/4 wysokości. Wkładamy obrane jajko i uzupełniamy masą.Wstawiamy do lodówki na około 3 godziny.",
         "id": 3739,
         "title": "Buraczkowa terrina z jakiem",
@@ -2818,13 +2296,7 @@
         ]
     },
     {
-        "products": [
-            "cztery buraki",
-            "<a href=\"/przepisy/Sos_czosnkowy\" title=\"Sos czosnkowy\">sos czosnkowy</a>",
-            "kumin",
-            "chilli",
-            "łyżka natki pietruszki"
-        ],
+        "products": "sos czosnkowy",
         "steps": [
             "Buraki szorujemy i pieczemy w 180 stopniach do miękkości (przez ok. 40 minut). Po wyjęciu kroimy je na plastry.",
             "Sos czosnkowy mieszamy z kuminem, chilli i łyżką natki.",
@@ -2838,17 +2310,7 @@
         ]
     },
     {
-        "products": [
-            " 150 gram sera feta",
-            " cztery buraki",
-            " jabłko",
-            " cytryna",
-            " pół pęczka natki pietruszki",
-            " cztery łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " ząbek czosnku",
-            " sól",
-            " pieprz"
-        ],
+        "products": "cztery łyżki oliwy",
         "steps": [
             "Buraki gotujemy, obieramy ze skóry i kroimy w kostkę. Fetę kruszymy, a jabłko ścieramy na tarce.",
             "Składniki mieszamy, dodajemy sok, oliwę oraz zmiażdżony czosnek. Posypujemy poszatkowaną natką pietruszki."
@@ -2886,39 +2348,7 @@
         ]
     },
     {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 30 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 2</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Burgery:</big>",
-        "steps": "Doprawiamy mięso przyprawami oraz wrzucamy jajko. Formujemy kotleciki, układamy je na papierze do pieczenia i wstawiamy do 180 stopni na ok. 25 minut.Jogurt oraz majonez mieszamy w misce, po czym dodajemy pesto i ponownie mieszamy.Kotlety smarujemy sosem i wykładamy pomiędzy rozcięte bułki.",
-        "id": 3608,
-        "title": "Burgery drobiowe",
-        "categories": [
-            "Ptactwo",
-            "Kuchnia_amerykańska"
-        ]
-    },
-    {
-        "products": [
-            "375 g ciecierzycy z puszki",
-            "łyżka <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            "ząbek czosnku",
-            "sześć łodyżek szczypiorku z cebulą, posiekane w krążki",
-            "pół łyżeczki kuminu",
-            "łyżka utartego świeżego imbiru",
-            "średniej wielkości marchew starta na tarce",
-            "dwie łyżki świeżo posiekanej kolendry",
-            "cztery łyżki świeżo posiekanej pietruszki",
-            "łyżka soku z cytryny",
-            "sześć łyżek płatków owsianych",
-            "sól",
-            "pieprz",
-            "gałka muszkatołowa",
-            "słodka papryka"
-        ],
+        "products": "łyżka oliwy",
         "steps": [
             "Ciecierzycę płuczemy pod wodą i odcedzamy. Następnie rozgniatamy ją widelcem.",
             "Na patelni podsmażamy na oliwie cebulkę ze szczypiorkiem i posiekanym czosnkiem. Dodajemy imbir, kumin i marchew. Mieszamy całość i smażymy ok. 5 minut. Odstawiamy do przestudzenia.",
@@ -2934,19 +2364,7 @@
         ]
     },
     {
-        "products": [
-            "cukinia,",
-            "marchewka,",
-            "dwie łyżki sezamu,",
-            "cztery łyżki pestek słonecznika,",
-            "jajko,",
-            "dwie łyżki posiekanego koperku,",
-            "słodka papryka,",
-            "posiekany ząbek czosnku,",
-            "sól,",
-            "pieprz,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>."
-        ],
+        "products": "oliwa.",
         "steps": "Cukinię i marchewkę ucieramy na dużych oczkach. Cukinię odsączamy z soku.Warzywa mieszamy razem, dodajemy słonecznik, jajko, sezam oraz przyprawy. Mieszamy.Z masy formujemy kotlety i smażymy na rozgrzanym oleju.",
         "id": 3544,
         "title": "Burgery z cukinii",
@@ -2976,20 +2394,7 @@
         ]
     },
     {
-        "products": [
-            " 700 gram ziemniaków",
-            " szklanka posiekanej w kostkę cebuli",
-            " łyżeczka mielonego imbiru",
-            " łyżeczka mielonej kolendry",
-            " łyżeczka garam masala",
-            " łyżeczka mielonego kminu rzymskiego",
-            " ostra papryczka lub chili, bez pestek i posiekana",
-            " trzy łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju sezamowy</a>",
-            " półtora szklanki zielonego groszku",
-            " sól",
-            " pieprz",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej do smażenia</a>"
-        ],
+        "products": "olej do smażenia",
         "steps": [
             "Ziemniaki obieramy i kroimy w kostkę. Gotujemy.",
             "Dodajemy do ziemniaków obraną i poszatkowaną cebulę, przyprawy oraz olej. Miażdżymy całość na jednolitą masę. Dodajemy groszek i mieszamy.",
@@ -3003,17 +2408,7 @@
         ]
     },
     {
-        "products": [
-            "półtora kilograma rostbefu,",
-            "spora cebula,",
-            "trzy ząbki czosnku,",
-            "dwa liście laurowe,",
-            "sól,",
-            "pieprz,",
-            "łyżka koncentratu pomidorowego,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>,",
-            "1/3 butelki czerwonego, wytrawnego wina."
-        ],
+        "products": "oliwa,",
         "steps": [
             "Cebulę i czosnek obieramy i siekamy.",
             "Mięso kroimy w kostkę i podsmażamy.",
@@ -3029,19 +2424,7 @@
         ]
     },
     {
-        "products": [
-            "600 gram piersi z kurczaka,",
-            "pięć cebul,",
-            "trzy pomidory,",
-            "spory (150 gram) jogurt naturalny,",
-            "nieco imbiru,",
-            "pół kubka orzeszków nerkowca (opcjonalnie migdałów),",
-            "gałka muszkatołowa,",
-            "liść laurowy,",
-            "curry,",
-            "pieprz cayenne,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>."
-        ],
+        "products": "oliwa.",
         "steps": [
             "Cebule kroimy w kostkę. Trzy z nich wkładamy do garnka, resztę wrzucamy na patelnię.",
             "W misce rozgniatamy czosnek i dodajemy starty imbir, łyżeczkę gałki, liść laurowy oraz łyżeczkę cayenne. Mieszamy całość na jednolitą masę.",
@@ -3087,12 +2470,7 @@
         ]
     },
     {
-        "products": [
-            "225 gram mąki razowej,",
-            "pół łyżeczki soli,",
-            "150 mililitrów wody,",
-            "600 mililitrów <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>."
-        ],
+        "products": "600 mililitrów oleju.",
         "steps": [
             "Do miski wrzucamy sól oraz mąkę i dokładnie mieszamy. W środku robimy dziurkę i stopniowo dolewamy do niej wodę.",
             "Całość zagniatamy, by powstało gładkie i elastyczne ciasto. Odstawiamy je w ciepłe miejsce na 30 minut.",
@@ -3109,18 +2487,7 @@
         ]
     },
     {
-        "products": [
-            "14 niewielkich bułek,",
-            "8 parówek,",
-            "600 gram pieczarek,",
-            "5 średnich cebul,",
-            "250 gram sera żółtego,",
-            "niewielki koncentrat pomidorowy,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej</a>,",
-            "curry,",
-            "papryka ostra,",
-            "pieprz ziołowy. "
-        ],
+        "products": "olej,",
         "steps": "Cebulę obieramy i kroimy na kawałki, podobnie czynimy z parówkami. Pieczarki oczyszczamy i tniemy na plastry. Cebulę oraz grzyby podsmażamy na oleju, po czym dodajemy parówki i całość dusimy.Pod sam koniec dodajemy koncentrat oraz przyprawy.Z bułek usuwamy końcówkę i usuwamy środek. Do bułek wkładamy farsz, po czym posypujemy je serem i zapiekwamy przez ok. 7 minut w 150 stopniach.",
         "id": 3529,
         "title": "Bułki z nadzieniem",
@@ -3157,16 +2524,7 @@
         ]
     },
     {
-        "products": [
-            "250 gram piersi z kurczaka,",
-            "pieprz ziołowy,",
-            "słodka papryka,",
-            "oregano,",
-            "zioła prowansalskie,",
-            "przyprawa do kurczaka,",
-            "dwa liście laurowe,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>."
-        ],
+        "products": "oliwa.",
         "steps": [
             "Umytego kurczaka tniemy na niewielkie kawałki. ",
             "Przyprawiamy go wszystkimi przyprawami (poza liściem), pamiętając by ziół prowansalskich użyć najmniej. ",
@@ -3192,13 +2550,7 @@
         ]
     },
     {
-        "products": [
-            "pół kilo bobu,",
-            "2-3 ząbki czosnku,",
-            "sól,",
-            "pieprz,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>."
-        ],
+        "products": "oliwa.",
         "steps": "Bób gotujemy w osolonej wodzie, po czym obieramy. W międzyczasie obieramy czosnek i siekamy lub przepuszczamy przez praskę. Wrzucamy go do moździerza i ucieramy z solą, pieprzem i oliwą na sos. Bób mieszamy z sosem.",
         "id": 3130,
         "title": "Bób w przyprawach",
@@ -3208,16 +2560,7 @@
         ]
     },
     {
-        "products": [
-            "pół kilo bobu,",
-            "cebula,",
-            "koperek,",
-            "ziemniak,",
-            "sól,",
-            "pieprz,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>,",
-            "ocet balsamiczny."
-        ],
+        "products": "oliwa,",
         "steps": [
             "Bób gotujemy i łuskamy. Cebulę szatkujemy na kawałki, podobnie robimy z koperkiem. Ziemniaka gotujemy i kroimy w kostkę.",
             "Wszystkie warzywa mieszamy razem. Polewamy oliwą oraz octem, po czym posypujemy koperkiem."
@@ -3252,31 +2595,7 @@
         "categories": []
     },
     {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 35 min, godzina wyrastania ciasta</span>",
-            "Ilość porcji:<span class=\"yield\"> 3- 4</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>ciasto:</big>",
-        "steps": "Mleko delikatnie podgrzewamy w garnku.Do miski wrzucamy mąkę, sól, drożdże, oliwę oraz podgrzane mleko, zagniatamy ciasto.Smarujemy je oliwą, wkładamy do miski, przykrywamy ścierką i odstawiamy w ciepłe miejsce na ok. godzinę.Myjemy i siekamy pieczarki.Gdy ciasto wyrośnie dzielimy je na kilka kulek, które rozwałkowujemy. Packi smarujemy przecierem.Układamy na nich pieczarki, pepperoni oraz ser.Składamy na pół i zlepiamy brzegi.Rozbełtanym jajkiem smarujemy całość.Pieczemy w 200 stopniach przez 25 minut.",
-        "id": 3691,
-        "title": "Calzone z piecarkami oraz peperroni",
-        "categories": [
-            "Pizza",
-            "Kuchnia_włoska"
-        ]
-    },
-    {
-        "products": [
-            "dwa serki camembert,",
-            "pół szklanki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju słonecznikowego</a>,",
-            "dwa listki laurowe,",
-            "kilka ziaren pieprzu,",
-            "dziesięć jagód jałowca,",
-            "dwa ząbki czosnku,",
-            "mała papryka chilli."
-        ],
+        "products": "pół szklanki oleju słonecznikowego,",
         "steps": [
             "Ser kroimy na ćwiartki i układamy w szerokim słoiku. Czosnek obieramy i prasujemy lub szatkujemy.",
             "Dorzucamy do niego ziarenka pieprzu, jagody jałowca, liście laurowe, czosnek oraz paprykę. ",
@@ -3290,17 +2609,7 @@
         ]
     },
     {
-        "products": [
-            "ser camambert",
-            "2 łyżki mąki kukurydzianej,",
-            "pół łyżeczki słodkiej papryki,",
-            "2 szczypty soli,",
-            "szczypta pieprzu ziołowego,",
-            "szczypta chili,",
-            "ciepła woda,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej</a>",
-            "jajko."
-        ],
+        "products": "olej",
         "steps": "Jajko trzepiemy wraz solą,po czym dosypujemy mąkę. Wlewamy taką ilość wody wody, by powstało stosunkowo gęste ciasto. Do ciasta dosypujemy przyprawy. Ser obtaczamy w przygotowanym cieście i smażymy na głębokim oleju na złocisty kolor.",
         "id": 3115,
         "title": "Camambert w cieście paprykowym",
@@ -3351,22 +2660,7 @@
         ]
     },
     {
-        "products": [
-            "dwa bakłażany,",
-            "dwie cebule,",
-            "trzy łodygi selera naciowego,",
-            "dwie papryki,",
-            "szklanka posiekanych, obranych pomidorów,",
-            "łyżka kaparów,",
-            "dwie łyżki czarnych oliwek,",
-            "łyżka rodzynek,",
-            "dwa ząbki czosnku,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>,",
-            "sól,",
-            "pieprz, ",
-            "cukier,",
-            "ocet winny."
-        ],
+        "products": "oliwa,",
         "steps": [
             "Bakłażany kroimy w sporą kostkę, paprykę w mniejszą. Cebulę szatkujemy, a selera kroimy na centymetrowe kawałki.",
             "Na oliwie dusimy cebulę, a gdy ta się zeszkli dodajemy selera, paprykę, rozgnieciony czosnek oraz pomidory. Dusimy całość przez 10 minut.",
@@ -3382,19 +2676,7 @@
         ]
     },
     {
-        "products": [
-            " 100 gram szpinaku",
-            " 100 gram bułki tartej",
-            " 400 gram mąki pszennej",
-            " 50 gram masła",
-            " cztery jajka",
-            " 25 mililitrów mleka",
-            " cebula",
-            " łyżeczka suszonego majeranku",
-            " świeża szałwia",
-            " sól",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej do smażenia</a>"
-        ],
+        "products": "olej do smażenia",
         "steps": [
             "Obieramy cebulę, szatkujemy i szklimy na oleju. ",
             "Bułkę podsmażamy na maśle, po czym mieszamy z mąką i cebulą.",
@@ -3437,18 +2719,8 @@
         ]
     },
     {
-        "products": [
-            " dwa buraki",
-            " łyżeczka miodu",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa z oliwek</a>",
-            " łyżeczka musztardy Dijon",
-            " dwie łyżki octu balsamicznego",
-            " 100 g koziego sera",
-            " uprażone pestki dyni",
-            " kilka listków rukoli",
-            " sól, pieprz"
-        ],
-        "steps": "Buraki myjemy, zawijamy w folię aluminiową i pieczemy w piekarniku nagrzanym do 200 stopni, przez około 10-15 minut- do miękkości. Po tym czasie studzimy, obieramy ze skóry i kroimy na bardzo cienkie, równe plastry. Na dużym półmisku układamy umytą i osuszoną rukolę, na niej plastry buraków, przekładane pokrojonym cienko kozim serem i posypujemy uprażonymi pestkami dyni. W miseczce mieszamy ocet balsamiczny, miód, musztardę, <a href=\"/index.php?title=Oliw%C4%99_z_oliwek&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Oliwę z oliwek (strona nie istnieje)\">oliwę z oliwek</a>, doprawiamy solą i pieprzem, polewamy powstałym sosem buraki.",
+        "products": "oliwa z oliwek",
+        "steps": "Buraki myjemy, zawijamy w folię aluminiową i pieczemy w piekarniku nagrzanym do 200 stopni, przez około 10-15 minut- do miękkości. Po tym czasie studzimy, obieramy ze skóry i kroimy na bardzo cienkie, równe plastry. Na dużym półmisku układamy umytą i osuszoną rukolę, na niej plastry buraków, przekładane pokrojonym cienko kozim serem i posypujemy uprażonymi pestkami dyni. W miseczce mieszamy ocet balsamiczny, miód, musztardę, oliwę z oliwek, doprawiamy solą i pieprzem, polewamy powstałym sosem buraki.",
         "id": 5204,
         "title": "Carpaccio z buraków",
         "categories": [
@@ -3458,15 +2730,7 @@
         ]
     },
     {
-        "products": [
-            " dwie niewielkie cukinie",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa z oliwek</a>",
-            " garść orzeszków pinii",
-            " sól",
-            " pieprz",
-            " grana padano",
-            " ocet jabłkowy"
-        ],
+        "products": "oliwa z oliwek",
         "steps": [
             "Cukinie kroimy na cienkie plastry, solimy je, dodajemy ocet i zalewamy wrzątkiem.",
             "Zostawiamy całość na kilka minut, po czym hartujemy w zimnej wodzie.",
@@ -3481,19 +2745,7 @@
         ]
     },
     {
-        "products": [
-            " 300 gram ugotowanego mięsa drobiowego",
-            " średni ogórek ",
-            " kilka rzodkiewek",
-            " dwa ugotowane na twardo jajka ",
-            " pęczek szczypiorku",
-            " szklanka kwaśnej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " łyżeczka ostrej musztardy",
-            " litr prawdziwego kwasu chlebowego",
-            " sól",
-            " cukier",
-            " pieprz"
-        ],
+        "products": "szklanka kwaśnej śmietany",
         "steps": [
             "Jajka oraz mięso kroimy w kostkę. Ogórka i rzodkiewkę kroimy w półplastry. Szczypiorek siekamy.",
             "Ucieramy szczypior z połową łyżeczki soli oraz szczyptą cukru, aż szczypior nie puści soku.",
@@ -3508,18 +2760,7 @@
         ]
     },
     {
-        "products": [
-            "300 g makaronu casarecce,",
-            "pół słoika suszonych pomidorów,",
-            "obrany pomidor,",
-            "ząbek czosnku,",
-            "pół pęczka bazylii,",
-            "kilka listków mięty,",
-            "80 gram startego parmezanu,",
-            "pieprz,",
-            "sól,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>."
-        ],
+        "products": "oliwa.",
         "steps": [
             "Składniki, poza makaronem, mieszamy w blenderze na gładką masę, dodając niewielkie porcje oliwy w trakcie mieszania.",
             "Makaron gotujemy, a dwie łyżki wrzątku wlewamy do sosu i mieszamy.",
@@ -3576,54 +2817,7 @@
         ]
     },
     {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 35 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 4</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>farsz:</big>",
-        "steps": [
-            "Cebulę obieramy i kroimy w kostkę. Szklimy na tłuszczu, dodajemy sól, mak i paprykę.",
-            "Drożdże rozcieramy z cukrem i rozprowadzamy mlekiem. Dodajemy mąkę, margarynę oraz jajka. Solimy i wyrabiamy ciasto.",
-            "Wałkujemy ciasto na placki o grubości ok. połowy centymetra. Wykrawamy na kwadraty, układamy farsz i zlepiamy na sakiewki. ",
-            "Pieczemy na złoto w 180 stopniach. od koniec pieczenia smarujemy jajkiem i posypujemy kminkiem."
-        ],
-        "id": 5091,
-        "title": "Cebularze dla studenta",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Mączne"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> - min</span>",
-            "Ilość porcji:<span class=\"yield\"> 3</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "steps": "Mąkę przesiewamy. Sodę mieszamy z mlekiem i dodajemy do mąki wraz z jajkiem i solą. Zagniatamy ciasto, a następnie wykładamy je na podsypaną mąką stolnicę i formujemy wałek, który kroimy w kostkę i z tak otrzymanych kawałków ciasta toczymy kulki. Przykrywamy je ściereczką. Robimy farsz. Mięso oraz cebulę drobno siekamy i łączymy. Przyprawiamy solą, pieprzem i starannie mieszamy. Kulki ciasta rozwałkowujemy na placuszki i układamy na nich porcje farszu. Zalepiamy brzegi ciasta, smarujemy pierożki roztopionym masłem i układamy na natłuszczonej blasze. Pieczemy 40 min w 180-200°C.",
-        "id": 3023,
-        "title": "Cebulniki",
-        "categories": [
-            "Kuchnia_tatarska",
-            "Wołowina"
-        ]
-    },
-    {
-        "products": [
-            "1 kg wołowego mięsa mielonego,",
-            "1/4 litra kwaśnej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>,",
-            "łyżka bazylii,",
-            "łyżka rozmarynu,",
-            "łyżka tymianku,",
-            "łyżka <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy z oliwek</a>,",
-            "3 czerwone cebule pokrojone w plasterki,",
-            "łyżka octu balsamicznego,",
-            "2 łyżki miodu."
-        ],
+        "products": "łyżka oliwy z oliwek,",
         "steps": "Z mięsa, śmietany oraz wszystkich ziół formujemy bitki o grubości ok. centymetra. Smażymy je na oliwie po 8 minut z każdej ze stron (aż do zbrązowienia). Posiekaną cebulę wraz z oliwą smażymy przez 20 minut na średniej wielkości ogniu, dopóki ta nie stanie się złoto - brązowa. Gdy tak się stanie dodajemy mod, ocet i pieczemy przez następne 10 minut. Bitki posypujemy otrzymaną cebulką.",
         "id": 3257,
         "title": "Cebulowe bitki w ziołach",
@@ -3649,24 +2843,7 @@
         ]
     },
     {
-        "products": [
-            " 700 gram mięsa wołowego ",
-            " cztery spore łyżki ajvaru",
-            " półtora łyżki musztardy delikatesowej",
-            " spora cebula biała",
-            " spora cebula czerwona",
-            " pięć ząbków czosnku",
-            " dwie łyżki ziarenek smaku ",
-            " łyżka pieprzu ziołowego",
-            " łyżka papryki mielonej słodkiej",
-            " czubata łyżka suszonego majeranku",
-            " łyżka suszonego tymianku",
-            " łyżeczka świeżo zmielonego czarnego pieprzu",
-            " łyżeczka sumaku",
-            " łyżka przyprawy tureckiej kofte bahari",
-            " 125 mililitrów gazowanej, zimnej wody",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej roślinny</a>"
-        ],
+        "products": "olej roślinny",
         "steps": [
             "Cebulę oraz czosnek obieramy i siekamy. Mieszamy z mięsem oraz przyprawami. Dolewamy zimną wodę i wyrabiamy. Przykrywamy folią i wkładamy na noc do lodówki.",
             "Z masy formujemy niewielkie, podłużne kotleciki. Nadziewamy je na patyki i smarujemy olejem. Wstawiamy do ok. 220 stopni na 10 minut. "
@@ -3719,22 +2896,6 @@
     },
     {
         "products": [
-            "Czas przygotowania:<span class=\"duration\"> 30 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 2</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Sos:</big>",
-        "steps": "Sos:Wino wraz octem podgrzewamy wspólnie z posiekaną szalotką, estragonem i rozgniecionymi ziarnami pieprzu. Odparowujemy na niewielkim ogniu do okolic 2/3 objętości. Przecieramy dokładnie przez sitko, a następnie wlewamy do garnka ustawionego na naczyniu z wrzącą wodą. Dodajmy żółtka oraz szczyptę soli. Ubijamy tak długo, aż sos zgęstnieje. Nie doprowadzając do wrzenia sosu, podgrzewamy całość. Dodajemy chłodne masło i wciąż ubijamy. Doprawiamy czosnkiem, solą, pieprzem cayenne oraz sokiem z cytryny.",
-        "id": 3049,
-        "title": "Chateaubriand z sosem bearneńskim",
-        "categories": [
-            "Kuchnia_francuska",
-            "Wołowina"
-        ]
-    },
-    {
-        "products": [
             "cztery kromki czerstwej chałki,",
             "szklanka mleka,",
             "jajko,",
@@ -3772,19 +2933,7 @@
         ]
     },
     {
-        "products": [
-            " 70 gram makaronu",
-            " 30 gram łososia wędzonego",
-            " garść zielonego groszku",
-            " niewielka cebulka",
-            " pół ząbka czosnku",
-            " pieprz",
-            " sól",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>",
-            " wino białe",
-            " śmietanka",
-            " łyżeczka posiekanej natki pietruszki"
-        ],
+        "products": "oliwa",
         "steps": [
             "Makaron gotujemy al dente. Pod koniec gotowania, dwie minuty przed wyłączeniem ognia wrzucamy groszek.",
             "Cebulkę oraz czosnek obieramy i siekamy. Szklimy na oliwie i podlewamy winem. ",
@@ -3799,15 +2948,7 @@
         ]
     },
     {
-        "products": [
-            " pęczek świeżego szpinaku",
-            " dwa jajka",
-            " cztery łyżki mąki zwykłej",
-            " dwie łyżki wody",
-            " pół łyżeczki cukru",
-            " starty żółty ser",
-            " <a href=\"/przepisy/Sos_czosnkowy\" title=\"Sos czosnkowy\">sos czosnkowy</a>"
-        ],
+        "products": "sos czosnkowy",
         "steps": [
             "Szpinak myjemy i gotujemy w osolonej wodzie przez trzy minuty.",
             "Po ugotowaniu spryskujemy go zimną wodą i odcedzamy. Następnie szpinak kroimy na drobne kawałki i mieszamy z jajkiem, mąką, cukrem oraz wodą.",
@@ -3822,20 +2963,7 @@
         ]
     },
     {
-        "products": [
-            "600 gram z piersi kurczaka,",
-            "700 gram pomidorów,",
-            "pęczek kolendry lub pietruszki,",
-            "puszka kukurydzy,",
-            "300 gram tartego żółtego sera,",
-            "150 mililitrów gęstej kwaśnej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>,",
-            "150 mililitrów <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a> do sosów 20%,",
-            "150 gram nachos,",
-            "150 gram poszatkowanej cebuli,",
-            "dwa spore ząbki czosnku,",
-            "pół słoiczka sosu do taco,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>."
-        ],
+        "products": "oliwa.",
         "steps": [
             "Obrane pomidory tniemy w kostkę.",
             "Cebulę i czosnek obieramy, szatkujemy i podsmażamy. Dodajemy pomidory i gotujemy całość przez 30 minut. ",
@@ -3895,14 +3023,7 @@
         ]
     },
     {
-        "products": [
-            " dwa kilogramy pomidorów",
-            " dwie spore cebule",
-            " trzy papryczki chilli",
-            " dwie łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " bazylia",
-            " pieprz biały"
-        ],
+        "products": "dwie łyżki oliwy",
         "steps": [
             "Pomidory obieramy, kroimy na kawałki. Z papryczek usuwamy pestki i płuczemy. Cebulę obieramy i szatkujemy. ",
             "Cebulę szklimy w garnku, po czym dodajemy do niej pomidory oraz papryczkę. ",
@@ -3913,24 +3034,6 @@
         "categories": [
             "Warzywne",
             "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 1,5 godziny.</span>",
-            "Ilość porcji:<span class=\"yield\"> 4</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Ciasto:</big>",
-        "steps": "Przygotuj nadzienie: mięso pokrój w kostkę, cebule obierz i posiekaj na małe kawałki. Następnie wymieszaj ją z mięsem, dodaj sól, kolendrę, kminek, pieprz czarny i czerwony oraz pietruszkę. Na końcu dolej szklankę wody i wszystko bardzo dokładnie wymieszaj. Przygotuj ciasto: mąkę wsyp do miski, dodaj gorącą wodę i zagnieć na jednolite puszyste ciasto. Podsyp stolnicę mąką i rozwałkuj ciasto na cienki placek (jak do pierogów). Wytnij w cieście kółka większe niż średnica szklanki (np. szerokim kubkiem), następnie rozwałkuj je na bardzo cienkie placuszki i nałóż do środka po łyżeczce farszu. Chwyć wszystkie krawędzie placka, skręcając je na górze, tak aby tworzyły sakiewkę. Placki odkładaj na posypany mąką blat. Zagotuj wodę, dodaj sól i gotuj chinkali przez ok. 15 min. W środku sakiewki wytworzy się rosół, dlatego też przed jedzeniem nagryź lekko chinkali, spij rosół ze środka, zjedz nadzienie z ciastem, a górną końcówkę odłóż i nie jedz jej.",
-        "id": 3048,
-        "title": "Chinkali",
-        "categories": [
-            "Wołowina",
-            "Kuchnia_gruzińska",
-            "Wieprzowina",
-            "Mączne"
         ]
     },
     {
@@ -3971,14 +3074,7 @@
         ]
     },
     {
-        "products": [
-            " umyte i rozdrobnione liście jarmużu",
-            " szczypta soli",
-            " łyżeczka płatków drożdżowych",
-            " 1/3 łyżeczki chilli",
-            " trzy łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " granulowany czosnek"
-        ],
+        "products": "trzy łyżki oliwy",
         "steps": [
             "Mieszamy w misce jarmuż, sól, chilli, płatki, oliwę oraz granulowany czosnek. ",
             "Piekarnik rozgrzewamy do 180 stopni. Na blachę kładziemy pergamin i układamy na wierzchu liście. Wstawiamy do piekarnika na ok. kwadrans.",
@@ -4018,19 +3114,7 @@
         ]
     },
     {
-        "products": [
-            "1/2 kg mielonego mięsa wołowego,",
-            "3 średnie, pokrojone w paski cebule,",
-            "1/2 kg pokrojonych w plastry pieczarek,",
-            "1 puszka kukurydzy,",
-            "1 puszka czerwonej fasoli,",
-            "1 słoik papryki konserwowej,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>,",
-            "1 mieszanka mrożonych, chińskich warzyw,",
-            "1 łyżeczka oregano,",
-            "1 mały słoik przecieru pomidorowego,",
-            "2 szklanki <a href=\"/przepisy/Ros%C3%B3%C5%82\" title=\"Rosół\">rosołu</a>."
-        ],
+        "products": "2 szklanki rosołu.",
         "steps": "Z mięsa formujemy niewielkie kotleciki, obtaczamy w bułce, doprawiamy solą oraz pieprzem i smażymy na oleju. Cebulę oraz pieczarki podsmażamy na tej samej patelni, po czym dodajemy kukurydzę, fasolę, posiekaną paprykę oraz przyprawy, mrożonkę i przecier. Zalewamy rosołem i dusimy przez 15 minut. Przelewamy całość do garnka, dorzucamy kotlety i gotujemy przez 10 minut, dolewając ewentualnie wody, by danie nie było geste. Na kilka minut przed zdjęciem z palnika dodajemy przecier.",
         "id": 3259,
         "title": "Chiński gulasz",
@@ -4041,18 +3125,7 @@
         ]
     },
     {
-        "products": [
-            "500 gram mięsa mielonego z drobiu,",
-            "łyżka sezamu,",
-            "garść szczypiorku,",
-            "łyżka musztardy Dijon,",
-            "2 łyżeczki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju sezamowego</a>,",
-            "łyżeczka sosu sojowego,",
-            "2 łyżki <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>,",
-            "pół łyżeczki soku z cytryny,",
-            "pasta wasabi,",
-            "4 bułki."
-        ],
+        "products": "2 łyżki śmietany,",
         "steps": "Na patelni prażymy sezam. Szczypiorek siekamyMięso, sezam, szczypiorek, musztardę, olej oraz sos mieszamy razem, na jednolitą masę. Formujemy z niej cztery kotlety.Śmietanę mieszamy z sokiem z cytryny i pastą wasabi.Grillujemy burgery z każdej strony po ok. 3 minuty. Do bułek wkładamy burgery, które smarujemy sosem.",
         "id": 3476,
         "title": "Chińskie burgery",
@@ -4100,20 +3173,10 @@
         ]
     },
     {
-        "products": [
-            " kilogram kaszy manny",
-            " 25 gram masła",
-            " dwie łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " łyżeczka drobnej soli",
-            " 20 gram drożdży piwnych",
-            " jajko",
-            " łyżeczka anyżu",
-            " 2 i 1/4 szklanki wody",
-            " żółtko"
-        ],
+        "products": "dwie łyżki oleju",
         "steps": [
             "Kaszę mieszamy ze stopionym masłem i olejem. Solimy i mieszamy dodając nieco wody. ",
-            "Rozpuszczamy drożdże w 1/4 szklanki wody i dodajemy do miski wraz z jajkiem.&lt;r /&gt;Wyrabiamy ręką dolewając powoli wodę. ",
+            "Rozpuszczamy drożdże w 1/4 szklanki wody i dodajemy do miski wraz z jajkiem.<r />Wyrabiamy ręką dolewając powoli wodę. ",
             "Odstawiamy je na kwadrans po czym dodajemy anyż. ",
             "Z ciasta formujemy kulę i wkładamy do naczynia żaroodpornego i spłaszczamy. Odstawiamy w ciepłe miejsce na 120 minut.",
             "Przed wstawieniem do piekarnika smarujemy żółtkiem.",
@@ -4126,14 +3189,7 @@
         ]
     },
     {
-        "products": [
-            "szklanka mąki chlebowej,",
-            "piętnaście gram drożdży,",
-            "cztery łyżki mleka,",
-            "łyżka stołowa <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>,",
-            "dwie łyżki naturalnego jogurtu,",
-            "sól."
-        ],
+        "products": "łyżka stołowa oleju,",
         "steps": [
             "Drożdże rozdrabniamy i mieszamy z ciepłym mlekiem. Odstawiamy na kwadrans, by całość wyrosła.",
             "Mąkę mieszamy z solą, dodajemy płyn drożdżowy, olej, jogurt. Zagniatamy całość na miękkie i gładziutkie ciasto.",
@@ -4149,13 +3205,7 @@
         ]
     },
     {
-        "products": [
-            "dwie kromki chleba",
-            "spory, soczysty pomidor,",
-            "dwa ząbki czosnku,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>,",
-            "sól,"
-        ],
+        "products": "oliwa,",
         "steps": "Pomidora obieramy, usuwamy nasiona. Rozgniatamy na papkę.Chleb opiekamy lekko w tosterze lub na grillu. Czosnek rozcieramy razem z solą i oliwą.Otrzymaną masą smarujemy każdą z kromek.Wierzch smarujemy pomidorem.",
         "id": 3587,
         "title": "Chleb pomidorowy",
@@ -4167,18 +3217,7 @@
         ]
     },
     {
-        "products": [
-            "ćwierć kilograma mąki pszennej,",
-            "łyżeczka proszku do pieczenia,",
-            "4 jajka,",
-            "pól szklanki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy</a>,",
-            "pół szklanki białego wina,",
-            "200 gram szynki pokrojonej w kostkę,",
-            "10 oliwek pokrojonych w plasterki,",
-            "100 gram startego parmezanu,",
-            "sól,",
-            "pieprz. "
-        ],
+        "products": "pól szklanki oliwy,",
         "steps": "Foremkę do pieczenia smarujemy dokładnie masłem i nagrzewamy do 180 stopni piekarnik. Do miksera wrzucamy wszystkie składniki według listy powyżej, mieszając je na średnich obrotach. Gdy masa będzie stosunkowo jednolita wrzucamy całość do formy i pieczemy przez 45 minut.",
         "id": 3248,
         "title": "Chleb z nadzieniem z szynki i oliwek",
@@ -4188,15 +3227,7 @@
         ]
     },
     {
-        "products": [
-            " pięć jaj",
-            " 150 gram cukru trzcinowego",
-            " 450 mililitrów <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a> 36%",
-            " trzy łyżki ciemnego rumu",
-            " sześć kromek babki panettone",
-            " dwie gruszki",
-            " garść rodzynek"
-        ],
+        "products": "450 mililitrów śmietany 36%",
         "steps": [
             "Chleb tniemy na kawałki i układamy w wysmarowanej masłem formie.",
             "Kładziemy na to rodzynki, pocięte gruszki, posypujemy cukrem i zalewamy rumem.",
@@ -4263,14 +3294,7 @@
         ]
     },
     {
-        "products": [
-            " podwójna pierś kurczaka",
-            " niewielki jogurt naturalny",
-            " sól",
-            " pieprz",
-            " opakowanie krakersów cebulowych",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej do smażenia</a>"
-        ],
+        "products": "olej do smażenia",
         "steps": [
             "Mięso kroimy na paski, solimy i pieprzymy. Mieszamy z jogurtem i wstawiamy na noc do lodówki.",
             "Panierujemy w pokruszonych krakersach i smażymy na złoty kolor."
@@ -4368,17 +3392,7 @@
         ]
     },
     {
-        "products": [
-            "300 mililitrów wody,",
-            "łyżka cukru,",
-            "pół torebki waniliowego cukru,",
-            "sól,",
-            "30 gram masła,",
-            "240 gram mąki tortowej,",
-            "dwa jajka,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej</a>,",
-            "cukier puder."
-        ],
+        "products": "olej,",
         "steps": "W wodzie z solą rozpuszczamy oba cukry. Zagotowujemy.Dodajemy masło i rozpuszczamy je.Powoli mieszając dodajemy mąkę.Gotujemy, aż ciasto przestanie przyklejać do ścianek garnka.Lekko studzimy masę i mieszamy ją z jajkami. Na patelni rozgrzewamy olej i łyżką nakładamy na niego ciasto, by powstały dłuższe placuszki.Smażymy z obu stron.Gdy ostygną posypujemy cukrem pudrem",
         "id": 3713,
         "title": "Churros",
@@ -4429,17 +3443,7 @@
         ]
     },
     {
-        "products": [
-            "150 gram świeżych owoców żurawiny,",
-            "zielone jabłko pokrojone w kostkę,",
-            "ćwiartka szklanki cukru,",
-            "pomarańcza pokrojona na kawałki,",
-            "pół cytryny pokrojone na kawałki,",
-            "jeden cm imbiru pokrojony na kawałki,",
-            "dwie łyżki octu winnego,",
-            "starte skórki z połowy pomarańczy i połowy cytryny,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>."
-        ],
+        "products": "oliwa.",
         "steps": "Wszystkie składniki mieszamy dokładnie razem. Następnie wrzucamy je do wysmarowanego tłuszczem garnka i gotujemy na niewielkim ogniu przez 40 minut, co jakiś czas mieszając i sprawdzając, czy danie nie przywarło.Podajemy po schłodzeniu.",
         "id": 3417,
         "title": "Chutney z żurawinami",
@@ -4449,18 +3453,7 @@
         ]
     },
     {
-        "products": [
-            "500 gram szczawiu,",
-            "4 świeże ogórki,",
-            "garść szczypiorku,",
-            "łyżka masła,",
-            "łyżeczka utartego chrzanu,",
-            "łyżka cukru,",
-            "4 jajka,",
-            "1 litr <a href=\"/przepisy/Kwas_chlebowy\" title=\"Kwas chlebowy\">kwasu chlebowego</a>,",
-            "sól,",
-            "koperek."
-        ],
+        "products": "1 litr kwasu chlebowego,",
         "steps": "Przebrany i opłukany szczaw dusimy pod przykryciem na maśle. Gdy będzie gotowy ucieramy na tarce. Ogórki obierajmy, kroimy w kostkę, koperek i szczypiorek drobno siekamy. Jajka gotujemy, a następnie żółtka ucieramy z chrzanem, a białka siekamy na drobne fragmenty. Wszystkie składniki wkładamy do naczynia, zalewamy zimnym kwasem chlebowym i solimy. ",
         "id": 3019,
         "title": "Chłodnik białoruski/ Chołodnik",
@@ -4557,16 +3550,7 @@
         ]
     },
     {
-        "products": [
-            "6 porów,",
-            "2 łyżki masła,",
-            "6 średnich, łatwo się rozgotowujących ziemniaków,",
-            "1,2 litra <a href=\"/przepisy/Ros%C3%B3%C5%82\" title=\"Rosół\">rosołu z kurczaka</a>,",
-            "150 mililitrów słodkiej śmietanki kremówki,",
-            "1 pęczek szczypiorku,",
-            "świeżo zmielony biały pieprz,",
-            "sól."
-        ],
+        "products": "1,2 litra rosołu z kurczaka,",
         "steps": "Z porów odcinamy zielone części, przecinamy wzdłuż na pół, dokładnie płuczemy, kroimy w paski i dusimy w garnku na rozgrzanym maśle do zeszklenia. Dodajemy obrane, pokrojone w kostkę ziemniaki, mieszamy i dusimy razem kilka minut. Zalewamy bulionem i gotujemy na małym ogniu ok. 40 min. Lekko ostudzoną zupę miksujemy na gładki krem. Gdy zupełnie wystygnie, mieszamy ze śmietanką, doprawiamy do smaku solą i pieprzem. Chłodzimy w lodówce przez minimum 6 godz. (można ją zrobić dzień wcześniej). Podajemy zimną w miseczkach, przybraną posiekanym szczypiorkiem.",
         "id": 3029,
         "title": "Chłodnik porowy",
@@ -4676,20 +3660,6 @@
         "id": 2104,
         "title": "Ciasteczka cebulowe",
         "categories": [
-            "Przekąski"
-        ]
-    },
-    {
-        "products": [
-            "Ilość porcji:<span class=\"yield\"> 8,</span>",
-            "Kaloryczność:<span class=\"calories\"> 468 kcal (jedna porcja).</span>"
-        ],
-        "Sk.C5.82adniki": "Ciasto:",
-        "steps": "Z mąki, masła i pozostąłych składników zagnieść ciasto, wstawić je na 2 godziny do lodówki. Ser zetrzeć na tarce i wymieszać z papryką. Ochłodzone ciasto cienko rozwałkować, pokroić w kwadraty, każdy posypać grubo serem i zlepić przeciwległe rogi. Układać na wysmarowanej tłuszczem blasze i piec w nagrzanym piekarniku (180°C) ok. 15 minut.",
-        "id": 2080,
-        "title": "Ciasteczka nadziewane żółtym serem",
-        "categories": [
-            "Strony_z_odwołaniami_do_nieistniejących_plików",
             "Przekąski"
         ]
     },
@@ -4841,14 +3811,7 @@
         ]
     },
     {
-        "products": [
-            " 250 gram <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a> 22%",
-            " trzy jajka ",
-            " laska wanilii",
-            " 100 gram cukru",
-            " 180 mililitrów mleka",
-            " czekoladowe ciasteczka kruche "
-        ],
+        "products": "250 gram śmietany 22%",
         "steps": [
             "Do garnka wlewamy śmietanę i wbijamy jajka. Mieszamy na niewielkim ogniu, po czym dodajemy cukier, laskę wanilii oraz mleko. ",
             "Podgrzewamy masę, aż zgęstnieje (nie wolno zagotować). Odstawiamy do schłodzenia (najpierw na powietrzu, potem do lodówki, by się mocno schłodziło).",
@@ -4871,7 +3834,7 @@
             "tabliczka czekolady,",
             "garść kokosowych wiórków."
         ],
-        "steps": "Do miski wrzucamy masło, dodajemy cukier i ucieramy całość mikserem na jednolitą masę.Wrzucamy resztę składników i ponownie miksujemy tak, by ciasto było gęste.Formujemy z niego kulki, które układamy na blasze wyłożonej papierem do pieczenia.Pieczemy przez kwadrans w 170 stopniach. Gdy ostygną <a href=\"/przepisy/Roztapianie_czekolady\" title=\"Roztapianie czekolady\">roztapiamy czekoladę</a> i polewamy kulki, a następnie posypujemy wiórkami.Ponownie odstawiamy do ostygnięcia.",
+        "steps": "Do miski wrzucamy masło, dodajemy cukier i ucieramy całość mikserem na jednolitą masę.Wrzucamy resztę składników i ponownie miksujemy tak, by ciasto było gęste.Formujemy z niego kulki, które układamy na blasze wyłożonej papierem do pieczenia.Pieczemy przez kwadrans w 170 stopniach. Gdy ostygną roztapiamy czekoladę i polewamy kulki, a następnie posypujemy wiórkami.Ponownie odstawiamy do ostygnięcia.",
         "id": 3741,
         "title": "Ciastka czekoladowo - kokosowe",
         "categories": [
@@ -4980,84 +3943,18 @@
         ]
     },
     {
-        "products": [
-            " 60 ciasteczek herbatników be be(mniejszych)",
-            " puszka masy kajmakowej/krówki",
-            " 500 mililitrów <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietanki</a> 30%",
-            " 500 mililitrów mleka",
-            " dwa budynie waniliowe lub śmietankowe",
-            " pół szklanki cukru",
-            " ciemna czekolada",
-            " kostka margaryny lub pół kostki masła"
-        ],
+        "products": "500 mililitrów śmietanki 30%",
         "steps": [
             "Z budyniu oraz mleka robimy budyń, po czym odstawiamy go do wystudzenia.",
             "Margarynę/masło miksujemy z cukrem na jednolitą masę. Następnie dodajemy po łyżce budyniu mieszając.",
             "Układamy na blasze warstwę 20 herbatników.",
             "Wkładamy masę do gotującej się wody na ok. 5 minut. Następnie rozsmarowujemy ją po pierwszej warstwie herbatników.",
-            " Wykładamy na masę kolejne 20 herbatników. Ubijamy śmietanę i układamy ją na herbatnikach.",
-            "Układamy ostatnią warstwę ciasteczek. <a href=\"/przepisy/Roztapianie_czekolady\" title=\"Roztapianie czekolady\">Roztapiamy czekoladę</a> i rozsmarowujemy ją po ostatniej warstwie.",
+            "Wykładamy na masę kolejne 20 herbatników. Ubijamy śmietanę i układamy ją na herbatnikach.",
+            "Układamy ostatnią warstwę ciasteczek. Roztapiamy czekoladę i rozsmarowujemy ją po ostatniej warstwie.",
             "Odstawiamy ciasto na dwie - trzy godziny do schłodzenia."
         ],
         "id": 5324,
         "title": "Ciasto 3bit",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 50 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 6</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Ciasto:</big>",
-        "steps": "<big>Ciasto:</big>Jajka oraz cukier ubijamy na puszysta masę. Dodajemy resztę składników i spokojnie mieszamy. Gotową masę wylewamy na wyłożona papierem blachę lub tortownicę. Wstawiamy na ok. 35 minut do 180 stopni.<big>Masa:</big>Czekoladę rozpuszczamy, studzimy i miksujemy z masłem oraz nutellą.Wafelki kroimy na niewielkie kawałki i dorzucamy je do masy.Połowę masy wykładamy na jedno ciasto i przykrywamy drugim.Na wierzch kładziemy drugą porcję masy.",
-        "id": 3494,
-        "title": "Ciasto Ferrero Rocher",
-        "categories": [
-            "Desery",
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 50 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 8</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Ciasto:</big>",
-        "steps": [
-            "Ciasto:",
-            "Miksujemy wszystkie składniki, dzielimy na dwa kawałki. Oba pieczemy przez 25 minut w 180 stopniach.",
-            "Krem:",
-            "Zwykłe mleko zagotowujemy wraz z cukrem oraz cukrem waniliowym. Studzimy.",
-            "Masło ucieramy, jednocześnie powoli dodajemy ostudzone mleko wciąż ucierając.Wsypujemy przesiane mleko w proszku i ucieramy na gładko.",
-            "Masę wykładamy na jeden ostudzony placek i przykrywamy drugim.",
-            "Polewa: ",
-            "Czekoladę łamiemy i wkładamy do garnka. Zalewamy śmietaną i podgrzewamy na niewielkim ogniu do momentu rozpuszczenia się czekolady. ",
-            "Dodajemy kakao i mieszamy. Gdy składniki się złączą dosypujemy żelatynę, po czym mieszamy dopóki się rozpuści.",
-            "Polewę odstawiamy, by wystygła. Gdy zacznie gęstnieć, polewamy nią na ciasto."
-        ],
-        "id": 4693,
-        "title": "Ciasto Milky Way",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> - min,</span>",
-            "Ilość porcji:<span class=\"yield\"> -,</span>",
-            "Kaloryczność:<span class=\"calories\"> -,</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł.</span>"
-        ],
-        "Sk.C5.82adniki": "<b>ciasto:</b>",
-        "steps": "Aby przygotować ciasto, jajka zmiksować z cukrem i cukrem waniliowym. Dodawać po trochu mąkę z proszkiem do pieczenia i pół szklanki wody, ciągle mieszając. Składniki dokładnie zmiksować. Ciasto wlać do wysmarowanej tłuszczem formy. Piec 25 minut w piekarniku nagrzanym do 180 stopni.",
-        "id": 1509,
-        "title": "Ciasto brzoskwiniowe",
         "categories": [
             "Ciasta"
         ]
@@ -5081,15 +3978,7 @@
         ]
     },
     {
-        "products": [
-            " trzy niepełne szklanki mąki ",
-            " szklanka cukru",
-            " dwa buraki",
-            " szklanka <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " dwa jajka",
-            " łyżeczka cynamonu",
-            " łyżeczka proszku do pieczenia"
-        ],
+        "products": "szklanka oleju",
         "steps": [
             "Obrane buraki ścieramy na tarce.",
             "Białka ubijamy  z cukrem na białą masę (nie na sztywno).",
@@ -5100,22 +3989,6 @@
         "id": 4567,
         "title": "Ciasto buraczane",
         "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 55 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 6</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Masa ciemna:</big>",
-        "steps": "Masa ciemna:Mieszamy wszystkie składniki mikserem na najwięskzych obrotach przez ok. 10 minut (do momentu uzyskania jednolitej masy).Pod koniec mieszania dodajemy olej, po czym wylewamy masę na wysmarowaną tłuszczem formę.Masa serowa:Również mieszamy całość na jednolitą masę.Kładziemy masę serową na ciasto.Zapiekamy całość w 200 stopniach przez 40 minut.",
-        "id": 3550,
-        "title": "Ciasto cielak",
-        "categories": [
-            "Desery",
             "Ciasta"
         ]
     },
@@ -5166,13 +4039,7 @@
         "categories": []
     },
     {
-        "products": [
-            " 500 gram mąki ",
-            " cztery łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a> ",
-            " dwa jajka ",
-            " 125 mililitrów wody ",
-            " sól "
-        ],
+        "products": "cztery łyżki oliwa ",
         "steps": [
             "Sól łączymy z mąką, po czym powoli dolewamy wodę, cały czas ugniatając. ",
             "Jajka mieszamy i dodajemy do reszty ciasta. Następnie dodajemy oliwę i wciąż ugniatamy.",
@@ -5188,18 +4055,8 @@
         ]
     },
     {
-        "products": [
-            "3 jajka",
-            "1 szklanka cukru",
-            "2 szklanki mąki",
-            "2/3 szklanki oleju",
-            "1 szklanka orzechów włoskich, grubo posiekanych",
-            "1 łyżeczka sody",
-            "1 łyżeczka <a href=\"/przepisy/Cynamon\" title=\"Cynamon\">cynamonu</a>",
-            "1 łyżeczka proszku do pieczenia",
-            "4-5 jabłek"
-        ],
-        "steps": "Jajka utrzeć mikserem z cukrem, dodać oliwę (by ciasto było gładkie, wilgotne po upieczeniu i wolniej czerstwieje),mąkę z proszkiem do pieczenia, sodę i <a href=\"/przepisy/Cynamon\" title=\"Cynamon\">cynamon</a>. Następnie dodać orzechy oraz obrane, pokrojone w plastry jabłka. Delikatnie wszystko wymieszać. Piec w temperaturze 175oC przez około godzinę.",
+        "products": "1 łyżeczka cynamonu",
+        "steps": "Jajka utrzeć mikserem z cukrem, dodać oliwę (by ciasto było gładkie, wilgotne po upieczeniu i wolniej czerstwieje),mąkę z proszkiem do pieczenia, sodę i cynamon. Następnie dodać orzechy oraz obrane, pokrojone w plastry jabłka. Delikatnie wszystko wymieszać. Piec w temperaturze 175oC przez około godzinę.",
         "id": 1427,
         "title": "Ciasto jabłkowe",
         "categories": [
@@ -5207,18 +4064,7 @@
         ]
     },
     {
-        "products": [
-            "200 gram orzechów laskowych,",
-            "dwie szklanki mąki,",
-            "szklanka cukru pudru,",
-            "trzy jajka,",
-            "łyżeczka proszku do pieczenia,",
-            "1/3 szklanki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju roślinnego</a>,",
-            "pół szklanki mleka,",
-            "cztery jabłka,",
-            "pół szklanki rodzynek.",
-            "tabliczka czekolady."
-        ],
+        "products": "1/3 szklanki oleju roślinnego,",
         "steps": "Jabłka myjemy, obieramy i kroimy w kostkę.Orzechy siekamy.Wszystkie składniki wrzucamy do miski i mieszamy mikserem.Przekładamy całość do formy lub naczynia wyłożonego papierem.Pieczemy przez 50 minut w 190 stopniach.Rozpuszczamy czekoladę w garnku włożonym do wrzącej wody i gdy ciasto będzie gotowe oblewamy czekolada wierzch. ",
         "id": 3704,
         "title": "Ciasto jabłkowo - orzechowe",
@@ -5379,21 +4225,7 @@
         ]
     },
     {
-        "products": [
-            " półtora kilograma mąki ",
-            " 20 gram drożdży ",
-            " 125 mililitrów <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju </a> ",
-            " farsz: ",
-            " półtora kilograma szpinaku ",
-            " 500 gram białego sera ",
-            " pęczek szczypiorku ",
-            " pęczek kopru ",
-            " pięć cebul ",
-            " cztery jajka ",
-            " dwa ząbki czosnku ",
-            " sól ",
-            " pieprz "
-        ],
+        "products": "125 mililitrów oleju  ",
         "steps": [
             "Drożdże rozpuszczamy w wodzie i mieszamy z resztą składników. Ugniatamy grube i tłuste ciasto.",
             "Szpinak czyścimy i gotujemy w osolonej wodzie. Odcedzamy, dodajemy sól i pieprz oraz posiekany szczypior i koper, jajko oraz rozgnieciony ser.",
@@ -5407,46 +4239,6 @@
             "Mączne",
             "Jarskie",
             "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 65 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 6</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Kruszonka:</big>",
-        "steps": [
-            "Orzechy, cynamon i cukier mieszamy razem w misce.",
-            "Masło rozcieramy z cukrem na puch i powoli dodajemy do niego po jednym jajku.",
-            "Mąkę mieszamy z proszkiem oraz sodą, po czym dodajemy stopniowo, na przemian mąkę i śmietanę. Na koniec dodajemy esencję.",
-            "Formę smarujemy masłem, po czym wlewamy do niej 1/3 ciasta, które posypujemy połową kruszonki, wlewamy kolejną warstwę itd. Na wierzchu powinno zostać nam kruszonka.",
-            "Wstawiamy ciasto na 55 minut do 180 stopni."
-        ],
-        "id": 4082,
-        "title": "Ciasto z orzechowo cynamonową kruszonką",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 35 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 4</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>Ciasto:</big>",
-        "steps": [
-            "Ze składników zagniatamy ciasto i dzielimy je na dwie części. Wkładamy je do prostokątnych foremek z papierem do pieczenia. Pieczemy kwadrans w 200 stopniach.",
-            "Puszkę mleka gotujemy trzy godziny lub korzystamy z gotowego toffi.",
-            "Śmietanę ubijamy na puszystą masę i dodajemy do niej rozpuszczoną żelatynę. Przekładamy kremem ostudzonego placka. Na wierzchu smarujemy mleko lub toffi i sypiemy orzechy i przykładamy drugi placek. Przechowujemy w lodówce."
-        ],
-        "id": 4857,
-        "title": "Ciasto z toffi i miodem",
-        "categories": [
-            "Ciasta"
         ]
     },
     {
@@ -5468,18 +4260,7 @@
         ]
     },
     {
-        "products": [
-            " 400 gram mąki ",
-            " 200 gram cukru ",
-            " cztery jajka ",
-            " 200 mililitrów <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju słonecznikowego</a> ",
-            " dwie łyżeczki proszku do pieczenia ",
-            " dwie łyżki ekstraktu waniliowego ",
-            " szczypta soli ",
-            " jabłka ",
-            " śliwki ",
-            " cukier trzcinowy "
-        ],
+        "products": "200 mililitrów oleju słonecznikowego ",
         "steps": [
             "Jaja miksujemy z cukrem, dodajemy do nich mąkę z proszkiem do pieczenia oraz solą, a także olej (cały czas miksujemy, składniki dodajemy naprzemiennie).",
             "Gdy masa stanie się gładka dodajemy do niej ekstrakt i ponownie chwilę mieszamy. ",
@@ -5494,20 +4275,7 @@
         ]
     },
     {
-        "products": [
-            " puszka ciecierzycy",
-            " cztery ziemniaki",
-            " spora czerwona papryka",
-            " pół małego pora ",
-            " cztery łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>",
-            " łyżka melasy",
-            " kilka łyżek wody",
-            " łyżeczka soli",
-            " ćwierć łyżeczki cynamonu",
-            " ćwierć łyżeczki imbiru",
-            " ćwierć łyżeczki kminu",
-            " szczypta chili"
-        ],
+        "products": "cztery łyżki oleju",
         "steps": [
             "Obieramy ziemniaki i kroimy w słupki. Podsmażamy na złoto. ",
             "Kroimy paprykę w paski, a pora w krążki. Dorzucamy warzywa do ziemniaków, solimy i mieszamy.",
@@ -5522,24 +4290,7 @@
         ]
     },
     {
-        "products": [
-            "250 gram ciecierzycy,",
-            "czerwona cebula,",
-            "ząbek czosnku,",
-            "kilogram dojrzałych pomidorów,",
-            "czerwona papryka,",
-            "pomarańczowa papryka,",
-            "żółta papryka,",
-            "3 strączki papryczki chilli,",
-            "2 łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy</a>,",
-            "ok. 2 cm. korzenia imbiru,",
-            "łyżeczka listków rozmarynu,",
-            "łyżeczka curry,",
-            "łyżeczka cukru,",
-            "chilli,",
-            "sól,",
-            "pieprz."
-        ],
+        "products": "2 łyżki oliwy,",
         "steps": "Cebulę, imbir oraz czosnek myjemy, obieramy i szatkujemy na kawałki. Chilli i paprykę oczyszczamy z nasion i kroimy w paseczki. Pomidory parzymy, obieramy ze skóry i kroimy w kostkę.Na gorącej oliwie dusimy cebulę oraz imbir i czosnek, aż cebula nie zbrązowieje. Dorzucamy do niej paprykę i dusimy całośc przez 5 minut. Dodajemy pomidory, papryczkę chilli i przyprawy.Gdy pomidory puszczą sok dodajemy ciecierzycę. Dusimy przez kwadrans.",
         "id": 3543,
         "title": "Ciecierzycowy gulasz",
@@ -5559,14 +4310,7 @@
         "categories": []
     },
     {
-        "products": [
-            " sześć sznycli cielęcych",
-            " trzy łyżki masła",
-            " 250 mililitrów gęstej, kwaśnej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " sok z cytryny",
-            " sól",
-            " pieprz "
-        ],
+        "products": "250 mililitrów gęstej, kwaśnej śmietany",
         "steps": [
             "Sznycle podsmażamy na maśle z obu stron. Doprawiamy solą i pieprzem.",
             "Śmietanę mieszamy z sokiem z cytryny i zalewamy sznycle. Całość zagotowujemy."
@@ -5594,22 +4338,7 @@
         ]
     },
     {
-        "products": [
-            "sześć łyżek pszennej mąki",
-            "sól",
-            "pieprz",
-            "700 gram cielęciny",
-            "<a href=\"/index.php?title=Olej&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Olej (strona nie istnieje)\">olej roślinny</a>",
-            "300 gram cebulek perłowych (ew. trzy cebule)",
-            "trzy drobno posiekane ząbki czosnku",
-            "trzy marchewki pokrojone w plasterki",
-            "300 mililitrów czerwonego wina",
-            "200 mililitrów bulionu ",
-            "puszka pokrojonych pomidorów w zalewie",
-            "skórka starta z cytryny",
-            "liść laurowy",
-            "dwa pęczki natki, posiekanej"
-        ],
+        "products": "olej roślinny",
         "steps": [
             "Mięso kroimy w kostkę, po czym wrzucamy do miski. Dosypujemy do niej mąkę, pieprz, po czym mieszamy. W garnku rozgrzewamy tłuszcz, po czym smażymy mięso do zarumienienia.",
             "Wykładamy mięso, a do tłuszczu wrzucamy marchew, pokrojoną w plastry cebulę oraz czosnek.",
@@ -5738,13 +4467,7 @@
         ]
     },
     {
-        "products": [
-            "200 mililitrów <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a> kremówki",
-            "70 gram płatków owsianych",
-            "120 gram cukru",
-            "400 gram malin",
-            "trzy łyżki whisky"
-        ],
+        "products": "200 mililitrów śmietany kremówki",
         "steps": [
             "Płatki wstawiamy na blasze z pergaminem do 150 stopni, zapiekamy przez ok. 20 minut z nawiewem. Skrapiamy całość whisky i odstawiamy na noc.",
             "Zasypujemy maliny 60 gramami cukru i gotujemy przez kwadrans, by woda odparowała. Mielimy, przecieramy przez sito i studzimy.",
@@ -5773,33 +4496,6 @@
         "categories": [
             "Desery",
             "Kuchnia_hiszpańska"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> - 150 min,</span>",
-            "Ilość porcji:<span class=\"yield\"> - 4,</span>",
-            "Kaloryczność:<span class=\"calories\"> - ,</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł.</span>"
-        ],
-        "steps": [
-            "\t\t\t\t1. Rozdziel żółtka i białka. Białek możesz potem użyć do bezów.",
-            "\t\t\t\t2. Żółtka wymieszaj trzepaczką z cukrem i miodem.",
-            "\t\t\t\t3. Mieszając wlej śmietankę do tej samej miski.",
-            "\t\t\t\t4. Laskę wanilii rozetnij wzdłuż na pół i nożem wyskrob nasionka. Dodaj je do śmietanki z jajkami, wymieszaj i na koniec wrzuć rozciętą laskę.",
-            "\t\t\t\t5. Miskę zakryj folią i wstaw na godzinę do lodówki, żeby smaki się połączyły.",
-            "\t\t\t\t6. Wyjmij z miski laskę wanilii, a następnie przelej wszystko do głębokich talerzy lub w miarę płytkich misek, w których będziesz całość zapiekał. Uważaj, żeby nie pobrudzić brzegów jajkowo-śmietanową masą.",
-            "\t\t\t\t7. Wstaw talerze na blachę piekarnika.",
-            "\t\t\t\t8. Są dwa sposoby pieczenia tego deseru. Sposób 1: pieczesz creme w temperaturze 90 stopni C przez ok. 1 godz. 20 min. (uważając, żeby temperatura nie była większa, bo deser nie wyjdzie). Sposób 2: nalewasz na blaszkę, na której stoją talerze, wodę (do 3/4 wysokości talerza) i pieczesz creme w takiej kąpieli przez 25 min. w temperaturze 160 stopni.",
-            "\t\t\t\t9. Żeby sprawdzić, czy creme jest dobry trzeba wstrząsnąć talerzem. Powinien zachowywać się jak dobrze ścięta galaretka. Nie wylatywać z talerza!",
-            "\t\t\t\t10. Wystudź całość i posyp brązowym cukrem.",
-            "\t\t\t\t11. Palnikiem gazowym opal z wierzchu creme, żeby cukier się skarmelizował i stworzył cienką skorupkę.",
-            "\t\t\t\tUwaga: pisząc palnik mam na myśli ręczny palnik podłączony do butli gazowej. Taki palnik w kuchni się bardzo przydaje. Na przykład do opalania drobiu, jeśli są na nim jakieś piórka. Jeśli nie macie palnika można wstawić creme do piekarnika, ale pod warunkiem, że macie opcję grill. I trzeba bardzo pilnować, żeby cukier się nie przypalił (co może się stać błyskawicznie) tylko skarmelizował.. Można również cukier polać spirytusem i podpalić. Jednak trzeba będzie tę czynność powtarzać kilka razy dla uzyskania odpowiedniej karmelizacji."
-        ],
-        "id": 1456,
-        "title": "Creme Brulee",
-        "categories": [
-            "Desery"
         ]
     },
     {
@@ -5948,14 +4644,7 @@
         ]
     },
     {
-        "products": [
-            "cukinia,",
-            "<a href=\"/przepisy/Sos_z_jogurtu\" title=\"Sos z jogurtu\">sos z jogurtu</a>,",
-            "sól,",
-            "pieprz,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>,",
-            "ogórek."
-        ],
+        "products": "oliwa,",
         "steps": [
             "Ogórka trzema na średnich oczkach.",
             "Cukinię kroimy na grube plastry, smarujemy oliwą i pieczemy na patelni grillowej (opcjonalnie grill elektryczny lub zwykła patelnia).",
@@ -6003,20 +4692,7 @@
         ]
     },
     {
-        "products": [
-            "400 gram makaronu,",
-            "duża cukinia,",
-            "cztery małe cukinie,",
-            "garść świeżej bazylii,",
-            "cztery łyżki startego parmezanu,",
-            "dwie łyżki orzeszków piniowych,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>,",
-            "dwa ząbki czosnku,",
-            "sól,",
-            "pieprz,",
-            "sok z połowy cytryny,",
-            "trzy łyżki oliwy cytrynowej."
-        ],
+        "products": "oliwa,",
         "steps": [
             "Małe cukinie tniemy na cienkie plastry.",
             "Oliwę cytrynową mieszamy z solą, pieprzem oraz sokiem z cytryny. Zalewamy płynem cukinie i odstawiamy na moment. ",
@@ -6042,18 +4718,7 @@
         "categories": []
     },
     {
-        "products": [
-            "100 gram cukinii obranej ze skórki,",
-            "90 gram obranej cebuli,",
-            "90 gram tofu naturalnego, rozdrobnionego,",
-            "60 ml gazowanej wody mineralnej,",
-            "1 łyżeczka suszonego oregano,",
-            "1 jajko,",
-            "30 gram mąki ziemniaczanej,",
-            "sól,",
-            "pieprz,",
-            "2 łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy</a>."
-        ],
+        "products": "2 łyżki oliwy.",
         "steps": "Cukinię oraz cebulę kroimy na niewielką kostkę. Tofu oraz połowę cebuli, oregano i wodę mineralną miksujemy na jednolita masę. Następnie dodajemy do niej jajko, sól oraz pieprz i ponownie miksujemy. Wrzucamy mąkę ziemniaczaną i ponownie wykonujemy tą czynność. Na patelni rozgrzewamy oliwę, wrzucamy resztę cebuli oraz cukinię i smażymy na bardzo mocnym ogniu przez ok. 60 sekund. Po upływie tego czasu przykrywamy patelnię i dusimy na średnim ogniu przez 3 minuty. Następnie wlewamy zmiksowane tofu i delikatnie mieszamy. Smażymy obie strony przez 5 minut na średnim ogniu.",
         "id": 3279,
         "title": "Cukiniowa fritatta z tofu",
@@ -6065,19 +4730,7 @@
         ]
     },
     {
-        "products": [
-            " duża cukinia",
-            " białko z jajka",
-            " 20 mililitrów mleka",
-            " papryka słodka",
-            " tymianek suszony",
-            " sól",
-            " sproszkowane chili",
-            " cebula w proszku",
-            "okruszki z chleba ",
-            " sok z połowy cytryny",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>"
-        ],
+        "products": "oliwa",
         "steps": [
             "Cukinię myjemy i kroimy na paski. W misce mieszamy mleko z białkiem jajka.",
             "W drugiej misce mieszamy paprykę, tymianek, chili, okruszki oraz cebulę.",
@@ -6092,15 +4745,7 @@
         ]
     },
     {
-        "products": [
-            "dwie cukinie,",
-            "półtora szklanki mąki,",
-            "dwie szklanki mleka,",
-            "cztery łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>,",
-            "łyżeczka proszku do pieczenia,",
-            "pieprz,",
-            "sól."
-        ],
+        "products": "cztery łyżki oleju,",
         "steps": [
             "Mąkę, mleko, olej, sól oraz proszek mieszamy razem, po czym wyrabiamy ciasto. Ma być gęste, ale nie za bardzo.",
             "Cukinię kroimy na plastry, posypujemy pieprzem i solą.",
@@ -6116,18 +4761,7 @@
         ]
     },
     {
-        "products": [
-            " trzy młode cukinie",
-            " cebula",
-            " spory pomidor",
-            " topiony, ziołowy serek",
-            " dwa ząbki czosnku",
-            " papryka",
-            " zioła",
-            " sól",
-            " przyprawa do warzyw z grilla",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>"
-        ],
+        "products": "oliwa",
         "steps": [
             "Cukinię myjemy, przekrajamy na pół i wyjmujemy łyżką miąższ.",
             "Warzywa kroimy w kostkę, czosnek miażdżymy i mieszamy całość z miąższem (poza papryką i cebulą).",
@@ -6171,15 +4805,7 @@
         ]
     },
     {
-        "products": [
-            " trzy kwiaty cukinii",
-            " dwie łyżeczki serka homo",
-            " chili w proszku",
-            " ząbek czosnku",
-            " natka pietruszki",
-            " <a href=\"/przepisy/Ciasto_na_nale%C5%9Bniki\" title=\"Ciasto na naleśniki\">Ciasto na naleśniki</a>",
-            " frytki: cukinia, pietruszka, marchew"
-        ],
+        "products": "Ciasto na naleśniki",
         "steps": [
             "Z kwiatów usuwamy pręciki. Pietruszkę drobno siekamy, czosnek wyciskamy przez praskę. Chili dodajemy do serka.",
             "Kwiaty wypełniamy farszem i skręcamy końcówki. Zanurzamy w cieście, po czym kładziemy na patelnię i smażymy z obu stron.",
@@ -6215,17 +4841,7 @@
         ]
     },
     {
-        "products": [
-            "pół kalafiora,",
-            "pół niewielkiej dyni,",
-            "dwa ziemniaki,",
-            "cebula,",
-            "<a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>,",
-            "sól,",
-            "kozieradka,",
-            "czarna gorczyca,",
-            "przyprawa curry."
-        ],
+        "products": "oliwa,",
         "steps": [
             "Kalafiora dzielimy na różyczki, a dynię oraz ziemniaki kroimy w kostkę. Cebulę obieramy i kroimy w pióra.",
             "Oliwę, kozieradkę oraz gorczycę wrzucamy na rozgrzaną patelnię. Szklimy na tej mieszance cebulę.",
@@ -6241,21 +4857,7 @@
         ]
     },
     {
-        "products": [
-            "trzy łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>,",
-            "średnia cebula,",
-            "pół łyżeczki świeżego, tartego imbiru,",
-            "pół łyżeczki rozgniecionego czosnku,",
-            "pół łyżeczki mielonego kminku,",
-            "pół łyżeczki mielonej kolendry,",
-            "pół łyżeczki chilli w proszku,",
-            "papryczka chilli,",
-            "75 mililitrów wody,",
-            "ziemniak,",
-            "250 gram ciecierzycy z puszki,",
-            "łyżka soku z cytryny,",
-            "sól do smaku."
-        ],
+        "products": "trzy łyżki oliwy,",
         "steps": [
             "Cebulę obieramy i kroimy w plastry. Podsmażamy ją na patelni.",
             "Zmniejszamy ogień, dodajemy imbir, pocięty czosnek oraz przyprawy oraz listek kolendry i poszatkowane chilli. Gotujemy dwie minuty.",
@@ -6271,22 +4873,7 @@
         ]
     },
     {
-        "products": [
-            "dwie łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>,",
-            "łyżeczka nasion kminku,",
-            "pół łyżeczki nasion kolendry,",
-            "ćwierć łyżeczki kurkumy,",
-            "pół łyżeczki garam masala,",
-            "liść limonki kafir,",
-            "niewielka, ostra papryczka,",
-            "dwa posiekane ząbki czosnku,",
-            "posiekana cebula,",
-            "niewielki, posiekany kawałek imbiru,",
-            "450 gram posiekanych, obranych pomidorów,",
-            "450 gram ugotowanej cieciorki,",
-            "spora cukinia,",
-            "cytryna."
-        ],
+        "products": "dwie łyżki oleju,",
         "steps": [
             "Na rozgrzany na patelni olej wrzucamy przyprawy i lekko je podsmażamy. ",
             "Dodajemy paprykę, cebulę oraz czosnek. Smażymy do miękkości, po czym dodajemy pomidory i smażymy, dopóki się nie rozpadną.",
@@ -6401,21 +4988,7 @@
         ]
     },
     {
-        "products": [
-            " półtora kilograma karkówki",
-            " boczek gotowany,wędzony ",
-            " ziemniaki ",
-            " marchew",
-            " liście kapusty",
-            " cebula",
-            " jabłko",
-            " sól",
-            " pieprz",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej roślinny</a>",
-            " cynamon",
-            " ziarna jałowca",
-            " szklanka półwytrawnego wina"
-        ],
+        "products": "olej roślinny",
         "steps": [
             "Mięso nacieramy solą, cynamonem oraz pieprzem. Wkładamy na 12 godzin do lodówki.",
             "Liście parzymy we wrzątku, obrane ziemniaki, cebule oraz marchew kroimy w talarki.",
@@ -6543,20 +5116,7 @@
         ]
     },
     {
-        "products": [
-            " kilogram filetów z białej ryby",
-            " dwie czerwone cebule",
-            " trzy ząbki czosnku",
-            " pół łyżki posiekanej natki pietruszki",
-            " dwie łyżeczki startej skórki z cytryny",
-            " dwie łyżki posiekanych liści cytrynowego tymianku",
-            " trzy liście laurowe",
-            " ćwierć szklanki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " dwie łyżki białego octu winnego",
-            " litr wywaru rybnego",
-            " pół szklanki białego wina wytrawnego",
-            " pieprz mielony"
-        ],
+        "products": "ćwierć szklanki oliwy",
         "steps": [
             "Filety kroimy na ok. 3 centymetrowe kawałki. Z obranej cebuli oraz czosnku, pietruszki, skórki, tymianku, liści oraz octu i oliwy robimy sos. Zalewamy nim rybę, nakrywamy folią i wkładamy do lodówki na dwie godziny.",
             "Wkładamy rybę do garnka, zalewamy winem, wywarem oraz pieprzem. Gotujemy przez kwadrans, aż ryba zmięknie."
@@ -6672,14 +5232,7 @@
         "categories": []
     },
     {
-        "products": [
-            " 100 gram gorzkiej czekolady",
-            " dwie szklanki mleka",
-            " pół szklanki <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietanki</a> 30&nbsp;%",
-            " ćwierć łyżeczki mielonego cynamonu",
-            " łyżeczka ciemnego, gorzkiego kakao",
-            " dwie łyżeczki cukru"
-        ],
+        "products": "pół szklanki śmietanki 30 %",
         "steps": [
             "Czekoladę łamiemy na małe kawałki.",
             "Do garnka wlewamy mleko, śmietankę, czekoladę, kakao, cukier oraz cynamon.",
@@ -6701,7 +5254,7 @@
             "1 puszka (ok. 900 g) gruszek w syropie,",
             "40-50 dag biszkopcików lub pokrojonego w kostkę podeschniętego domowego biszkoptu."
         ],
-        "steps": "Rozpuść czekoladę ze śmietaną, dodaj wiśnie i nieco syropu z gruszek (lub nalewki z wiśni). Wlej czekoladę z wiśniami do kociołka na fondue. Zanurzaj w niej nadziane na szpadki cząstki gruszek i biszkopty. Zjadaj od razu. <b>RADA:</b> można zanurzać także świeże owoce - np. truskawki i melona.",
+        "steps": "Rozpuść czekoladę ze śmietaną, dodaj wiśnie i nieco syropu z gruszek (lub nalewki z wiśni). Wlej czekoladę z wiśniami do kociołka na fondue. Zanurzaj w niej nadziane na szpadki cząstki gruszek i biszkopty. Zjadaj od razu. RADA: można zanurzać także świeże owoce - np. truskawki i melona.",
         "id": 2204,
         "title": "Czekoladowe fondue",
         "categories": [
@@ -6709,16 +5262,7 @@
         ]
     },
     {
-        "products": [
-            "1,5 szklanki mleka,",
-            "4,5 łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>,",
-            "1 i 3/4 szklanki mąki,",
-            "2 łyżeczki proszku do pieczenia,",
-            "2 jajka,",
-            "1/3 szklanki cukru,",
-            "2,5 łyżki kakao,",
-            "szczypta soli."
-        ],
+        "products": "4,5 łyżki oleju,",
         "steps": "Mąkę przesiewamy z proszkiem do pieczenia. Dodajemy resztę składników i bardzo dokładnie miksujemy. Patelnię rozgrzewamy na małym ogniu i taki też utrzymujemy przez całe smażenie. Placki obracamy, gdy pojawiać się zaczną na nich pęcherze powietrza.",
         "id": 3124,
         "title": "Czekoladowe pancakes",
@@ -6738,7 +5282,7 @@
         ],
         "steps": [
             "Na rozgrzaną patelnię wsypujemy orzechy i prażymy przez kilka minut.",
-            "<a href=\"/przepisy/Roztapianie_czekolady\" title=\"Roztapianie czekolady\">Roztapiamy czekoladę</a>. Dodajemy orzechy i mieszamy.",
+            "Roztapiamy czekoladę. Dodajemy orzechy i mieszamy.",
             "Blachę wykładamy papierem, wylewamy masę, powierzchnię wyrównujemy.",
             "Wstawiamy na godzinę do lodówki."
         ],
@@ -6756,7 +5300,7 @@
         ],
         "steps": [
             "Truskawki myjemy i osuszamy.",
-            "Czekoladę łamiemy i <a href=\"/przepisy/Roztapianie_czekolady\" title=\"Roztapianie czekolady\">roztapiamy</a>.",
+            "Czekoladę łamiemy i roztapiamy.",
             "Dodajemy do niej masło i mieszając roztapiamy je w czekoladzie. Studzimy nieco masę.",
             "Truskawki moczymy w czekoladzie (do ok. połowy) i układamy na talerzu, Całość schładzamy w lodówce."
         ],
@@ -6789,21 +5333,6 @@
         "title": "Czekoladowe śliwki",
         "categories": [
             "Spiżarnia_domowa",
-            "Desery"
-        ]
-    },
-    {
-        "products": [
-            "Czas przygotowania:<span class=\"duration\"> 140 min</span>",
-            "Ilość porcji:<span class=\"yield\"> 6</span>",
-            "Kaloryczność:<span class=\"calories\"> -</span>",
-            "Orientacyjny koszt:<span class=\"cost\"> - zł</span>"
-        ],
-        "Sk.C5.82adniki": "<big>warstwa z białej czekolady:</big>",
-        "steps": "Blachę do pieczenia wykładamy pergaminem.Przygotowujemy białą warstwę. Czekoladę, miód oraz masło rozpuszczamy w garnku umieszzczony w większym naczyniu pełnym wody, którą należy doprowadzić do wrzenia.Zdejmujemy z ognia, dodajemy ryż i mieszamy całość. Wlewamy do foremek, dociskamy. Wstawiamy do lodówki.Tak samo przygotowujemy warstwę ciemną, którą kładziemy na warstwę białą.Wstawiamy do lodówki na dwie godziny. Kroimy.",
-        "id": 3546,
-        "title": "Czekoladowo - ryżowe ciastka",
-        "categories": [
             "Desery"
         ]
     },
@@ -6879,20 +5408,7 @@
         ]
     },
     {
-        "products": [
-            "5 dużych czerwonych papryczek chilli,",
-            "kawałek korzenia imbiru,",
-            "2 łodygi trawy cytrynowej,",
-            "7 ząbków czosnku,",
-            "3 szalotki,",
-            "łyżeczka zmielonych nasion kolendry,",
-            "łyżeczka zmielonego kminu rzymskiego,",
-            "łyżeczka pasty z krewetek,",
-            "dwie łyżeczki sproszkowanej słodkiej papryki,",
-            "pół łyżeczki kurkumy,",
-            "łyżeczka soli,",
-            "łyżka <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju słonecznikowego</a>."
-        ],
+        "products": "łyżka oleju słonecznikowego.",
         "steps": "Papryczki oraz imbir siekamy. Z trawy cytrynowej usuwamy twarde części i również ją siekamy. Czosnek i szalotki obieramy oraz siekamy. Wszystkie warzywa wraz z przyprawami wrzucamy do miksera i miksujemy na gładką pastę.",
         "id": 3351,
         "title": "Czerwona pasta curry",
@@ -6902,21 +5418,7 @@
         ]
     },
     {
-        "products": [
-            "pół sporej cebuli pokrojonej w piórka",
-            "dwa posiekane ząbki czosnku",
-            "marchewka pokrojona w plastry",
-            "połowa małego kalafiora podzielonego na różyczki",
-            "półtora szklanki ciecierzycy gotowanej lub ew. puszkowanej",
-            "puszka kukurydzy w kolbach",
-            "dwie łyżki czerwonej pasty curry",
-            "puszka mleka kokosowego",
-            "natka kolendry",
-            "cztery łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            "sól",
-            "pieprz",
-            "pół łyżeczki przyprawy curry"
-        ],
+        "products": "cztery łyżki oliwy",
         "steps": [
             "Marchewkę oraz kalafiora gotujemy do miękkości. Oliwę rozgrzewamy i szklimy na niej cebulę oraz czosnek. Po chwili dodajemy marchew oraz kalafiora i moment smażymy.",
             "Dodajemy mleko i gotujemy całość.",
@@ -6971,17 +5473,7 @@
         ]
     },
     {
-        "products": [
-            " półtora szklanki ryżu",
-            " ćwierć szklanki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " litr bulionu",
-            " dwa ząbki czosnku",
-            " marchewka",
-            " szklanka groszku (świeży, z puszki, mrożony)",
-            " cebula",
-            " dwa pomidory",
-            " łodyga selera naciowego"
-        ],
+        "products": "ćwierć szklanki oliwy",
         "steps": [
             "Cebulę i czosnek obieramy i siekamy, pomidory obieramy, selera i marchew obieramy i tniemy w plastry. Pomidora miksujemy na papkę.",
             "Do garnka z rozgrzaną oliwą wsypujemy ryż i smażymy, aż się zeszkli.",
@@ -6995,21 +5487,7 @@
         ]
     },
     {
-        "products": [
-            "600 gram wołowej polędwicy,",
-            "50 gram boczku,",
-            "marchewka,",
-            "korzeń pietruszki,",
-            "seler,",
-            "dwie cebule,",
-            "dwie łyżeczki ziaren pieprzu czarnego,",
-            "pięć kulek ziela angielskiego,",
-            "dwa listki laurowe,",
-            "250 gram <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a> 22%,",
-            "skórka z cytryny,",
-            "sok z połowy cytryny,",
-            "sól."
-        ],
+        "products": "250 gram śmietany 22%,",
         "steps": [
             "Wołowinę myjemy, kroimy na średnie kawałki i obsmażamy na połowie boczku.",
             "Na drugiej połowie mięsa smażymy warzywa.",
@@ -7025,17 +5503,7 @@
         ]
     },
     {
-        "products": [
-            " 100 gram piersi indyczych",
-            " puszka pomidorów bez skórki",
-            " puszka kukurydzy",
-            " dwie spore czerwone papryki",
-            " cztery łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " łyżeczka oregano",
-            " łyżeczka chili",
-            " łyżeczka mielonej kolendry",
-            " sól"
-        ],
+        "products": "cztery łyżki oliwy",
         "steps": [
             "Indyka opłukać, osuszyć, pokroić na długie kawałki, obsypać solą.",
             "Na patelni rozgrzać nieco oliwy i mocno zarumienić filety.",
@@ -7052,18 +5520,7 @@
         ]
     },
     {
-        "products": [
-            " pięć główek czosnku",
-            " 400 mililitrów białego wytrawnego wina",
-            " 70 mililitrów 10% octu",
-            " 50 gram cukru",
-            " łyżeczka ziaren kolorowego pieprzu",
-            " łyżeczka nasion kolendry",
-            " liść laurowy",
-            " łyżeczka soli",
-            " pokrojona ostra papryczka",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>"
-        ],
+        "products": "oliwa",
         "steps": [
             "Obieramy ząbki.",
             "Zagotowujemy wino oraz ocet, cukier i przyprawy. Do gotującego się płynu wsypujemy czosnek, dodajemy paprykę.",
@@ -7078,17 +5535,7 @@
         ]
     },
     {
-        "products": [
-            " 300 gram młodego czosnku",
-            " litr osolonego wrzątku",
-            " cztery spore gałązki kopru",
-            " trzy łyżki zielonego cząbru",
-            " ćwierć litra białego wytrawnego wina",
-            " 1/8 litra octu",
-            " łyżka soli",
-            " łyżeczka cukru",
-            " 1/8 litra <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>"
-        ],
+        "products": "1/8 litra oliwy",
         "steps": [
             "Czosnek obieramy, solimy i wkładamy do osolonego wrzątku. Zagotowujemy.",
             "Odcedzamy, przelewamy zimną wodą i odsączamy.",
@@ -7104,13 +5551,7 @@
         ]
     },
     {
-        "products": [
-            "awokado",
-            "trzy ząbki czosnku,",
-            "łyżka <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy</a>,",
-            "sok z połowy limonki,",
-            "pół łyżeczki soli."
-        ],
+        "products": "łyżka oliwy,",
         "steps": "Obieramy awokado, kroimy na pół, wyrzucamy pestkę. Siekamy.Czosnek obieramy i siekamy. Dodajemy sól, sok oraz oliwę.Dokładnie mieszamy.",
         "id": 3699,
         "title": "Czosnkowa pasta awokado",
@@ -7120,16 +5561,7 @@
         ]
     },
     {
-        "products": [
-            "cztery niewielkie bakłażany,",
-            "sześć suszonych pomidorów,",
-            "słoiczek czosnku w zalewie octowo-ziołowej,",
-            "szklanka <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>,",
-            "pół szklanki białego octu winnego,",
-            "sól,",
-            "pieprz,",
-            "szczypta pieprzu cayenne."
-        ],
+        "products": "szklanka oliwy,",
         "steps": [
             "Umyte bakłażany i kroimy w niewielkie plastry.",
             "Grillujemy je na patelni grillowej lub smażymy na patelni, po czym odstawiamy.",
@@ -7180,16 +5612,7 @@
         ]
     },
     {
-        "products": [
-            "1 kg karczochów,",
-            "5 ząbków czosnku,",
-            "sok z cytryny,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwa</a>,",
-            "ziele angielskie,",
-            "pieprz w ziarenkach,",
-            "liść laurowy,",
-            "vegeta lub inne jarzywko."
-        ],
+        "products": "oliwa,",
         "steps": "Karczochy pozbywamy ogonka, obu końcówek i listków z wierzchu, po czym kroimy na plastry. Wlewamy do miski wodę, sok z połowy cytryny i przez 20 minut namaczamy karczochy. W międzyczasie czosnek kroimy na plasterki, który następnie rumienimy na patelni. Odcedzone karczochy dodajemy do czosnku, podsmażamy, zalewamy wodą i dodajemy wszystkie przyprawy. Dusimy przez ok. godzinę.Odcinamy ogonek od karczochów i obieramy z listków, aż odsłonią się te o kolorze jaśniejszym, następnie odcinamy końcówkę i \"dupkę\". Kroimy w plastry. Wodę wlewamy do naczynia głębokiego i dodajemy sok z 1/2 cytryny, wkładamy pokrojone karczochy. Moczymy ok 20 min. W miedzy czasie obieramy czosnek i kroimy w plasterki. Do garnka wlewamy olej i rumienimy czosnek, odcedzić karczochy i dodać do czosnku lekko podsmażyć, zalewamy wodą, dodajemy pieprz w ziarenkach, ziele angielskie, liść laurowy, vegetę. Dusimy ok 50 min. ",
         "id": 3295,
         "title": "Czosnkowe karczochy",
@@ -7199,15 +5622,7 @@
         ]
     },
     {
-        "products": [
-            " sześć ząbków czosnku",
-            " cztery łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " dwie łyżki masła",
-            " 24 tygrysie krewetki",
-            " pęczek natki pietruszki",
-            " sól",
-            " pieprz"
-        ],
+        "products": "cztery łyżki oliwy",
         "steps": [
             "Czosnek obieramy, siekamy i szklimy na oliwie z masłem.",
             "Zwiększamy ogień, dodajemy obrane krewetki i smażymy je z 3 minuty. Dorzucamy natkę i doprawiamy solą oraz pieprzem."
@@ -7220,19 +5635,7 @@
         ]
     },
     {
-        "products": [
-            "40 dag mrożonych obranych krewetek,",
-            "2 łyżki masła,",
-            "2 łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oliwy</a>,",
-            "duża garść posiekanej natki pietruszki,",
-            "2 ząbki czosnku,",
-            "1 cm świeżego korzenia imbiru,",
-            "1 łyżeczka słodkiej papryki w proszku,",
-            "1/2 łyżeczki ostrej papryki w proszku,",
-            "szczypta pieprzu cayenne,",
-            "sól,",
-            "zmielony czarny pieprz."
-        ],
+        "products": "2 łyżki oliwy,",
         "steps": "Obrane ząbki czosnku kroimy na cienkie plastry, a obrany imbir drobno siekamy. Zagotowujemy 1 litr wody. Mrożone krewetki wrzucamy na sitko, przelewamy gorącą wodą i odstawiamy na chwilę.Masło i oliwę rozgrzewamy na patelni. Dodajemy do niej czosnek oraz imbir i smażymy przez 30 sekund pamiętając o mieszaniu. Krewetki dodajemy, gdy czosnek zacznie robić się żółty. Mieszamy ponownie i smażymy przez 3 minuty (krewetki powinny zmienić kolor). Dodajemy papryki, oba pieprze oraz sól. Mieszamy ponownie i trzymamy na ogniu przez 30 sekund. Dodajemy natkę pietruszki, mieszamy.",
         "id": 3171,
         "title": "Czosnkowe krewetki z imbirem",
@@ -7241,15 +5644,7 @@
         ]
     },
     {
-        "products": [
-            " pół kilograma kapeluszy z pieczarek ",
-            " trzy ząbki czosnku",
-            " cytryna",
-            " 150 mililitrów <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " pęczek natki pietruszki",
-            " sól",
-            " pieprz"
-        ],
+        "products": "150 mililitrów oliwy",
         "steps": [
             "Pieczarki polewamy sokiem i odstawiamy na kwadrans.",
             "Na rozgrzaną oliwę wrzucamy zmiażdżony czosnek oraz pieczarki i smażymy na 10 minut. Doprawiamy, posypujemy pocięta natką pietruszki."
@@ -7299,21 +5694,7 @@
         ]
     },
     {
-        "products": [
-            " kilogram morskiej ryby",
-            " dwa spore pomidory",
-            " dwie marchewki",
-            " duża cebula",
-            " kawałek selera",
-            " pół szklanki ryżu",
-            " 60 mililitrów <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " cytryna",
-            " łyżka posiekanej pietruszki",
-            " dwa jajka",
-            " sól",
-            " pieprz",
-            " liść laurowy"
-        ],
+        "products": "60 mililitrów oliwy",
         "steps": [
             "Cebule, marchewki oraz selera obieramy i kroimy na cienkie paski. Pomidora obieramy i kroimy na ćwiartki.",
             "Wszystkie warzywa wrzucamy do gotującej się wody, doprawiamy solą, pieprzem oraz liściem laurowym. Dolewamy oliwę i gotujemy na małym ogniu 30 minut.",
@@ -7332,14 +5713,7 @@
         ]
     },
     {
-        "products": [
-            " pół kilograma marchewki",
-            " spory ząbek czosnku",
-            " oregano",
-            " sól",
-            " pół szklanki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " dwie łyżki octu winnego"
-        ],
+        "products": "pół szklanki oliwy",
         "steps": [
             "Marchewkę gotujemy w skórce, po czym studzimy.",
             "Obieramy i kroimy w długie plastry.",
@@ -7455,7 +5829,7 @@
             " 100 g mielonych migdałów,",
             " garść płatków migdałowych,",
             " masło do posmarowania formy,",
-            " zapach waniliowy (opcjonalnie).​ "
+            " zapach waniliowy (opcjonalnie)."
         ],
         "steps": "Morele starannie osączamy z syropu. Formę do pieczenia (najlepiej taką, którą możemy podać potem na stół) smarujemy masłem. Układamy w niej ciasno morele – stroną przeciętą do góry.Jajka ubijamy widelcem w misce, jak na omlet. Dodajemy (cały czas ubijając) śmietankę, cukier puder, mielone migdały i zapach waniliowy. Masa powinna stać się gładka. Zalewamy nią morele ułożone w formie. Wstawiamy do dobrze nagrzanego piekarnika (180 st. C.) na ok. 30 min. Wyjmujemy, gdy masa jajeczna jest ścięta na całej powierzchni i ładnie przyrumieniona.Na suchej patelni przyrumieniamy lekko płatki migdałowe i osypujemy nimi wierzch wyjętego deseru. ",
         "id": 2009,
@@ -7465,14 +5839,7 @@
         ]
     },
     {
-        "products": [
-            " 500 gram świeżych truskawek",
-            " szklanka gęstej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " 40 gram lodów waniliowych",
-            " cukier",
-            " cztery łyżki likieru pomarańczowego",
-            " starta wanilia"
-        ],
+        "products": "szklanka gęstej śmietany",
         "steps": [
             "Truskawki oczyszczamy z szypułek. Kroimy je, słodzimy i zalewamy likierem. Dodajemy startą wanilię.",
             "Całość mieszamy i odstawiamy na dwie godziny do lodówki.",
@@ -7510,17 +5877,7 @@
         ]
     },
     {
-        "products": [
-            " bakłażan",
-            " trzy łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>",
-            " dwie łyżki posiekanej pietruszki",
-            " dwa roztarte ząbki czosnku",
-            " dwie łyżki pokrojonego szczypiorku",
-            " dwie łyżeczki soku z cytryny",
-            " sól",
-            " pieprz",
-            " <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwa</a>"
-        ],
+        "products": "oliwa",
         "steps": [
             "Bakłażana kroimy w plastry i posypujemy je solą. Podsmażamy na oliwie dopóki skórka nie zacznie brązowieć.",
             "Miksujemy je na gładką masę. W trakcie stopniowo dodajemy oliwę, szczypior, czosnek oraz sok z cytryny.",
@@ -7577,25 +5934,6 @@
         "categories": []
     },
     {
-        "Podzia.C5.82_.22E.22_dodatk.C3.B3w_wed.C5.82ug_ich_szkodliwo.C5.9Bci": "<span class=\"mw-headline\" id=\"Rakotw.C3.B3rcze_.22E.22\">Rakotwórcze \"E\"</span><span class=\"mw-editsection\"><span class=\"mw-editsection-bracket\">[</span><a href=\"/index.php?title=Dodatki_do_%C5%BCywno%C5%9Bci&amp;action=edit&amp;section=2\" title=\"Edytuj sekcję: Rakotwórcze &quot;E&quot;\">edytuj</a><span class=\"mw-editsection-bracket\">]</span></span>",
-        "Rakotw.C3.B3rcze_.22E.22": "E: 131, 142, 210 - 215, 217, 239, 330 , 951 ",
-        "Zakazane_.28tylko_w_USA.29": "E: 103, 105, 111, 121, 125, 126, 130, 152, 123 ",
-        "Niebezpieczne": "E: 102, 110, 120 ",
-        "Podejrzane": "E: 104, 122, 141, 150, 151, 171, 173, 180, 240, 241, 477 ",
-        "Zaburzenia_.C5.BCo.C5.82.C4.85dka_i_jelit": "E: 221- 224, 226, 338 - 341, 407, 450, 461- 463, 465, 466 ",
-        "Szkodliwe_dla_sk.C3.B3ry": "E:230, 231, 232, 233",
-        "BARWNIKI_I_PIGMENTY": "E 100 - kurkumina (kurkuma) - żółty, roślinny; przyprawy, koncentraty",
-        "KONSERWANTY": "E 200 - kwas sorbowy - syntetyczny; sery, margaryny i inne",
-        "ANTYUTLENIACZE_I_STABILIZATORY": "E 270 - kwas mlekowy - fermentacyjny, konserwant; różne",
-        "ZAG.C4.98SZCZACZE": "E 400 - kwas alginowy - naturalny (produkowany z alg); różne",
-        "R.C3.93.C5.BBNE": "E 500a - węglan sodu, soda - syntetyczny, regulator kwasowości; różne",
-        "id": 1333,
-        "title": "Dodatki do żywności",
-        "categories": [
-            "Artykuły_spożywcze"
-        ]
-    },
-    {
         "id": 2230,
         "title": "Dodatki do ĹźywnoÂci",
         "categories": []
@@ -7630,20 +5968,7 @@
         ]
     },
     {
-        "products": [
-            "500 gram baraniny z karkówki lub mostka,",
-            "125 mililitrów octu 3%,",
-            "200 gram ryżu,",
-            "400 mililitrów  wody,",
-            "40 gram masła,",
-            "1 średnia cebula,",
-            "1 główka kapusty włoskiej lub cukrowej,",
-            "500 mililitrów  <a href=\"/przepisy/Ros%C3%B3%C5%82\" title=\"Rosół\">rosołu</a>,",
-            "250 mililitrów  <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>,",
-            "1 łyżka mąki,",
-            "sól, ",
-            "pieprz."
-        ],
+        "products": "250 mililitrów  śmietany,",
         "steps": "Sparzoną wrzącym octem baraninę oczyścić, pokroić w kawałki, zemleć w maszynce. Cebule obrać, posiekać, przesmażyć na maśle na zloty kolor. Ryż opłukać, osączyć, zalać wrzątkiem, osolić, gotować na małym ogniu 10 min. Przygotować farsz: połączyć baraninę z na wpół miękkim ryżem, dodać przesmażona cebule, sol, pieprz. Dokładnie wymieszać. Kapustę opłukać, obrać z wierzchnich liści. Główkę zalać wrzątkiem, gotować 3-4 min, odcedzić. Sparzone liście zdejmować kolejno i formować, przycinając wzdłuż gruby nerw liściowy. Na środek każdego liścia nałożyć farsz, liść zwinąć w rulon i podwinąć brzegi, by farsz nie wyciekł. Gołąbki ułożyć ciasno w garnku, jeden obok drugiego, zalać wrzącym rosołem, gotować na małym ogniu lub piec w piekarniku ogrzanym do temp. 200żC 40 min. Śmietanę wymieszać z maka, zalać potrawę. Zapiekać w piekarniku ogrzanym do temp. 200żC ok. 20 min. Dolmę podawać w naczyniu, w którym się zapiekała.",
         "id": 3024,
         "title": "Dolma",
@@ -7653,18 +5978,7 @@
         ]
     },
     {
-        "products": [
-            "liście winogron,",
-            "400 gram ryżu,",
-            "100 mililitrów <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>,",
-            "pęczek dymki,",
-            "1 łyżka świeżej mięty,",
-            "2 łyżki koperku,",
-            "2 łyżki natki pietruszki,",
-            "sok z dużej cytryny.",
-            "sól,",
-            "pieprz."
-        ],
+        "products": "100 mililitrów oleju,",
         "steps": "Liście winogron dokładnie myjemy oraz osuszamy. Dymkę kroimy na niewielkie fragmenty, które rumienimy na rozgrzanym oleju. Następnie dodajemy ryż, przyprawy i zioła, dolewamy wodę i dusimy przez 10 minut. Po tym czasie odstawiamy całość do wystygnięcia. W ten sposób przygotowany farsz wykładamy na liście i formujemy w niewielkie gołąbki, przy czym część liści zostawiamy, by wyłożyć dno garnka, na których układamy warstwami gołąbki. Podlewamy wodą i sokiem z cytryny, a następnie dusimy na małym ogniu przez półtorej godziny.",
         "id": 2931,
         "title": "Dolmedakia",
@@ -7850,12 +6164,7 @@
         ]
     },
     {
-        "products": [
-            " pięć łyżek sosu sojowego jasnego",
-            " łyżka <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju sezamowego</a>",
-            " dwie łyżki wywaru z kurczaka (bez tłuszczu)",
-            " sól do smaku"
-        ],
+        "products": "łyżka oleju sezamowego",
         "steps": [
             "Składniki, bez soli, mieszamy dokładnie razem.",
             "Doprawiamy solą."
@@ -7901,18 +6210,7 @@
         ]
     },
     {
-        "products": [
-            "600 gram pomidorów,",
-            "dwa ząbki czosnku,",
-            "cztery łyżki <a href=\"/przepisy/Oliwa_z_oliwek\" title=\"Oliwa z oliwek\">oliwy</a>,",
-            "pieprz,",
-            "sól,",
-            "mały pęczek pietruszki,",
-            "80 gram masła,",
-            "sześć łyżek tartej bułki,",
-            "dwie łyżki soku cytrynowego,",
-            "cztery filety z dorsza."
-        ],
+        "products": "cztery łyżki oliwy,",
         "steps": [
             "Pomidory myjemy, wycieramy i kroimy w kostkę. Czosnek również obieramy i kroimy w pióra, a cebulę w plastry. ",
             "Na patelni szklimy cebulę oraz czosnek, a następnie dodajemy pomidory. Smażymy trzy minuty, po czym doprawiamy solą i pieprzem. ",
@@ -7969,18 +6267,7 @@
         ]
     },
     {
-        "products": [
-            " 500 gram fileta z ryby",
-            " szklanka <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " łyżka mąki",
-            " 100 gram żółtego sera",
-            " trzy ząbki czosnku",
-            " łyżeczka musztardy",
-            " łyżeczka ziół prowansalskich",
-            " pieprz",
-            " sól",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej do smażenia</a>"
-        ],
+        "products": "olej do smażenia",
         "steps": [
             "Ryby myjemy, posypujemy solą i pieprzem, obtaczamy w mące. Smażymy na złoty kolor.",
             "Zioła, musztardę, śmietanę, sól i roztarty czosnek mieszamy razem.",
@@ -7991,16 +6278,7 @@
         "categories": []
     },
     {
-        "products": [
-            "pół kilograma filetów dorsza,",
-            "dwie łyżki <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">oleju</a>,",
-            "25 gram mąki,",
-            "sól,",
-            "pieprz,",
-            "10 pomidorków koktajlowych,",
-            "20 listków bazylii,",
-            "<a href=\"/przepisy/Sos_kokosowy\" title=\"Sos kokosowy\">sos kokosowy</a>."
-        ],
+        "products": "sos kokosowy.",
         "steps": "Rybę kroimy na kawałki i obtaczamy w mące.Umyte pomidorki kroimy na połówki, a bazylię szatkujemy.Na patelni podsmażamy rybę.Po kilku minutach wlewamy sos i mieszamy. Zostawiamy na średnim ogniu na 5 minut.Dodajemy pomidory oraz bazylię.Gotujemy kolejne 5 minut.",
         "id": 3724,
         "title": "Dorsz w sosie kokosowym",
@@ -8031,17 +6309,7 @@
         "categories": []
     },
     {
-        "products": [
-            "4 wypatroszone dorsze (z wyciętym kręgosłupem),",
-            "2 łyżki soku z cytryny,",
-            "4 grubsze plastry sera ementaler,",
-            "200 gram mąki,",
-            "3 jajka,",
-            "10 łyżek jasnego piwa,",
-            "<a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej</a>,",
-            "sól, ",
-            "biały pieprz. "
-        ],
+        "products": "olej,",
         "steps": "Ser kroimy na 4 plastry. Do rozciętych dorszy wkładamy ser. Skrapiamy środek sokiem z cytryny, pieprzymy, solimy, po czym spinamy całość wykałaczkami. W międzyczasie z mąki, piwa i jajek robimy ciasto, w które zanurzamy rybę. Smażymy całośc na głębokim oleju przez ok. 10 minut.",
         "id": 3163,
         "title": "Dorsz z nadzieniem",
@@ -8050,20 +6318,7 @@
         ]
     },
     {
-        "products": [
-            " 600 gram dorsza",
-            " 500 gram pieczarek",
-            " duża cebula",
-            " dwie łyżki klarowanego masła",
-            " trzy łyżki gęstej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " żółty ser",
-            " sok z połowy cytryny",
-            " dwa ząbki czosnku",
-            " sól",
-            " pieprz",
-            " zioła",
-            " "
-        ],
+        "products": "trzy łyżki gęstej śmietany",
         "steps": [
             "Dorsza kroimy na porcje, solimy, polewamy sokiem, doprawiamy poszatkowanym czosnkiem oraz ziołami.",
             "Poszatkowaną cebulę podsmażamy, po czym dusimy na niej pocięte w plastry pieczarki. Po kilku minutach dodajemy śmietanę, sól oraz pieprz. ",
@@ -8077,13 +6332,7 @@
         ]
     },
     {
-        "products": [
-            " cebula przekrojona na pól",
-            " 200 gram surowego ryżu",
-            " 120 gram czarnej soczewicy",
-            " <a href=\"/przepisy/Olej_ro%C5%9Blinny\" title=\"Olej roślinny\">olej roślinny</a>",
-            " sól "
-        ],
+        "products": "olej roślinny",
         "steps": [
             "Wsypujemy soczewicę oraz ryż do dwóch osobnych naczyń. Zalewamy oba wodą i odstawiamy na ok. 10 godzin.",
             "Wylewamy wodę. Miksujemy osobno soczewicę oraz ryż z odrobiną wody, by powstało gęste ciasto.",
@@ -8100,12 +6349,7 @@
         ]
     },
     {
-        "products": [
-            " trzy łyżki musztardy",
-            " szklanka kwaśnej <a href=\"/przepisy/%C5%9Amietana\" title=\"Śmietana\">śmietany</a>",
-            " pół łyżeczki curry",
-            " biały pieprz"
-        ],
+        "products": "szklanka kwaśnej śmietany",
         "steps": "Wszystkie składniki mieszamy razem, po czym wkładamy do lodówki na ok. 15 minut.",
         "id": 5112,
         "title": "Dressing na śledzia",
