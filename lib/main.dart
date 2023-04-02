@@ -35,6 +35,10 @@ void main() async {
     await Hive.openBox<GroceryList>("groceryLists");
   }
 
+  if (!Hive.isBoxOpen("stores")) {
+    await Hive.openBox("stores");
+  }
+
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => PositionModel(_scaffoldKey)),
