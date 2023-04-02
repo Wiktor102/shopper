@@ -7,6 +7,7 @@ import 'package:hive/hive.dart';
 class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
   List<int> _favoriteIds = [];
+  bool loading = true;
 
   List<Recipe> get recipes => _recipes;
   Future<void> readJSON() async {
@@ -51,7 +52,11 @@ class RecipesModel extends ChangeNotifier {
     readJSON().then((_) async {
       final box = await Hive.openBox("favoriteRecipes");
       final savedFav = box.get("favorite");
-      if (savedFav == null) return;
+      if (savedFav == null) {
+        loading = false;
+        notifyListeners();
+        return;
+      }
 
       _favoriteIds = savedFav;
       for (Recipe recipe in _recipes) {
@@ -59,6 +64,7 @@ class RecipesModel extends ChangeNotifier {
         recipe.favorite = true;
       }
 
+      loading = false;
       notifyListeners();
     });
   }

@@ -120,6 +120,10 @@ class RecipesList extends StatelessWidget {
     final provider = Provider.of<RecipesModel>(context);
     List<TemporaryRecipe> recipes = []; //lista która pokazuje sie na ekranie
 
+    if (provider.loading) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
     switch (currentTab) {
       case RecipesTabs.custom:
         for (int i = 0; i < provider.recipes.length; i++) {
