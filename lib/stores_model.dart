@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:latlong2/latlong.dart';
@@ -8,6 +9,8 @@ import 'package:phone_number/phone_number.dart';
 import "./position_model.dart";
 import "./favorite_stores_model.dart";
 import "./settings_model.dart";
+
+part "stores_model.g.dart";
 
 class StoresModel extends ChangeNotifier {
   List<Store> nearbyStores = [];
@@ -78,17 +81,31 @@ class StoresModel extends ChangeNotifier {
   }
 }
 
+@HiveType(typeId: 0)
 class Store {
+  @HiveField(0)
   final String id;
+
+  @HiveField(1)
   final String name;
+
+  @HiveField(2)
   final String? address;
+
+  @HiveField(3)
   final String? phoneNumber;
+
+  @HiveField(4)
   final String? website;
-  final LatLng location;
+
+  @HiveField(7)
+  final List<double> location;
+
+  @HiveField(6)
   final List<dynamic> types;
 
-  double get lat => location.latitude;
-  double get lng => location.longitude;
+  double get lat => location[0];
+  double get lng => location[1];
 
   Store({
     required this.id,
@@ -107,7 +124,7 @@ class Store {
       address: json["address"] as String?,
       phoneNumber: json["phone_number"] as String?,
       website: json["website"] as String?,
-      location: LatLng(json["location"]["lat"], json["location"]["lng"]),
+      location: [json["location"]["lat"], json["location"]["lng"]],
       types: json["types"] as List<dynamic>,
     );
   }
@@ -148,4 +165,8 @@ class Store {
 
     return detailsList;
   }
+}
+
+class LatLngWithAdapter extends LatLng {
+  LatLngWithAdapter(super.latitude, super.longitude);
 }
