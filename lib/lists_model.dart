@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopper/recipes_model.dart';
 
 //komenda pozwalająca usuwać obiekt z listy
 Set<dynamic> deleteFromSetIndex(Set<dynamic> set, int index) {
@@ -14,6 +15,11 @@ class GroceryListModel extends ChangeNotifier {
   int currentListIndex = 0;
 
   Set<GroceryList> get grocerySet => _set;
+
+  int addList(GroceryList list) {
+    _set.add(list);
+    return _set.length - 1;
+  }
 
   void newList(String name, Set<TaskObject> items) {
     GroceryList newList = GroceryList(name, items);
@@ -111,6 +117,13 @@ class TaskObject {
 class GroceryList {
   String name;
   Set<TaskObject> items;
+  static GroceryList readFromRecipe(Recipe recipe) {
+    final Set<TaskObject> objects = {};
+    for (String value in recipe.ingredients) {
+      objects.add(TaskObject(value, false));
+    }
+    return GroceryList(recipe.name, objects);
+  }
 
   GroceryList(this.name, this.items);
 }
