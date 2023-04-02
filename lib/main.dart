@@ -26,7 +26,14 @@ GlobalKey<ScaffoldMessengerState> getScaffoldKey() {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
+
   Hive.registerAdapter(StoreAdapter());
+  Hive.registerAdapter(TaskObjectAdapter());
+  Hive.registerAdapter(GroceryListAdapter());
+
+  if (!Hive.isBoxOpen("groceryLists")) {
+    await Hive.openBox<GroceryList>("groceryLists");
+  }
 
   runApp(MultiProvider(
     providers: [

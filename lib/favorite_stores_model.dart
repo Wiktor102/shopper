@@ -50,6 +50,7 @@ class FavoriteStoresModel extends ChangeNotifier {
 
   void updateFavorite(Store store) {
     _favorites[store.id] = store;
+    //! TODO: add update in hive
     notifyListeners();
   }
 }
