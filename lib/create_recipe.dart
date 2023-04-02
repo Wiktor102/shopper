@@ -3,7 +3,8 @@ import 'package:provider/provider.dart';
 import "recipes_model.dart";
 
 class CreateRecipe extends StatefulWidget {
-  const CreateRecipe({super.key});
+  final Recipe? recipe;
+  const CreateRecipe({super.key, this.recipe});
 
   @override
   State<CreateRecipe> createState() => _CreateRecipeState();
@@ -13,6 +14,27 @@ class _CreateRecipeState extends State<CreateRecipe> {
   String title = "";
   List<String> ingredients = [""];
   List<String> steps = [];
+
+  final titleController = TextEditingController();
+  final stepsController = TextEditingController();
+  final ingredientsControllers = [TextEditingController()];
+
+  @override
+  void initState() {
+    if (widget.recipe != null) {
+      loadRecipe(widget.recipe as Recipe);
+    }
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    for (TextEditingController controller in ingredientsControllers) {
+      controller.dispose();
+    }
+
+    super.dispose();
+  }
 
   void save(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context, listen: false);
@@ -25,9 +47,34 @@ class _CreateRecipeState extends State<CreateRecipe> {
       custom: true,
     );
 
-    provider.addCustomRecipe(newRecipe);
+    if (widget.recipe == null) {
+      provider.addCustomRecipe(newRecipe);
+    } else {
+      provider.updateCustomRecipe(widget.recipe!.id, newRecipe);
+    }
 
     Navigator.of(context).pop();
+  }
+
+  void loadRecipe(Recipe recipe) {
+    setState(() {
+      title = recipe.name;
+      ingredients = recipe.ingredients;
+      steps = recipe.steps;
+    });
+
+    titleController.text = recipe.name;
+    stepsController.text = recipe.steps[0];
+
+    int i = 0;
+    for (String ingredient in recipe.ingredients) {
+      if (ingredientsControllers.length - 1 < i) {
+        ingredientsControllers.add(TextEditingController());
+      }
+
+      ingredientsControllers[i].text = ingredient;
+      i++;
+    }
   }
 
   void removeField(index) {
@@ -45,6 +92,7 @@ class _CreateRecipeState extends State<CreateRecipe> {
   void addNextField() {
     setState(() {
       ingredients.add("");
+      ingredientsControllers.add(TextEditingController());
     });
   }
 
@@ -63,6 +111,7 @@ class _CreateRecipeState extends State<CreateRecipe> {
         child: ListView(
           children: [
             TextField(
+              controller: titleController,
               decoration: const InputDecoration(
                 labelText: "Tytuł",
                 border: OutlineInputBorder(),
@@ -90,6 +139,7 @@ class _CreateRecipeState extends State<CreateRecipe> {
                           children: [
                             Expanded(
                               child: TextField(
+                                controller: ingredientsControllers[index],
                                 decoration: InputDecoration(
                                   labelText: "Składnik ${index + 1}",
                                   border: const OutlineInputBorder(),
@@ -144,6 +194,7 @@ class _CreateRecipeState extends State<CreateRecipe> {
             Padding(
               padding: const EdgeInsets.only(top: 10, left: 20),
               child: TextField(
+                controller: stepsController,
                 maxLines: null, //or null
                 decoration: InputDecoration(
                   hintText: "Jak wykonać $title?",

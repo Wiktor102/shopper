@@ -138,12 +138,18 @@ class RecipesList extends StatelessWidget {
   void createCustomRecipe(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const CreateRecipe(),
+        builder: (context) => const CreateRecipe(recipe: null),
       ),
     );
   }
 
-  void editCustomRecipe(int index, RecipesModel provider) {}
+  void editCustomRecipe(BuildContext context, Recipe recipe) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CreateRecipe(recipe: recipe),
+      ),
+    );
+  }
 
   void deleteCustomRecipe(int recipeId, RecipesModel provider) {
     provider.removeCustomRecipe(recipeId);
@@ -212,8 +218,8 @@ class RecipesList extends StatelessWidget {
                             onSelected: (value) async {
                               if (value == "edit") {
                                 editCustomRecipe(
-                                  recipes[index].trueIndex,
-                                  provider,
+                                  context,
+                                  recipes[index].recipe,
                                 );
                               }
 
