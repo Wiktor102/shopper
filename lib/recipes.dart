@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shopper/empty.dart';
 
 import "./recipes_model.dart";
 import 'bullet_list.dart';
@@ -145,16 +146,13 @@ class RecipesList extends StatelessWidget {
                 ),
               ),
             )
-          : Align(
-              alignment: Alignment.center,
-              child: Text(
-                currentTab == RecipesTabs.custom
-                    ? "Nie utworzono jeszcze żadnego przepisu"
-                    : currentTab == RecipesTabs.favorites
-                        ? "Nie polubiono żadnego przepisu"
-                        : "Brak przepisów",
-                textAlign: TextAlign.center,
-              )),
+          : Empty(
+              currentTab == RecipesTabs.custom
+                  ? "Nie utworzono jeszcze żadnego przepisu"
+                  : currentTab == RecipesTabs.favorites
+                      ? "Nie polubiono żadnego przepisu"
+                      : "Brak przepisów",
+            ),
       floatingActionButton: currentTab == RecipesTabs.custom
           ? FloatingActionButton(
               onPressed: () => createCustomRecipe(context),
