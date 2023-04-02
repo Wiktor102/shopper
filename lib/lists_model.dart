@@ -16,6 +16,11 @@ class GroceryListModel extends ChangeNotifier {
 
   Set<GroceryList> get grocerySet => _set;
 
+  int addList(GroceryList list) {
+    _set.add(list);
+    return _set.length - 1;
+  }
+
   void newList(String name, Set<TaskObject> items) {
     GroceryList newList = GroceryList(name, items);
     _set.add(newList);

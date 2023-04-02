@@ -6,7 +6,9 @@ import 'recipes_model.dart';
 
 class RecipeDetails extends StatelessWidget {
   final int index;
-  const RecipeDetails(this.index, {super.key});
+  final Function(Recipe, BuildContext) createListFromRecipe;
+
+  const RecipeDetails(this.index, this.createListFromRecipe, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +21,11 @@ class RecipeDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text(recipe.name),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.playlist_add)),
           IconButton(
-            onPressed: () => provider.toggleFavorites(index),
+            onPressed: () {
+              Navigator.pop(context);
+              provider.toggleFavorites(index);
+            },
             icon: Icon(
               Icons.favorite,
               color: provider.recipes[index].favorite ? Colors.red : null,
@@ -53,6 +57,13 @@ class RecipeDetails extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+          createListFromRecipe(recipe, context);
+        },
+        child: const Icon(Icons.playlist_add),
       ),
     );
   }

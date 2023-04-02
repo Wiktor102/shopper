@@ -7,46 +7,47 @@ class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
 
   List<Recipe> get recipes => _recipes;
-  void readJSON() {
-    rootBundle.loadString('assets/recipes.json').then((value) {
-      final decoded = jsonDecode(value);
+  void readJSON() async {
+    final jsonString = await rootBundle.loadString('assets/recipes.json');
+    final decoded = jsonDecode(jsonString);
 
-      for (final recipe in decoded) {
-        final List<dynamic>? products = recipe['products'];
-        final List<String> ingredients = [];
-        if (products != null) {
-          for (String value in products) {
-            ingredients.add(value);
-          }
+    for (final recipe in decoded) {
+      final List<dynamic>? products = recipe['products'];
+      final List<String> ingredients = [];
+      if (products != null) {
+        for (String value in products) {
+          ingredients.add(value);
         }
-
-        if (recipe['steps'] is String) {
-          recipe['steps'] = [recipe['steps']];
-        }
-
-        final List<dynamic>? steps_dynamic = recipe['steps'];
-        final List<String> steps = [];
-        if (steps_dynamic != null) {
-          for (String value in steps_dynamic) {
-            steps.add(value);
-          }
-        }
-
-        _recipes.add(
-          Recipe(
-            name: recipe['title'] as String,
-            ingredients: ingredients.isNotEmpty ? ingredients : ["null"],
-            steps: steps.isNotEmpty ? steps : ["null"],
-          ),
-        );
       }
-      notifyListeners();
-    });
+
+      if (recipe['steps'] is String) {
+        recipe['steps'] = [recipe['steps']];
+      }
+
+      final List<dynamic>? stepsDynamic = recipe['steps'];
+      final List<String> steps = [];
+      if (stepsDynamic != null) {
+        for (String value in stepsDynamic) {
+          steps.add(value);
+        }
+      }
+
+      _recipes.add(
+        Recipe(
+          name: recipe['title'] as String,
+          ingredients: ingredients.isNotEmpty ? ingredients : ["null"],
+          steps: steps.isNotEmpty ? steps : ["null"],
+        ),
+      );
+    }
+
+    notifyListeners();
   }
 
   RecipesModel() {
     readJSON();
   }
+
   void toggleFavorites(int index) {
     _recipes[index].favorite = !_recipes[index].favorite ? true : false;
     notifyListeners();

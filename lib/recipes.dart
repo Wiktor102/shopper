@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:shopper/empty.dart';
 
 import "./recipes_model.dart";
-import 'bullet_list.dart';
+import 'lists_model.dart';
 import 'recipe_details.dart';
 
 enum RecipesTabs { recipes, custom, favorites }
@@ -17,7 +17,16 @@ class TemporaryRecipe {
 }
 
 class Recipes extends StatelessWidget {
-  const Recipes({super.key});
+  final Function(int) changeTab;
+
+  const Recipes(this.changeTab, {super.key});
+
+  void createListFromRecipe(Recipe recipe, BuildContext context) {
+    final listsProvider = Provider.of<GroceryListModel>(context, listen: false);
+    GroceryList list = GroceryList.readFromRecipe(recipe);
+    listsProvider.currentListIndex = listsProvider.addList(list);
+    changeTab(1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,14 +69,19 @@ class Recipes extends StatelessWidget {
             ),
           ],
         ),
-        body: const TabBarView(children: [
+        body: TabBarView(children: [
           RecipesList(
             currentTab: RecipesTabs.recipes,
+            createListFromRecipe: createListFromRecipe,
           ),
           RecipesList(
             currentTab: RecipesTabs.custom,
+            createListFromRecipe: createListFromRecipe,
           ),
-          RecipesList(currentTab: RecipesTabs.favorites)
+          RecipesList(
+            currentTab: RecipesTabs.favorites,
+            createListFromRecipe: createListFromRecipe,
+          )
         ]),
       ),
     );
@@ -75,15 +89,19 @@ class Recipes extends StatelessWidget {
 }
 
 class RecipesList extends StatelessWidget {
-  // final bool favorites;
-  // final bool custom;
   final RecipesTabs currentTab;
-  const RecipesList({super.key, this.currentTab = RecipesTabs.recipes});
+  final Function(Recipe, BuildContext) createListFromRecipe;
+
+  const RecipesList({
+    super.key,
+    this.currentTab = RecipesTabs.recipes,
+    required this.createListFromRecipe,
+  });
 
   void showDetails(BuildContext context, int index) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => RecipeDetails(index),
+        builder: (context) => RecipeDetails(index, createListFromRecipe),
       ),
     );
   }
@@ -133,7 +151,12 @@ class RecipesList extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
-                        onPressed: () {}, icon: const Icon(Icons.playlist_add)),
+                      onPressed: () => {
+                        createListFromRecipe(
+                            recipes.elementAt(index).recipe, context)
+                      },
+                      icon: const Icon(Icons.playlist_add),
+                    ),
                     IconButton(
                       onPressed: () => provider
                           .toggleFavorites(recipes.elementAt(index).trueIndex),
