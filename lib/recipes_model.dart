@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 
+part "recipes_model.g.dart";
+
 class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
-  final List<Recipe> _customRecipes = [];
+  List<Recipe> _customRecipes = [];
   List<int> _favoriteIds = [];
   bool loading = true;
 
@@ -64,6 +66,11 @@ class RecipesModel extends ChangeNotifier {
   }
 
   RecipesModel() {
+    Hive.openBox("customRecipes").then((Box box) {
+      _customRecipes = box.values.toList().cast<Recipe>();
+      _recipes.addAll(_customRecipes);
+    });
+
     readJSON().then((_) async {
       await loadFavorites();
 
@@ -88,16 +95,30 @@ class RecipesModel extends ChangeNotifier {
   void addCustomRecipe(Recipe recipe) {
     _customRecipes.add(recipe);
     _recipes.add(recipe);
+
+    Hive.box("customRecipes").add(recipe);
     notifyListeners();
   }
 }
 
+@HiveType(typeId: 3)
 class Recipe {
+  @HiveField(0)
   int id;
+
+  @HiveField(1)
   String name;
+
+  @HiveField(2)
   List<String> ingredients;
+
+  @HiveField(3)
   List<String> steps;
+
+  @HiveField(4)
   bool favorite;
+
+  @HiveField(5)
   bool custom;
 
   Recipe({

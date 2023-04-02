@@ -142,6 +142,7 @@ class RecipesList extends StatelessWidget {
       default:
         for (int i = 0; i < provider.recipes.length; i++) {
           final element = provider.recipes.elementAt(i);
+          if (element.custom) continue;
           recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
         }
     }
