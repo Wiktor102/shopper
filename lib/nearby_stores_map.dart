@@ -36,7 +36,7 @@ class NearbyStoresMap extends StatelessWidget {
 
     final List<MarkerWithMetadata> markerList = storesProvider.nearbyStores
         .map((Store store) => MarkerWithMetadata(
-              point: LatLng(store.location.latitude, store.location.longitude),
+              point: LatLng(store.lat, store.lng),
               builder: (context) => GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 child: const Image(image: AssetImage('assets/pinGreen.png')),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import "package:flutter/scheduler.dart";
+import "package:hive/hive.dart";
+import "package:hive_flutter/hive_flutter.dart";
 import 'package:provider/provider.dart';
 
 import "./settings.dart";
@@ -22,7 +23,22 @@ GlobalKey<ScaffoldMessengerState> getScaffoldKey() {
   return _scaffoldKey;
 }
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(StoreAdapter());
+  Hive.registerAdapter(TaskObjectAdapter());
+  Hive.registerAdapter(GroceryListAdapter());
+
+  if (!Hive.isBoxOpen("groceryLists")) {
+    await Hive.openBox<GroceryList>("groceryLists");
+  }
+
+  if (!Hive.isBoxOpen("stores")) {
+    await Hive.openBox("stores");
+  }
+
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => PositionModel(_scaffoldKey)),
@@ -73,6 +89,12 @@ class _AppState extends State<App> {
 
   _AppState() {
     screens = [Recipes(changeTab), const GroceryLists(), const NearbyStores()];
+  }
+
+  @override
+  void dispose() {
+    Hive.close();
+    super.dispose();
   }
 
   @override
