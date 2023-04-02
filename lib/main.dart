@@ -81,10 +81,14 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   int tabIndex = 1;
   List titles = ["Przepisy", "Listy zakupowe", "Najbliższe sklepy"];
-  List screens = const [Recipes(), GroceryLists(), NearbyStores()];
+  late List screens;
 
   changeTab(int i) {
     setState(() => tabIndex = i);
+  }
+
+  _AppState() {
+    screens = [Recipes(changeTab), const GroceryLists(), const NearbyStores()];
   }
 
   @override

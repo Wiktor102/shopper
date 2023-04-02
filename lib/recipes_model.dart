@@ -1,40 +1,70 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
+
   List<Recipe> get recipes => _recipes;
+  void readJSON() async {
+    final jsonString = await rootBundle.loadString('assets/recipes.json');
+    final decoded = jsonDecode(jsonString);
 
-  RecipesModel() {
-    // tutaj można wczytać dane z json-a (albo zawołać funkcję ładującą json-a)
-    // na razie jakieś statyczne dane:
-    List<String> st = [
-      "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "2. Nam at risus venenatis, efficitur orci nec, commodo risus. Nunc eget augue metus. Aliquam sollicitudin, felis porttitor."
-    ];
+    for (final recipe in decoded) {
+      final List<dynamic>? products = recipe['products'];
+      final List<String> ingredients = [];
+      if (products != null) {
+        for (String value in products) {
+          ingredients.add(value);
+        }
+      }
 
-    _recipes.add(Recipe(
-        name: "Przepis 1", ingredients: ["coś", "I jeszcze coś"], steps: st));
-    _recipes
-        .add(Recipe(name: "Przepis 2", ingredients: ["coś innego"], steps: st));
+      if (recipe['steps'] is String) {
+        recipe['steps'] = [recipe['steps']];
+      }
+
+      final List<dynamic>? stepsDynamic = recipe['steps'];
+      final List<String> steps = [];
+      if (stepsDynamic != null) {
+        for (String value in stepsDynamic) {
+          steps.add(value);
+        }
+      }
+
+      _recipes.add(
+        Recipe(
+          name: recipe['title'] as String,
+          ingredients: ingredients.isNotEmpty ? ingredients : ["null"],
+          steps: steps.isNotEmpty ? steps : ["null"],
+        ),
+      );
+    }
+
     notifyListeners();
   }
 
+  RecipesModel() {
+    readJSON();
+  }
+
   void toggleFavorites(int index) {
-    // dodać albo usunąć z ulubionych przepis o podanym index-ie
+    _recipes[index].favorite = !_recipes[index].favorite ? true : false;
     notifyListeners();
   }
 }
 
 class Recipe {
-  final String name;
-  final List<String> ingredients;
-  final List<String> steps;
+  String name;
+  List<String> ingredients;
+  List<String> steps;
   bool favorite;
+  bool custom;
 
-  Recipe({
-    required this.name,
-    required this.ingredients,
-    required this.steps,
-    this.favorite = false,
-  });
+  Recipe(
+      {required this.name,
+      required this.ingredients,
+      required this.steps,
+      this.favorite = false,
+      this.custom = false});
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopper/recipes_model.dart';
 import 'package:hive/hive.dart';
 
 part 'lists_model.g.dart';
@@ -31,6 +32,11 @@ class GroceryListModel extends ChangeNotifier {
 
   void saveUpdatedList(int index) {
     Hive.box<GroceryList>("groceryLists").putAt(index, _set.elementAt(index));
+  }
+
+  int addList(GroceryList list) {
+    _set.add(list);
+    return _set.length - 1;
   }
 
   void newList(String name, Set<TaskObject> items) {
@@ -146,6 +152,13 @@ class GroceryList {
 
   @HiveField(1)
   Set<TaskObject> items;
+  static GroceryList readFromRecipe(Recipe recipe) {
+    final Set<TaskObject> objects = {};
+    for (String value in recipe.ingredients) {
+      objects.add(TaskObject(value, false));
+    }
+    return GroceryList(recipe.name, objects);
+  }
 
   GroceryList(this.name, this.items);
 }
