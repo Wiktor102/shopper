@@ -5,18 +5,18 @@ import 'package:flutter/services.dart';
 
 class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
+
   List<Recipe> get recipes => _recipes;
   void readJSON() {
-    rootBundle.loadString('assets/recipes.json').then((value) => {
-          for (final recipe in jsonDecode(value))
-            {
-              _recipes.add(Recipe(
-                  name: recipe['title'] as String,
-                  ingredients: ['steps', 'test'],
-                  steps: ['steps', 'imma speed']))
-            }
-        });
-    notifyListeners();
+    rootBundle.loadString('assets/recipes.json').then((value) {
+      for (final recipe in jsonDecode(value)) {
+        _recipes.add(Recipe(
+            name: recipe['title'] as String,
+            ingredients: ['steps', 'test'],
+            steps: ['steps', 'imma speed']));
+      }
+      notifyListeners();
+    });
   }
 
   RecipesModel() {
