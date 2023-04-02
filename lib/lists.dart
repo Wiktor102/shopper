@@ -120,6 +120,7 @@ class _GroceryListsState extends State<GroceryLists> {
                     padding: const EdgeInsets.only(right: 10),
                     child: DropdownButton<GroceryList>(
                       isExpanded: true,
+                      isDense: true,
                       value: provider.getCurrentList(),
                       items: provider.grocerySet
                           .map<DropdownMenuItem<GroceryList>>(
