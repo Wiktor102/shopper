@@ -257,50 +257,47 @@ class _GroceryListsState extends State<GroceryLists> {
                                   provider.setTaskStatus(index, (value))
                               },
                             ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 30),
-                              child: PopupMenuButton<TaskOptions>(
-                                  initialValue: null,
-                                  onSelected: (TaskOptions value) {
-                                    switch (value) {
-                                      case TaskOptions.edit:
-                                        promptForString(
-                                                "Zmień nazwę produktu",
-                                                provider
-                                                    .getCurrentList()
-                                                    .items
-                                                    .elementAt(index)
-                                                    .item)
-                                            .then((String? value) => {
-                                                  if (value != null ||
-                                                      value != "")
-                                                    provider.renameTask(
-                                                        index, value!)
-                                                });
-                                        break;
-                                      case TaskOptions.delete:
-                                        provider.deleteTask(
-                                            index, provider.currentListIndex);
-                                        break;
-                                      default:
-                                    }
-                                  },
-                                  icon: const Icon(Icons.more_vert),
-                                  itemBuilder: (BuildContext context) =>
-                                      <PopupMenuEntry<TaskOptions>>[
-                                        const PopupMenuItem(
-                                          value: TaskOptions.edit,
-                                          child: Text("Edytuj nazwe"),
+                            PopupMenuButton<TaskOptions>(
+                                initialValue: null,
+                                onSelected: (TaskOptions value) {
+                                  switch (value) {
+                                    case TaskOptions.edit:
+                                      promptForString(
+                                              "Zmień nazwę produktu",
+                                              provider
+                                                  .getCurrentList()
+                                                  .items
+                                                  .elementAt(index)
+                                                  .item)
+                                          .then((String? value) => {
+                                                if (value != null ||
+                                                    value != "")
+                                                  provider.renameTask(
+                                                      index, value!)
+                                              });
+                                      break;
+                                    case TaskOptions.delete:
+                                      provider.deleteTask(
+                                          index, provider.currentListIndex);
+                                      break;
+                                    default:
+                                  }
+                                },
+                                icon: const Icon(Icons.more_vert),
+                                itemBuilder: (BuildContext context) =>
+                                    <PopupMenuEntry<TaskOptions>>[
+                                      const PopupMenuItem(
+                                        value: TaskOptions.edit,
+                                        child: Text("Edytuj nazwe"),
+                                      ),
+                                      const PopupMenuItem(
+                                        value: TaskOptions.delete,
+                                        child: Text(
+                                          "Usuń",
+                                          style: TextStyle(color: Colors.red),
                                         ),
-                                        const PopupMenuItem(
-                                          value: TaskOptions.delete,
-                                          child: Text(
-                                            "Usuń",
-                                            style: TextStyle(color: Colors.red),
-                                          ),
-                                        ),
-                                      ]),
-                            )
+                                      ),
+                                    ])
                           ],
                         ),
                       );
