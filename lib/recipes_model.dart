@@ -4,12 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 
+part "recipes_model.g.dart";
+
 class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
+  List<Recipe> _customRecipes = [];
   List<int> _favoriteIds = [];
   bool loading = true;
 
   List<Recipe> get recipes => _recipes;
+  int get numberOfCustomRecipes => _customRecipes.length;
+
   Future<void> readJSON() async {
     final jsonString = await rootBundle.loadString('assets/recipes.json');
     final decoded = jsonDecode(jsonString);
@@ -48,21 +53,26 @@ class RecipesModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  RecipesModel() {
-    readJSON().then((_) async {
-      final box = await Hive.openBox("favoriteRecipes");
-      final savedFav = box.get("favorite");
-      if (savedFav == null) {
-        loading = false;
-        notifyListeners();
-        return;
-      }
+  Future<void> loadFavorites() async {
+    final box = await Hive.openBox("favoriteRecipes");
+    final savedFav = box.get("favorite");
+    if (savedFav == null) return;
 
-      _favoriteIds = savedFav;
-      for (Recipe recipe in _recipes) {
-        if (!_favoriteIds.contains(recipe.id)) continue;
-        recipe.favorite = true;
-      }
+    _favoriteIds = savedFav;
+    for (Recipe recipe in _recipes) {
+      if (!_favoriteIds.contains(recipe.id)) continue;
+      recipe.favorite = true;
+    }
+  }
+
+  RecipesModel() {
+    Hive.openBox("customRecipes").then((Box box) {
+      _customRecipes = box.values.toList().cast<Recipe>();
+      _recipes.addAll(_customRecipes);
+    });
+
+    readJSON().then((_) async {
+      await loadFavorites();
 
       loading = false;
       notifyListeners();
@@ -81,14 +91,50 @@ class RecipesModel extends ChangeNotifier {
     Hive.box("favoriteRecipes").put("favorite", _favoriteIds);
     notifyListeners();
   }
+
+  void addCustomRecipe(Recipe recipe) {
+    _customRecipes.add(recipe);
+    _recipes.add(recipe);
+
+    Hive.box("customRecipes").put(recipe.id, recipe);
+    notifyListeners();
+  }
+
+  void removeCustomRecipe(int recipeId) {
+    _recipes.removeWhere((r) => r.id == recipeId);
+    _customRecipes.removeWhere((r) => r.id == recipeId);
+
+    Hive.box("customRecipes").delete(recipeId);
+    notifyListeners();
+  }
+
+  void updateCustomRecipe(int recipeId, Recipe recipe) {
+    recipe.id = recipeId;
+    _recipes[_recipes.indexWhere((r) => r.id == recipeId)] = recipe;
+    _customRecipes[_customRecipes.indexWhere((r) => r.id == recipeId)] = recipe;
+    Hive.box("customRecipes").put(recipeId, recipe);
+    notifyListeners();
+  }
 }
 
+@HiveType(typeId: 3)
 class Recipe {
+  @HiveField(0)
   int id;
+
+  @HiveField(1)
   String name;
+
+  @HiveField(2)
   List<String> ingredients;
+
+  @HiveField(3)
   List<String> steps;
+
+  @HiveField(4)
   bool favorite;
+
+  @HiveField(5)
   bool custom;
 
   Recipe({

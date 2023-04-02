@@ -27,6 +27,7 @@ void main() async {
   await Hive.initFlutter();
 
   Hive.registerAdapter(StoreAdapter());
+  Hive.registerAdapter(RecipeAdapter());
   Hive.registerAdapter(TaskObjectAdapter());
   Hive.registerAdapter(GroceryListAdapter());
 

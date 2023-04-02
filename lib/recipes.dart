@@ -99,6 +99,34 @@ class RecipesList extends StatelessWidget {
     required this.createListFromRecipe,
   });
 
+  Future<bool> promptForBoolean(context, String dialog) async {
+    bool result = false;
+    await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(dialog),
+        actions: [
+          TextButton(
+            onPressed: () {
+              result = false;
+              Navigator.of(context).pop();
+            },
+            child: const Text("Anuluj"),
+          ),
+          TextButton(
+            onPressed: () {
+              result = true;
+              Navigator.of(context).pop();
+            },
+            child: const Text("Potwierdź"),
+          )
+        ],
+      ),
+    );
+
+    return result;
+  }
+
   void showDetails(BuildContext context, int index) {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -110,9 +138,21 @@ class RecipesList extends StatelessWidget {
   void createCustomRecipe(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const CreateRecipe(),
+        builder: (context) => const CreateRecipe(recipe: null),
       ),
     );
+  }
+
+  void editCustomRecipe(BuildContext context, Recipe recipe) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CreateRecipe(recipe: recipe),
+      ),
+    );
+  }
+
+  void deleteCustomRecipe(int recipeId, RecipesModel provider) {
+    provider.removeCustomRecipe(recipeId);
   }
 
   @override
@@ -142,6 +182,7 @@ class RecipesList extends StatelessWidget {
       default:
         for (int i = 0; i < provider.recipes.length; i++) {
           final element = provider.recipes.elementAt(i);
+          if (element.custom) continue;
           recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
         }
     }
@@ -171,6 +212,60 @@ class RecipesList extends StatelessWidget {
                             recipes[index].recipe.favorite ? Colors.red : null,
                       ),
                     ),
+                    currentTab == RecipesTabs.custom
+                        ? PopupMenuButton(
+                            icon: const Icon(Icons.more_vert),
+                            onSelected: (value) async {
+                              if (value == "edit") {
+                                editCustomRecipe(
+                                  context,
+                                  recipes[index].recipe,
+                                );
+                              }
+
+                              if (value == "delete") {
+                                final bool res = await promptForBoolean(context,
+                                    "Czy na pewno chcesz usunąć ten przepis?");
+                                if (!res) return;
+                                deleteCustomRecipe(
+                                  recipes[index].recipe.id,
+                                  provider,
+                                );
+                              }
+                            },
+                            itemBuilder: (BuildContext context) =>
+                                <PopupMenuItem>[
+                              PopupMenuItem(
+                                value: "edit",
+                                child: Row(
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 5),
+                                      child: Icon(Icons.edit),
+                                    ),
+                                    Text("Edytuj"),
+                                  ],
+                                ),
+                              ),
+                              PopupMenuItem(
+                                value: "delete",
+                                child: Row(
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 5),
+                                      child:
+                                          Icon(Icons.delete, color: Colors.red),
+                                    ),
+                                    Text(
+                                      "Usuń",
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        : const Text("")
                   ],
                 ),
               ),
