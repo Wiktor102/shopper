@@ -6,10 +6,13 @@ import 'package:hive/hive.dart';
 
 class RecipesModel extends ChangeNotifier {
   final List<Recipe> _recipes = [];
+  final List<Recipe> _customRecipes = [];
   List<int> _favoriteIds = [];
   bool loading = true;
 
   List<Recipe> get recipes => _recipes;
+  int get numberOfCustomRecipes => _customRecipes.length;
+
   Future<void> readJSON() async {
     final jsonString = await rootBundle.loadString('assets/recipes.json');
     final decoded = jsonDecode(jsonString);
@@ -48,21 +51,21 @@ class RecipesModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> loadFavorites() async {
+    final box = await Hive.openBox("favoriteRecipes");
+    final savedFav = box.get("favorite");
+    if (savedFav == null) return;
+
+    _favoriteIds = savedFav;
+    for (Recipe recipe in _recipes) {
+      if (!_favoriteIds.contains(recipe.id)) continue;
+      recipe.favorite = true;
+    }
+  }
+
   RecipesModel() {
     readJSON().then((_) async {
-      final box = await Hive.openBox("favoriteRecipes");
-      final savedFav = box.get("favorite");
-      if (savedFav == null) {
-        loading = false;
-        notifyListeners();
-        return;
-      }
-
-      _favoriteIds = savedFav;
-      for (Recipe recipe in _recipes) {
-        if (!_favoriteIds.contains(recipe.id)) continue;
-        recipe.favorite = true;
-      }
+      await loadFavorites();
 
       loading = false;
       notifyListeners();
@@ -79,6 +82,12 @@ class RecipesModel extends ChangeNotifier {
     }
 
     Hive.box("favoriteRecipes").put("favorite", _favoriteIds);
+    notifyListeners();
+  }
+
+  void addCustomRecipe(Recipe recipe) {
+    _customRecipes.add(recipe);
+    _recipes.add(recipe);
     notifyListeners();
   }
 }
