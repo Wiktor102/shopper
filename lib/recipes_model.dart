@@ -14,22 +14,31 @@ class RecipesModel extends ChangeNotifier {
       for (final recipe in decoded) {
         final List<dynamic>? products = recipe['products'];
         final List<String> ingredients = [];
-        if (products != null)
+        if (products != null) {
           for (String value in products) {
             ingredients.add(value);
           }
+        }
 
-        final List<dynamic>? steps_dynamic = recipe['products'];
+        if (recipe['steps'] is String) {
+          recipe['steps'] = [recipe['steps']];
+        }
+
+        final List<dynamic>? steps_dynamic = recipe['steps'];
         final List<String> steps = [];
-        if (steps_dynamic != null)
+        if (steps_dynamic != null) {
           for (String value in steps_dynamic) {
             steps.add(value);
           }
+        }
 
-        _recipes.add(Recipe(
+        _recipes.add(
+          Recipe(
             name: recipe['title'] as String,
             ingredients: ingredients.isNotEmpty ? ingredients : ["null"],
-            steps: steps.isNotEmpty ? steps : ["null"]));
+            steps: steps.isNotEmpty ? steps : ["null"],
+          ),
+        );
       }
       notifyListeners();
     });
