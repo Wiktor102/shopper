@@ -96,7 +96,15 @@ class RecipesModel extends ChangeNotifier {
     _customRecipes.add(recipe);
     _recipes.add(recipe);
 
-    Hive.box("customRecipes").add(recipe);
+    Hive.box("customRecipes").put(recipe.id, recipe);
+    notifyListeners();
+  }
+
+  void removeCustomRecipe(int recipeId) {
+    _recipes.removeWhere((r) => r.id == recipeId);
+    _customRecipes.removeWhere((r) => r.id == recipeId);
+
+    Hive.box("customRecipes").delete(recipeId);
     notifyListeners();
   }
 }
