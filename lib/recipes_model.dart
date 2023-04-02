@@ -9,11 +9,27 @@ class RecipesModel extends ChangeNotifier {
   List<Recipe> get recipes => _recipes;
   void readJSON() {
     rootBundle.loadString('assets/recipes.json').then((value) {
-      for (final recipe in jsonDecode(value)) {
+      final decoded = jsonDecode(value);
+
+      for (final recipe in decoded) {
+        final List<dynamic>? products = recipe['products'];
+        final List<String> ingredients = [];
+        if (products != null)
+          for (String value in products) {
+            ingredients.add(value);
+          }
+
+        final List<dynamic>? steps_dynamic = recipe['products'];
+        final List<String> steps = [];
+        if (steps_dynamic != null)
+          for (String value in steps_dynamic) {
+            steps.add(value);
+          }
+
         _recipes.add(Recipe(
             name: recipe['title'] as String,
-            ingredients: ['steps', 'test'],
-            steps: ['steps', 'imma speed']));
+            ingredients: ingredients.isNotEmpty ? ingredients : ["null"],
+            steps: steps.isNotEmpty ? steps : ["null"]));
       }
       notifyListeners();
     });
@@ -21,14 +37,9 @@ class RecipesModel extends ChangeNotifier {
 
   RecipesModel() {
     readJSON();
-    if (_recipes.isEmpty) {
-      print("empty");
-      return;
-    }
-    notifyListeners();
   }
   void toggleFavorites(int index) {
-    // dodać albo usunąć z ulubionych przepis o podanym index-ie
+    _recipes[index].favorite = !_recipes[index].favorite ? true : false;
     notifyListeners();
   }
 }
@@ -38,15 +49,12 @@ class Recipe {
   List<String> ingredients;
   List<String> steps;
   bool favorite;
-  static Recipe fromJson(Map<String, dynamic> json) {
-    return Recipe(
-        name: json['title'], ingredients: ["a", "b"], steps: ["a", "n"]);
-  }
+  bool custom;
 
-  Recipe({
-    required this.name,
-    required this.ingredients,
-    required this.steps,
-    this.favorite = false,
-  });
+  Recipe(
+      {required this.name,
+      required this.ingredients,
+      required this.steps,
+      this.favorite = false,
+      this.custom = false});
 }

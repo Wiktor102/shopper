@@ -6,6 +6,14 @@ import 'package:provider/provider.dart';
 import "./recipes_model.dart";
 import 'bullet_list.dart';
 
+enum RecipesTabs { recipes, custom, favorites }
+
+class TemporaryRecipe {
+  int trueIndex;
+  Recipe recipe;
+  TemporaryRecipe({required this.recipe, required this.trueIndex});
+}
+
 class Recipes extends StatelessWidget {
   const Recipes({super.key});
 
@@ -51,9 +59,13 @@ class Recipes extends StatelessWidget {
           ],
         ),
         body: const TabBarView(children: [
-          RecipesList(),
-          RecipesList(custom: true),
-          RecipesList(favorites: true)
+          RecipesList(
+            currentTab: RecipesTabs.recipes,
+          ),
+          RecipesList(
+            currentTab: RecipesTabs.custom,
+          ),
+          RecipesList(currentTab: RecipesTabs.favorites)
         ]),
       ),
     );
@@ -61,14 +73,10 @@ class Recipes extends StatelessWidget {
 }
 
 class RecipesList extends StatelessWidget {
-  final bool favorites;
-  final bool custom;
-
-  const RecipesList({
-    super.key,
-    this.favorites = false,
-    this.custom = false,
-  });
+  // final bool favorites;
+  // final bool custom;
+  final RecipesTabs currentTab;
+  const RecipesList({super.key, this.currentTab = RecipesTabs.recipes});
 
   void showDetails(BuildContext context, int index) {
     Navigator.of(context).push(
@@ -89,40 +97,65 @@ class RecipesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
-    if (custom) {
-      // filtruj listę przepisów by pokazać wyłączne własne
-    } else {
-      // filtruj listę przepisów by nie pokazać własnych przepisów
-    }
+    List<TemporaryRecipe> recipes = []; //lista która pokazuje sie na ekranie
 
-    if (favorites) {
-      // filtruj listę przepisów po atrybucie favorite
-      // albo w modelu stworzyć metodę, która zwróci tylko ulubione
+    switch (currentTab) {
+      case RecipesTabs.custom:
+        for (int i = 0; i < provider.recipes.length; i++) {
+          final element = provider.recipes.elementAt(i);
+          if (!element.custom) continue;
+          recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
+        }
+        break;
+      case RecipesTabs.favorites:
+        for (int i = 0; i < provider.recipes.length; i++) {
+          final element = provider.recipes.elementAt(i);
+          if (!element.favorite) continue;
+          recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
+        }
+        break;
+      default:
+        for (int i = 0; i < provider.recipes.length; i++) {
+          final element = provider.recipes.elementAt(i);
+          recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
+        }
     }
-
     return Scaffold(
-      body: ListView.builder(
-        itemCount: provider.recipes.length,
-        itemBuilder: (_, index) => ListTile(
-          onTap: () => showDetails(context, index),
-          title: Text(provider.recipes[index].name),
-          trailing: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.playlist_add)),
-              IconButton(
-                onPressed: () => provider.toggleFavorites(index),
-                icon: Icon(
-                  Icons.favorite,
-                  color: provider.recipes[index].favorite ? Colors.red : null,
+      body: recipes.isNotEmpty
+          ? ListView.builder(
+              itemCount: recipes.length,
+              itemBuilder: (_, index) => ListTile(
+                onTap: () => showDetails(context, index),
+                title: Text(recipes[index].recipe.name),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.playlist_add)),
+                    IconButton(
+                      onPressed: () => provider
+                          .toggleFavorites(recipes.elementAt(index).trueIndex),
+                      icon: Icon(
+                        Icons.favorite,
+                        color:
+                            recipes[index].recipe.favorite ? Colors.red : null,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: custom
+            )
+          : Align(
+              alignment: Alignment.center,
+              child: Text(
+                currentTab == RecipesTabs.custom
+                    ? "Nie utworzono jeszcze żadnego przepisu"
+                    : currentTab == RecipesTabs.favorites
+                        ? "Nie polubiono żadnego przepisu"
+                        : "Brak przepisów",
+                textAlign: TextAlign.center,
+              )),
+      floatingActionButton: currentTab == RecipesTabs.custom
           ? FloatingActionButton(
               onPressed: () => createCustomRecipe(context),
               child: const Icon(Icons.add),
