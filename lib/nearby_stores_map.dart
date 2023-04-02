@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 
@@ -96,6 +97,7 @@ class NearbyStoresMap extends StatelessWidget {
             userAgentPackageName: 'com.example.app',
           ),
           popupMarkerLayer,
+          CurrentLocationLayer(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -106,7 +108,7 @@ class NearbyStoresMap extends StatelessWidget {
             0,
           );
         },
-        child: const Icon(Icons.near_me),
+        child: const Icon(Icons.my_location),
       ),
     );
   }

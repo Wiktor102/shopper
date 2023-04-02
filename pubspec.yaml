@@ -46,6 +46,7 @@ dependencies:
   url_launcher: ^6.1.10
   phone_number: ^1.0.0
   drag_and_drop_lists: ^0.3.3
+  flutter_map_location_marker: ^5.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
