@@ -48,7 +48,13 @@ class _StoreDistanceTileState extends State<StoreDistanceTile> {
     final bool isFormValid = formKey.currentState!.validate();
 
     if (!isFormValid) {
-      return;
+      if (val > 10000) {
+        val = 10000;
+      } else if (val < 500) {
+        val = 500;
+      } else {
+        return;
+      }
     }
 
     settingsProvider.storeDistance = val;
@@ -70,27 +76,14 @@ class _StoreDistanceTileState extends State<StoreDistanceTile> {
         child: Form(
           key: formKey,
           autovalidateMode: AutovalidateMode.always,
-          child: TextFormField(
-            controller: textController,
-            keyboardType: TextInputType.number,
-            decoration: const InputDecoration(suffixText: "m"),
-            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-            validator: (String? value) {
-              if (value == null || value == "") return "Min. 500 m";
-              int val = int.parse(value);
-
-              if (val > 10000) {
-                return "Max. 10 000 m";
-              }
-
-              if (val < 500) {
-                return "Min. 500 m";
-              }
-
-              return null;
-            },
-            onChanged: (String val) =>
-                onValueChange(int.parse(val), settingsProvider),
+          child: Slider(
+            min: 500,
+            max: 10000,
+            divisions: 95,
+            label: settingsProvider.storeDistance.toString(),
+            value: settingsProvider.storeDistance.toDouble(),
+            onChanged: (double val) =>
+                onValueChange(val.floor(), settingsProvider),
           ),
         ),
       ),
@@ -146,12 +139,14 @@ class AboutApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ExpansionTile(
+      initiallyExpanded: true,
       title: Text("O aplikacji"),
       leading: Icon(Icons.info),
       children: [
         Padding(
           padding: EdgeInsets.only(left: 59),
           child: ExpansionTile(
+            initiallyExpanded: true,
             title: Text("Autorzy"),
             children: [
               ListTile(title: Text("Wiktor Golicz")),
@@ -162,6 +157,7 @@ class AboutApp extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(left: 59),
           child: ExpansionTile(
+            initiallyExpanded: true,
             title: Text("Źródła"),
             children: [
               ListTile(title: Text("wikikuchnia.org")),
@@ -173,7 +169,7 @@ class AboutApp extends StatelessWidget {
           padding: EdgeInsets.only(left: 59),
           child: ListTile(
             title: Text("Wersja"),
-            trailing: Text("v1.3"),
+            trailing: Text("v1.4"),
           ),
         )
       ],
