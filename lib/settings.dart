@@ -18,7 +18,7 @@ class Settings extends StatelessWidget {
       body: ListView(
         children: [
           ThemeTile(settingsProvider: settingsProvider),
-          const StoreDistanceTile(),
+          //const StoreDistanceTile(),
           const AboutApp(),
         ],
       ),
