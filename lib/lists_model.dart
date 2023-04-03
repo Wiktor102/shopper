@@ -15,18 +15,31 @@ Set<dynamic> deleteFromSetIndex(Set<dynamic> set, int index) {
 
 class GroceryListModel extends ChangeNotifier {
   Set<GroceryList> _set = {};
-  int currentListIndex = 0;
+  int _currentListIndex = 0;
+
+  int get currentListIndex => _currentListIndex;
+  set currentListIndex(int newIndex) {
+    Hive.box("lastOpenedList").put("index", newIndex);
+    _currentListIndex = newIndex;
+    notifyListeners();
+  }
 
   Set<GroceryList> get grocerySet => _set;
 
   GroceryListModel() {
     Box box = Hive.box<GroceryList>("groceryLists");
     _set = box.values.toSet().cast<GroceryList>();
+
+    int? savedIndex = Hive.box("lastOpenedList").get("index");
+    if (savedIndex != null && savedIndex < _set.length) {
+      currentListIndex = savedIndex;
+    }
   }
 
   @override
   void dispose() {
     Hive.box<GroceryList>("groceryLists").close();
+    Hive.box("lastOpenedList").close();
     super.dispose();
   }
 
@@ -36,6 +49,9 @@ class GroceryListModel extends ChangeNotifier {
 
   int addList(GroceryList list) {
     _set.add(list);
+    Hive.box<GroceryList>("groceryLists").add(list);
+    notifyListeners();
+
     return _set.length - 1;
   }
 
@@ -55,7 +71,7 @@ class GroceryListModel extends ChangeNotifier {
   void deleteList(int index) {
     Set<dynamic> updatedSet = deleteFromSetIndex(_set, index);
     _set = updatedSet.cast<GroceryList>();
-    Hive.box<GroceryList>("groceryLists").delete(index);
+    Hive.box<GroceryList>("groceryLists").deleteAt(index);
     notifyListeners();
   }
 

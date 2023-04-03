@@ -39,6 +39,10 @@ void main() async {
     await Hive.openBox("stores");
   }
 
+  if (!Hive.isBoxOpen("lastOpenedList")) {
+    await Hive.openBox("lastOpenedList");
+  }
+
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => PositionModel(_scaffoldKey)),
@@ -187,7 +191,7 @@ class AboutApp extends StatelessWidget {
           ),
           ListTile(
             title: Text("Wersja"),
-            trailing: Text("v1.1"),
+            trailing: Text("v1.2"),
           )
         ],
       ),

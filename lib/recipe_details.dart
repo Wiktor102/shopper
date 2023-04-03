@@ -22,10 +22,7 @@ class RecipeDetails extends StatelessWidget {
         title: Text(recipe.name),
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-              provider.toggleFavorites(index);
-            },
+            onPressed: () => provider.toggleFavorites(index),
             icon: Icon(
               Icons.favorite,
               color: provider.recipes[index].favorite ? Colors.red : null,
