@@ -16,7 +16,7 @@ W aplikacji shopper można też zobaczyć mapę ze sklepami w pobliżu. Dla wię
 
 ### Sposób 1 - gotowy plik .apk
 
-W zakładce "Releases" do pobrania dostępny jest plik app-release.apk. Wystarczy go zainstalować nha urządzeniu z systemem android (może być konieczne zezwolenie na instalacje aplikacji z nieznanych źródeł).
+W zakładce "Releases" do pobrania dostępny jest plik shopper.apk. Wystarczy go zainstalować nha urządzeniu z systemem android (może być konieczne zezwolenie na instalacje aplikacji z nieznanych źródeł).
 
 ### Sposób 2 - ręczna kompilacja pliku .apk
 
