@@ -37,7 +37,6 @@ class StoreDistanceTile extends StatefulWidget {
 
 class _StoreDistanceTileState extends State<StoreDistanceTile> {
   late TextEditingController textController;
-  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -45,16 +44,10 @@ class _StoreDistanceTileState extends State<StoreDistanceTile> {
   }
 
   void onValueChange(int val, SettingsModel settingsProvider) {
-    final bool isFormValid = formKey.currentState!.validate();
-
-    if (!isFormValid) {
-      if (val > 10000) {
-        val = 10000;
-      } else if (val < 500) {
-        val = 500;
-      } else {
-        return;
-      }
+    if (val > 10000) {
+      val = 10000;
+    } else if (val < 500) {
+      val = 500;
     }
 
     settingsProvider.storeDistance = val;
@@ -66,25 +59,30 @@ class _StoreDistanceTileState extends State<StoreDistanceTile> {
     textController =
         TextEditingController(text: settingsProvider.storeDistance.toString());
 
-    return ListTile(
-      title: const Text("Odległość sklepów"),
-      subtitle: const Text("500 m - 10 000 m"),
-      trailing: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width * 0.4,
-        ),
-        child: Form(
-          key: formKey,
-          autovalidateMode: AutovalidateMode.always,
-          child: Slider(
-            min: 500,
-            max: 10000,
-            divisions: 95,
-            label: settingsProvider.storeDistance.toString(),
-            value: settingsProvider.storeDistance.toDouble(),
-            onChanged: (double val) =>
-                onValueChange(val.floor(), settingsProvider),
-          ),
+    return Form(
+      child: DecoratedBox(
+        decoration: const BoxDecoration(
+            border:
+                Border(bottom: BorderSide(width: 3, color: Colors.black45))),
+        child: Column(
+          children: [
+            const ListTile(
+              title: Text("Odległość sklepów"),
+              subtitle: Text("500 m - 10 000 m"),
+            ),
+            Container(
+              transform: Matrix4.translationValues(0.0, -10.0, 0.0),
+              child: Slider(
+                min: 500,
+                max: 10000,
+                divisions: 95,
+                label: settingsProvider.storeDistance.toString(),
+                value: settingsProvider.storeDistance.toDouble(),
+                onChanged: (double val) =>
+                    onValueChange(val.floor(), settingsProvider),
+              ),
+            ),
+          ],
         ),
       ),
     );

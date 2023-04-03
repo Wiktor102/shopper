@@ -61,6 +61,12 @@ class StoresModel extends ChangeNotifier {
     }
   }
 
+  @override
+  void dispose() {
+    print("Disposing!!!!!!!");
+    super.dispose();
+  }
+
   Store getStoreById(String id) {
     return nearbyStores.firstWhere((Store store) => store.id == id);
   }
