@@ -288,7 +288,7 @@ class _GroceryListsState extends State<GroceryLists> {
                                     <PopupMenuEntry<TaskOptions>>[
                                       const PopupMenuItem(
                                         value: TaskOptions.edit,
-                                        child: Text("Edytuj nazwe"),
+                                        child: Text("Zmień nazwę"),
                                       ),
                                       const PopupMenuItem(
                                         value: TaskOptions.delete,
