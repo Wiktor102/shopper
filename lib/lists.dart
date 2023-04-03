@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:Shopper/settings_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -102,6 +103,8 @@ class _GroceryListsState extends State<GroceryLists> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<GroceryListModel>(context);
+    final settings = Provider.of<SettingsModel>(context);
+
     if (provider.grocerySet.isEmpty) {
       provider.newList("Nowa Lista", {TaskObject("necesary", false)});
       provider.deleteTask(0, 0);
@@ -111,116 +114,146 @@ class _GroceryListsState extends State<GroceryLists> {
       body: Column(
         children: [
           //wyświetla poszczególne rzeczy z listy
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: DropdownButton<GroceryList>(
-                      isExpanded: true,
-                      isDense: true,
-                      value: provider.getCurrentList(),
-                      items: provider.grocerySet
-                          .map<DropdownMenuItem<GroceryList>>(
-                              (GroceryList value) {
-                        return DropdownMenuItem(
-                          value: value,
-                          child: Text(value.name),
-                        );
-                      }).toList(),
-                      onChanged: (GroceryList? value) {
-                        WidgetsBinding.instance.addPostFrameCallback((_) {
-                          setState(() {
-                            if (value == null) return;
-                            provider.changeListTo(value);
+          DecoratedBox(
+            decoration: BoxDecoration(
+              color: settings.brightness == Brightness.light
+                  ? const Color(0xFFb5f2b0)
+                  : const Color(0XFF005212),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: DropdownButton<GroceryList>(
+                        selectedItemBuilder: (BuildContext context) {
+                          return provider.grocerySet.map((GroceryList value) {
+                            return Container(
+                              alignment: Alignment.centerLeft,
+                              constraints: const BoxConstraints(minWidth: 100),
+                              child: Text(
+                                value.name,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            );
+                          }).toList();
+                        },
+                        isExpanded: true,
+                        isDense: true,
+                        value: provider.getCurrentList(),
+                        items: provider.grocerySet
+                            .map<DropdownMenuItem<GroceryList>>(
+                                (GroceryList value) {
+                          return DropdownMenuItem(
+                            value: value,
+                            child: Text(
+                              value.name,
+                              style: provider.getCurrentList().hashCode ==
+                                      value.hashCode
+                                  ? const TextStyle(
+                                      fontWeight: FontWeight.w800,
+                                      color: Color(0XFF008F1F),
+                                    )
+                                  : const TextStyle(
+                                      fontWeight: FontWeight.w300),
+                            ),
+                          );
+                        }).toList(),
+                        onChanged: (GroceryList? value) {
+                          WidgetsBinding.instance.addPostFrameCallback((_) {
+                            setState(() {
+                              if (value == null) return;
+                              provider.changeListTo(value);
+                            });
                           });
-                        });
-                      },
+                        },
+                      ),
                     ),
                   ),
-                ),
-                Row(
-                  children: [
-                    IconButton(
-                        onPressed: () async {
-                          String? value =
-                              await promptForString("Podaj nazwę listy", null);
+                  Row(
+                    children: [
+                      IconButton(
+                          onPressed: () async {
+                            String? value = await promptForString(
+                                "Podaj nazwę listy", null);
 
-                          if (value != null || value != "") {
-                            provider.newList(
-                              value!,
-                              {TaskObject("necesary", true)},
-                            );
-                            int newListIndex = provider.grocerySet.length - 1;
-                            provider.deleteTask(
-                              0,
-                              newListIndex,
-                            );
-                            provider.currentListIndex = newListIndex;
-                          }
-                        },
-                        icon: const Icon(Icons.format_list_bulleted_add)),
-                    IconButton(
-                        onPressed: () async {
-                          String? value = await promptForString(
-                              "Zmień nazwę listy",
-                              provider.getCurrentList().name);
+                            if (value != null || value != "") {
+                              provider.newList(
+                                value!,
+                                {TaskObject("necesary", true)},
+                              );
+                              int newListIndex = provider.grocerySet.length - 1;
+                              provider.deleteTask(
+                                0,
+                                newListIndex,
+                              );
+                              provider.currentListIndex = newListIndex;
+                            }
+                          },
+                          icon: const Icon(Icons.format_list_bulleted_add)),
+                      IconButton(
+                          onPressed: () async {
+                            String? value = await promptForString(
+                                "Wpisz nową nazwę listy",
+                                provider.getCurrentList().name);
 
-                          if (value != null || value != "") {
-                            provider.renameList(
-                              value!,
-                              provider.currentListIndex,
-                            );
-                          }
-                        },
-                        icon: const Icon(Icons.edit_note_sharp)),
-                    PopupMenuButton<MoreListOption>(
-                      icon: const Icon(
-                        Icons.delete,
-                        color: Colors.red,
-                      ),
-                      itemBuilder: (BuildContext context) =>
-                          <PopupMenuItem<MoreListOption>>[
-                        const PopupMenuItem(
-                          value: MoreListOption.delete_list,
-                          child: Text(
-                            "Usuń listę",
-                            style: TextStyle(color: Colors.red),
-                          ),
+                            if (value != null || value != "") {
+                              provider.renameList(
+                                value!,
+                                provider.currentListIndex,
+                              );
+                            }
+                          },
+                          icon: const Icon(Icons.edit_note_sharp)),
+                      PopupMenuButton<MoreListOption>(
+                        icon: const Icon(
+                          Icons.delete,
+                          color: Colors.red,
                         ),
-                        const PopupMenuItem(
-                            value: MoreListOption.delete_checked_tasks,
+                        itemBuilder: (BuildContext context) =>
+                            <PopupMenuItem<MoreListOption>>[
+                          const PopupMenuItem(
+                            value: MoreListOption.delete_list,
                             child: Text(
-                              "Usuń zaznaczone",
+                              "Usuń listę",
                               style: TextStyle(color: Colors.red),
-                            )),
-                      ],
-                      onSelected: (MoreListOption value) {
-                        switch (value) {
-                          case MoreListOption.delete_checked_tasks:
-                            promptForBoolean(
-                                    "Czy chcesz usunąć zaznaczone obiekty")
-                                .then((value) => {
-                                      if (value == true)
-                                        provider.deleteChecked(
-                                            provider.currentListIndex)
-                                    });
-                            break;
-                          case MoreListOption.delete_list:
-                            print(provider.currentListIndex);
-                            promptForBoolean("Czy chcesz usunąć listę").then(
-                                (value) =>
-                                    value ? provider.deleteCurrentList() : 0);
-                            break;
-                          default:
-                        }
-                      },
-                    )
-                  ],
-                ),
-              ],
+                            ),
+                          ),
+                          const PopupMenuItem(
+                              value: MoreListOption.delete_checked_tasks,
+                              child: Text(
+                                "Usuń zaznaczone",
+                                style: TextStyle(color: Colors.red),
+                              )),
+                        ],
+                        onSelected: (MoreListOption value) {
+                          switch (value) {
+                            case MoreListOption.delete_checked_tasks:
+                              promptForBoolean(
+                                      "Czy chcesz usunąć zaznaczone obiekty")
+                                  .then((value) => {
+                                        if (value == true)
+                                          provider.deleteChecked(
+                                              provider.currentListIndex)
+                                      });
+                              break;
+                            case MoreListOption.delete_list:
+                              print(provider.currentListIndex);
+                              promptForBoolean("Czy chcesz usunąć listę").then(
+                                  (value) =>
+                                      value ? provider.deleteCurrentList() : 0);
+                              break;
+                            default:
+                          }
+                        },
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
           provider.getCurrentList().items.isNotEmpty
@@ -263,7 +296,7 @@ class _GroceryListsState extends State<GroceryLists> {
                                   switch (value) {
                                     case TaskOptions.edit:
                                       promptForString(
-                                              "Zmień nazwę produktu",
+                                              "Wpisz nową nazwę produktu",
                                               provider
                                                   .getCurrentList()
                                                   .items
@@ -321,7 +354,7 @@ class _GroceryListsState extends State<GroceryLists> {
       // ten guzik słuzy do przypisywania itemów do listy
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          promptForString("Napisz nazwę produktu", null)
+          promptForString("Wpisz nazwę produktu", null)
               .then((String? value) => {
                     if (value != null || value != "")
                       provider.addTaskToCurrentList(TaskObject(value!, false))

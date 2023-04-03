@@ -18,7 +18,8 @@ class Settings extends StatelessWidget {
       body: ListView(
         children: [
           ThemeTile(settingsProvider: settingsProvider),
-          const StoreDistanceTile()
+          const StoreDistanceTile(),
+          const AboutApp(),
         ],
       ),
     );
@@ -135,6 +136,47 @@ class ThemeTile extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class AboutApp extends StatelessWidget {
+  const AboutApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const ExpansionTile(
+      title: Text("O aplikacji"),
+      leading: Icon(Icons.info),
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: 59),
+          child: ExpansionTile(
+            title: Text("Autorzy"),
+            children: [
+              ListTile(title: Text("Wiktor Golicz")),
+              ListTile(title: Text("Mikołaj Gaweł-Kucab")),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 59),
+          child: ExpansionTile(
+            title: Text("Źródła"),
+            children: [
+              ListTile(title: Text("wikikuchnia.org")),
+              ListTile(title: Text("truewayapi.com")),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 59),
+          child: ListTile(
+            title: Text("Wersja"),
+            trailing: Text("v1.3"),
+          ),
+        )
+      ],
     );
   }
 }

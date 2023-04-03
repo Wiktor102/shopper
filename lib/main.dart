@@ -116,7 +116,7 @@ class _AppState extends State<App> {
       home: Scaffold(
         appBar: AppBar(
           title: Text(titles[tabIndex]),
-          actions: const [SettingsButton(), InformationButton()],
+          actions: const [SettingsButton()],
         ),
         body: screens[tabIndex],
         bottomNavigationBar:
@@ -141,60 +141,6 @@ class SettingsButton extends StatelessWidget {
     return IconButton(
       icon: const Icon(Icons.settings),
       onPressed: () => goToSettings(context),
-    );
-  }
-}
-
-class InformationButton extends StatelessWidget {
-  const InformationButton({
-    super.key,
-  });
-
-  void goToInfo(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (_) => const AboutApp()));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      icon: const Icon(Icons.info),
-      onPressed: () => goToInfo(context),
-    );
-  }
-}
-
-class AboutApp extends StatelessWidget {
-  const AboutApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("O aplikacji")),
-      body: ListView(
-        children: const [
-          ExpansionTile(
-            initiallyExpanded: true,
-            title: Text("Autorzy"),
-            children: [
-              ListTile(title: Text("Wiktor Golicz")),
-              ListTile(title: Text("Mikołaj Gaweł-Kucab")),
-            ],
-          ),
-          ExpansionTile(
-            initiallyExpanded: true,
-            title: Text("Źródła"),
-            children: [
-              ListTile(title: Text("wikikuchnia.org")),
-              ListTile(title: Text("truewayapi.com")),
-            ],
-          ),
-          ListTile(
-            title: Text("Wersja"),
-            trailing: Text("v1.3"),
-          )
-        ],
-      ),
     );
   }
 }
