@@ -33,15 +33,20 @@ class StoresModel extends ChangeNotifier {
     double lng = _positionProvider.lng;
     double? bestAccuracy;
     List<Store>? bestAccuracyList;
+    int? bestRange;
+    int desiredRange = settingsProvider.storeDistance;
 
     Hive.box("stores").toMap().forEach((k, v) {
       List<String> saveLocation = k.split(",");
       double saveLat = double.parse(saveLocation[0]);
       double saveLng = double.parse(saveLocation[1]);
+      int range = int.parse(saveLocation[2]);
       double dist = distance(lat, lng, saveLat, saveLng);
 
-      if (bestAccuracy == null || dist < bestAccuracy!) {
+      if ((bestAccuracy == null || dist < bestAccuracy!) &&
+          bestRange == desiredRange) {
         bestAccuracy = dist;
+        bestRange = range;
         bestAccuracyList = v.cast<Store>();
       }
     });
@@ -73,9 +78,11 @@ class StoresModel extends ChangeNotifier {
   }
 
   Future<void> _getNearbyStores(PositionModel _positionProvider) async {
-    print("...");
     double lat = _positionProvider.lat;
     double lng = _positionProvider.lng;
+    int storeDistanceSetting = settingsProvider.storeDistance;
+
+    print("Super: $storeDistanceSetting");
 
     Uri uri = Uri(
       scheme: 'https',
@@ -84,7 +91,7 @@ class StoresModel extends ChangeNotifier {
       queryParameters: {
         "location": "$lat,$lng",
         "type": "grocery_store",
-        "radius": settingsProvider.storeDistance.toString()
+        "radius": storeDistanceSetting.toString()
       },
     );
 
@@ -100,12 +107,11 @@ class StoresModel extends ChangeNotifier {
       List<dynamic> results = body["results"] as List<dynamic>;
       nearbyStores =
           results.map((dynamic result) => Store.fromJson(result)).toList();
-      Hive.box("stores").put("$lat,$lng", nearbyStores);
+      Hive.box("stores").put("$lat,$lng,$storeDistanceSetting", nearbyStores);
       loading = false;
       notifyListeners();
     } else {
       loading = false;
-      print(response.reasonPhrase);
     }
   }
 }

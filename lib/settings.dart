@@ -18,7 +18,7 @@ class Settings extends StatelessWidget {
       body: ListView(
         children: [
           ThemeTile(settingsProvider: settingsProvider),
-          // const StoreDistanceTile()
+          const StoreDistanceTile()
         ],
       ),
     );
@@ -36,35 +36,17 @@ class StoreDistanceTile extends StatefulWidget {
 
 class _StoreDistanceTileState extends State<StoreDistanceTile> {
   late TextEditingController textController;
+  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
     super.initState();
-    // textController = TextEditingController();
   }
 
-  void onValueChange(
-    int val,
-    SettingsModel settingsProvider,
-    BuildContext context,
-  ) {
-    void resetText() {
-      textController.text = settingsProvider.storeDistance.toString();
-    }
+  void onValueChange(int val, SettingsModel settingsProvider) {
+    final bool isFormValid = formKey.currentState!.validate();
 
-    void showSnackbar(String text) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
-    }
-
-    if (val > 10000) {
-      showSnackbar("Wartość musi być mniejsza od 10 000 m");
-      resetText();
-      return;
-    }
-
-    if (val < 500) {
-      showSnackbar("Wartość musi być większa od 500 m");
-      resetText();
+    if (!isFormValid) {
       return;
     }
 
@@ -79,18 +61,36 @@ class _StoreDistanceTileState extends State<StoreDistanceTile> {
 
     return ListTile(
       title: const Text("Odległość sklepów"),
-      subtitle: const Text("Max. 10 000 m"),
+      subtitle: const Text("500 m - 10 000 m"),
       trailing: ConstrainedBox(
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.4,
         ),
-        child: TextField(
-          controller: textController,
-          keyboardType: TextInputType.number,
-          decoration: const InputDecoration(suffixText: "m"),
-          inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-          onSubmitted: (String val) =>
-              onValueChange(int.parse(val), settingsProvider, context),
+        child: Form(
+          key: formKey,
+          autovalidateMode: AutovalidateMode.always,
+          child: TextFormField(
+            controller: textController,
+            keyboardType: TextInputType.number,
+            decoration: const InputDecoration(suffixText: "m"),
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+            validator: (String? value) {
+              if (value == null || value == "") return "Min. 500 m";
+              int val = int.parse(value);
+
+              if (val > 10000) {
+                return "Max. 10 000 m";
+              }
+
+              if (val < 500) {
+                return "Min. 500 m";
+              }
+
+              return null;
+            },
+            onChanged: (String val) =>
+                onValueChange(int.parse(val), settingsProvider),
+          ),
         ),
       ),
     );

@@ -191,7 +191,7 @@ class AboutApp extends StatelessWidget {
           ),
           ListTile(
             title: Text("Wersja"),
-            trailing: Text("v1.2"),
+            trailing: Text("v1.3"),
           )
         ],
       ),

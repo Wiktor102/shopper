@@ -35,86 +35,6 @@
     },
     {
         "products": [
-            "Bakłażan",
-            "Cebula",
-            "Pomidory",
-            "Przyprawy do smaku",
-            "kilka łyżek oliwy do smażenia"
-        ],
-        "steps": [
-            "Bakłażana kroimy w talarki. Cebulę obieramy i przepłukujemy, po czym kroimy w plastry.",
-            "Szklimy cebulę na oliwie. Na drugiej patelni podsmażamy bakłażana. ",
-            "Pomidora obieramy i kroimy w kostkę. Wszystkie składniki łączymy na patelni, doprawiamy.",
-            "Dusimy 20 minut."
-        ],
-        "id": 2,
-        "title": "Adżapsandali",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Kuchnia_gruzińska",
-            "Dieta_bezglutenowa"
-        ]
-    },
-    {
-        "products": [
-            "pół filiżanki oliwy"
-        ],
-        "steps": [
-            "Kroimy mięso w kostkę. Cebulę obieramy i kroimy w plastry. Pomidory obieramy i kroimy na ćwiartki, a bakłażana w kostkę.",
-            "Smażymy całość na oliwie, po czym zalewamy wodą. ",
-            "Dodajemy paprykę i sól, po czym gotujemy ok. 50 minut.",
-            "Przecieramy jarzyny przez sito i wrzucamy do garnka i gotujemy zupę na małym ogniu przez ok. 10 minut."
-        ],
-        "id": 3,
-        "title": "Afrykańskie pepe",
-        "categories": [
-            "Zupy_na_mięsie",
-            "Kuchnia_afrykańska"
-        ]
-    },
-    {
-        "products": [
-            "1/4 litra oliwy z oliwek,"
-        ],
-        "steps": "Letnie ziemniaki miksujemy, dodajemy do nich poszatkowany czosnek. Następnie miksując na średnich obrotach składniki w takiej kolejności: oliwa, musztarda, sok, przyprawy.",
-        "id": 4,
-        "title": "Aioli",
-        "categories": [
-            "Sosy_zimne",
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "dwie łyżki oliwy"
-        ],
-        "steps": [
-            "Pory oczyszczamy i kroimy w półplastry. Jabłka obieramy i ścieramy na sporych oczkach.",
-            "Oliwę ubijamy z musztardą oraz sokiem z cytryny. ",
-            "Mieszamy sos z porami i jabłkami."
-        ],
-        "id": 5,
-        "title": "Akademicka surówka",
-        "categories": [
-            "Surówki"
-        ]
-    },
-    {
-        "products": [
-            "150 ml oleju słonecznikowego,"
-        ],
-        "steps": "Czosnek rozgniatamy w moździerzu ze szczyptą soli na gładką pastę. Przekładamy do miski. Dodajemy żółtka, wlewamy oliwę wymieszaną z olejem, cały czas mieszając – początkowo po kropelce, stopniowo później nieco większym strumieniem, by żółtka połączyły się z olejem i oliwą w gładką emulsję. Wlewamy sok z cytryny, solimy do smaku, mieszamy. Szczelnie przykrywamy i do momentu podania trzymamy w lodówce.",
-        "id": 6,
-        "title": "Alioli",
-        "categories": [
-            "Sosy_zimne",
-            "Dodatki_do_dań",
-            "Kuchnia_hiszpańska"
-        ]
-    },
-    {
-        "products": [
             " dziewięć jaj",
             " 300 gram kapusty kiszonej",
             " dwie łyżki smalcu",
@@ -155,66 +75,6 @@
         "categories": [
             "Desery",
             "Kuchnia_włoska"
-        ]
-    },
-    {
-        "products": [
-            "nieco oleju"
-        ],
-        "steps": [
-            "Jagody mieszamy z cukrem. Kromki smarujemy olejem i zapiekamy na patelni z obu stron.",
-            "Następnie smarujemy je masłem orzechowym i posypujemy jagodami."
-        ],
-        "id": 9,
-        "title": "Amerykańska kanapka z jagodami",
-        "categories": [
-            "Śniadania",
-            "Kuchnia_amerykańska"
-        ]
-    },
-    {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": "Rybę oczyszczamy i płuczemy. Polewamy ją sokiem z cytryny i odstawiamy na kwadrans.Następnie solimy, doprawiamy i polewamy oliwą.Zawijamy w folię i grillujemy przez ok. 30 minut, co jakiś czas przewracając.",
-        "id": 10,
-        "title": "Amur grillowany",
-        "categories": [
-            "Ryby"
-        ]
-    },
-    {
-        "products": [
-            "oliwa do smażenia"
-        ],
-        "steps": [
-            "Mięso kroimy na kawałki, obsmażamy i studzimy.",
-            "Ananasa, pieczarki oraz kukurydzę wraz z kurczakiem mieszamy.",
-            "Doprawiamy solą oraz pieprzem. Wrzucamy majonez i mieszamy."
-        ],
-        "id": 11,
-        "title": "Ananasowa sałatka",
-        "categories": [
-            "Ptactwo",
-            "Sałaty",
-            "Grzyby"
-        ]
-    },
-    {
-        "products": [
-            "trzy łyżki oliwy "
-        ],
-        "steps": [
-            "Fasolę namaczamy 12 godzin, po czym gotujemy do miękkości w wodzie z namaczania. Odcedzamy, studzimy.",
-            "Parówki obieramy z osłonek i kroimy w plastry. Podsmażamy obraną cebulę na oliwie, po czym dodajemy parówki oraz poszatkowany czosnek.",
-            "Dodajemy fasolę oraz kapary. Doprawiamy, mieszamy, podlewamy wodą i dusimy 5 minut na małym ogniu."
-        ],
-        "id": 12,
-        "title": "Andaluzyjska fasola",
-        "categories": [
-            "Wieprzowina",
-            "Warzywne",
-            "Kuchnia_hiszpańska"
         ]
     },
     {
@@ -302,32 +162,6 @@
     },
     {
         "products": [
-            "oliwa,"
-        ],
-        "steps": "Farsz:Umyte, sparzone i obrane pomidory miksujemy i przecieramy przez sitko. Cebulę kroimy na kawałki i szklimy na oliwie. Gdy cebula zrobi się złocista dodajemy do niej mięso oraz groszek. Gotujemy przez ok. 10 minut cały czas mieszając. Po tym czasie dodajemy zmiksowane pomidory i doprawiamy solą i pieprzem. Dusimy na małym ogniu, dopóki farsz nie stanie się gęsty.Kulki:Ryż gotujemy, po czym mieszamy z masłem i serem. Z powstałej masy lepimy kulki, a w każdą wkładamy nadzienie. Następnie panierujemy w jajku i bułce i smażymy na głębokim oleju na złoty kolor.",
-        "id": 17,
-        "title": "Arancine",
-        "categories": [
-            "Wieprzowina",
-            "Warzywne",
-            "Kuchnia_włoska"
-        ]
-    },
-    {
-        "products": [
-            "1/4 szklanki oliwy,"
-        ],
-        "steps": "Pomidory i ziemniaki kroimy w kosteczkę, a cebule na plastry. Mięso również kroimy, ale na nieco grubsze kostki. Warzywa mieszamy, dodajemy do mięsa, a całość zalewamy oliwą. Wkładamy mieszankę do naczynia żaroodpornego, przykrywamy folią i zapiekamy 1 godzinę w temperaturze 180 - 190 stopni. Po upływie czasu mieszamy całość, przykrywamy ponownie i pieczemy przez 75 minut. Po upływie tego czasu zdejmujemy folię i pieczemy tak długo, aż mięso zrobi się rumiane.",
-        "id": 18,
-        "title": "Arni kleftiko/wieprzowina po cypryjsku",
-        "categories": [
-            "Wieprzowina",
-            "Warzywne",
-            "Kuchnia_cypryjska"
-        ]
-    },
-    {
-        "products": [
             "oliwa wysokiej jakości (najlepiej z pestek winogron),",
             "kilka świeżych gałązek rozmarynu,",
             "kilka gałązek lawendy."
@@ -337,19 +171,6 @@
         "title": "Aromatyczna oliwa",
         "categories": [
             "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "litr rosołu rybnego,"
-        ],
-        "steps": "Cebulę obieramy i kroimy.Ośmiorniczki i kalmary myjemy i kroimy na kawałki.Na patelnię wlewamy oliwę i podsmażamy na niej cebulę, aż się nie zeszkli.Dodajemy pocięte owoce morza oraz sepię i smażymy.Wlewamy bulion, doprawiamy, po czym dodajemy ryż, mieszamy.Czekamy, aż ryż wchłonie cały bulion.",
-        "id": 20,
-        "title": "Arroz negro",
-        "categories": [
-            "Kuchnia_hiszpańska",
-            "Inne_mięsne",
-            "Ryby"
         ]
     },
     {
@@ -385,22 +206,6 @@
     },
     {
         "products": [
-            "Sos vinaigrette"
-        ],
-        "steps": [
-            "Owoce przecinamy na pół wzdłuż.",
-            "Usuwamy pestkę, a środek wypełniamy sosem."
-        ],
-        "id": 22,
-        "title": "Awokado wypełnione sosem",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Przekąski"
-        ]
-    },
-    {
-        "products": [
             "2 dojrzałe avocado,",
             "10 obranych krewetek koktajlowych,",
             "sok z połowy cytryny,",
@@ -428,24 +233,6 @@
         "id": 3970,
         "title": "Ayran",
         "categories": []
-    },
-    {
-        "products": [
-            "olej do wysmarowania foremek"
-        ],
-        "steps": [
-            "W misce mieszamy proszek, sól, przyprawy oraz mąkę.",
-            "W drugiej misce mieszamy mleko, masło, jajko. Mieszamy, po czym łączymy obie miski i również mieszamy.",
-            "Oliwki kroimy w plastry, a ser w kostkę. Wrzucamy do ciasta, mieszamy.",
-            "Foremki smarujemy tłuszczem i wypełniamy ciastem. Smarujemy górę każdego jajkiem.",
-            "Pieczemy ok. 30 minut w 200 stopniach."
-        ],
-        "id": 25,
-        "title": "Babeczki z fetą oraz oliwkami",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
     },
     {
         "products": [
@@ -494,26 +281,6 @@
         "title": "Babeczki z sosem waniliowym",
         "categories": [
             "Desery"
-        ]
-    },
-    {
-        "products": [
-            "oliwa"
-        ],
-        "steps": [
-            "Bułkę moczymy w wodzie, po czym po 10 minutach odciskamy i przekładamy do sporego naczynia.",
-            "Dodajemy mięso, doprawiamy solą, pieprzem, papryką i kminkiem, po czym mieszamy.",
-            "Cebulę oraz czosnek obieramy i szatkujemy.",
-            "Rozgrzewamy na patelni oliwę, po czym podsmażamy cebulę i czosnek. Gdy się zeszklą dodajemy mięsa.",
-            "Rozmaryn myjemy, siekamy i łączymy z mięsem. Formujemy z masy kulki i kładziemy je na blasze do pieczenia.",
-            "Skrapiamy oliwą i pieczemy ok. 30 minut w 180 stopniach."
-        ],
-        "id": 28,
-        "title": "Babilońskie mięsiwo",
-        "categories": [
-            "Kuchnia_arabska",
-            "Wołowina",
-            "Baranina"
         ]
     },
     {
@@ -591,21 +358,6 @@
     },
     {
         "products": [
-            "200 gram tłustej i kwaśnej śmietany,"
-        ],
-        "steps": [
-            "Jajka, śmietanę, cukier, mąkę oraz proszek mieszamy na gładką masę.",
-            "Wrzucamy ekstrakt, skórkę oraz sok z pomarańczy. Mieszamy.",
-            "Przelewamy całość do wysmarowanej tłuszczem formy i pieczemy ok. 60 minut w 180 stopniach."
-        ],
-        "id": 35,
-        "title": "Babka pomarańczowa",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
             "2 kg ziemniaków (najleprze stare)",
             "2-3 jajka",
             "3-4 łyżki mąki przennej",
@@ -636,26 +388,6 @@
         "categories": [
             "Warzywne",
             "Wieprzowina"
-        ]
-    },
-    {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": [
-            "Bacalhau moczymy przez noc w wodzie (zmiana wody co kilka godzin sprawi, że będzie mniej słony).",
-            "Czosnek kroimy w plastry, ziemniaki obieramy i kroimy w słupki.",
-            "Czosnek rumienimy na oliwie, po czym dorzucamy ziemniaki i dusimy je na oliwie około kwadransa.",
-            "Dodajemy rozdrobnioną rybę i mieszamy całość. Doprawiamy pieprzem oraz solą.",
-            "Dusimy 5 minut, po czym dodaje pietruszkę.",
-            "W misce rozbełtujemy jajka i dodajemy je do garnka, po czym czekamy aż się zetną."
-        ],
-        "id": 38,
-        "title": "Bacalhau a bras",
-        "categories": [
-            "Ryby",
-            "Warzywne",
-            "Kuchnia_portugalska"
         ]
     },
     {
@@ -699,54 +431,6 @@
         "categories": [
             "Warzywne",
             "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "sos jogurtowy"
-        ],
-        "steps": [
-            "Całego bakłażana pieczemy owiniętego w folię (200 stopni, ok. 45 minut).",
-            "Po upieczeni obieramy go ze skóry i kroimy na pół.",
-            "Na każda połowę kładziemy sos, orzeszki piniowe oraz kilka listków mięty."
-        ],
-        "id": 41,
-        "title": "Bakłażan w sosie jogurtowym",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "trzy łyżki oleju"
-        ],
-        "steps": [
-            "Bakłażany kroimy na plastry. Rozgrzewamy na patelni olej, dorzucamy gorczycę, a gdy ta zacznie pękać dodajemy liście kaffirui całość mieszamy.",
-            "Dorzucamy plastry bakłażana i mieszamy. Dolewamy szklankę wody, sól, po czym dusimy do miękkości.",
-            "Przed podaniem studzimy i mieszamy z jogurtem."
-        ],
-        "id": 42,
-        "title": "Bakłażan z gorczycą",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oleju z orzechów włoskich"
-        ],
-        "steps": [
-            "Soczewicę gotujemy 30 minut razem z obraną i pociętą w słupki marchewkę, obraną i pociętą cebulą, goździkami oraz boczkiem pociętym w paski.",
-            "Odsączamy, cebulę wyrzucamy, a do soczewicy wrzucamy selera pokrojonego w plastry o grubości ok. 0,5 centymetra, grubo posiekaną kolendrę i szczypiorek.",
-            "Doprawiamy musztardą, olejem, solą, pieprzem oraz octem."
-        ],
-        "id": 43,
-        "title": "Bakłażan z soczewicą",
-        "categories": [
-            "Warzywne",
-            "Wieprzowina"
         ]
     },
     {
@@ -816,35 +500,6 @@
         "title": "Bakłażany zapiekane z mięsem i cebulą",
         "categories": [
             "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "olej rzepakowy."
-        ],
-        "steps": "Banany obieramy ze skórek, po czym kroimy na lekko skośne plastry, a czekoladę trzemy na tarce (na grubych oczkach). W międzyczasie nasączamy papier ryżowy wodą i zawijamy w niego plastry. Mocno rozgrzewamy olej i smażymy na nim \"pakunki\" z obu stron. Gdy będą już gotowe posypujemy je czekolada oraz sezamem.",
-        "id": 48,
-        "title": "Banany w papierze ryżowym",
-        "categories": [
-            "Desery"
-        ]
-    },
-    {
-        "products": [
-            "cynamon."
-        ],
-        "steps": [
-            "Całe banany rozkładamy na grilu i pieczemy około 3-4 minut.",
-            "Przed podaniem nacinamy z jednej strony skórkę i mamy parę możliwości urozmaicenia :",
-            "- wlewamy miód i posypujemy wszystko cynamonem;",
-            "- posypujemy czekoladą i wlewamy rum;",
-            "- polewamy syropem smakowym (do wyboru do koloru);"
-        ],
-        "id": 49,
-        "title": "Banany z grilla",
-        "categories": [
-            "Na_grillu_i_biwaku",
-            "Desery"
         ]
     },
     {
@@ -929,38 +584,6 @@
     },
     {
         "products": [
-            "2 szklanki soku z buraków i jabłek,"
-        ],
-        "steps": "Umyte buraki pieczemy w piekarniku (150 stopni, ok. 20 minut). Śliwki namaczamy przez ok. 2 godziny w dwóch szklankach przegotowanej wody. Dodajemy goździki i otartą skórkę z cytryny, a następnie zagotowujemy. Upieczone buraki obieramy i ścieramy na tarce o dużych oczkach. Zalewamy gorąca wodą i gotujemy przez 10 minut. Całość przecedzamy, dodajemy pieprz i sól, a następnie mieszamy z miodem i wywarem ze śliwek. Ponownie zagotowujemy, a następnie wyłączamy ogień, dodajemy napój jabłkowo- buraczany.",
-        "id": 55,
-        "title": "Barszcz ze śliwkami",
-        "categories": [
-            "Zupy_jarskie",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "25 mililitrów oleju"
-        ],
-        "steps": [
-            "Bakłażany obieramy, odcinamy ogonki i kroimy na spore plastry. Solimy i odkładamy na sitku na ok. pół godziny.",
-            "Wycieramy je serwetką i obsypujemy mąką.",
-            "Żółty ser ucieramy na tarce na niewielkich oczkach. ",
-            "Na patelni smażymy bakłażany z obu stron.",
-            "Pomidory obieramy, kroimy na plastry, usuwamy nasiona i posypujemy solą i pieprzem.",
-            "W brytfannie wysmarowanej tłuszczem układamy warstwy bakłażanów oraz pomidorów. Zalewamy bulionem oraz winem. Wierzch posypujemy bazylią i serem. ",
-            "Pieczemy 25 minut w 200 stopni."
-        ],
-        "id": 56,
-        "title": "Baskijskie bakłażany",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
             "110 gram startych batatów,",
             "110 gram startej dyni,",
             "dwa jajka,",
@@ -987,45 +610,6 @@
     },
     {
         "products": [
-            "dwie łyżeczki oliwy."
-        ],
-        "steps": [
-            "Drożdże i ciepłą wodę mieszamy dokładnie.",
-            "W misce mieszamy mąkę i sól, po czym dodajemy wodę drożdzową i oliwę.",
-            "Wyrabiamy całość na gładkie i elastyczne ciasto (nie może się kleić).",
-            "Dzielimy na pięć kawałków. Każdy z nich rozwałkowujemy.",
-            "Kładziemy je wysypanej mąką powierzchni i przykrywamy ścierką. Odkładamy na ok. 40 minut w ciepłe miejsce, by podrosły."
-        ],
-        "id": 58,
-        "title": "Batbout",
-        "categories": [
-            "Mączne",
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "oliwa"
-        ],
-        "steps": [
-            "Pomidora obieramy ze skóry i usuwamy pestki. Kroimy  w niewielką kostkę. Łososia również tniemy na kawałki",
-            "Kapary, natkę, sok z połowy cytryny, czosnek oraz chilli dorzucamy do miksera i miksujemy.",
-            "W międzyczasie gotujemy makaron.",
-            "Na patelni podsmażamy łososia, po czym dolewamy do niego sok z cytryny oraz pieprz. ",
-            "Podsmażamy, po czym dodajemy pastę z kaparów i natki. Dolewamy łyżkę wody z makaronu i mieszamy.",
-            "Dodajemy pomidora, mieszamy.",
-            "Wykładamy sos na makaron, a na niego łososia."
-        ],
-        "id": 59,
-        "title": "Bavette z łososiem",
-        "categories": [
-            "Ryby",
-            "Warzywne",
-            "Makarony"
-        ]
-    },
-    {
-        "products": [
             " gruszka",
             " spory plaster boczku",
             " 50 gram sera pleśniowego",
@@ -1043,40 +627,6 @@
         "categories": [
             "Wieprzowina",
             "Przekąski"
-        ]
-    },
-    {
-        "products": [
-            "olej do smażenia"
-        ],
-        "steps": [
-            "Obieramy bakłażana ze skóry, po czym kroimy wzdłuż, pozbywając się nasion. Solimy, skrapiamy sokiem z cytryny i odstawiamy na 30 minut.",
-            "Rozgrzewamy olej i smażymy na nim plastry na złocisty kolor.",
-            "Mięso doprawiamy solą, papryką oraz pieprzem, po czym wbijamy do niego jajko. Mieszamy.",
-            "Formujemy je na niewielkie kotlety i smażymy.",
-            "Kotlety owijamy bakłażanem i wkładamy do piekarnika. ",
-            "Pomidory obieramy ze skóry, kroimy na ćwiartki i podsmażamy na patelni, dodając pieprz, chili i sól.",
-            "Przecier wlewamy do naczynia, gdzie będzie zapiekane mięso. Wlewamy tam tez bulion.",
-            "Pieczemy w 180 stopniach przez ok. 40 minut."
-        ],
-        "id": 61,
-        "title": "Bałkańskie bakłażany",
-        "categories": [
-            "Wołowiny",
-            "Warzywne",
-            "Kuchnia_bałkańska"
-        ]
-    },
-    {
-        "products": [
-            "4 łyżki oliwy"
-        ],
-        "steps": "Marchew, seler, pietruszkę zetrzeć na tarce o grubych oczkach, cebulę pokroić w małą kostkę, dodać rozgniecione ziele angielskie, pieprz, miód i dwie łyżki oliwy, całość dokładnie wymieszać. Powstałą masą dokładnie natrzeć poporcjowanego umytego i osuszonego bażanta, posypać słodką papryką i solą, odłożyć do zamarynowania do lodówki na kilka godzin. Następnie oczyszczamy mięso z marynaty (zostawiamy ją) i smażymy każdą porcję na mocno rozgrzanym tłuszczu, przekładamy do rondla. Dodajemy do obsmażonego mięsa odłożoną marynatę, dodajemy tłuszcz od smażenia, pół szklanki wody i dusimy pod przykryciem na niewielkim ogniu do miękkości. Pod koniec duszenia dodajemy pokruszony lub starty piernik i wino, dusimy jeszcze chwilkę odkryte, aby intensywny zapach alkoholu odparował. ",
-        "id": 62,
-        "title": "Bażant słodko- winny",
-        "categories": [
-            "Ptactwo",
-            "Dziczyzna"
         ]
     },
     {
@@ -1135,33 +685,6 @@
     },
     {
         "products": [
-            "trzy łyżki oliwy"
-        ],
-        "steps": [
-            "Mięso myjemy, cebulę obieramy i kroimy w grube pióra. Pomidory obieramy i kroimy w cząstki. Zielone chili kroimy w plastry, czerwone szatkujemy.",
-            "Na oliwie smażymy mięso. Kiedy będzie gotowe (w zależności od upodobań) dodajemy resztę warzyw i podlewamy całość bulionem, doprawiamy solą i pieprzem.",
-            "Smażymy kolejne 10 minut."
-        ],
-        "id": 66,
-        "title": "Befsztyk kowboja",
-        "categories": [
-            "Wołowina",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "płynna przyprawa do potraw typu-\"Maggi\""
-        ],
-        "steps": "Mięso umyć, zemleć(smakoszom polecał bym raczej przesiekać mięso ze trzy razy), wymieszać z oliwą i przyprawami oraz Maggi. Cebulę obrać, opłukać, drobno pokroić razem z ogórkiem i grzybkami. Mięso wyporcjować na talerzyki lub półmisek, w środku zrobić wgłębienie, w które włożyć żółtka a w koło mięsa ułożyć cebulę, ogórki, grzybki i musztardę. Podawać z białym lub ciemnym pieczywem oraz kawałkiem masła  z zestawem przypraw: Maggi,papryka w proszku i sól, mięso można takżeułożyć na liściach sałaty. ",
-        "id": 67,
-        "title": "Befsztyk tatarski",
-        "categories": [
-            "Wołowina"
-        ]
-    },
-    {
-        "products": [
             "1 befsztyk wykrojony z pachwiny,",
             "sól, pieprz."
         ],
@@ -1170,73 +693,6 @@
         "id": 68,
         "title": "Befsztyk z pachwiny",
         "categories": [
-            "Wołowina"
-        ]
-    },
-    {
-        "products": [
-            "pięć łyżek śmietany kremówki,"
-        ],
-        "steps": [
-            "Mąkę, cukier oraz sól ucieramy z masłem.",
-            "Gdy masło będzie drobne wlewamy wodę oraz śmietanę i ugniatamy. Gdy ciasto będzie gotowe wkładamy na pół godziny do lodówki.",
-            "Wałkujemy na blacie posypanym mąką. Przenosimy do formy, wyklejamy i wstawiamy na dwadzieścia minut do 200 stopni. "
-        ],
-        "id": 69,
-        "title": "Bezjajeczne kruche ciasto",
-        "categories": [
-            "Ciasta",
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "trzy łyżki oleju"
-        ],
-        "steps": [
-            "Wszystkie składniki miksujemy. ",
-            "Na gorącą patelnię z niewielką ilością tłuszczu wlewamy porcję. Smażymy do momentu, gdy pojawią się bąble i odwracamy. ",
-            "Smażymy na średnim ogniu."
-        ],
-        "id": 70,
-        "title": "Bezjajeczne naleśniki",
-        "categories": [
-            "Mączne"
-        ]
-    },
-    {
-        "products": [
-            "dwie łyżki oliwy"
-        ],
-        "steps": [
-            "Cebulę obieramy i tniemy na pióra.",
-            "Naczynie żaroodporne smarujemy oliwą i kładziemy w nim umyte kiełbaski. Posypujemy pieprzem i ziołami. Obsypujemy je cebulą, podlewamy wodą i solimy.",
-            "Pieczemy w 180 stopniach przez 60 minut, podlewając w razie konieczności łyżką wody."
-        ],
-        "id": 71,
-        "title": "Biała kiełbasa zapiekana z cebulą",
-        "categories": [
-            "Wieprzowina",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "pół szklanki śmietany"
-        ],
-        "steps": [
-            "Mięso zalewamy dwoma litrami wody, dosypujemy półtora łyżeczki soli. Gotujemy 20 minut.",
-            "Mięso wyjmujemy i ew. obieramy z kości. Odkładamy.",
-            "Wywar przecedzamy. Wsypujemy do niego umyta kaszę i gotujemy 30 minut. ",
-            "Miksujemy wywar z kaszą, wkładamy mięso i miksujemy. ",
-            "Włoszczyznę oczyszczamy, siekamy, wkładamy do zupy i gotujemy 5 minut na niewielkim ogniu.",
-            "Czosnek rozcieramy z sola i wrzucamy do zupy.",
-            "Przed podaniem dodajemy śmietanę i pieprz."
-        ],
-        "id": 72,
-        "title": "Biała zupa cielęca",
-        "categories": [
-            "Zupy_na_mięsie",
             "Wołowina"
         ]
     },
@@ -1317,23 +773,6 @@
             "Mleczne",
             "Jarskie",
             "Z_jaj"
-        ]
-    },
-    {
-        "products": [
-            "szklanka śmietany"
-        ],
-        "steps": [
-            "Obieramy ziemniaki i gotujemy. W osobnym boczku zagotowujmy wodę, dodajemy pokrojony w paski boczek, obraną i poszatkowaną cebulę oraz zmiażdżony czosnek.",
-            "W misce mieszamy mleko z mąką i śmietaną.",
-            "Wlewamy do gotującej się wody i gotujemy niecałe 10 minut. Mieszamy trzepaczką, by usunąć grudki.",
-            "Dodajemy ziemniaki oraz nieco koperku."
-        ],
-        "id": 76,
-        "title": "Biełucha",
-        "categories": [
-            "Zupy_jarskie",
-            "Mleczne"
         ]
     },
     {
@@ -1481,25 +920,6 @@
     },
     {
         "products": [
-            "łyżka oliwy,"
-        ],
-        "steps": [
-            "Fasolę myjemy i odcinamy końcówki, po czym dzielimy na pół.",
-            "Ziemniaki obieramy, kroimy w kostkę. Brokuła dzielimy na różyczki. ",
-            "Mieszamy warzywa, oliwię, sól i pieprz, po czym wkładamy do naczynia żaroodpornego i wkładamy do 200 stopni na kwadrans.",
-            "Podgrzewamy bulion, dodajemy szafran, gorczycę oraz curry.",
-            "Wyjmujemy z piekarnika warzywa, dodajemy ryż, fasolę oraz bulion. Przykrywamy folią i wstawiamy do piekarnika na 30 minut.",
-            "Gdy bulion się wchłonie, a ryż będzie miękki wyciągamy, dodajemy sok z cytryny, orzechy i kolendrę. Mieszamy."
-        ],
-        "id": 84,
-        "title": "Biryani",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
             " 6 jaj,",
             " szklanka cukru,",
             " 2 szklanki mąki,",
@@ -1530,23 +950,6 @@
         "title": "Biszkopt z żółtą masą",
         "categories": [
             "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "oliwa z oliwek"
-        ],
-        "steps": [
-            "Białka oddzielamy od żółtek i ubijamy na sztywno z solą. Ubijając dodajemy powoli cukier.",
-            "Pianę łączymy z żółtkami i mieszamy delikatnie z mąką. Dodajemy czereśnie i lekko mieszamy z ciastem.",
-            "Na rozgrzaną oliwą wylewamy ciasto i smażymy na małym ogniu. Gdy omlet się zetnie od spodu odwracamy go.",
-            "Przed podaniem posypujemy cukrem pudrem."
-        ],
-        "id": 89,
-        "title": "Biszkoptowy omlet z czereśniami",
-        "categories": [
-            "Z_jaj",
-            "Śniadania"
         ]
     },
     {
@@ -1701,50 +1104,6 @@
     },
     {
         "products": [
-            "olej do smażenia"
-        ],
-        "steps": [
-            "Na patelni opiekamy boczek co jakiś czas go obracając. Oprószamy pieprzem i solą, dodajemy obrane i pokrojone czosnek oraz cebulę, podlewamy całość wodą i podgrzewamy pod przykryciem. ",
-            "Gdy woda odparuje podlewamy olejem i ponownie opiekamy."
-        ],
-        "id": 104,
-        "title": "Boczek opiekany",
-        "categories": [
-            "Wieprzowina"
-        ]
-    },
-    {
-        "products": [
-            "olej"
-        ],
-        "steps": [
-            "Paprykę obieramy, usuwamy gniazda i kroimy w słupki. Boczek kroimy w kostkę.",
-            "Oba składniki podsmażamy na oleju. Dodajemy obraną i posiekaną cebulę.",
-            "Kiełbasę kroimy na plastry i dodajemy do boczku.",
-            "Pomidory obieramy, kroimy w kostkę. Podlewamy bulionem i dusimy kwadrans.",
-            "Jabłka ścieramy, mieszamy z pomidorami, doprawiamy i dodajemy do reszty składników. Zasypujemy całość pietruszką."
-        ],
-        "id": 105,
-        "title": "Boczek z jarzynami",
-        "categories": [
-            "Warzywne",
-            "Wieprzowina"
-        ]
-    },
-    {
-        "products": [
-            " olej do smażenia"
-        ],
-        "steps": "Kotlety myjemy, lekko rozbijamy, oprószamy solą i pieprzem z obu stron, po czym na niewielkiej ilości mocno rozgrzanego oleju obsmażamy tylko do zarumienia się, ściągamy z patelni, na ten sam tłuszcz (musi być go naprawdę mało) kładziemy pokrojony w kostkę boczek i cebulę, kiedy cebula się zeszkli, dodajemy pokrojone pieczarki, smażymy do miękkości, odparowujemy wodę, po czym przyprawiamy papryką w proszku, dolewamy wody i umieszczamy w środku kotlety, dusimy całość pod przykryciem ok. 20 min. Gdy mięso jest już prawie miękkie, dodajemy pokrojone w krążki paprykę i pomidora, znowu dusimy do miękkości mięsa i papryki, po czym dolewamy śmietanę wymieszaną z mąką, po zagotowaniu danie jest gotowe. ",
-        "id": 106,
-        "title": "Boczkowe kotlety",
-        "categories": [
-            "Wieprzowina",
-            "Dania_jednogarnkowe"
-        ]
-    },
-    {
-        "products": [
             "600g polędwicy wołowej,",
             "60g tłuszczu,",
             "2 łyżki mąki,",
@@ -1808,44 +1167,9 @@
         ]
     },
     {
-        "products": [
-            "cztery łyżki oleju"
-        ],
-        "steps": [
-            "Prawdziwki myjemy w wodzie z octem. Odsączamy, kroimy na plastry.",
-            "Cebulę obieramy i siekamy, pietruszkę siekamy również.",
-            "Rumienimy na rozgrzanym oleju grzyby. Dodajemy cebulę, sól, pieprz oraz bułkę. Dusimy na średnim ogniu.",
-            "Przed podaniem skrapiamy sokiem cytrynowym i posypujemy pietruszką. Na patelni rozgrzać olej i na dość dużym ogniu obrumienić plasterki prawdziwków."
-        ],
-        "id": 110,
-        "title": "Bordoskie prawdziwki",
-        "categories": [
-            "Grzyby",
-            "Jarskie"
-        ]
-    },
-    {
         "id": 1616,
         "title": "Borgacz",
         "categories": []
-    },
-    {
-        "products": [
-            "trzy łyżki oliwy"
-        ],
-        "steps": [
-            "Oczyszczone grzyby tniemy na połówki. Na patelni rozgrzewamy masło i wrzucamy grzyby. Podsmażamy, aż się zarumienią. ",
-            "Szpinak przebieramy, myjemy, suszymy i kroimy na kawałki. Dodajemy do grzybów, doprawiamy solą i pieprzem, po czym dusimy do miękkości.",
-            "Wkładamy wszystko do miski.",
-            "Czosnek przepuszczamy przez praskę, mieszamy z sokiem z cytryny, oliwą, solą oraz cukrem. Mieszamy. Takim sosem polewamy sałatkę, a na koniec posypujemy ją koperkiem."
-        ],
-        "id": 112,
-        "title": "Borowiki ze szpinakiem",
-        "categories": [
-            "Grzyby",
-            "Sałaty",
-            "Jarskie"
-        ]
     },
     {
         "products": [
@@ -1861,53 +1185,6 @@
         "categories": [
             "Jarskie",
             "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "100 mililitrów śmietany"
-        ],
-        "steps": [
-            "Z filetów usuwamy ości.",
-            "Do garnka wlewamy oliwę i smażymy na niej rybę ok. 10 minut na wolnym ogniu, aż mięso zacznie się rozpadać. Odstawiamy do ostygnięcia.",
-            "Ziemniaki obieramy, kroimy w kostkę. Wkładamy do garnka, wlewamy mleko, sprasowany czosnek oraz śmietanę. Gotujemy do miękkości, po czym rozgniatamy.",
-            "Mieszamy z rybą i doprawiamy."
-        ],
-        "id": 114,
-        "title": "Brandade",
-        "categories": [
-            "Ryby",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "150 mililitrów śmietanki 30%,"
-        ],
-        "steps": [
-            "Formę 25 na 25 centymetrów smarujemy masłem. Chleb również.",
-            "Kromki kroimy na połowę i wykładamy jedną warstwę na dnie formy. Posypujemy ją bakaliami i przykładamy resztą pieczywa. ",
-            "Ubijamy w misce jajka, dodajemy mleko, śmietanę oraz cukier. Mieszamy i zalewamy cieczą chleb i odstawiamy całość na kwadrans.",
-            "Ścieramy gałkę na wierzch dania i pieczemy ok. 35 minut w 180 stopniach (masa ma być stała, a kromki brązowawe)."
-        ],
-        "id": 115,
-        "title": "Bread Pudding",
-        "categories": [
-            "Kuchnia_angielska",
-            "Mączne"
-        ]
-    },
-    {
-        "products": [
-            "łyżka oliwy z oliwek"
-        ],
-        "steps": "Ziemniaki obieramy i gotujemy, najlepiej na parze, przez ok. 15 - 20 minut, a gdy będą gotowe tniemy je na talarki. W międzyczasie kroimy cukinię na cienkie plasterki, cebulę na piórka, a pomidory na cienkie paski. Cukinię smażymy na oliwie i maśle i dorzucamy cebulę oraz ziemniaki. Doprawiamy rozmarynem, papryką i czekamy, aż cukinia zmięknie. Gdy stanie się ona miękka dodajemy łyżkę pesto oraz pomidory. Wszystko smażymy tak długo, aż ziemniaki nie staną się rumiane. Doprawiamy całość solą i pieprzem.Wykładamy danie na talerze i dekorujemy oliwkami, papryką i utartym serem.",
-        "id": 116,
-        "title": "Briami",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Kuchnia_grecka"
         ]
     },
     {
@@ -2199,6 +1476,11 @@
         ]
     },
     {
+        "id": 2534,
+        "title": "Budyń bananowy",
+        "categories": []
+    },
+    {
         "products": [
             "Surowe jarzyny umyć, odsączyć z wody.",
             "Przygotować sos. Rozetrzeć sól i pieprz z sokiem cytrynowym. Dodać oliwę, wymieszać.",
@@ -2234,38 +1516,6 @@
     },
     {
         "products": [
-            "200 mililitrów kwaśnej śmietany,"
-        ],
-        "steps": [
-            "Buraki szorujemy i układamy w brytfannie. Wstawiamy do 150 stopni i pieczemy na półmiękko.",
-            "Ostygnięte obieramy, odcinamy czubki, po czym łyżką wydrążamy miąższ.",
-            "Cebulę obieramy i szatkujemy.",
-            "Mięso podsmażamy na oleju, wkładamy do miski i dodajemy ryż, cebulę, miąższ z buraków oraz połowę śmietany. Mieszamy, doprawiamy.",
-            "Nadzieniem wypełniamy buraki. Układamy je w natłuszczonym naczyniu żaroodpornym, skrapiamy śmietaną i zapiekamy 5 minut."
-        ],
-        "id": 138,
-        "title": "Buraczaki nadziewane mięsem",
-        "categories": [
-            "Wieprzowina",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "500 mililitrów śmietany 18%,"
-        ],
-        "steps": "Nieobranego buraka gotujemy przez ok. kwadrans.Jajka gotujemy na twardo.Obieramy buraka i ścieramy na małych oczkach.Żelatynę rozpuszczamy w wrzącej wodzie, wlewamy do garnka i mieszamy ze śmietaną.Stawiamy garnek na mały ogniu i doprowadzimy do momentu \"przed\" wrzeniem.Wrzucamy buraki, doprawiamy solą oraz pieprzem i mieszamy. Po czym odstawiamy, by ostygło.Foremki (mogą być pojemniki po jogurtach lub deserach) smarujemy masłem. Masę nalewamy do ok. 3/4 wysokości. Wkładamy obrane jajko i uzupełniamy masą.Wstawiamy do lodówki na około 3 godziny.",
-        "id": 139,
-        "title": "Buraczkowa terrina z jakiem",
-        "categories": [
-            "Z_jaj",
-            "Warzywne",
-            "Przekąski",
-            "Kuchnia_francuska"
-        ]
-    },
-    {
-        "products": [
             " 10 gram świeżych drożdży ",
             " 100 mililitrów ciepłej wody",
             " 100 gram ugotowanych i zmiksowanych buraków ",
@@ -2283,38 +1533,6 @@
         "title": "Buraczkowe chrupki",
         "categories": [
             "Desery"
-        ]
-    },
-    {
-        "products": [
-            "sos czosnkowy"
-        ],
-        "steps": [
-            "Buraki szorujemy i pieczemy w 180 stopniach do miękkości (przez ok. 40 minut). Po wyjęciu kroimy je na plastry.",
-            "Sos czosnkowy mieszamy z kuminem, chilli i łyżką natki.",
-            "Polewamy buraki sosem."
-        ],
-        "id": 141,
-        "title": "Buraki w sosie czosnkowym",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oliwy"
-        ],
-        "steps": [
-            "Buraki gotujemy, obieramy ze skóry i kroimy w kostkę. Fetę kruszymy, a jabłko ścieramy na tarce.",
-            "Składniki mieszamy, dodajemy sok, oliwę oraz zmiażdżony czosnek. Posypujemy poszatkowaną natką pietruszki."
-        ],
-        "id": 142,
-        "title": "Buraki z fetą",
-        "categories": [
-            "Dodatki_do_dań",
-            "Jarskie",
-            "Warzywne"
         ]
     },
     {
@@ -2343,37 +1561,6 @@
     },
     {
         "products": [
-            "łyżka oliwy"
-        ],
-        "steps": [
-            "Ciecierzycę płuczemy pod wodą i odcedzamy. Następnie rozgniatamy ją widelcem.",
-            "Na patelni podsmażamy na oliwie cebulkę ze szczypiorkiem i posiekanym czosnkiem. Dodajemy imbir, kumin i marchew. Mieszamy całość i smażymy ok. 5 minut. Odstawiamy do przestudzenia.",
-            "Do cieciorki wrzucamy rzeczy z patelni, zioła oraz sok, płatki i przyprawy. Mieszamy całość.",
-            "Formujemy burgery, po czym układamy na posmarowanej oliwą blasze.",
-            "Pieczemy w 200 stopniach po 10 minut z każdej strony."
-        ],
-        "id": 144,
-        "title": "Burgery z cieciorki",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "oliwa."
-        ],
-        "steps": "Cukinię i marchewkę ucieramy na dużych oczkach. Cukinię odsączamy z soku.Warzywa mieszamy razem, dodajemy słonecznik, jajko, sezam oraz przyprawy. Mieszamy.Z masy formujemy kotlety i smażymy na rozgrzanym oleju.",
-        "id": 145,
-        "title": "Burgery z cukinii",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
             " 500 gram mielonego wołowego mięsa",
             " 100 gram fety",
             " suszone pomidory w płatkach",
@@ -2393,73 +1580,6 @@
     },
     {
         "products": [
-            "olej do smażenia"
-        ],
-        "steps": [
-            "Ziemniaki obieramy i kroimy w kostkę. Gotujemy.",
-            "Dodajemy do ziemniaków obraną i poszatkowaną cebulę, przyprawy oraz olej. Miażdżymy całość na jednolitą masę. Dodajemy groszek i mieszamy.",
-            "Formujemy z masy kotlety i smażymy na patelni przez ok. 4 minuty z każdej strony."
-        ],
-        "id": 147,
-        "title": "Burgery z ziemniaków",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": [
-            "Cebulę i czosnek obieramy i siekamy.",
-            "Mięso kroimy w kostkę i podsmażamy.",
-            "Szklimy cebulę z czosnkiem i dodajemy ją do mięsa, doprawiamy oraz solimy.",
-            "Dodajemy koncentrat i mieszamy dokładnie. Trzymamy na ogniu kilka minut.",
-            "Dolewamy powoli i partiami wino, by mięso się dusiło na małym ogniu. Dusimy ok. 2 godzin pod przykryciem, by część płynu odparowała."
-        ],
-        "id": 148,
-        "title": "Burgundzka wołowina",
-        "categories": [
-            "Wołowina",
-            "Kuchnia_francuska"
-        ]
-    },
-    {
-        "products": [
-            "oliwa."
-        ],
-        "steps": [
-            "Cebule kroimy w kostkę. Trzy z nich wkładamy do garnka, resztę wrzucamy na patelnię.",
-            "W misce rozgniatamy czosnek i dodajemy starty imbir, łyżeczkę gałki, liść laurowy oraz łyżeczkę cayenne. Mieszamy całość na jednolitą masę.",
-            "Kroimy obranego pomidora w kostkę. Podsmażamy cebulę w garnku na oliwie, po czym dodajemy do niej pomidora i smażymy, aż ten ostatni się rozpadnie.",
-            "Dodajemy jogurt oraz orzechy i mieszamy.",
-            "Zmniejszamy ogień na niewielki i próbujemy sosu, by sprawdzić, czy nie należy doprawić.",
-            "Pierś kroimy na kostkę i dodajemy do cebuli na patelni. Smażymy całość, po czym dodajemy do sosu.",
-            "Gotujemy kilka minut na średnim ogniu."
-        ],
-        "id": 149,
-        "title": "Butter Chicken",
-        "categories": [
-            "Ptactwo",
-            "Kuchnia_indyjska",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            " mak, sezam, słonecznik, płatki owsiane."
-        ],
-        "Sk.C5.82adniki": "<span class=\"mw-headline\" id=\"Przepis_na_12_sztuk:\">Przepis na 12 sztuk:</span><span class=\"mw-editsection\"><span class=\"mw-editsection-bracket\">[</span><a href=\"/index.php?title=Bu%C5%82eczki_owsiane&amp;action=edit&amp;section=3\" title=\"Edytuj sekcję: Przepis na 12 sztuk:\">edytuj</a><span class=\"mw-editsection-bracket\">]</span></span>",
-        "steps": "Do miski wlej mleko. Rozpuść w nim drożdże. Dodaj dwie szklanki mąki i szklankę płatków owsianych, wymieszaj i przykryj miskę ściereczką. Odstaw w ciepłe miejsce.W tym czasie roztop na patelni masło i ostudź je. Odrobiną masła wysmaruj dużą blachę. Po około pół godzinie, kiedy zaczyn wyrośnie, dodaj do niego następne trzy szklanki mąki i łyżkę soli. Wymieszane ciasto wyrzuć na stół lub stolnice i zagnieć, podsypując mąką, jeżeli będzie to konieczne. Pod koniec zagniatania (powinno trwać nie krócej niż 5 min.) dodaj resztę ostudzonego masła i wgnieć je dokładnie w ciasto. Ciasto powinno być miękkie, gładkie i nie klejące się do rąk. Zrób z niego wałek i podziel na 12 równych części. Z każdej ulep kulkę i połóż na blachę. Zachowaj miedzy kulkami odstępy co najmniej 2 cm, ponieważ znacznie urosną w czasie pieczenia. Każdą kulkę wygładź ręką zwilżoną wodą i posyp makiem, sezamem, słonecznikiem lub płatkami owsianymi. Możesz użyć też dowolnej mieszanki tych składników. Jeżeli ich nie masz, bułki będą smaczne i bez nich. Rozgrzej piekarnik do 180 st. C, wstaw blachę z bułkami na środkowy poziom na ok. 25-30 minut. Są gotowe, kiedy mają złoty kolor.",
-        "id": 150,
-        "title": "Bułeczki owsiane",
-        "categories": [
-            "Śniadania"
-        ]
-    },
-    {
-        "products": [
             "dwie bułki,",
             "dwie łyżki masła tudzież margaryny,",
             "jajko."
@@ -2471,37 +1591,6 @@
             "Przekąski",
             "Śniadania",
             "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "600 mililitrów oleju."
-        ],
-        "steps": [
-            "Do miski wrzucamy sól oraz mąkę i dokładnie mieszamy. W środku robimy dziurkę i stopniowo dolewamy do niej wodę.",
-            "Całość zagniatamy, by powstało gładkie i elastyczne ciasto. Odstawiamy je w ciepłe miejsce na 30 minut.",
-            "Dzielimy je na dziesięć porcji i z każdej robimy kulkę.",
-            "Każdą z nich rozwałkowujemy na placek.",
-            "Na rozgrzanej patelni smażymy placki z obu stron na złoty kolor."
-        ],
-        "id": 152,
-        "title": "Bułki poori",
-        "categories": [
-            "Kuchnia_indyjska",
-            "Dodatki_do_dań",
-            "Mączne"
-        ]
-    },
-    {
-        "products": [
-            "olej,"
-        ],
-        "steps": "Cebulę obieramy i kroimy na kawałki, podobnie czynimy z parówkami. Pieczarki oczyszczamy i tniemy na plastry. Cebulę oraz grzyby podsmażamy na oleju, po czym dodajemy parówki i całość dusimy.Pod sam koniec dodajemy koncentrat oraz przyprawy.Z bułek usuwamy końcówkę i usuwamy środek. Do bułek wkładamy farsz, po czym posypujemy je serem i zapiekwamy przez ok. 7 minut w 150 stopniach.",
-        "id": 153,
-        "title": "Bułki z nadzieniem",
-        "categories": [
-            "Śniadania",
-            "Grzyby"
         ]
     },
     {
@@ -2528,46 +1617,14 @@
     },
     {
         "products": [
-            "oliwa."
+            "1 kg składnik,",
+            "0.25 l składnik."
         ],
-        "steps": [
-            "Umytego kurczaka tniemy na niewielkie kawałki. ",
-            "Przyprawiamy go wszystkimi przyprawami (poza liściem), pamiętając by ziół prowansalskich użyć najmniej. ",
-            "Na rozgrzanej oliwie podsmażamy kurczaka. Gdy będzie gotowy zalewamy patelnię woda i gotujemy przez 2 minuty. ",
-            "Wlewamy całość do garnka, dorzucamy liście laurowe oraz ew. doprawiamy i dusimy na małym ogniu przez 15 minut."
-        ],
-        "id": 156,
-        "title": "Błyskawiczny gulasz z kurczaka",
+        "steps": "Opis przyrządzania potrawy",
+        "id": 157,
+        "title": "BĂťche de noĂŤl",
         "categories": [
-            "Ptactwo"
-        ]
-    },
-    {
-        "products": [
-            "oliwa."
-        ],
-        "steps": "Bób gotujemy w osolonej wodzie, po czym obieramy. W międzyczasie obieramy czosnek i siekamy lub przepuszczamy przez praskę. Wrzucamy go do moździerza i ucieramy z solą, pieprzem i oliwą na sos. Bób mieszamy z sosem.",
-        "id": 158,
-        "title": "Bób w przyprawach",
-        "categories": [
-            "Jarskie",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": [
-            "Bób gotujemy i łuskamy. Cebulę szatkujemy na kawałki, podobnie robimy z koperkiem. Ziemniaka gotujemy i kroimy w kostkę.",
-            "Wszystkie warzywa mieszamy razem. Polewamy oliwą oraz octem, po czym posypujemy koperkiem."
-        ],
-        "id": 159,
-        "title": "Bób z warzywami",
-        "categories": [
-            "Sałaty",
-            "Warzywne",
-            "Jarskie"
+            "WikiKuchnia"
         ]
     },
     {
@@ -2590,22 +1647,6 @@
         "id": 2930,
         "title": "Calzone",
         "categories": []
-    },
-    {
-        "products": [
-            "pół szklanki oleju słonecznikowego,"
-        ],
-        "steps": [
-            "Ser kroimy na ćwiartki i układamy w szerokim słoiku. Czosnek obieramy i prasujemy lub szatkujemy.",
-            "Dorzucamy do niego ziarenka pieprzu, jagody jałowca, liście laurowe, czosnek oraz paprykę. ",
-            "Zalewamy całość olejem, zamykamy szczelnie i przez dwa dni chłodzimy w lodówce."
-        ],
-        "id": 162,
-        "title": "Camambert marynowany",
-        "categories": [
-            "Dodatki_do_dań",
-            "Przekąski"
-        ]
     },
     {
         "products": [
@@ -2644,42 +1685,6 @@
     },
     {
         "products": [
-            "oliwa,"
-        ],
-        "steps": [
-            "Bakłażany kroimy w sporą kostkę, paprykę w mniejszą. Cebulę szatkujemy, a selera kroimy na centymetrowe kawałki.",
-            "Na oliwie dusimy cebulę, a gdy ta się zeszkli dodajemy selera, paprykę, rozgnieciony czosnek oraz pomidory. Dusimy całość przez 10 minut.",
-            "Bakłażany smażymy na złocisty kolor na drugiej patelni, po czym dorzucamy do reszty warzyw.",
-            "Dodajemy kapary, pokrojone oliwki oraz sparzone rodzynki. Doprawiamy i studzimy."
-        ],
-        "id": 166,
-        "title": "Caponata",
-        "categories": [
-            "Kuchnia_włoska",
-            "Jarskie",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "olej do smażenia"
-        ],
-        "steps": [
-            "Obieramy cebulę, szatkujemy i szklimy na oleju. ",
-            "Bułkę podsmażamy na maśle, po czym mieszamy z mąką i cebulą.",
-            "Dodajemy jaja, szpinak, mleko, sól oraz majeranek i wyrabiamy gładkie ciasto.",
-            "Z masy formujemy długie paluchy i wrzucamy je do wody. Gotujemy, aż do wypłynięcia. Podajemy posypane szałwią."
-        ],
-        "id": 167,
-        "title": "Caponetti",
-        "categories": [
-            "Mączne",
-            "Jarskie",
-            "Kuchnia_włoska"
-        ]
-    },
-    {
-        "products": [
             " 800 gram wołowiny bez kości",
             " 400 gram cebuli",
             " łyżka przecieru pomidorowego",
@@ -2703,71 +1708,6 @@
         "categories": [
             "Wołowina",
             "Kuchnia_argentyńska"
-        ]
-    },
-    {
-        "products": [
-            "oliwa z oliwek"
-        ],
-        "steps": "Buraki myjemy, zawijamy w folię aluminiową i pieczemy w piekarniku nagrzanym do 200 stopni, przez około 10-15 minut- do miękkości. Po tym czasie studzimy, obieramy ze skóry i kroimy na bardzo cienkie, równe plastry. Na dużym półmisku układamy umytą i osuszoną rukolę, na niej plastry buraków, przekładane pokrojonym cienko kozim serem i posypujemy uprażonymi pestkami dyni. W miseczce mieszamy ocet balsamiczny, miód, musztardę, oliwę z oliwek, doprawiamy solą i pieprzem, polewamy powstałym sosem buraki.",
-        "id": 169,
-        "title": "Carpaccio z buraków",
-        "categories": [
-            "Jarskie",
-            "Warzywne",
-            "Sałaty"
-        ]
-    },
-    {
-        "products": [
-            "oliwa z oliwek"
-        ],
-        "steps": [
-            "Cukinie kroimy na cienkie plastry, solimy je, dodajemy ocet i zalewamy wrzątkiem.",
-            "Zostawiamy całość na kilka minut, po czym hartujemy w zimnej wodzie.",
-            "Układamy na talerzu i skrapiamy oliwą, octem, solą, pieprzem, grana padano oraz prażonymi orzeszkami pini."
-        ],
-        "id": 170,
-        "title": "Carpaccio z cukini",
-        "categories": [
-            "Warzywne",
-            "Przekąski",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "szklanka kwaśnej śmietany"
-        ],
-        "steps": [
-            "Jajka oraz mięso kroimy w kostkę. Ogórka i rzodkiewkę kroimy w półplastry. Szczypiorek siekamy.",
-            "Ucieramy szczypior z połową łyżeczki soli oraz szczyptą cukru, aż szczypior nie puści soku.",
-            "Wkładamy całość do wazy, zalewamy śmietaną wymieszaną z musztardą oraz jajkami. Następnie powoli dolewamy kwas.",
-            "Mieszamy całość i doprawiamy. Dosypujemy warzywa oraz mięso, mieszamy, przykrywamy. Wstawiamy na godzinę do lodówki."
-        ],
-        "id": 171,
-        "title": "Carska orkoszka",
-        "categories": [
-            "Kuchnia_rosyjska",
-            "Zupy_na_mięsie"
-        ]
-    },
-    {
-        "products": [
-            "oliwa."
-        ],
-        "steps": [
-            "Składniki, poza makaronem, mieszamy w blenderze na gładką masę, dodając niewielkie porcje oliwy w trakcie mieszania.",
-            "Makaron gotujemy, a dwie łyżki wrzątku wlewamy do sosu i mieszamy.",
-            "Makaron polewamy sosem."
-        ],
-        "id": 172,
-        "title": "Casarecce z pomidorami",
-        "categories": [
-            "Kuchnia_włoska",
-            "Warzywne",
-            "Jarskie",
-            "Makarony"
         ]
     },
     {
@@ -2813,18 +1753,6 @@
     },
     {
         "products": [
-            "łyżka oliwy z oliwek,"
-        ],
-        "steps": "Z mięsa, śmietany oraz wszystkich ziół formujemy bitki o grubości ok. centymetra. Smażymy je na oliwie po 8 minut z każdej ze stron (aż do zbrązowienia). Posiekaną cebulę wraz z oliwą smażymy przez 20 minut na średniej wielkości ogniu, dopóki ta nie stanie się złoto - brązowa. Gdy tak się stanie dodajemy mod, ocet i pieczemy przez następne 10 minut. Bitki posypujemy otrzymaną cebulką.",
-        "id": 175,
-        "title": "Cebulowe bitki w ziołach",
-        "categories": [
-            "Wołowina",
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
             "1 kg filetów ryby morskiej (dorsz, panga lub sola),",
             "2 kilogramy cytryn,",
             "125 mililitrów słodkiego sosu chili,",
@@ -2837,22 +1765,6 @@
         "categories": [
             "Ryby",
             "Kuchnia_południowoamerykańska"
-        ]
-    },
-    {
-        "products": [
-            "olej roślinny"
-        ],
-        "steps": [
-            "Cebulę oraz czosnek obieramy i siekamy. Mieszamy z mięsem oraz przyprawami. Dolewamy zimną wodę i wyrabiamy. Przykrywamy folią i wkładamy na noc do lodówki.",
-            "Z masy formujemy niewielkie, podłużne kotleciki. Nadziewamy je na patyki i smarujemy olejem. Wstawiamy do ok. 220 stopni na 10 minut. "
-        ],
-        "id": 177,
-        "title": "Cevapcici",
-        "categories": [
-            "Przekąski",
-            "Wołowina",
-            "Kuchnia_bałkańska"
         ]
     },
     {
@@ -2933,61 +1845,6 @@
     },
     {
         "products": [
-            "oliwa"
-        ],
-        "steps": [
-            "Makaron gotujemy al dente. Pod koniec gotowania, dwie minuty przed wyłączeniem ognia wrzucamy groszek.",
-            "Cebulkę oraz czosnek obieramy i siekamy. Szklimy na oliwie i podlewamy winem. ",
-            "Moment dusimy i dodajemy śmietankę.",
-            "Po chwili wrzucamy łososia oraz odcedzony makaron. Doprawiamy solą i pieprzem i mieszamy o posypujemy pietruszką."
-        ],
-        "id": 182,
-        "title": "Chifferi z łososiem",
-        "categories": [
-            "Makarony",
-            "Ryby"
-        ]
-    },
-    {
-        "products": [
-            "sos czosnkowy"
-        ],
-        "steps": [
-            "Szpinak myjemy i gotujemy w osolonej wodzie przez trzy minuty.",
-            "Po ugotowaniu spryskujemy go zimną wodą i odcedzamy. Następnie szpinak kroimy na drobne kawałki i mieszamy z jajkiem, mąką, cukrem oraz wodą.",
-            "Na patelni rozgrzewamy olej. Nakładamy na niego placuszki z masy. Na wierzch placków kładziemy żółty ser. ",
-            "Przykrywamy całość i smażymy ok. 3 minut z obu stron."
-        ],
-        "id": 183,
-        "title": "Chijimi",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "oliwa."
-        ],
-        "steps": [
-            "Obrane pomidory tniemy w kostkę.",
-            "Cebulę i czosnek obieramy, szatkujemy i podsmażamy. Dodajemy pomidory i gotujemy całość przez 30 minut. ",
-            "Kurczaka smażymy z obu stron, po czym studzimy. Gdy wystygną rwiemy je na kawałki (nie kroimy!).",
-            "Do pomidorów dodajemy sos do taco oraz posiekaną kolendrę/pietruszkę. Mieszamy i gotujemy 5 minut.",
-            "Obie śmietany mieszamy, a kukurydze odcedzamy.",
-            "Do naczynia żaroodpornego wkładamy: sos pomidorowy, nachos, ser żółty, kukurydze, kurczaka, śmietanę, sos pomidorowy. Układamy tak warstwy aż do wyczerpania składników (na wierzchu powinny być nachos posypane serem).",
-            "Pieczemy w 180 stopniach przez 40 minut."
-        ],
-        "id": 184,
-        "title": "Chilaquiles",
-        "categories": [
-            "Warzywne",
-            "Ptactwo",
-            "Kuchnia_meksykańska"
-        ]
-    },
-    {
-        "products": [
             " 0,5 kg mielonej wołowiny,",
             " 2 średnie cebule,",
             " 250 g brązowej lub czerwonej fasoli,",
@@ -3029,22 +1886,6 @@
     },
     {
         "products": [
-            "dwie łyżki oliwy"
-        ],
-        "steps": [
-            "Pomidory obieramy, kroimy na kawałki. Z papryczek usuwamy pestki i płuczemy. Cebulę obieramy i szatkujemy. ",
-            "Cebulę szklimy w garnku, po czym dodajemy do niej pomidory oraz papryczkę. ",
-            "Doprawiamy pieprzem, dodajemy bazylię i dusimy na małym ogniu ok. 120 minut."
-        ],
-        "id": 187,
-        "title": "Chilli",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
             " 100 gram płatków migdałowych",
             " 125 gram cukru",
             " ćwierć pomarańczy",
@@ -3082,23 +1923,6 @@
     },
     {
         "products": [
-            "trzy łyżki oliwy"
-        ],
-        "steps": [
-            "Mieszamy w misce jarmuż, sól, chilli, płatki, oliwę oraz granulowany czosnek. ",
-            "Piekarnik rozgrzewamy do 180 stopni. Na blachę kładziemy pergamin i układamy na wierzchu liście. Wstawiamy do piekarnika na ok. kwadrans.",
-            "W trakcie pieczenia sprawdzamy, czy nie są za bardzo wysuszone."
-        ],
-        "id": 190,
-        "title": "Chipsy z jarmużu",
-        "categories": [
-            "Jarskie",
-            "Warzywne",
-            "Przekąski"
-        ]
-    },
-    {
-        "products": [
             "2 całe piersi z kurczaka,",
             "1 opakowanie chińskiej mrożonki warzywnej,",
             "¾ szklanki fasolki szparagowej ciętej (może być mrożona),",
@@ -3115,31 +1939,6 @@
         "title": "Chińska potrawka",
         "categories": [
             "Kuchnia_chińska"
-        ]
-    },
-    {
-        "products": [
-            "2 szklanki rosołu."
-        ],
-        "steps": "Z mięsa formujemy niewielkie kotleciki, obtaczamy w bułce, doprawiamy solą oraz pieprzem i smażymy na oleju. Cebulę oraz pieczarki podsmażamy na tej samej patelni, po czym dodajemy kukurydzę, fasolę, posiekaną paprykę oraz przyprawy, mrożonkę i przecier. Zalewamy rosołem i dusimy przez 15 minut. Przelewamy całość do garnka, dorzucamy kotlety i gotujemy przez 10 minut, dolewając ewentualnie wody, by danie nie było geste. Na kilka minut przed zdjęciem z palnika dodajemy przecier.",
-        "id": 193,
-        "title": "Chiński gulasz",
-        "categories": [
-            "Wołowina",
-            "Warzywne",
-            "Kuchnia_chińska"
-        ]
-    },
-    {
-        "products": [
-            "2 łyżki śmietany,"
-        ],
-        "steps": "Na patelni prażymy sezam. Szczypiorek siekamyMięso, sezam, szczypiorek, musztardę, olej oraz sos mieszamy razem, na jednolitą masę. Formujemy z niej cztery kotlety.Śmietanę mieszamy z sokiem z cytryny i pastą wasabi.Grillujemy burgery z każdej strony po ok. 3 minuty. Do bułek wkładamy burgery, które smarujemy sosem.",
-        "id": 194,
-        "title": "Chińskie burgery",
-        "categories": [
-            "Kuchnia_chińska",
-            "Ptactwo"
         ]
     },
     {
@@ -3178,85 +1977,6 @@
         "categories": [
             "Desery",
             "Kuchnia_chińska"
-        ]
-    },
-    {
-        "products": [
-            "dwie łyżki oleju"
-        ],
-        "steps": [
-            "Kaszę mieszamy ze stopionym masłem i olejem. Solimy i mieszamy dodając nieco wody. ",
-            "Rozpuszczamy drożdże w 1/4 szklanki wody i dodajemy do miski wraz z jajkiem.Wyrabiamy ręką dolewając powoli wodę. ",
-            "Odstawiamy je na kwadrans po czym dodajemy anyż. ",
-            "Z ciasta formujemy kulę i wkładamy do naczynia żaroodpornego i spłaszczamy. Odstawiamy w ciepłe miejsce na 120 minut.",
-            "Przed wstawieniem do piekarnika smarujemy żółtkiem.",
-            "Pieczemy w 180 stopniach przez ok. godzinę"
-        ],
-        "id": 197,
-        "title": "Chleb anyżowy",
-        "categories": [
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "łyżka stołowa oleju,"
-        ],
-        "steps": [
-            "Drożdże rozdrabniamy i mieszamy z ciepłym mlekiem. Odstawiamy na kwadrans, by całość wyrosła.",
-            "Mąkę mieszamy z solą, dodajemy płyn drożdżowy, olej, jogurt. Zagniatamy całość na miękkie i gładziutkie ciasto.",
-            "Odstawiamy na godzinę, by wyrosło. Dzielimy je na kilka części, które wyrabiamy po kilka minut.",
-            "Formujemy placki i pieczemy je przez kilka minut w 200 stopniach, a następnie opiekamy na grillem przez 2 minuty, by się zarumieniły."
-        ],
-        "id": 198,
-        "title": "Chleb naan",
-        "categories": [
-            "Dodatki_do_dań",
-            "Mączne",
-            "Kuchnia_indyjska"
-        ]
-    },
-    {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": "Pomidora obieramy, usuwamy nasiona. Rozgniatamy na papkę.Chleb opiekamy lekko w tosterze lub na grillu. Czosnek rozcieramy razem z solą i oliwą.Otrzymaną masą smarujemy każdą z kromek.Wierzch smarujemy pomidorem.",
-        "id": 199,
-        "title": "Chleb pomidorowy",
-        "categories": [
-            "Kuchnia_hiszpańska",
-            "Dodatki_do_dań",
-            "Przekąski",
-            "Śniadania"
-        ]
-    },
-    {
-        "products": [
-            "pól szklanki oliwy,"
-        ],
-        "steps": "Foremkę do pieczenia smarujemy dokładnie masłem i nagrzewamy do 180 stopni piekarnik. Do miksera wrzucamy wszystkie składniki według listy powyżej, mieszając je na średnich obrotach. Gdy masa będzie stosunkowo jednolita wrzucamy całość do formy i pieczemy przez 45 minut.",
-        "id": 200,
-        "title": "Chleb z nadzieniem z szynki i oliwek",
-        "categories": [
-            "Dodatki_do_dań",
-            "Śniadania"
-        ]
-    },
-    {
-        "products": [
-            "450 mililitrów śmietany 36%"
-        ],
-        "steps": [
-            "Chleb tniemy na kawałki i układamy w wysmarowanej masłem formie.",
-            "Kładziemy na to rodzynki, pocięte gruszki, posypujemy cukrem i zalewamy rumem.",
-            "Jajka mieszamy ze śmietaną i zalewamy, by gruszki były pokryte cieczą.",
-            "Wstawiamy do 180 stopni na kwadrans"
-        ],
-        "id": 201,
-        "title": "Chlebowy pudding z gruszkami",
-        "categories": [
-            "Jarskie",
-            "Kuchnia_brytyjska"
         ]
     },
     {
@@ -3309,20 +2029,6 @@
         "title": "Chouder/Zupa rybna",
         "categories": [
             "Zupy_jarskie"
-        ]
-    },
-    {
-        "products": [
-            "olej do smażenia"
-        ],
-        "steps": [
-            "Mięso kroimy na paski, solimy i pieprzymy. Mieszamy z jogurtem i wstawiamy na noc do lodówki.",
-            "Panierujemy w pokruszonych krakersach i smażymy na złoty kolor."
-        ],
-        "id": 204,
-        "title": "Chrupiąca pierś drobiowa",
-        "categories": [
-            "Ptactwo"
         ]
     },
     {
@@ -3393,18 +2099,6 @@
     },
     {
         "products": [
-            "olej,"
-        ],
-        "steps": "W wodzie z solą rozpuszczamy oba cukry. Zagotowujemy.Dodajemy masło i rozpuszczamy je.Powoli mieszając dodajemy mąkę.Gotujemy, aż ciasto przestanie przyklejać do ścianek garnka.Lekko studzimy masę i mieszamy ją z jajkami. Na patelni rozgrzewamy olej i łyżką nakładamy na niego ciasto, by powstały dłuższe placuszki.Smażymy z obu stron.Gdy ostygną posypujemy cukrem pudrem",
-        "id": 213,
-        "title": "Churros",
-        "categories": [
-            "Desery",
-            "Kuchnia_hiszpańska"
-        ]
-    },
-    {
-        "products": [
             "kilogram gruszek,",
             "kilogram cebuli,",
             "100 mililitrów octu jabłkowego,",
@@ -3442,32 +2136,6 @@
             "Warzywne",
             "Spiżarnia_domowa",
             "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "oliwa."
-        ],
-        "steps": "Wszystkie składniki mieszamy dokładnie razem. Następnie wrzucamy je do wysmarowanego tłuszczem garnka i gotujemy na niewielkim ogniu przez 40 minut, co jakiś czas mieszając i sprawdzając, czy danie nie przywarło.Podajemy po schłodzeniu.",
-        "id": 216,
-        "title": "Chutney z żurawinami",
-        "categories": [
-            "Kuchnia_indyjska",
-            "Sosy_zimne"
-        ]
-    },
-    {
-        "products": [
-            "1 litr kwasu chlebowego,"
-        ],
-        "steps": "Przebrany i opłukany szczaw dusimy pod przykryciem na maśle. Gdy będzie gotowy ucieramy na tarce. Ogórki obierajmy, kroimy w kostkę, koperek i szczypiorek drobno siekamy. Jajka gotujemy, a następnie żółtka ucieramy z chrzanem, a białka siekamy na drobne fragmenty. Wszystkie składniki wkładamy do naczynia, zalewamy zimnym kwasem chlebowym i solimy. ",
-        "id": 217,
-        "title": "Chłodnik białoruski/ Chołodnik",
-        "categories": [
-            "Kuchnia_rosyjska",
-            "Jarskie",
-            "Zupy_zimne",
-            "Zupy_jarskie"
         ]
     },
     {
@@ -3557,19 +2225,6 @@
     },
     {
         "products": [
-            "1,2 litra rosołu z kurczaka,"
-        ],
-        "steps": "Z porów odcinamy zielone części, przecinamy wzdłuż na pół, dokładnie płuczemy, kroimy w paski i dusimy w garnku na rozgrzanym maśle do zeszklenia. Dodajemy obrane, pokrojone w kostkę ziemniaki, mieszamy i dusimy razem kilka minut. Zalewamy bulionem i gotujemy na małym ogniu ok. 40 min. Lekko ostudzoną zupę miksujemy na gładki krem. Gdy zupełnie wystygnie, mieszamy ze śmietanką, doprawiamy do smaku solą i pieprzem. Chłodzimy w lodówce przez minimum 6 godz. (można ją zrobić dzień wcześniej). Podajemy zimną w miseczkach, przybraną posiekanym szczypiorkiem.",
-        "id": 222,
-        "title": "Chłodnik porowy",
-        "categories": [
-            "Zupy_zimne",
-            "Jarskie",
-            "Międzynarodowa"
-        ]
-    },
-    {
-        "products": [
             " 300 gram mięsa bez kości",
             " 200 gram ziemniaków",
             " 160 gram cebuli",
@@ -3594,6 +2249,11 @@
         "categories": [
             "Zupy_mięsne"
         ]
+    },
+    {
+        "id": 4356,
+        "title": "Ciasta z nadzieniem szpinakowym",
+        "categories": []
     },
     {
         "products": [
@@ -3795,22 +2455,6 @@
     },
     {
         "products": [
-            "250 gram śmietany 22%"
-        ],
-        "steps": [
-            "Do garnka wlewamy śmietanę i wbijamy jajka. Mieszamy na niewielkim ogniu, po czym dodajemy cukier, laskę wanilii oraz mleko. ",
-            "Podgrzewamy masę, aż zgęstnieje (nie wolno zagotować). Odstawiamy do schłodzenia (najpierw na powietrzu, potem do lodówki, by się mocno schłodziło).",
-            "Następnie wkładamy masę do zamrażarki i trzymamy ją tam trzy godziny, wyjmując co godzinę, by przemieszać widelcem. ",
-            "Ciastka kroimy na kawałki i dodajemy do lodów. Mieszamy."
-        ],
-        "id": 240,
-        "title": "Ciasteczkowe lody",
-        "categories": [
-            "Desery"
-        ]
-    },
-    {
-        "products": [
             "250 gram mąki pszennej,",
             "125 gram masła,",
             "125 gram cukru,",
@@ -3929,25 +2573,6 @@
     },
     {
         "products": [
-            "500 mililitrów śmietanki 30%"
-        ],
-        "steps": [
-            "Z budyniu oraz mleka robimy budyń, po czym odstawiamy go do wystudzenia.",
-            "Margarynę/masło miksujemy z cukrem na jednolitą masę. Następnie dodajemy po łyżce budyniu mieszając.",
-            "Układamy na blasze warstwę 20 herbatników.",
-            "Wkładamy masę do gotującej się wody na ok. 5 minut. Następnie rozsmarowujemy ją po pierwszej warstwie herbatników.",
-            "Wykładamy na masę kolejne 20 herbatników. Ubijamy śmietanę i układamy ją na herbatnikach.",
-            "Układamy ostatnią warstwę ciasteczek. Roztapiamy czekoladę i rozsmarowujemy ją po ostatniej warstwie.",
-            "Odstawiamy ciasto na dwie - trzy godziny do schłodzenia."
-        ],
-        "id": 248,
-        "title": "Ciasto 3bit",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
             "250 gram herbatników,",
             "150 gram masła,",
             "budyń zrobiony w półtorej szklanki mleka (ma być gęsty!),",
@@ -3961,23 +2586,6 @@
         "title": "Ciasto budyniowe",
         "categories": [
             "Desery",
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "szklanka oleju"
-        ],
-        "steps": [
-            "Obrane buraki ścieramy na tarce.",
-            "Białka ubijamy  z cukrem na białą masę (nie na sztywno).",
-            "Dodajemy pozostałe składniki i mieszamy. Jeśli zajdzie taka potrzeba dodajemy nieco oleju lub mleka.",
-            "Przekładamy masę do formy wyłożonej papierem i wstawiamy do nagrzanego do 200 stopni piekarnika. Pieczemy ok. 40 minut.",
-            "Przygotowujemy lukier, po czym polewamy nim ciasto."
-        ],
-        "id": 250,
-        "title": "Ciasto buraczane",
-        "categories": [
             "Ciasta"
         ]
     },
@@ -4015,47 +2623,6 @@
         "title": "Ciasto drożdżowe (łatwe)",
         "categories": [
             "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oliwa "
-        ],
-        "steps": [
-            "Sól łączymy z mąką, po czym powoli dolewamy wodę, cały czas ugniatając. ",
-            "Jajka mieszamy i dodajemy do reszty ciasta. Następnie dodajemy oliwę i wciąż ugniatamy.",
-            "Gdy ciasto zrobi się elastyczne i gładkie przykrywamy je ścierką i odstawiamy na 20 minut.",
-            "Dzielimy je na 8 części i rozwałkowujemy na cienkie arkusze."
-        ],
-        "id": 255,
-        "title": "Ciasto fyllo",
-        "categories": [
-            "Mączne",
-            "Z_jaj",
-            "Kuchnia_grecka"
-        ]
-    },
-    {
-        "products": [
-            "1 łyżeczka cynamonu"
-        ],
-        "steps": "Jajka utrzeć mikserem z cukrem, dodać oliwę (by ciasto było gładkie, wilgotne po upieczeniu i wolniej czerstwieje),mąkę z proszkiem do pieczenia, sodę i cynamon. Następnie dodać orzechy oraz obrane, pokrojone w plastry jabłka. Delikatnie wszystko wymieszać. Piec w temperaturze 175oC przez około godzinę.",
-        "id": 256,
-        "title": "Ciasto jabłkowe",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "1/3 szklanki oleju roślinnego,"
-        ],
-        "steps": "Jabłka myjemy, obieramy i kroimy w kostkę.Orzechy siekamy.Wszystkie składniki wrzucamy do miski i mieszamy mikserem.Przekładamy całość do formy lub naczynia wyłożonego papierem.Pieczemy przez 50 minut w 190 stopniach.Rozpuszczamy czekoladę w garnku włożonym do wrzącej wody i gdy ciasto będzie gotowe oblewamy czekolada wierzch. ",
-        "id": 257,
-        "title": "Ciasto jabłkowo - orzechowe",
-        "categories": [
-            "Ciasta",
-            "Desery"
         ]
     },
     {
@@ -4201,25 +2768,6 @@
     },
     {
         "products": [
-            "125 mililitrów oleju  "
-        ],
-        "steps": [
-            "Drożdże rozpuszczamy w wodzie i mieszamy z resztą składników. Ugniatamy grube i tłuste ciasto.",
-            "Szpinak czyścimy i gotujemy w osolonej wodzie. Odcedzamy, dodajemy sól i pieprz oraz posiekany szczypior i koper, jajko oraz rozgnieciony ser.",
-            "Cebulę siekamy i podsmażamy, po czym dodajemy do szpinaku.",
-            "Ciasto rozwałkowujemy i połowę kładziemy na blasze. Rozkładamy na nim farsz i przykrywamy go drugą częścią.",
-            "Wierzch nacinamy, smarujemy oliwą i pieczemy w 170 stopniach, aż ciasto zrobi się rumiane. Przed podaniem kroimy."
-        ],
-        "id": 267,
-        "title": "Ciasto z nadzieniem szpinakowym",
-        "categories": [
-            "Mączne",
-            "Jarskie",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
             "25 dag mąki,",
             "4 jaja,",
             "20 dag masła lub margaryny,",
@@ -4238,66 +2786,6 @@
     },
     {
         "products": [
-            "200 mililitrów oleju słonecznikowego "
-        ],
-        "steps": [
-            "Jaja miksujemy z cukrem, dodajemy do nich mąkę z proszkiem do pieczenia oraz solą, a także olej (cały czas miksujemy, składniki dodajemy naprzemiennie).",
-            "Gdy masa stanie się gładka dodajemy do niej ekstrakt i ponownie chwilę mieszamy. ",
-            "Blachę smarujemy tłuszczem i wylewamy na nią ciasto.",
-            "Umyte owoce tniemy na kawałki (np. jabłka na plastry, śliwki na ćwiartki) i kładziemy na cieście. Posypujemy całość cukrem.",
-            "Pieczemy ok. 60 minut w 170 stopniach."
-        ],
-        "id": 269,
-        "title": "Ciasto ze śliwkami i jabłkami",
-        "categories": [
-            "Ciasta"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oleju"
-        ],
-        "steps": [
-            "Obieramy ziemniaki i kroimy w słupki. Podsmażamy na złoto. ",
-            "Kroimy paprykę w paski, a pora w krążki. Dorzucamy warzywa do ziemniaków, solimy i mieszamy.",
-            "Melasę łączymy z wodą i przyprawami. Wlewamy do warzyw.",
-            "Dodajemy odlaną ciecierzycę i smażymy całość na patelni trzy minuty.Ziemniaki obieramy i kroimy w słupki. Wrzucamy na rozgrzany olej i smażymy mieszając od czasu do czasu aż się zezłocą. W tym czasie myjemy paprykę i kroimy w paski, podobnie myjemy pora i kroimy w dość grube krążki. Dorzucamy warzywa do ziemniaków, solimy i mieszamy. Łączymy melasę z kilkoma łyżkami wody i przyprawami, dolewamy do warzyw na patelni, dorzucamy odlaną z zalewy ciecierzycę, mieszamy i trzymamy na patelni około 3 minuty."
-        ],
-        "id": 270,
-        "title": "Ciecierzyca z warzywami",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "2 łyżki oliwy,"
-        ],
-        "steps": "Cebulę, imbir oraz czosnek myjemy, obieramy i szatkujemy na kawałki. Chilli i paprykę oczyszczamy z nasion i kroimy w paseczki. Pomidory parzymy, obieramy ze skóry i kroimy w kostkę.Na gorącej oliwie dusimy cebulę oraz imbir i czosnek, aż cebula nie zbrązowieje. Dorzucamy do niej paprykę i dusimy całośc przez 5 minut. Dodajemy pomidory, papryczkę chilli i przyprawy.Gdy pomidory puszczą sok dodajemy ciecierzycę. Dusimy przez kwadrans.",
-        "id": 271,
-        "title": "Ciecierzycowy gulasz",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "250 mililitrów gęstej, kwaśnej śmietany"
-        ],
-        "steps": [
-            "Sznycle podsmażamy na maśle z obu stron. Doprawiamy solą i pieprzem.",
-            "Śmietanę mieszamy z sokiem z cytryny i zalewamy sznycle. Całość zagotowujemy."
-        ],
-        "id": 274,
-        "title": "Cielęce sznycle po cesarsku",
-        "categories": [
-            "Wołowina"
-        ]
-    },
-    {
-        "products": [
             "10 dag tuńczyka w sosie własnym,",
             "3 fileciki anchois,",
             "10 dag majonezu, ",
@@ -4310,24 +2798,6 @@
         "title": "Cielęcina w sosie z tuńczyka",
         "categories": [
             "Wołowina"
-        ]
-    },
-    {
-        "products": [
-            "olej roślinny"
-        ],
-        "steps": [
-            "Mięso kroimy w kostkę, po czym wrzucamy do miski. Dosypujemy do niej mąkę, pieprz, po czym mieszamy. W garnku rozgrzewamy tłuszcz, po czym smażymy mięso do zarumienienia.",
-            "Wykładamy mięso, a do tłuszczu wrzucamy marchew, pokrojoną w plastry cebulę oraz czosnek.",
-            "Naczynie żaroodporne smarujemy olejem. Na sam spód kładziemy warzywa, na które wylewamy tłuszcz ze smażenia. Kładziemy na nie mięso oraz pomidory.",
-            "Całość posypujemy natką, zalewamy winem oraz ciepłym bulionem, obsypujemy skórką cytryny, dodajemy liść laurowy.",
-            "Pieczemy godzinę w 180 stopniach."
-        ],
-        "id": 276,
-        "title": "Cielęcina w winie czerwonym",
-        "categories": [
-            "Wołowina",
-            "Warzywne"
         ]
     },
     {
@@ -4441,23 +2911,6 @@
         "categories": [
             "Ptactwo",
             "Kuchnia_francuska"
-        ]
-    },
-    {
-        "products": [
-            "200 mililitrów śmietany kremówki"
-        ],
-        "steps": [
-            "Płatki wstawiamy na blasze z pergaminem do 150 stopni, zapiekamy przez ok. 20 minut z nawiewem. Skrapiamy całość whisky i odstawiamy na noc.",
-            "Zasypujemy maliny 60 gramami cukru i gotujemy przez kwadrans, by woda odparowała. Mielimy, przecieramy przez sito i studzimy.",
-            "Śmietankę ubijamy z resztą cukru, po czym dodajemy do niego płatki i mieszamy.",
-            "Układamy w szklankach warstwy malin oraz śmietanki. Na wierzch sypiemy płatki i wstawiamy do lodówki na dwie godziny."
-        ],
-        "id": 283,
-        "title": "Cranachan",
-        "categories": [
-            "Kuchnia_brytyjska",
-            "Desery"
         ]
     },
     {
@@ -4603,22 +3056,6 @@
     },
     {
         "products": [
-            "oliwa,"
-        ],
-        "steps": [
-            "Ogórka trzema na średnich oczkach.",
-            "Cukinię kroimy na grube plastry, smarujemy oliwą i pieczemy na patelni grillowej (opcjonalnie grill elektryczny lub zwykła patelnia).",
-            "Solimy, pieprzymy. Sos mieszamy z ogórkiem i polewamy nim cukinię."
-        ],
-        "id": 293,
-        "title": "Cukinia z sosem jogurtowym",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
             "niewielka cukinia,",
             "nieco pasty miso,",
             "kawałek tofu,",
@@ -4639,101 +3076,9 @@
         ]
     },
     {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": [
-            "Małe cukinie tniemy na cienkie plastry.",
-            "Oliwę cytrynową mieszamy z solą, pieprzem oraz sokiem z cytryny. Zalewamy płynem cukinie i odstawiamy na moment. ",
-            "Dużą cukinię kroimy w kostkę. Blanszujemy lub gotujemy na parze. ",
-            "Do miksera wrzucamy dużą cukinię, obrany czosnek, bazylię, parmezan oraz orzeszki. W trakcie miksowania dodajemy porcjami niewielką ilość oliwy. Doprawiamy solą i pieprzem. ",
-            "Małe cukinie z marynatą zagotowujemy na małym ogniu, by zmiękły. ",
-            "Gotujemy makaron. ",
-            "Do dużej cukinii dodajemy dwie łyżki wody z makaronu.",
-            "Odcedzamy makaron, mieszamy z pesto i małymi cukiniami. Posypujemy parmezanem."
-        ],
-        "id": 297,
-        "title": "Cukiniowa calamarata",
-        "categories": [
-            "Warzywne",
-            "Makarony",
-            "Jarskie",
-            "Kuchnia_włoska"
-        ]
-    },
-    {
         "id": 3870,
         "title": "Cukiniowa calarameta",
         "categories": []
-    },
-    {
-        "products": [
-            "2 łyżki oliwy."
-        ],
-        "steps": "Cukinię oraz cebulę kroimy na niewielką kostkę. Tofu oraz połowę cebuli, oregano i wodę mineralną miksujemy na jednolita masę. Następnie dodajemy do niej jajko, sól oraz pieprz i ponownie miksujemy. Wrzucamy mąkę ziemniaczaną i ponownie wykonujemy tą czynność. Na patelni rozgrzewamy oliwę, wrzucamy resztę cebuli oraz cukinię i smażymy na bardzo mocnym ogniu przez ok. 60 sekund. Po upływie tego czasu przykrywamy patelnię i dusimy na średnim ogniu przez 3 minuty. Następnie wlewamy zmiksowane tofu i delikatnie mieszamy. Smażymy obie strony przez 5 minut na średnim ogniu.",
-        "id": 299,
-        "title": "Cukiniowa fritatta z tofu",
-        "categories": [
-            "Kuchnia_włoska",
-            "Warzywne",
-            "Jarskie",
-            "Śniadania"
-        ]
-    },
-    {
-        "products": [
-            "oliwa"
-        ],
-        "steps": [
-            "Cukinię myjemy i kroimy na paski. W misce mieszamy mleko z białkiem jajka.",
-            "W drugiej misce mieszamy paprykę, tymianek, chili, okruszki oraz cebulę.",
-            "Wkładamy cukinię najpierw do mleka z białkiem, potem do drugiej miski.",
-            "Pieczemy 20 minut w 200 stopniach. Po wyjęciu skrapiamy sokiem oraz solimy."
-        ],
-        "id": 300,
-        "title": "Cukiniowe frytki",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oleju,"
-        ],
-        "steps": [
-            "Mąkę, mleko, olej, sól oraz proszek mieszamy razem, po czym wyrabiamy ciasto. Ma być gęste, ale nie za bardzo.",
-            "Cukinię kroimy na plastry, posypujemy pieprzem i solą.",
-            "Każdy z kawałków obtaczamy w cieście i kładziemy na rozgrzany tłuszcz. Smażymy z obu stron na średnim ogniu."
-        ],
-        "id": 301,
-        "title": "Cukiniowe racuchy",
-        "categories": [
-            "Mączne",
-            "Dodatki_do_dań",
-            "Jarskie",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "oliwa"
-        ],
-        "steps": [
-            "Cukinię myjemy, przekrajamy na pół i wyjmujemy łyżką miąższ.",
-            "Warzywa kroimy w kostkę, czosnek miażdżymy i mieszamy całość z miąższem (poza papryką i cebulą).",
-            "Cebulę i paprykę podsmażamy osobno na oliwie.",
-            "Wszystkie warzywa mieszamy z przyprawą oraz czosnkiem. ",
-            "Do łódek wkładamy ser oraz mieszankę warzyw. Posypujemy ziołami.",
-            "Każdą łódkę owijamy folią i pieczemy na grillu przez ok. 30 minut."
-        ],
-        "id": 302,
-        "title": "Cukiniowe łódeczki",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Na_grillu_i_biwaku"
-        ]
     },
     {
         "products": [
@@ -4763,22 +3108,6 @@
     },
     {
         "products": [
-            "Ciasto na naleśniki"
-        ],
-        "steps": [
-            "Z kwiatów usuwamy pręciki. Pietruszkę drobno siekamy, czosnek wyciskamy przez praskę. Chili dodajemy do serka.",
-            "Kwiaty wypełniamy farszem i skręcamy końcówki. Zanurzamy w cieście, po czym kładziemy na patelnię i smażymy z obu stron.",
-            "Warzywa obieramy i kroimy w paski, po czym smażymy na patelni"
-        ],
-        "id": 304,
-        "title": "Cukiniowy kwiat z warzywnymi frytkami",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
             " sześć zielonych jabłek ",
             " sześć drewnianych patyczków ",
             " 250 gram cukru ",
@@ -4797,60 +3126,6 @@
         "title": "Cukrowe jabłka",
         "categories": [
             "Desery"
-        ]
-    },
-    {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": [
-            "Kalafiora dzielimy na różyczki, a dynię oraz ziemniaki kroimy w kostkę. Cebulę obieramy i kroimy w pióra.",
-            "Oliwę, kozieradkę oraz gorczycę wrzucamy na rozgrzaną patelnię. Szklimy na tej mieszance cebulę.",
-            "Następnie dorzucamy ziemniak i podsmażamy. Podobnie robimy pierw z kalafiorem, potem z dynią.",
-            "Mieszamy, solimy i dodajemy curry oraz 1/4 szklanki wody. ",
-            "Dusimy na małym ogniu pod przykryciem ok. 15 minut."
-        ],
-        "id": 306,
-        "title": "Curry warzywne",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "trzy łyżki oliwy,"
-        ],
-        "steps": [
-            "Cebulę obieramy i kroimy w plastry. Podsmażamy ją na patelni.",
-            "Zmniejszamy ogień, dodajemy imbir, pocięty czosnek oraz przyprawy oraz listek kolendry i poszatkowane chilli. Gotujemy dwie minuty.",
-            "Dolewamy wodę, mieszamy.",
-            "Ziemniaka kroimy w kostkę i razem ciecierzycą wrzucamy na patelnię. Dodajemy sól, mieszamy i na małym ogniu gotujemy pod przykryciem 10 minut.",
-            "Zdejmujemy z ognia, kropimy cytryną i posypujemy kolendrą."
-        ],
-        "id": 307,
-        "title": "Curry z ciecierzycy",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "dwie łyżki oleju,"
-        ],
-        "steps": [
-            "Na rozgrzany na patelni olej wrzucamy przyprawy i lekko je podsmażamy. ",
-            "Dodajemy paprykę, cebulę oraz czosnek. Smażymy do miękkości, po czym dodajemy pomidory i smażymy, dopóki się nie rozpadną.",
-            "Dodajemy cieciorkę oraz pokrojoną w kostkę cukinię.",
-            "Zmniejszamy ogień i dusimy przez 5 minut.",
-            "Wlewamy sok, mieszamy i przekładamy do miski."
-        ],
-        "id": 308,
-        "title": "Curry z ciecierzycy oraz cukinii",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
         ]
     },
     {
@@ -4950,26 +3225,6 @@
         "title": "Cynamon",
         "categories": [
             "Przyprawy,_zioła,_ingrediencje"
-        ]
-    },
-    {
-        "products": [
-            "olej roślinny"
-        ],
-        "steps": [
-            "Mięso nacieramy solą, cynamonem oraz pieprzem. Wkładamy na 12 godzin do lodówki.",
-            "Liście parzymy we wrzątku, obrane ziemniaki, cebule oraz marchew kroimy w talarki.",
-            "Naczynie żaroodporne smarujemy tłuszczem. Kładziemy na nie plastry boczku, a na nie sparzone liście kapusty.",
-            "Układamy na boczku i warzywach mięso. Na nie kładziemy pokrojone w plastry ziemniaki oraz marchewki.",
-            "Na wierzchu kładziemy talarki z cebuli oraz jabłka.",
-            "Posypujemy wierzch cynamonem, dodajemy kilkanaście ziarenek jałowca oraz posypujemy pieprzem. Zalewamy całość winem.",
-            "Wstawiamy całość do 200 stopni na 120 minut (pod przykryciem). Co jakiś czas podlewamy winem."
-        ],
-        "id": 314,
-        "title": "Cynamonowa karkówka",
-        "categories": [
-            "Wieprzowina",
-            "Warzywne"
         ]
     },
     {
@@ -5084,21 +3339,6 @@
     },
     {
         "products": [
-            "ćwierć szklanki oliwy"
-        ],
-        "steps": [
-            "Filety kroimy na ok. 3 centymetrowe kawałki. Z obranej cebuli oraz czosnku, pietruszki, skórki, tymianku, liści oraz octu i oliwy robimy sos. Zalewamy nim rybę, nakrywamy folią i wkładamy do lodówki na dwie godziny.",
-            "Wkładamy rybę do garnka, zalewamy winem, wywarem oraz pieprzem. Gotujemy przez kwadrans, aż ryba zmięknie."
-        ],
-        "id": 320,
-        "title": "Cytrynowa zupa rybna",
-        "categories": [
-            "Zupy_na_mięsie",
-            "Ryby"
-        ]
-    },
-    {
-        "products": [
             "250 gram masła,",
             "starta skórka z cytryny,",
             "pęczek pietruszki."
@@ -5202,23 +3442,6 @@
     },
     {
         "products": [
-            "pół szklanki śmietanki 30 %"
-        ],
-        "steps": [
-            "Czekoladę łamiemy na małe kawałki.",
-            "Do garnka wlewamy mleko, śmietankę, czekoladę, kakao, cukier oraz cynamon.",
-            "Powoli podgrzewamy, nieustannie mieszając.",
-            "Czekoladę wlewamy do filiżanki i dekorujemy bitą śmietaną."
-        ],
-        "id": 328,
-        "title": "Czekolada cynamonowa",
-        "categories": [
-            "Napoje_gorące",
-            "Desery"
-        ]
-    },
-    {
-        "products": [
             "20 dag pokrojonej czekolady deserowej,",
             "¼ szklanki śmietany (36%),",
             "1 słoik (ok. 20 dag) wiśni koktajlowych (mogą być wiśnie z nalewki),",
@@ -5230,22 +3453,6 @@
         "title": "Czekoladowe fondue",
         "categories": [
             "Desery"
-        ]
-    },
-    {
-        "products": [
-            "4,5 łyżki oleju,"
-        ],
-        "steps": "Mąkę przesiewamy z proszkiem do pieczenia. Dodajemy resztę składników i bardzo dokładnie miksujemy. Patelnię rozgrzewamy na małym ogniu i taki też utrzymujemy przez całe smażenie. Placki obracamy, gdy pojawiać się zaczną na nich pęcherze powietrza.",
-        "id": 330,
-        "title": "Czekoladowe pancakes",
-        "categories": [
-            "Mączne",
-            "Jarskie",
-            "Dodatki_do_dań",
-            "Z_jaj",
-            "Desery",
-            "Śniadania"
         ]
     },
     {
@@ -5382,35 +3589,6 @@
     },
     {
         "products": [
-            "łyżka oleju słonecznikowego."
-        ],
-        "steps": "Papryczki oraz imbir siekamy. Z trawy cytrynowej usuwamy twarde części i również ją siekamy. Czosnek i szalotki obieramy oraz siekamy. Wszystkie warzywa wraz z przyprawami wrzucamy do miksera i miksujemy na gładką pastę.",
-        "id": 338,
-        "title": "Czerwona pasta curry",
-        "categories": [
-            "Sosy_na_zimno",
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oliwy"
-        ],
-        "steps": [
-            "Marchewkę oraz kalafiora gotujemy do miękkości. Oliwę rozgrzewamy i szklimy na niej cebulę oraz czosnek. Po chwili dodajemy marchew oraz kalafiora i moment smażymy.",
-            "Dodajemy mleko i gotujemy całość.",
-            "Dodajemy ciecierzycę oraz kukurydzę, doprawiamy solą, pieprzem oraz przyprawą curry. Gotujemy, by całość zgęstniała.",
-            "Przed podaniem posypujemy całość kolendrą."
-        ],
-        "id": 339,
-        "title": "Czerwone curry",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
             " osiem dojrzałych fig",
             " 100 mililitrów czerwonego słodkiego wina",
             " 100 gram powideł śliwkowych",
@@ -5451,128 +3629,6 @@
     },
     {
         "products": [
-            "ćwierć szklanki oliwy"
-        ],
-        "steps": [
-            "Cebulę i czosnek obieramy i siekamy, pomidory obieramy, selera i marchew obieramy i tniemy w plastry. Pomidora miksujemy na papkę.",
-            "Do garnka z rozgrzaną oliwą wsypujemy ryż i smażymy, aż się zeszkli.",
-            "Dodajemy czosnek oraz cebulę. Po chwili wrzucamy resztę warzyw, zalewamy bulionem. Dusimy ok. 20 minut."
-        ],
-        "id": 342,
-        "title": "Czerwony ryż",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "250 gram śmietany 22%,"
-        ],
-        "steps": [
-            "Wołowinę myjemy, kroimy na średnie kawałki i obsmażamy na połowie boczku.",
-            "Na drugiej połowie mięsa smażymy warzywa.",
-            "Dokładamy do nich mięso oraz tyle wody, by przykryła ona składniki. Dusimy przez pół godziny na średnim ogniu.",
-            "Mięso wyjmujemy, a do reszty dodajemy śmietanę i cytrynę. Miksujemy i zagotowujemy sos, po czym polewamy nim sos."
-        ],
-        "id": 343,
-        "title": "Czeska wołowina",
-        "categories": [
-            "Wołowina",
-            "Kuchnia_czeska",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oliwy"
-        ],
-        "steps": [
-            "Indyka opłukać, osuszyć, pokroić na długie kawałki, obsypać solą.",
-            "Na patelni rozgrzać nieco oliwy i mocno zarumienić filety.",
-            "Papry­ki umyć, usunąć gniazda i pokroić na paseczki.",
-            "Kukurydzę odsączyć z zalewy. Na kolejnej patelni rozgrzać tłuszcz, wrzucić paprykę, podsmażyć, dodać indyka oraz kukurydzę. Smażyć sześć minut.",
-            "Pomidory odsączyć i dorzucić do reszty dania. Potrawę doprawić oregano, kolendrą oraz chili. Dusić na małym ogniu przez około 25 minut."
-        ],
-        "id": 344,
-        "title": "Czeski indyk",
-        "categories": [
-            "Kuchnia_czeska",
-            "Warzywne",
-            "Ptactwo"
-        ]
-    },
-    {
-        "products": [
-            "oliwa"
-        ],
-        "steps": [
-            "Obieramy ząbki.",
-            "Zagotowujemy wino oraz ocet, cukier i przyprawy. Do gotującego się płynu wsypujemy czosnek, dodajemy paprykę.",
-            "Gotujemy pięć minut na małym ogniu. Zdejmujemy z ognia, przykrywamy rondel i odstawiamy na ok. 5 godzin.",
-            "Po tym czasie zagotowujemy całość i od zawrzenia gotujemy ok. 3 minuty.",
-            "Przestudzony płyn wlewamy do słoików, zalewamy zalewą, a na wierzch dodajemy łyżkę oliwy."
-        ],
-        "id": 345,
-        "title": "Czosnek marynowany",
-        "categories": [
-            "Domowa_spiżarnia"
-        ]
-    },
-    {
-        "products": [
-            "1/8 litra oliwy"
-        ],
-        "steps": [
-            "Czosnek obieramy, solimy i wkładamy do osolonego wrzątku. Zagotowujemy.",
-            "Odcedzamy, przelewamy zimną wodą i odsączamy.",
-            "Zioła płuczemy, suszymy i wkładamy do słoika.",
-            "Zagotowujemy wino z octem, cukrem i solą. Gotujemy mieszając, by sól i cukier się rozpuściły.",
-            "Wlewamy zalewę do ok. 3 cm poniżej krawędzi. Powoli dodajemy oliwę. Gdy całość ostygnie zakręcamy."
-        ],
-        "id": 346,
-        "title": "Czosnek w ziołach",
-        "categories": [
-            "Jarskie",
-            "Spiżarnia_domowa"
-        ]
-    },
-    {
-        "products": [
-            "łyżka oliwy,"
-        ],
-        "steps": "Obieramy awokado, kroimy na pół, wyrzucamy pestkę. Siekamy.Czosnek obieramy i siekamy. Dodajemy sól, sok oraz oliwę.Dokładnie mieszamy.",
-        "id": 347,
-        "title": "Czosnkowa pasta awokado",
-        "categories": [
-            "Sosy_zimne",
-            "Dodatki_do_dań"
-        ]
-    },
-    {
-        "products": [
-            "szklanka oliwy,"
-        ],
-        "steps": [
-            "Umyte bakłażany i kroimy w niewielkie plastry.",
-            "Grillujemy je na patelni grillowej lub smażymy na patelni, po czym odstawiamy.",
-            "Pomidory kroimy w paski. ",
-            "W misce mieszamy bakłażana, pomidory oraz czosnek (bez zalewy).",
-            "Z reszty składników robimy marynatę. Mieszamy je razem za pomocą widelca.",
-            "Warzywa zalewamy marynatą, po czym mieszamy.",
-            "Przekładamy całość do słoików, wlewając na koniec marynatę. Ogórki wstawiamy do lodówki na około dwa dni. "
-        ],
-        "id": 348,
-        "title": "Czosnkowe bakłażany",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Sałaty",
-            "Domowa_spiżarnia"
-        ]
-    },
-    {
-        "products": [
             " ciasto:",
             " 400 gram mąki pszennej ",
             " 20 gram drobnego cukru",
@@ -5600,60 +3656,6 @@
         "categories": [
             "Mączne",
             "Dodatki_o_dań"
-        ]
-    },
-    {
-        "products": [
-            "oliwa,"
-        ],
-        "steps": "Karczochy pozbywamy ogonka, obu końcówek i listków z wierzchu, po czym kroimy na plastry. Wlewamy do miski wodę, sok z połowy cytryny i przez 20 minut namaczamy karczochy. W międzyczasie czosnek kroimy na plasterki, który następnie rumienimy na patelni. Odcedzone karczochy dodajemy do czosnku, podsmażamy, zalewamy wodą i dodajemy wszystkie przyprawy. Dusimy przez ok. godzinę.Odcinamy ogonek od karczochów i obieramy z listków, aż odsłonią się te o kolorze jaśniejszym, następnie odcinamy końcówkę i \"dupkę\". Kroimy w plastry. Wodę wlewamy do naczynia głębokiego i dodajemy sok z 1/2 cytryny, wkładamy pokrojone karczochy. Moczymy ok 20 min. W miedzy czasie obieramy czosnek i kroimy w plasterki. Do garnka wlewamy olej i rumienimy czosnek, odcedzić karczochy i dodać do czosnku lekko podsmażyć, zalewamy wodą, dodajemy pieprz w ziarenkach, ziele angielskie, liść laurowy, vegetę. Dusimy ok 50 min. ",
-        "id": 350,
-        "title": "Czosnkowe karczochy",
-        "categories": [
-            "Warzywne",
-            "Jarskie"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oliwy"
-        ],
-        "steps": [
-            "Czosnek obieramy, siekamy i szklimy na oliwie z masłem.",
-            "Zwiększamy ogień, dodajemy obrane krewetki i smażymy je z 3 minuty. Dorzucamy natkę i doprawiamy solą oraz pieprzem."
-        ],
-        "id": 351,
-        "title": "Czosnkowe krewetki",
-        "categories": [
-            "Warzywne",
-            "Inne_mięsne"
-        ]
-    },
-    {
-        "products": [
-            "2 łyżki oliwy,"
-        ],
-        "steps": "Obrane ząbki czosnku kroimy na cienkie plastry, a obrany imbir drobno siekamy. Zagotowujemy 1 litr wody. Mrożone krewetki wrzucamy na sitko, przelewamy gorącą wodą i odstawiamy na chwilę.Masło i oliwę rozgrzewamy na patelni. Dodajemy do niej czosnek oraz imbir i smażymy przez 30 sekund pamiętając o mieszaniu. Krewetki dodajemy, gdy czosnek zacznie robić się żółty. Mieszamy ponownie i smażymy przez 3 minuty (krewetki powinny zmienić kolor). Dodajemy papryki, oba pieprze oraz sól. Mieszamy ponownie i trzymamy na ogniu przez 30 sekund. Dodajemy natkę pietruszki, mieszamy.",
-        "id": 352,
-        "title": "Czosnkowe krewetki z imbirem",
-        "categories": [
-            "Ryby"
-        ]
-    },
-    {
-        "products": [
-            "150 mililitrów oliwy"
-        ],
-        "steps": [
-            "Pieczarki polewamy sokiem i odstawiamy na kwadrans.",
-            "Na rozgrzaną oliwę wrzucamy zmiażdżony czosnek oraz pieczarki i smażymy na 10 minut. Doprawiamy, posypujemy pocięta natką pietruszki."
-        ],
-        "id": 353,
-        "title": "Czosnkowe pieczarki",
-        "categories": [
-            "Grzyby",
-            "Jarskie",
-            "Dodatki_do_dań"
         ]
     },
     {
@@ -5690,45 +3692,6 @@
         "title": "Czosnkowy kurczak",
         "categories": [
             "Ptactwo"
-        ]
-    },
-    {
-        "products": [
-            "60 mililitrów oliwy"
-        ],
-        "steps": [
-            "Cebule, marchewki oraz selera obieramy i kroimy na cienkie paski. Pomidora obieramy i kroimy na ćwiartki.",
-            "Wszystkie warzywa wrzucamy do gotującej się wody, doprawiamy solą, pieprzem oraz liściem laurowym. Dolewamy oliwę i gotujemy na małym ogniu 30 minut.",
-            "Rybę myjemy, oczyszczamy, solimy, dzielimy na kawałki i gotujemy w wywarze ok. kwadransa.",
-            "Wyjmujemy ją, a warzywa miksujemy. ",
-            "Do zmiksowanej mieszanki dodajemy ryż i po 20 minutach zdejmujemy danie z ognia.",
-            "Jajka ubijamy z sokiem z cytryny i powoli (by jajka się nie ścięły) dodajemy do zupy.",
-            "Rybę podajemy osobno."
-        ],
-        "id": 356,
-        "title": "Danie Posejdona",
-        "categories": [
-            "Ryby",
-            "Warzywne",
-            "Kuchnia_międzynarodowa"
-        ]
-    },
-    {
-        "products": [
-            "pół szklanki oliwy"
-        ],
-        "steps": [
-            "Marchewkę gotujemy w skórce, po czym studzimy.",
-            "Obieramy i kroimy w długie plastry.",
-            "Czosnek miażdżymy i łączymy z oliwą oraz oregano. Dolewamy ocet i doprawiamy solą.",
-            "Sosem polewamy marchewkę. Wstawiamy całość do lodówki na 45 minut."
-        ],
-        "id": 357,
-        "title": "Danie marchewkowe",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Dodatki_do_dań"
         ]
     },
     {
@@ -5843,22 +3806,6 @@
     },
     {
         "products": [
-            "szklanka gęstej śmietany"
-        ],
-        "steps": [
-            "Truskawki oczyszczamy z szypułek. Kroimy je, słodzimy i zalewamy likierem. Dodajemy startą wanilię.",
-            "Całość mieszamy i odstawiamy na dwie godziny do lodówki.",
-            "Śmietanę słodzimy, mieszamy z nieco rozpuszczonymi lodami i ubijamy na sztywno.",
-            "Podajemy z ubitą śmietaną."
-        ],
-        "id": 365,
-        "title": "Deser truskawkowy",
-        "categories": [
-            "Desery"
-        ]
-    },
-    {
-        "products": [
             " jajko",
             " dwie niepełne szklanki mąki ziemniaczanej ",
             " dwie czubate łyżki mąki pszennej",
@@ -5879,22 +3826,6 @@
         "title": "Deserowe pieczarki",
         "categories": [
             "Desery"
-        ]
-    },
-    {
-        "products": [
-            "oliwa"
-        ],
-        "steps": [
-            "Bakłażana kroimy w plastry i posypujemy je solą. Podsmażamy na oliwie dopóki skórka nie zacznie brązowieć.",
-            "Miksujemy je na gładką masę. W trakcie stopniowo dodajemy oliwę, szczypior, czosnek oraz sok z cytryny.",
-            "Mieszamy i doprawiamy solą i pieprzem. Na wierzch sypiemy natkę pietruszki."
-        ],
-        "id": 367,
-        "title": "Dip bakłażanowy",
-        "categories": [
-            "Sosy_zimne",
-            "Dodatki_do_dań"
         ]
     },
     {
@@ -5957,31 +3888,6 @@
         "categories": [
             "Desery",
             "Kuchnia_włoska"
-        ]
-    },
-    {
-        "products": [
-            "250 mililitrów  śmietany,"
-        ],
-        "steps": "Sparzoną wrzącym octem baraninę oczyścić, pokroić w kawałki, zemleć w maszynce. Cebule obrać, posiekać, przesmażyć na maśle na zloty kolor. Ryż opłukać, osączyć, zalać wrzątkiem, osolić, gotować na małym ogniu 10 min. Przygotować farsz: połączyć baraninę z na wpół miękkim ryżem, dodać przesmażona cebule, sol, pieprz. Dokładnie wymieszać. Kapustę opłukać, obrać z wierzchnich liści. Główkę zalać wrzątkiem, gotować 3-4 min, odcedzić. Sparzone liście zdejmować kolejno i formować, przycinając wzdłuż gruby nerw liściowy. Na środek każdego liścia nałożyć farsz, liść zwinąć w rulon i podwinąć brzegi, by farsz nie wyciekł. Gołąbki ułożyć ciasno w garnku, jeden obok drugiego, zalać wrzącym rosołem, gotować na małym ogniu lub piec w piekarniku ogrzanym do temp. 200żC 40 min. Śmietanę wymieszać z maka, zalać potrawę. Zapiekać w piekarniku ogrzanym do temp. 200żC ok. 20 min. Dolmę podawać w naczyniu, w którym się zapiekała.",
-        "id": 374,
-        "title": "Dolma",
-        "categories": [
-            "Kuchnia_tatarska",
-            "Baranina"
-        ]
-    },
-    {
-        "products": [
-            "100 mililitrów oleju,"
-        ],
-        "steps": "Liście winogron dokładnie myjemy oraz osuszamy. Dymkę kroimy na niewielkie fragmenty, które rumienimy na rozgrzanym oleju. Następnie dodajemy ryż, przyprawy i zioła, dolewamy wodę i dusimy przez 10 minut. Po tym czasie odstawiamy całość do wystygnięcia. W ten sposób przygotowany farsz wykładamy na liście i formujemy w niewielkie gołąbki, przy czym część liści zostawiamy, by wyłożyć dno garnka, na których układamy warstwami gołąbki. Podlewamy wodą i sokiem z cytryny, a następnie dusimy na małym ogniu przez półtorej godziny.",
-        "id": 375,
-        "title": "Dolmedakia",
-        "categories": [
-            "Warzywne",
-            "Kuchnia_grecka",
-            "Jarskie"
         ]
     },
     {
@@ -6161,20 +4067,6 @@
     },
     {
         "products": [
-            "łyżka oleju sezamowego"
-        ],
-        "steps": [
-            "Składniki, bez soli, mieszamy dokładnie razem.",
-            "Doprawiamy solą."
-        ],
-        "id": 385,
-        "title": "Domowy sos sojowy do drobiu",
-        "categories": [
-            "Sosy_gorące"
-        ]
-    },
-    {
-        "products": [
             "Jedna świeża dorada,",
             "pęczek natki pietruszki lub estragonu,",
             "cytryna,",
@@ -6205,26 +4097,6 @@
         "categories": [
             "Ryby",
             "Kuchnia_afrykańska"
-        ]
-    },
-    {
-        "products": [
-            "cztery łyżki oliwy,"
-        ],
-        "steps": [
-            "Pomidory myjemy, wycieramy i kroimy w kostkę. Czosnek również obieramy i kroimy w pióra, a cebulę w plastry. ",
-            "Na patelni szklimy cebulę oraz czosnek, a następnie dodajemy pomidory. Smażymy trzy minuty, po czym doprawiamy solą i pieprzem. ",
-            "Natkę siekamy i mieszamy z masłem i tartą bułką. Doprawiamy pieprzem, solą i sokiem z cytryny. ",
-            "Filety myjemy, suszymy i smarujemy masą ziołową. ",
-            "Warzywa z patelni wkładamy do naczynia żaroodpornego. Na nich kładziemy rybę. ",
-            "Wstawiamy danie do 200 stopni na ok. 12 minut."
-        ],
-        "id": 388,
-        "title": "Dorsz na warzywach",
-        "categories": [
-            "Ryby",
-            "Warzywne",
-            "Kuchnia_międzynarodowa"
         ]
     },
     {
@@ -6268,31 +4140,6 @@
     },
     {
         "products": [
-            "olej do smażenia"
-        ],
-        "steps": [
-            "Ryby myjemy, posypujemy solą i pieprzem, obtaczamy w mące. Smażymy na złoty kolor.",
-            "Zioła, musztardę, śmietanę, sól i roztarty czosnek mieszamy razem.",
-            "Mięso wkładamy do naczynia żaroodpornego, zalewamy sosem, posypujemy serem. Pieczemy w 180 stopniach przez ok. 20 minut."
-        ],
-        "id": 391,
-        "title": "Dorsz pod białą pierzynką",
-        "categories": []
-    },
-    {
-        "products": [
-            "sos kokosowy."
-        ],
-        "steps": "Rybę kroimy na kawałki i obtaczamy w mące.Umyte pomidorki kroimy na połówki, a bazylię szatkujemy.Na patelni podsmażamy rybę.Po kilku minutach wlewamy sos i mieszamy. Zostawiamy na średnim ogniu na 5 minut.Dodajemy pomidory oraz bazylię.Gotujemy kolejne 5 minut.",
-        "id": 392,
-        "title": "Dorsz w sosie kokosowym",
-        "categories": [
-            "Ryby",
-            "Kuchnia_międzynarodowa"
-        ]
-    },
-    {
-        "products": [
             " 1 dorodny filet z dorsza, najlepiej świeży, ok. 30-40 dkg,",
             " 1 spora cebula (najlepiej szalotka),",
             " 1 kieliszek białego wytrawnego wina (100 g),",
@@ -6305,64 +4152,6 @@
         "title": "Dorsz w sosie śmietanowym",
         "categories": [
             "Ryby"
-        ]
-    },
-    {
-        "products": [
-            "olej,"
-        ],
-        "steps": "Ser kroimy na 4 plastry. Do rozciętych dorszy wkładamy ser. Skrapiamy środek sokiem z cytryny, pieprzymy, solimy, po czym spinamy całość wykałaczkami. W międzyczasie z mąki, piwa i jajek robimy ciasto, w które zanurzamy rybę. Smażymy całośc na głębokim oleju przez ok. 10 minut.",
-        "id": 395,
-        "title": "Dorsz z nadzieniem",
-        "categories": [
-            "Ryby"
-        ]
-    },
-    {
-        "products": [
-            "trzy łyżki gęstej śmietany"
-        ],
-        "steps": [
-            "Dorsza kroimy na porcje, solimy, polewamy sokiem, doprawiamy poszatkowanym czosnkiem oraz ziołami.",
-            "Poszatkowaną cebulę podsmażamy, po czym dusimy na niej pocięte w plastry pieczarki. Po kilku minutach dodajemy śmietanę, sól oraz pieprz. ",
-            "W naczyniu żaroodpornym kładziemy rybę, pieczarki, po czym posypujemy całość serem. Wstawiamy do 170 stopni na ok. 25 minut."
-        ],
-        "id": 396,
-        "title": "Dorsz z pieczarkami",
-        "categories": [
-            "Ryby",
-            "Warzywne"
-        ]
-    },
-    {
-        "products": [
-            "olej roślinny"
-        ],
-        "steps": [
-            "Wsypujemy soczewicę oraz ryż do dwóch osobnych naczyń. Zalewamy oba wodą i odstawiamy na ok. 10 godzin.",
-            "Wylewamy wodę. Miksujemy osobno soczewicę oraz ryż z odrobiną wody, by powstało gęste ciasto.",
-            "Długo mieszamy oba ciasta, by powstała z nich jednolita masa. ",
-            "Solimy i odstawiamy na osiem godzin w ciepłe miejsce, by ciasto sfermentowało a na jego wierzchu powstaną pęcherzyki.",
-            "Smarujemy patelnię oliwą i smażymy ciasto z obu stron."
-        ],
-        "id": 397,
-        "title": "Dosa",
-        "categories": [
-            "Warzywne",
-            "Jarskie",
-            "Kuchnia_indyjska"
-        ]
-    },
-    {
-        "products": [
-            "szklanka kwaśnej śmietany"
-        ],
-        "steps": "Wszystkie składniki mieszamy razem, po czym wkładamy do lodówki na ok. 15 minut.",
-        "id": 398,
-        "title": "Dressing na śledzia",
-        "categories": [
-            "Sosy_zimne",
-            "Dodatki_do_dań"
         ]
     },
     {
