@@ -20,7 +20,7 @@ class RecipesModel extends ChangeNotifier {
     final decoded = jsonDecode(jsonString);
 
     for (final recipe in decoded) {
-      final List<dynamic>? products = recipe['products'];
+      final List<dynamic>? products = recipe['products'] is String? [recipe['products']: recipe['products'];
       final List<String> ingredients = [];
       if (products != null) {
         for (String value in products) {
