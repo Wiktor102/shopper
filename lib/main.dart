@@ -170,6 +170,7 @@ class AboutApp extends StatelessWidget {
       body: ListView(
         children: const [
           ExpansionTile(
+            initiallyExpanded: true,
             title: Text("Autorzy"),
             children: [
               ListTile(title: Text("Wiktor Golicz")),
@@ -177,6 +178,7 @@ class AboutApp extends StatelessWidget {
             ],
           ),
           ExpansionTile(
+            initiallyExpanded: true,
             title: Text("Źródła"),
             children: [
               ListTile(title: Text("wikikuchnia.org")),
@@ -185,7 +187,7 @@ class AboutApp extends StatelessWidget {
           ),
           ListTile(
             title: Text("Wersja"),
-            trailing: Text("v1.0"),
+            trailing: Text("v1.1"),
           )
         ],
       ),
