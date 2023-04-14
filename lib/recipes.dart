@@ -191,7 +191,8 @@ class RecipesList extends StatelessWidget {
           ? ListView.builder(
               itemCount: recipes.length,
               itemBuilder: (_, index) => ListTile(
-                onTap: () => showDetails(context, index),
+                onTap: () =>
+                    showDetails(context, recipes.elementAt(index).trueIndex),
                 title: Text(recipes[index].recipe.name),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
