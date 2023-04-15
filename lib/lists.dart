@@ -348,7 +348,8 @@ class _GroceryListsState extends State<GroceryLists> {
                     },
                   ),
                 )
-              : const Expanded(child: Empty("Brak produktów na liście"))
+              : Expanded(
+                  child: Empty("Brak produktów na liście", 'assets/empty.png'))
         ],
       ),
       // ten guzik słuzy do przypisywania itemów do listy

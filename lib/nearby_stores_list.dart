@@ -35,7 +35,11 @@ class NearbyStoresList extends StatelessWidget {
     }
 
     if (storeList.isEmpty) {
-      return const Empty("Brak danych do wyświetlenia");
+      return Empty(
+          !favorites
+              ? "Brak danych do wyświetlenia"
+              : "Brak polubionych sklepów",
+          "assets/shops.png");
     }
 
     return ListView.builder(

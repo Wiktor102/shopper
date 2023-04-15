@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Empty extends StatelessWidget {
   final String text;
-  const Empty(this.text, {super.key});
+  final String imagePath;
+  const Empty(this.text, this.imagePath, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class Empty extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Image(image: AssetImage('assets/empty.png')),
+              Image(image: AssetImage(imagePath)),
               const Padding(padding: EdgeInsets.only(top: 20)),
               Text(
                 text,

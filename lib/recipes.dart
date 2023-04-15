@@ -277,7 +277,11 @@ class RecipesList extends StatelessWidget {
                   : currentTab == RecipesTabs.favorites
                       ? "Nie polubiono żadnego przepisu"
                       : "Brak przepisów",
-            ),
+              currentTab == RecipesTabs.recipes
+                  ? 'assets/empty.png'
+                  : currentTab == RecipesTabs.favorites
+                      ? 'assets/favRecipes.png'
+                      : 'assets/customRecipes.png'),
       floatingActionButton: currentTab == RecipesTabs.custom
           ? FloatingActionButton(
               onPressed: () => createCustomRecipe(context),
