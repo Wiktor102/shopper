@@ -16,6 +16,7 @@ class RecipeDetails extends StatelessWidget {
     final recipe = provider.recipes[index];
 
     List<Text> steps = recipe.steps.map((s) => Text(s)).toList();
+    String tags = recipe.tags.join(", ");
 
     return Scaffold(
       appBar: AppBar(
@@ -47,7 +48,22 @@ class RecipeDetails extends StatelessWidget {
                   "Sposób przyrządzenia:",
                   style: TextStyle(fontSize: 22),
                 ),
-                ...steps
+                ...steps,
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Row(
+                    children: [
+                      const Text("Tagi: "),
+                      Opacity(
+                        opacity: 0.75,
+                        child: Text(
+                          tags,
+                          style: const TextStyle(fontStyle: FontStyle.italic),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
