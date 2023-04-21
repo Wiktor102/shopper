@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:Shopper/settings_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'empty.dart';
@@ -110,6 +111,7 @@ class RecipesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
+    final settings = Provider.of<SettingsModel>(context);
     List<TemporaryRecipe> recipes = []; //lista która pokazuje sie na ekranie
 
     if (provider.loading) {
@@ -142,6 +144,29 @@ class RecipesList extends StatelessWidget {
           if (provider.selectedCategories.isNotEmpty && !hasCategory) continue;
           recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
         }
+    }
+
+    if (settings.recipesSort == RecipesSort.alphabetically) {
+      recipes.sort((a, b) =>
+          a.recipe.name.toLowerCase().compareTo(b.recipe.name.toLowerCase()));
+    } else if (settings.recipesSort == RecipesSort.byCategory) {
+      recipes.sort((a, b) {
+        if (a.recipe.tags.isEmpty && b.recipe.tags.isEmpty) return 0;
+        if (a.recipe.tags.isEmpty) return 1;
+        if (b.recipe.tags.isEmpty) return -1;
+
+        int compareResult = a.recipe.tags[0]
+            .toLowerCase()
+            .compareTo(b.recipe.tags[0].toLowerCase());
+
+        if (compareResult == 0) {
+          return a.recipe.name
+              .toLowerCase()
+              .compareTo(b.recipe.name.toLowerCase());
+        }
+
+        return compareResult;
+      });
     }
 
     return Scaffold(

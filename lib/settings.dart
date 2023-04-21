@@ -18,6 +18,7 @@ class Settings extends StatelessWidget {
       body: ListView(
         children: [
           ThemeTile(settingsProvider: settingsProvider),
+          RecipesSortTile(settingsProvider: settingsProvider),
           //const StoreDistanceTile(),
           const AboutApp(),
         ],
@@ -124,6 +125,48 @@ class ThemeTile extends StatelessWidget {
               value: "dark",
               child: Text("Ciemny"),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RecipesSortTile extends StatelessWidget {
+  const RecipesSortTile({
+    super.key,
+    required this.settingsProvider,
+  });
+
+  final SettingsModel settingsProvider;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: const Text("Sortowanie przepisów"),
+      trailing: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width * 0.4,
+        ),
+        child: DropdownButton(
+          isExpanded: true,
+          value: settingsProvider.recipesSort,
+          onChanged: (RecipesSort? newSetting) {
+            settingsProvider.recipesSort = newSetting as RecipesSort;
+          },
+          items: const [
+            DropdownMenuItem(
+              value: RecipesSort.alphabetically,
+              child: Text("Alfabetycznie"),
+            ),
+            DropdownMenuItem(
+              value: RecipesSort.byCategory,
+              child: Text("Wg kategorii"),
+            ),
+            DropdownMenuItem(
+              value: RecipesSort.none,
+              child: Text("Bez sortowania"),
+            )
           ],
         ),
       ),

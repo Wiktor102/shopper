@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 
+import "./settings_model.dart";
+
 part "recipes_model.g.dart";
 
 class RecipesModel extends ChangeNotifier {
@@ -66,9 +68,6 @@ class RecipesModel extends ChangeNotifier {
         ),
       );
     }
-
-    _recipes
-        .sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
 
     _categories.sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
     _categories.remove("Inne");
