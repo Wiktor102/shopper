@@ -12,8 +12,13 @@ class RecipesModel extends ChangeNotifier {
   List<int> _favoriteIds = [];
   bool loading = true;
 
+  List<String> _categories = [];
+  final List<String> _selectedCategories = [];
+
   List<Recipe> get recipes => _recipes;
   int get numberOfCustomRecipes => _customRecipes.length;
+  List<String> get selectedCategories => _selectedCategories;
+  List<String> get allCategories => _categories;
 
   Future<void> readJSON() async {
     final jsonString = await rootBundle.loadString('assets/recipes.json');
@@ -42,6 +47,13 @@ class RecipesModel extends ChangeNotifier {
         }
       }
 
+      recipe["categories"].forEach((category) {
+        String catName = category.replaceAll("_", " ");
+        if (!_categories.contains(catName)) {
+          _categories.add(catName);
+        }
+      });
+
       _recipes.add(
         Recipe(
           id: recipe['id'] as int,
@@ -52,6 +64,9 @@ class RecipesModel extends ChangeNotifier {
       );
     }
 
+    _categories.sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
+    _categories.remove("Inne");
+    _categories.add("Inne");
     notifyListeners();
   }
 
@@ -116,6 +131,21 @@ class RecipesModel extends ChangeNotifier {
     _customRecipes[_customRecipes.indexWhere((r) => r.id == recipeId)] = recipe;
     Hive.box("customRecipes").put(recipeId, recipe);
     notifyListeners();
+  }
+
+  void selectCategory(int index) {
+    _selectedCategories.add(_categories[index]);
+    notifyListeners();
+  }
+
+  void unselectCategory(int index) {
+    _selectedCategories.removeAt(index);
+    notifyListeners();
+  }
+
+  List<String> getUnselectedCategories() {
+    return [..._categories]
+      ..removeWhere((element) => _selectedCategories.contains(element));
   }
 }
 
