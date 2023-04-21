@@ -47,10 +47,12 @@ class RecipesModel extends ChangeNotifier {
         }
       }
 
+      recipe["categories"] =
+          recipe["categories"].map((c) => c.replaceAll("_", " "));
+
       recipe["categories"].forEach((category) {
-        String catName = category.replaceAll("_", " ");
-        if (!_categories.contains(catName)) {
-          _categories.add(catName);
+        if (!_categories.contains(category)) {
+          _categories.add(category);
         }
       });
 
@@ -60,6 +62,7 @@ class RecipesModel extends ChangeNotifier {
           name: recipe['title'] as String,
           ingredients: ingredients.isNotEmpty ? ingredients : ["null"],
           steps: steps.isNotEmpty ? steps : ["null"],
+          tags: recipe["categories"].toList(),
         ),
       );
     }
@@ -169,11 +172,15 @@ class Recipe {
   @HiveField(5)
   bool custom;
 
+  @HiveField(7)
+  List<dynamic> tags;
+
   Recipe({
     required this.id,
     required this.name,
     required this.ingredients,
     required this.steps,
+    this.tags = const [],
     this.favorite = false,
     this.custom = false,
   });

@@ -135,6 +135,11 @@ class RecipesList extends StatelessWidget {
         for (int i = 0; i < provider.recipes.length; i++) {
           final element = provider.recipes.elementAt(i);
           if (element.custom) continue;
+
+          bool hasCategory = element.tags
+              .any((tag) => provider.selectedCategories.contains(tag));
+
+          if (provider.selectedCategories.isNotEmpty && !hasCategory) continue;
           recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
         }
     }
