@@ -67,6 +67,9 @@ class RecipesModel extends ChangeNotifier {
       );
     }
 
+    _recipes
+        .sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+
     _categories.sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
     _categories.remove("Inne");
     _categories.add("Inne");
