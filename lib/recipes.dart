@@ -356,9 +356,8 @@ class CategoryBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
-    final Map<int, String> unselected =
-        provider.getUnselectedCategories().asMap();
-    final Map<int, String> selected = provider.selectedCategories.asMap();
+    final Set<String> unselected = (provider.unselectedCategories);
+    final Set<String> selected = provider.selectedCategories;
 
     return Container(
       height: 50,
@@ -368,14 +367,8 @@ class CategoryBar extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          ...selected
-              .map((i, element) =>
-                  MapEntry(i, CategoryBarItem(element, i, true)))
-              .values,
-          ...unselected
-              .map((i, element) =>
-                  MapEntry(i, CategoryBarItem(element, i, false)))
-              .values,
+          ...selected.map((element) => CategoryBarItem(element, true)),
+          ...unselected.map((element) => CategoryBarItem(element, false)),
         ],
       ),
     );
@@ -384,10 +377,9 @@ class CategoryBar extends StatelessWidget {
 
 class CategoryBarItem extends StatelessWidget {
   final String title;
-  final int index;
   final bool selected;
 
-  const CategoryBarItem(this.title, this.index, this.selected, {super.key});
+  const CategoryBarItem(this.title, this.selected, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -403,7 +395,7 @@ class CategoryBarItem extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(100.0),
         onTap: () {
-          if (!selected) provider.selectCategory(index);
+          if (!selected) provider.selectCategory(title);
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 12),
@@ -419,7 +411,7 @@ class CategoryBarItem extends StatelessWidget {
                     padding: EdgeInsets.zero,
                     iconSize: 20,
                     visualDensity: VisualDensity.compact,
-                    onPressed: () => provider.unselectCategory(index),
+                    onPressed: () => provider.unselectCategory(title),
                     icon: const Icon(Icons.close),
                     color: selected ? Colors.white : null,
                   ),

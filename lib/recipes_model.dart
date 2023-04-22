@@ -14,13 +14,15 @@ class RecipesModel extends ChangeNotifier {
   List<int> _favoriteIds = [];
   bool loading = true;
 
-  List<String> _categories = [];
-  final List<String> _selectedCategories = [];
+  Set<String> _categories = {};
+  Set<String> _unselectedCategories = {};
+  final Set<String> _selectedCategories = {};
 
   List<Recipe> get recipes => _recipes;
   int get numberOfCustomRecipes => _customRecipes.length;
-  List<String> get selectedCategories => _selectedCategories;
-  List<String> get allCategories => _categories;
+  Set<String> get selectedCategories => _selectedCategories;
+  Set<String> get unselectedCategories => _unselectedCategories;
+  Set<String> get allCategories => _categories;
 
   Future<void> readJSON() async {
     final jsonString = await rootBundle.loadString('assets/recipes.json');
@@ -69,9 +71,14 @@ class RecipesModel extends ChangeNotifier {
       );
     }
 
-    _categories.sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
+    List<String> sorted = _categories.toList()
+      ..sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
+    _categories = Set<String>.from(sorted);
+
     _categories.remove("Inne");
     _categories.add("Inne");
+    _unselectedCategories = Set.from(_categories);
+
     notifyListeners();
   }
 
@@ -138,13 +145,15 @@ class RecipesModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void selectCategory(int index) {
-    _selectedCategories.add(_categories[index]);
+  void selectCategory(String name) {
+    _selectedCategories.add(name);
+    _unselectedCategories.remove(name);
     notifyListeners();
   }
 
-  void unselectCategory(int index) {
-    _selectedCategories.removeAt(index);
+  void unselectCategory(String name) {
+    _selectedCategories.remove(name);
+    _unselectedCategories.add(name);
     notifyListeners();
   }
 
