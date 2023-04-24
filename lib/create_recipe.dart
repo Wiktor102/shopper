@@ -16,6 +16,7 @@ class _CreateRecipeState extends State<CreateRecipe> {
   String title = "";
   List<String> ingredients = [""];
   List<String> steps = [];
+  bool editing = false;
 
   final titleController = TextEditingController();
   final stepsController = TextEditingController();
@@ -30,6 +31,9 @@ class _CreateRecipeState extends State<CreateRecipe> {
   void initState() {
     if (widget.recipe != null) {
       loadRecipe(widget.recipe as Recipe);
+      setState(() {
+        editing = true;
+      });
     }
     super.initState();
   }
@@ -152,7 +156,9 @@ class _CreateRecipeState extends State<CreateRecipe> {
   Widget build(BuildContext context) {
     return WillPopScope(
       child: Scaffold(
-        appBar: AppBar(title: const Text("Stwórz przepis")),
+        appBar: AppBar(
+          title: Text(editing ? "Edytuj przepis" : "Stwórz przepis"),
+        ),
         resizeToAvoidBottomInset: false,
         body: GestureDetector(
           onTap: () {
