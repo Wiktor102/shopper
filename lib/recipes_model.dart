@@ -17,12 +17,14 @@ class RecipesModel extends ChangeNotifier {
   Set<String> _categories = {}; // Kategorie przepisów gotowych
   Set<String> _unselectedCategories = {};
   Set<String> _customCategories = {}; // Kategorie przepisów własnych
+  Set<String> _favoriteCategories = {}; // Kategorie przepisów polubionych
   final Set<String> _selectedCategories = {};
 
   List<Recipe> get recipes => _recipes;
   int get numberOfCustomRecipes => _customRecipes.length;
 
   Set<String> get customCategories => _customCategories;
+  Set<String> get favoriteCategories => _favoriteCategories;
   Set<String> get selectedCategories => _selectedCategories;
   Set<String> get unselectedCategories => _unselectedCategories;
   Set<String> get allCategories => _categories;
@@ -96,6 +98,7 @@ class RecipesModel extends ChangeNotifier {
 
     readJSON().then((_) async {
       await loadFavorites();
+      _favoriteCategories = getCategories(_getFavoriteRecipes());
 
       loading = false;
       notifyListeners();
@@ -124,6 +127,10 @@ class RecipesModel extends ChangeNotifier {
     return mySet;
   }
 
+  List<Recipe> _getFavoriteRecipes() {
+    return _recipes.where((r) => r.favorite).toList();
+  }
+
   void toggleFavorites(int index) {
     _recipes[index].favorite = !_recipes[index].favorite ? true : false;
 
@@ -133,6 +140,7 @@ class RecipesModel extends ChangeNotifier {
       _favoriteIds.add(_recipes[index].id);
     }
 
+    _favoriteCategories = getCategories(_getFavoriteRecipes());
     Hive.box("favoriteRecipes").put("favorite", _favoriteIds);
     notifyListeners();
   }

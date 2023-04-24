@@ -386,7 +386,7 @@ class CategoryBar extends StatelessWidget {
           initialCategories = provider.customCategories;
           break;
         case RecipesTabs.favorites:
-          initialCategories = provider.allCategories;
+          initialCategories = provider.favoriteCategories;
           break;
         default:
           initialCategories = provider.allCategories;
