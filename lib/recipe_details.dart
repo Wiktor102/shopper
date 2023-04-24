@@ -1,3 +1,4 @@
+import 'package:Shopper/create_recipe.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -9,6 +10,14 @@ class RecipeDetails extends StatelessWidget {
   final Function(Recipe, BuildContext) createListFromRecipe;
 
   const RecipeDetails(this.index, this.createListFromRecipe, {super.key});
+
+  void editCustomRecipe(BuildContext context, Recipe recipe) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CreateRecipe(recipe: recipe),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +31,11 @@ class RecipeDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text(recipe.name),
         actions: [
+          if (recipe.custom)
+            IconButton(
+              onPressed: () => editCustomRecipe(context, recipe),
+              icon: const Icon(Icons.edit),
+            ),
           IconButton(
             onPressed: () => provider.toggleFavorites(index),
             icon: Icon(
