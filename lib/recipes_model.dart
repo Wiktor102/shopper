@@ -29,6 +29,11 @@ class RecipesModel extends ChangeNotifier {
   Set<String> get unselectedCategories => _unselectedCategories;
   Set<String> get allCategories => _categories;
 
+  set unselectedCategories(Set<String> newUnselected) {
+    _unselectedCategories = sortCategories(newUnselected);
+    notifyListeners();
+  }
+
   Future<void> readJSON() async {
     final jsonString = await rootBundle.loadString('assets/recipes.json');
     final decoded = jsonDecode(jsonString);
@@ -71,8 +76,6 @@ class RecipesModel extends ChangeNotifier {
     }
 
     _categories = getCategories(_recipes);
-    _unselectedCategories = Set.from(_categories);
-
     notifyListeners();
   }
 
@@ -114,6 +117,10 @@ class RecipesModel extends ChangeNotifier {
       }
     }
 
+    return sortCategories(mySet);
+  }
+
+  Set<String> sortCategories(Set<String> mySet) {
     List<String> sorted = mySet.toList()
       ..sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
 
@@ -185,6 +192,7 @@ class RecipesModel extends ChangeNotifier {
   void unselectCategory(String name) {
     _selectedCategories.remove(name);
     _unselectedCategories.add(name);
+    _unselectedCategories = sortCategories(_unselectedCategories);
     notifyListeners();
   }
 

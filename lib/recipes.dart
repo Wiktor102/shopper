@@ -131,62 +131,67 @@ class RecipesList extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
     final settings = Provider.of<SettingsModel>(context);
+    List<TemporaryRecipe> recipesForTags = [];
     List<TemporaryRecipe> recipes = []; //lista która pokazuje sie na ekranie
 
     if (provider.loading) {
       return const Center(child: CircularProgressIndicator());
     }
 
-    switch (currentTab) {
-      case RecipesTabs.custom:
-        for (int i = 0; i < provider.recipes.length; i++) {
-          final element = provider.recipes.elementAt(i);
-          if (!element.custom) continue;
-          recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
-        }
-        break;
-      case RecipesTabs.favorites:
-        for (int i = 0; i < provider.recipes.length; i++) {
-          final element = provider.recipes.elementAt(i);
-          if (!element.favorite) continue;
-          recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
-        }
-        break;
-      default:
-        for (int i = 0; i < provider.recipes.length; i++) {
-          final element = provider.recipes.elementAt(i);
-          if (element.custom) continue;
+    void sort() {
+      if (settings.recipesSort == RecipesSort.none) return;
+      if (settings.recipesSort == RecipesSort.alphabetically) {
+        recipes.sort((a, b) =>
+            a.recipe.name.toLowerCase().compareTo(b.recipe.name.toLowerCase()));
+        return;
+      }
 
-          bool hasCategory = element.tags
-              .any((tag) => provider.selectedCategories.contains(tag));
+      if (settings.recipesSort == RecipesSort.byCategory) {
+        recipes.sort((a, b) {
+          if (a.recipe.tags.isEmpty && b.recipe.tags.isEmpty) return 0;
+          if (a.recipe.tags.isEmpty) return 1;
+          if (b.recipe.tags.isEmpty) return -1;
 
-          if (provider.selectedCategories.isNotEmpty && !hasCategory) continue;
-          recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
-        }
-    }
-
-    if (settings.recipesSort == RecipesSort.alphabetically) {
-      recipes.sort((a, b) =>
-          a.recipe.name.toLowerCase().compareTo(b.recipe.name.toLowerCase()));
-    } else if (settings.recipesSort == RecipesSort.byCategory) {
-      recipes.sort((a, b) {
-        if (a.recipe.tags.isEmpty && b.recipe.tags.isEmpty) return 0;
-        if (a.recipe.tags.isEmpty) return 1;
-        if (b.recipe.tags.isEmpty) return -1;
-
-        int compareResult = a.recipe.tags[0]
-            .toLowerCase()
-            .compareTo(b.recipe.tags[0].toLowerCase());
-
-        if (compareResult == 0) {
-          return a.recipe.name
+          int compareResult = a.recipe.tags[0]
               .toLowerCase()
-              .compareTo(b.recipe.name.toLowerCase());
-        }
+              .compareTo(b.recipe.tags[0].toLowerCase());
 
-        return compareResult;
-      });
+          if (compareResult == 0) {
+            return a.recipe.name
+                .toLowerCase()
+                .compareTo(b.recipe.name.toLowerCase());
+          }
+
+          return compareResult;
+        });
+      }
     }
+
+    for (int i = 0; i < provider.recipes.length; i++) {
+      final element = provider.recipes.elementAt(i);
+
+      if (currentTab == RecipesTabs.custom) {
+        if (!element.custom) continue;
+      }
+
+      if (currentTab == RecipesTabs.favorites) {
+        if (!element.favorite) continue;
+      }
+
+      if (currentTab == RecipesTabs.recipes) {
+        if (element.custom) continue;
+      }
+
+      bool hasCategory =
+          element.tags.any((tag) => provider.selectedCategories.contains(tag));
+
+      recipesForTags.add(TemporaryRecipe(recipe: element, trueIndex: i));
+      if (provider.selectedCategories.isNotEmpty && !hasCategory) continue;
+
+      recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
+    }
+
+    sort();
 
     return Scaffold(
       body: recipes.isNotEmpty
@@ -367,35 +372,61 @@ class RecipeListItem extends StatelessWidget {
   }
 }
 
-class CategoryBar extends StatelessWidget {
+class CategoryBar extends StatefulWidget {
   final RecipesTabs tab;
 
   const CategoryBar(this.tab, {super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final provider = Provider.of<RecipesModel>(context);
-    Set<String> unselected = (provider.unselectedCategories);
-    final Set<String> selected = provider.selectedCategories;
+  State<CategoryBar> createState() => _CategoryBarState();
+}
 
-    if (selected.isEmpty) {
-      Set<String> initialCategories;
+class _CategoryBarState extends State<CategoryBar> {
+  late Set<String> unselected;
+  late Set<String> selected;
+  bool loading = true;
 
-      switch (tab) {
-        case RecipesTabs.custom:
-          initialCategories = provider.customCategories;
-          break;
-        case RecipesTabs.favorites:
-          initialCategories = provider.favoriteCategories;
-          break;
-        default:
-          initialCategories = provider.allCategories;
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      final provider = Provider.of<RecipesModel>(context, listen: false);
+      if (provider.selectedCategories.isEmpty) {
+        switch (widget.tab) {
+          case RecipesTabs.custom:
+            provider.unselectedCategories = provider.customCategories;
+            break;
+          case RecipesTabs.favorites:
+            provider.unselectedCategories = provider.favoriteCategories;
+            break;
+          default:
+            provider.unselectedCategories = provider.allCategories;
+        }
       }
 
-      unselected = Set<String>.from(initialCategories);
+      setState(() {
+        loading = false;
+      });
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final provider = Provider.of<RecipesModel>(context);
+
+    if (loading) {
+      return Container(
+        height: 50,
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+        decoration: const BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey, width: 1.0))),
+        child: const Center(child: CircularProgressIndicator()),
+      );
     }
 
-    if (unselected.isEmpty && selected.isEmpty) {
+    if (provider.unselectedCategories.isEmpty &&
+        provider.selectedCategories.isEmpty) {
       return Container(
         height: 50,
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -413,8 +444,10 @@ class CategoryBar extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          ...selected.map((element) => CategoryBarItem(element, true)),
-          ...unselected.map((element) => CategoryBarItem(element, false)),
+          ...provider.selectedCategories
+              .map((element) => CategoryBarItem(element, true)),
+          ...provider.unselectedCategories
+              .map((element) => CategoryBarItem(element, false)),
         ],
       ),
     );
