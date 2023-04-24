@@ -14,12 +14,15 @@ class RecipesModel extends ChangeNotifier {
   List<int> _favoriteIds = [];
   bool loading = true;
 
-  Set<String> _categories = {};
+  Set<String> _categories = {}; // Kategorie przepisów gotowych
   Set<String> _unselectedCategories = {};
+  Set<String> _customCategories = {}; // Kategorie przepisów własnych
   final Set<String> _selectedCategories = {};
 
   List<Recipe> get recipes => _recipes;
   int get numberOfCustomRecipes => _customRecipes.length;
+
+  Set<String> get customCategories => _customCategories;
   Set<String> get selectedCategories => _selectedCategories;
   Set<String> get unselectedCategories => _unselectedCategories;
   Set<String> get allCategories => _categories;
@@ -54,12 +57,6 @@ class RecipesModel extends ChangeNotifier {
       recipe["categories"] =
           recipe["categories"].map((c) => c.replaceAll("_", " "));
 
-      recipe["categories"].forEach((category) {
-        if (!_categories.contains(category)) {
-          _categories.add(category);
-        }
-      });
-
       _recipes.add(
         Recipe(
           id: recipe['id'] as int,
@@ -71,12 +68,7 @@ class RecipesModel extends ChangeNotifier {
       );
     }
 
-    List<String> sorted = _categories.toList()
-      ..sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
-    _categories = Set<String>.from(sorted);
-
-    _categories.remove("Inne");
-    _categories.add("Inne");
+    _categories = getCategories(_recipes);
     _unselectedCategories = Set.from(_categories);
 
     notifyListeners();
@@ -97,7 +89,9 @@ class RecipesModel extends ChangeNotifier {
   RecipesModel() {
     Hive.openBox("customRecipes").then((Box box) {
       _customRecipes = box.values.toList().cast<Recipe>();
+      _customCategories = getCategories(_customRecipes);
       _recipes.addAll(_customRecipes);
+      notifyListeners();
     });
 
     readJSON().then((_) async {
@@ -106,6 +100,28 @@ class RecipesModel extends ChangeNotifier {
       loading = false;
       notifyListeners();
     });
+  }
+
+  Set<String> getCategories(List<Recipe> myRecipes) {
+    Set<String> mySet = {};
+
+    for (Recipe r in myRecipes) {
+      for (String category in r.tags) {
+        mySet.add(category);
+      }
+    }
+
+    List<String> sorted = mySet.toList()
+      ..sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
+
+    mySet = Set<String>.from(sorted);
+
+    if (mySet.contains("Inne")) {
+      mySet.remove("Inne");
+      mySet.add("Inne");
+    }
+
+    return mySet;
   }
 
   void toggleFavorites(int index) {
@@ -122,6 +138,7 @@ class RecipesModel extends ChangeNotifier {
   }
 
   void addCustomRecipe(Recipe recipe) {
+    _customCategories.addAll(Set<String>.from(recipe.tags));
     _customRecipes.add(recipe);
     _recipes.add(recipe);
 
@@ -130,6 +147,10 @@ class RecipesModel extends ChangeNotifier {
   }
 
   void removeCustomRecipe(int recipeId) {
+    final Recipe toDelete =
+        _recipes.where((r) => r.id == recipeId).elementAt(0);
+    _customCategories.removeAll(Set<String>.from(toDelete.tags));
+
     _recipes.removeWhere((r) => r.id == recipeId);
     _customRecipes.removeWhere((r) => r.id == recipeId);
 
@@ -141,6 +162,8 @@ class RecipesModel extends ChangeNotifier {
     recipe.id = recipeId;
     _recipes[_recipes.indexWhere((r) => r.id == recipeId)] = recipe;
     _customRecipes[_customRecipes.indexWhere((r) => r.id == recipeId)] = recipe;
+    _customCategories = getCategories(_customRecipes);
+
     Hive.box("customRecipes").put(recipeId, recipe);
     notifyListeners();
   }
@@ -154,6 +177,12 @@ class RecipesModel extends ChangeNotifier {
   void unselectCategory(String name) {
     _selectedCategories.remove(name);
     _unselectedCategories.add(name);
+    notifyListeners();
+  }
+
+  void unselectAllCategories() {
+    _unselectedCategories.addAll(_selectedCategories);
+    _selectedCategories.clear();
     notifyListeners();
   }
 

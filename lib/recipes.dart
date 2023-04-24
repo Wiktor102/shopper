@@ -18,60 +18,79 @@ class TemporaryRecipe {
   TemporaryRecipe({required this.recipe, required this.trueIndex});
 }
 
-class Recipes extends StatelessWidget {
+class Recipes extends StatefulWidget {
   final Function(int) changeTab;
 
   const Recipes(this.changeTab, {super.key});
+
+  @override
+  State<Recipes> createState() => _RecipesState();
+}
+
+class _RecipesState extends State<Recipes> with TickerProviderStateMixin {
+  late TabController tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 3, vsync: this);
+    tabController.addListener(() {
+      if (!tabController.indexIsChanging) return;
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+        final provider = Provider.of<RecipesModel>(context, listen: false);
+        provider.unselectAllCategories();
+      });
+    });
+  }
 
   void createListFromRecipe(Recipe recipe, BuildContext context) {
     final listsProvider = Provider.of<GroceryListModel>(context, listen: false);
     GroceryList list = GroceryList.readFromRecipe(recipe);
     listsProvider.currentListIndex = listsProvider.addList(list);
-    changeTab(1);
+    widget.changeTab(1);
   }
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: TabBar(
-          tabs: [
-            Tab(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Icon(Icons.menu_book),
-                  Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text("Przepisy"))
-                ],
-              ),
+    return Scaffold(
+      appBar: TabBar(
+        controller: tabController,
+        tabs: [
+          Tab(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Icon(Icons.menu_book),
+                Padding(
+                    padding: EdgeInsets.only(left: 10), child: Text("Przepisy"))
+              ],
             ),
-            Tab(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Icon(Icons.local_library),
-                  Padding(
-                      padding: EdgeInsets.only(left: 10), child: Text("Własne"))
-                ],
-              ),
+          ),
+          Tab(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Icon(Icons.local_library),
+                Padding(
+                    padding: EdgeInsets.only(left: 10), child: Text("Własne"))
+              ],
             ),
-            Tab(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Icon(Icons.favorite),
-                  Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text("Ulubione"))
-                ],
-              ),
+          ),
+          Tab(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Icon(Icons.favorite),
+                Padding(
+                    padding: EdgeInsets.only(left: 10), child: Text("Ulubione"))
+              ],
             ),
-          ],
-        ),
-        body: TabBarView(children: [
+          ),
+        ],
+      ),
+      body: TabBarView(
+        controller: tabController,
+        children: [
           RecipesList(
             currentTab: RecipesTabs.recipes,
             createListFromRecipe: createListFromRecipe,
@@ -84,7 +103,7 @@ class Recipes extends StatelessWidget {
             currentTab: RecipesTabs.favorites,
             createListFromRecipe: createListFromRecipe,
           )
-        ]),
+        ],
       ),
     );
   }
@@ -173,9 +192,7 @@ class RecipesList extends StatelessWidget {
       body: recipes.isNotEmpty
           ? Column(
               children: [
-                currentTab == RecipesTabs.recipes
-                    ? const CategoryBar()
-                    : const Text(""),
+                if (recipes.isNotEmpty) CategoryBar(currentTab),
                 Expanded(
                   child: ListView.builder(
                     itemCount: recipes.length,
@@ -351,13 +368,42 @@ class RecipeListItem extends StatelessWidget {
 }
 
 class CategoryBar extends StatelessWidget {
-  const CategoryBar({super.key});
+  final RecipesTabs tab;
+
+  const CategoryBar(this.tab, {super.key});
 
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
-    final Set<String> unselected = (provider.unselectedCategories);
+    Set<String> unselected = (provider.unselectedCategories);
     final Set<String> selected = provider.selectedCategories;
+
+    if (selected.isEmpty) {
+      Set<String> initialCategories;
+
+      switch (tab) {
+        case RecipesTabs.custom:
+          initialCategories = provider.customCategories;
+          break;
+        case RecipesTabs.favorites:
+          initialCategories = provider.allCategories;
+          break;
+        default:
+          initialCategories = provider.allCategories;
+      }
+
+      unselected = Set<String>.from(initialCategories);
+    }
+
+    if (unselected.isEmpty && selected.isEmpty) {
+      return Container(
+        height: 50,
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+        decoration: const BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey, width: 1.0))),
+        child: const Center(child: Text("Brak kategorii")),
+      );
+    }
 
     return Container(
       height: 50,

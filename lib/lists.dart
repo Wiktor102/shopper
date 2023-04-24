@@ -241,7 +241,6 @@ class _GroceryListsState extends State<GroceryLists> {
                                       });
                               break;
                             case MoreListOption.delete_list:
-                              print(provider.currentListIndex);
                               promptForBoolean("Czy chcesz usunąć listę").then(
                                   (value) =>
                                       value ? provider.deleteCurrentList() : 0);
