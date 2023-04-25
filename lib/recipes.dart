@@ -277,33 +277,13 @@ class RecipesList extends StatelessWidget {
                             ? alphabet
                             : [],
                     itemBuilder: (_, index) =>
-                        _buildListItem(settings.brightness, recipes[index]),
+                        _buildListItem(settings, recipes[index]),
                     indexBarOptions: const IndexBarOptions(
                       needRebuild: true,
                       indexHintAlignment: Alignment.centerRight,
                       indexHintOffset: Offset(15, -20),
                     ),
-                    indexHintBuilder: (context, hint) {
-                      return Container(
-                        alignment: Alignment.center,
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                          color: settings.brightness == Brightness.light
-                              ? const Color(0xFFb5f2b0)
-                              : const Color(0XFF005212),
-                          borderRadius: const BorderRadius.only(
-                            topRight: Radius.circular(100),
-                            topLeft: Radius.circular(100),
-                            bottomLeft: Radius.circular(100),
-                          ),
-                        ),
-                        child: Text(
-                          hint,
-                          style: const TextStyle(fontSize: 30),
-                        ),
-                      );
-                    },
+                    indexHintBuilder: _buildIndexHint,
                   ),
                 ),
               ],
@@ -328,13 +308,13 @@ class RecipesList extends StatelessWidget {
     );
   }
 
-  Widget _buildListItem(Brightness brightness, TemporaryRecipe recipe) {
+  Widget _buildListItem(SettingsModel settings, TemporaryRecipe recipe) {
     return Column(
       children: [
-        if (recipe.isShowSuspension)
+        if (recipe.isShowSuspension && settings.recipesSort != RecipesSort.none)
           Container(
             alignment: Alignment.bottomLeft,
-            color: brightness == Brightness.light
+            color: settings.brightness == Brightness.light
                 ? const Color(0xFFb5f2b0)
                 : const Color(0XFF005212),
             // height: 35,
@@ -349,6 +329,29 @@ class RecipesList extends StatelessWidget {
           createListFromRecipe,
         ),
       ],
+    );
+  }
+
+  Widget _buildIndexHint(BuildContext context, String hint) {
+    final settings = Provider.of<SettingsModel>(context);
+    return Container(
+      alignment: Alignment.center,
+      width: 60,
+      height: 60,
+      decoration: BoxDecoration(
+        color: settings.brightness == Brightness.light
+            ? const Color(0xFFb5f2b0)
+            : const Color(0XFF005212),
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(100),
+          topLeft: Radius.circular(100),
+          bottomLeft: Radius.circular(100),
+        ),
+      ),
+      child: Text(
+        hint,
+        style: const TextStyle(fontSize: 30),
+      ),
     );
   }
 }
@@ -393,8 +396,12 @@ class RecipeListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
+    final settings = Provider.of<SettingsModel>(context);
+
     return Padding(
-      padding: const EdgeInsets.only(right: 10),
+      padding: settings.recipesSort == RecipesSort.alphabetically
+          ? const EdgeInsets.only(right: 10)
+          : const EdgeInsets.only(right: 0),
       child: ListTile(
         onTap: () => showDetails(context, recipe.trueIndex),
         title: Text(recipe.recipe.name),
