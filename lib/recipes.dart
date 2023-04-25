@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:Shopper/settings_model.dart';
+import 'package:azlistview/azlistview.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'empty.dart';
@@ -14,10 +15,65 @@ import 'utils/prompt_for_boolean.dart';
 
 enum RecipesTabs { recipes, custom, favorites }
 
-class TemporaryRecipe {
+const List<String> alphabet = [
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z',
+  '#'
+];
+
+class TemporaryRecipe extends ISuspensionBean {
   int trueIndex;
   Recipe recipe;
-  TemporaryRecipe({required this.recipe, required this.trueIndex});
+  late String tag;
+
+  TemporaryRecipe(BuildContext context,
+      {required this.recipe, required this.trueIndex}) {
+    final settings = Provider.of<SettingsModel>(context);
+    final validCharacters = RegExp(r'^[a-zA-Z0-9]+$');
+
+    if (settings.recipesSort != RecipesSort.alphabetically) {
+      if (recipe.tags.isEmpty) {
+        tag = 'Inne';
+        return;
+      }
+
+      tag = recipe.tags[0];
+      return;
+    }
+
+    if (validCharacters.hasMatch(recipe.name[0])) {
+      tag = recipe.name[0].toUpperCase();
+    } else {
+      tag = "#";
+    }
+  }
+
+  @override
+  String getSuspensionTag() => tag;
 }
 
 class Recipes extends StatefulWidget {
@@ -141,10 +197,19 @@ class RecipesList extends StatelessWidget {
     }
 
     void sort() {
+      final validCharacters = RegExp(r'^[a-zA-Z0-9]+$');
       if (settings.recipesSort == RecipesSort.none) return;
       if (settings.recipesSort == RecipesSort.alphabetically) {
-        recipes.sort((a, b) =>
-            a.recipe.name.toLowerCase().compareTo(b.recipe.name.toLowerCase()));
+        recipes.sort((a, b) {
+          final bool aMatches = validCharacters.hasMatch(a.recipe.name[0]);
+          final bool bMatches = validCharacters.hasMatch(b.recipe.name[0]);
+          if (!aMatches) return 1;
+          if (!bMatches) return -1;
+
+          return a.recipe.name
+              .toLowerCase()
+              .compareTo(b.recipe.name.toLowerCase());
+        });
         return;
       }
 
@@ -187,13 +252,15 @@ class RecipesList extends StatelessWidget {
       bool hasCategory =
           element.tags.any((tag) => provider.selectedCategories.contains(tag));
 
-      recipesForTags.add(TemporaryRecipe(recipe: element, trueIndex: i));
+      recipesForTags
+          .add(TemporaryRecipe(context, recipe: element, trueIndex: i));
       if (provider.selectedCategories.isNotEmpty && !hasCategory) continue;
 
-      recipes.add(TemporaryRecipe(recipe: element, trueIndex: i));
+      recipes.add(TemporaryRecipe(context, recipe: element, trueIndex: i));
     }
 
     sort();
+    SuspensionUtil.setShowSuspensionStatus(recipes);
 
     return Scaffold(
       body: recipes.isNotEmpty
@@ -201,12 +268,42 @@ class RecipesList extends StatelessWidget {
               children: [
                 if (recipes.isNotEmpty) CategoryBar(currentTab),
                 Expanded(
-                  child: ListView.builder(
+                  child: AzListView(
+                    data: recipes,
                     itemCount: recipes.length,
-                    itemBuilder: (_, index) => RecipeListItem(
-                        recipes.elementAt(index),
-                        currentTab,
-                        createListFromRecipe),
+                    indexBarData:
+                        settings.recipesSort == RecipesSort.alphabetically
+                            // ? recipes.map((r) => r.tag).toSet().toList()
+                            ? alphabet
+                            : [],
+                    itemBuilder: (_, index) =>
+                        _buildListItem(settings.brightness, recipes[index]),
+                    indexBarOptions: const IndexBarOptions(
+                      needRebuild: true,
+                      indexHintAlignment: Alignment.centerRight,
+                      indexHintOffset: Offset(15, -20),
+                    ),
+                    indexHintBuilder: (context, hint) {
+                      return Container(
+                        alignment: Alignment.center,
+                        width: 60,
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: settings.brightness == Brightness.light
+                              ? const Color(0xFFb5f2b0)
+                              : const Color(0XFF005212),
+                          borderRadius: const BorderRadius.only(
+                            topRight: Radius.circular(100),
+                            topLeft: Radius.circular(100),
+                            bottomLeft: Radius.circular(100),
+                          ),
+                        ),
+                        child: Text(
+                          hint,
+                          style: const TextStyle(fontSize: 30),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],
@@ -228,6 +325,30 @@ class RecipesList extends StatelessWidget {
               child: const Icon(Icons.add),
             )
           : null,
+    );
+  }
+
+  Widget _buildListItem(Brightness brightness, TemporaryRecipe recipe) {
+    return Column(
+      children: [
+        if (recipe.isShowSuspension)
+          Container(
+            alignment: Alignment.bottomLeft,
+            color: brightness == Brightness.light
+                ? const Color(0xFFb5f2b0)
+                : const Color(0XFF005212),
+            // height: 35,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, bottom: 3, top: 10),
+              child: Text(recipe.tag, style: const TextStyle(fontSize: 16)),
+            ),
+          ),
+        RecipeListItem(
+          recipe,
+          currentTab,
+          createListFromRecipe,
+        ),
+      ],
     );
   }
 }
@@ -272,78 +393,81 @@ class RecipeListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
-    return ListTile(
-      onTap: () => showDetails(context, recipe.trueIndex),
-      title: Text(recipe.recipe.name),
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          IconButton(
-            onPressed: () => {createListFromRecipe(recipe.recipe, context)},
-            icon: const Icon(Icons.playlist_add),
-          ),
-          IconButton(
-            onPressed: () => provider.toggleFavorites(recipe.trueIndex),
-            icon: Icon(
-              Icons.favorite,
-              color: recipe.recipe.favorite ? Colors.red : null,
+    return Padding(
+      padding: const EdgeInsets.only(right: 10),
+      child: ListTile(
+        onTap: () => showDetails(context, recipe.trueIndex),
+        title: Text(recipe.recipe.name),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            IconButton(
+              onPressed: () => {createListFromRecipe(recipe.recipe, context)},
+              icon: const Icon(Icons.playlist_add),
             ),
-          ),
-          if (currentTab == RecipesTabs.custom)
-            PopupMenuButton(
-              icon: const Icon(Icons.more_vert),
-              onSelected: (value) async {
-                if (value == "edit") {
-                  editCustomRecipe(
-                    context,
-                    recipe.recipe,
-                  );
-                }
+            IconButton(
+              onPressed: () => provider.toggleFavorites(recipe.trueIndex),
+              icon: Icon(
+                Icons.favorite,
+                color: recipe.recipe.favorite ? Colors.red : null,
+              ),
+            ),
+            if (currentTab == RecipesTabs.custom)
+              PopupMenuButton(
+                icon: const Icon(Icons.more_vert),
+                onSelected: (value) async {
+                  if (value == "edit") {
+                    editCustomRecipe(
+                      context,
+                      recipe.recipe,
+                    );
+                  }
 
-                if (value == "delete") {
-                  final bool res = await promptForBoolean(
-                    context,
-                    "Usunąć ten przepis?",
-                    text: "Tej czynności nie można cofnąć.",
-                  );
-                  if (!res) return;
-                  deleteCustomRecipe(
-                    recipe.recipe.id,
-                    provider,
-                  );
-                }
-              },
-              itemBuilder: (BuildContext context) => <PopupMenuItem>[
-                PopupMenuItem(
-                  value: "edit",
-                  child: Row(
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.only(right: 5),
-                        child: Icon(Icons.edit),
-                      ),
-                      Text("Edytuj"),
-                    ],
+                  if (value == "delete") {
+                    final bool res = await promptForBoolean(
+                      context,
+                      "Usunąć ten przepis?",
+                      text: "Tej czynności nie można cofnąć.",
+                    );
+                    if (!res) return;
+                    deleteCustomRecipe(
+                      recipe.recipe.id,
+                      provider,
+                    );
+                  }
+                },
+                itemBuilder: (BuildContext context) => <PopupMenuItem>[
+                  PopupMenuItem(
+                    value: "edit",
+                    child: Row(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: Icon(Icons.edit),
+                        ),
+                        Text("Edytuj"),
+                      ],
+                    ),
                   ),
-                ),
-                PopupMenuItem(
-                  value: "delete",
-                  child: Row(
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.only(right: 5),
-                        child: Icon(Icons.delete, color: Colors.red),
-                      ),
-                      Text(
-                        "Usuń",
-                        style: TextStyle(color: Colors.red),
-                      ),
-                    ],
+                  PopupMenuItem(
+                    value: "delete",
+                    child: Row(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: Icon(Icons.delete, color: Colors.red),
+                        ),
+                        Text(
+                          "Usuń",
+                          style: TextStyle(color: Colors.red),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            )
-        ],
+                ],
+              )
+          ],
+        ),
       ),
     );
   }
