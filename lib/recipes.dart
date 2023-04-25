@@ -10,6 +10,8 @@ import 'create_recipe.dart';
 import 'lists_model.dart';
 import 'recipe_details.dart';
 
+import 'utils/prompt_for_boolean.dart';
+
 enum RecipesTabs { recipes, custom, favorites }
 
 class TemporaryRecipe {
@@ -238,34 +240,6 @@ class RecipeListItem extends StatelessWidget {
   const RecipeListItem(this.recipe, this.currentTab, this.createListFromRecipe,
       {super.key});
 
-  Future<bool> promptForBoolean(context, String dialog) async {
-    bool result = false;
-    await showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(dialog),
-        actions: [
-          TextButton(
-            onPressed: () {
-              result = false;
-              Navigator.of(context).pop();
-            },
-            child: const Text("Anuluj"),
-          ),
-          TextButton(
-            onPressed: () {
-              result = true;
-              Navigator.of(context).pop();
-            },
-            child: const Text("Potwierdź"),
-          )
-        ],
-      ),
-    );
-
-    return result;
-  }
-
   void showDetails(BuildContext context, int index) {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -328,7 +302,10 @@ class RecipeListItem extends StatelessWidget {
 
                 if (value == "delete") {
                   final bool res = await promptForBoolean(
-                      context, "Czy na pewno chcesz usunąć ten przepis?");
+                    context,
+                    "Usunąć ten przepis?",
+                    text: "Tej czynności nie można cofnąć.",
+                  );
                   if (!res) return;
                   deleteCustomRecipe(
                     recipe.recipe.id,

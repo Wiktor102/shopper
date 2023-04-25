@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_tags_x/flutter_tags_x.dart';
 import 'package:provider/provider.dart';
 import "recipes_model.dart";
+import 'utils/prompt_for_boolean.dart';
 
 class CreateRecipe extends StatefulWidget {
   final Recipe? recipe;
@@ -121,35 +122,6 @@ class _CreateRecipeState extends State<CreateRecipe> {
     setState(() {
       steps = [value];
     });
-  }
-
-  Future<bool> promptForBoolean(context, String dialog, String text) async {
-    bool result = false;
-    await showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(dialog),
-        content: Text(text),
-        actions: [
-          TextButton(
-            onPressed: () {
-              result = false;
-              Navigator.of(context).pop();
-            },
-            child: const Text("Anuluj"),
-          ),
-          TextButton(
-            onPressed: () {
-              result = true;
-              Navigator.of(context).pop();
-            },
-            child: const Text("Potwierdź"),
-          )
-        ],
-      ),
-    );
-
-    return result;
   }
 
   @override
@@ -294,7 +266,7 @@ class _CreateRecipeState extends State<CreateRecipe> {
         String text = widget.recipe != null
             ? "Zmiany nie zostaną zapisane!"
             : "Przepis nie zostanie zapisany!";
-        return await promptForBoolean(context, title, text);
+        return await promptForBoolean(context, title, text: text);
       },
     );
   }

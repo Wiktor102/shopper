@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'bullet_list.dart';
 import 'recipes_model.dart';
+import 'utils/prompt_for_boolean.dart';
 
 class RecipeDetails extends StatelessWidget {
   final int index;
@@ -19,6 +20,22 @@ class RecipeDetails extends StatelessWidget {
     );
   }
 
+  void deleteCustomRecipe(BuildContext context, Recipe recipe) async {
+    final bool res = await promptForBoolean(
+      context,
+      "Usunąć ten przepis?",
+      text: "Tej czynności nie można cofnąć.",
+    );
+
+    if (!res) return;
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      final provider = Provider.of<RecipesModel>(context, listen: false);
+      provider.removeCustomRecipe(recipe.id);
+      Navigator.of(context).pop();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<RecipesModel>(context);
@@ -31,11 +48,6 @@ class RecipeDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text(recipe.name),
         actions: [
-          if (recipe.custom)
-            IconButton(
-              onPressed: () => editCustomRecipe(context, recipe),
-              icon: const Icon(Icons.edit),
-            ),
           IconButton(
             onPressed: () => provider.toggleFavorites(index),
             icon: Icon(
@@ -43,6 +55,43 @@ class RecipeDetails extends StatelessWidget {
               color: provider.recipes[index].favorite ? Colors.red : null,
             ),
           ),
+          if (recipe.custom)
+            PopupMenuButton(
+              icon: const Icon(Icons.more_vert),
+              onSelected: (value) async {
+                if (value == "edit") editCustomRecipe(context, recipe);
+                if (value == "delete") deleteCustomRecipe(context, recipe);
+              },
+              itemBuilder: (BuildContext context) => <PopupMenuItem>[
+                PopupMenuItem(
+                  value: "edit",
+                  child: Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(right: 5),
+                        child: Icon(Icons.edit),
+                      ),
+                      Text("Edytuj"),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: "delete",
+                  child: Row(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(right: 5),
+                        child: Icon(Icons.delete, color: Colors.red),
+                      ),
+                      Text(
+                        "Usuń",
+                        style: TextStyle(color: Colors.red),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            )
         ],
       ),
       body: ListView(

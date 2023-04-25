@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 import "./lists_model.dart";
 import 'empty.dart';
+import 'utils/prompt_for_boolean.dart';
 
 enum TaskOptions { edit, delete }
 
@@ -31,33 +32,6 @@ class _GroceryListsState extends State<GroceryLists> {
   void dispose() {
     controller.dispose();
     super.dispose();
-  }
-
-  Future<bool> promptForBoolean(String dialog) async {
-    bool result = false;
-    await showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-              title: Text(dialog),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    controller.clear();
-                    onPromptClosed();
-                  },
-                  child: const Text("Anuluj"),
-                ),
-                TextButton(
-                  onPressed: () {
-                    onPromptClosed();
-                    result = true;
-                    controller.clear();
-                  },
-                  child: const Text("Potwierdź"),
-                )
-              ],
-            ));
-    return result;
   }
 
   Future<String?> promptForString(String dialog, String? value) async {
@@ -233,17 +207,20 @@ class _GroceryListsState extends State<GroceryLists> {
                           switch (value) {
                             case MoreListOption.delete_checked_tasks:
                               promptForBoolean(
-                                      "Czy chcesz usunąć zaznaczone obiekty")
-                                  .then((value) => {
-                                        if (value == true)
-                                          provider.deleteChecked(
-                                              provider.currentListIndex)
-                                      });
+                                context,
+                                "Czy chcesz usunąć zaznaczone obiekty",
+                              ).then((value) => {
+                                    if (value == true)
+                                      provider.deleteChecked(
+                                          provider.currentListIndex)
+                                  });
                               break;
                             case MoreListOption.delete_list:
-                              promptForBoolean("Czy chcesz usunąć listę").then(
-                                  (value) =>
-                                      value ? provider.deleteCurrentList() : 0);
+                              promptForBoolean(
+                                context,
+                                "Czy chcesz usunąć listę",
+                              ).then((value) =>
+                                  value ? provider.deleteCurrentList() : 0);
                               break;
                             default:
                           }
