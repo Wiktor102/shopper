@@ -2264,7 +2264,8 @@
         "id": 228,
         "title": "Ciasteczka Boca Negra",
         "categories": [
-            "Desery"
+            "Desery",
+            "Ciastka"
         ]
     },
     {
@@ -2278,7 +2279,7 @@
         "steps": "Oddzielić żółtka od białek. Białka ubijać (najlepiej mikserem) i dodawać po kolei żółtka, cukier puder, mąkę i cukier waniliowy. Na wysmarowaną tłuszczem formę kształtujemy zgrabne babeczki i wkładamy do pieca nagrzanego do 150 stopni. Pieczemy przez ok. 12min. Wyciągamy gdy nabiorą złocistego koloru. Wykładamy na drewnianą deskę i czekamy aż ostygną. Dla dekoracji możemy polać czekoladą lub nadziać owocami",
         "id": 229,
         "title": "Ciasteczka biszkoptowe",
-        "categories": []
+        "categories": ["Ciastka"]
     },
     {
         "products": [
@@ -2295,7 +2296,8 @@
         "id": 230,
         "title": "Ciasteczka cebulowe",
         "categories": [
-            "Przekąski"
+            "Przekąski",
+            "Ciastka"
         ]
     },
     {
@@ -2316,7 +2318,8 @@
         "id": 232,
         "title": "Ciasteczka pomarańczowe z orzechami",
         "categories": [
-            "Desery"
+            "Desery",
+            "Ciastka"
         ]
     },
     {
@@ -2333,7 +2336,8 @@
         "id": 233,
         "title": "Ciasteczka ptysiowe z serem",
         "categories": [
-            "Przekąski"
+            "Przekąski",
+            "Ciastka"
         ]
     },
     {
@@ -2363,7 +2367,8 @@
         "id": 235,
         "title": "Ciasteczka sezamowe",
         "categories": [
-            "Przekąski"
+            "Przekąski",
+            "Ciastka"
         ]
     },
     {
@@ -2383,7 +2388,8 @@
         "id": 236,
         "title": "Ciasteczka z cukrem",
         "categories": [
-            "Desery"
+            "Desery",
+            "Ciastka"
         ]
     },
     {
@@ -2400,7 +2406,8 @@
         "id": 237,
         "title": "Ciasteczka z czekoladą",
         "categories": [
-            "Desery"
+            "Desery",
+            "Ciastka"
         ]
     },
     {
@@ -2414,7 +2421,8 @@
         "title": "Ciasteczka z mąki kukurydzianej/ Pastitas de maiz",
         "categories": [
             "Kuchnia_hiszpańska",
-            "Desery"
+            "Desery",
+            "Ciastka"
         ]
     },
     {
@@ -2437,7 +2445,8 @@
         "id": 239,
         "title": "Ciasteczka z żurawiną",
         "categories": [
-            "Desery"
+            "Desery",
+            "Ciasta"
         ]
     },
     {
