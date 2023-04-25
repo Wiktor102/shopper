@@ -66,13 +66,19 @@ class RecipeDetails extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text("Tagi: "),
-                      Opacity(
-                        opacity: 0.75,
-                        child: Text(
-                          tags,
-                          style: const TextStyle(fontStyle: FontStyle.italic),
+                      ConstrainedBox(
+                        constraints: BoxConstraints(
+                          maxWidth: MediaQuery.of(context).size.width * 0.6,
+                        ),
+                        child: Opacity(
+                          opacity: 0.75,
+                          child: Text(
+                            tags,
+                            style: const TextStyle(fontStyle: FontStyle.italic),
+                          ),
                         ),
                       ),
                     ],
