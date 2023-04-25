@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:hive/hive.dart';
 
+enum RecipesSort { alphabetically, byCategory, none }
+
 class SettingsModel extends ChangeNotifier {
   String _themeMode = "auto";
   Brightness brightness = SchedulerBinding.instance.window.platformBrightness;
+  RecipesSort _recipesSort = RecipesSort.alphabetically;
   int _storeDistance = 3000;
 
   SettingsModel() {
@@ -23,6 +26,10 @@ class SettingsModel extends ChangeNotifier {
 
       if (box.get("distance") != null) {
         storeDistance = box.get("distance");
+      }
+
+      if (box.get("recipesSort") != null) {
+        recipesSort = box.get("recipesSort");
       }
     });
   }
@@ -43,6 +50,13 @@ class SettingsModel extends ChangeNotifier {
     }
 
     Hive.box("settings").put("theme", newTheme);
+    notifyListeners();
+  }
+
+  RecipesSort get recipesSort => _recipesSort;
+  set recipesSort(RecipesSort newSetting) {
+    _recipesSort = newSetting;
+    Hive.box("settings").put("recipesSort", newSetting);
     notifyListeners();
   }
 

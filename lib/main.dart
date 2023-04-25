@@ -49,8 +49,6 @@ void main() async {
       ChangeNotifierProvider(create: (_) => FavoriteStoresModel()),
       ChangeNotifierProvider(create: (_) => GroceryListModel()),
       ChangeNotifierProvider(create: (_) => SettingsModel()),
-
-      // jeśli wewnątrz RecipesModel będzie potrzebny GroceryListModel to trzeba będzie użyć ChangeNotifierProxyProvider
       ChangeNotifierProvider(create: (_) => RecipesModel()),
       ChangeNotifierProxyProvider2<PositionModel, SettingsModel, StoresModel>(
         create: (BuildContext context) => StoresModel(

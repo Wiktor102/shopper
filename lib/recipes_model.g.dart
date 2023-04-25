@@ -21,6 +21,7 @@ class RecipeAdapter extends TypeAdapter<Recipe> {
       name: fields[1] as String,
       ingredients: (fields[2] as List).cast<String>(),
       steps: (fields[3] as List).cast<String>(),
+      tags: (fields[7] as List).cast<dynamic>(),
       favorite: fields[4] as bool,
       custom: fields[5] as bool,
     );
@@ -29,7 +30,7 @@ class RecipeAdapter extends TypeAdapter<Recipe> {
   @override
   void write(BinaryWriter writer, Recipe obj) {
     writer
-      ..writeByte(6)
+      ..writeByte(7)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -41,7 +42,9 @@ class RecipeAdapter extends TypeAdapter<Recipe> {
       ..writeByte(4)
       ..write(obj.favorite)
       ..writeByte(5)
-      ..write(obj.custom);
+      ..write(obj.custom)
+      ..writeByte(7)
+      ..write(obj.tags);
   }
 
   @override
